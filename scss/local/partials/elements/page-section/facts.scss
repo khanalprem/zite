@@ -1,0 +1,134 @@
+.fact-section{
+    @include cover(center);
+    background-color:rgba(34,54,69,1);
+    padding:100px 0;
+    margin-top:100px;
+    // .overlay{
+    //     @include overlay(rgba($heading-color,.9));
+    // }
+    .fact-box{
+        text-align: center;
+        .box-in{
+            .custom-progress {
+                width: 150px;
+                height: 150px;
+                background: none;
+                position: relative;
+                @include display-flex(flex);
+                overflow: hidden;
+                margin:auto;
+                font-size: .75rem;
+                @include radius(.25rem);
+                &::after{
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    border: 6px solid $border-footer;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                span{
+                    width: 50%;
+                    height: 100%;
+                    overflow: hidden;
+                    position: absolute;
+                    top: 0;
+                    z-index: 1;
+                    span{
+                        &.custom-progress-bar{
+                            width: 100%;
+                            height: 100%;
+                            background: none;
+                            border-width: 6px;
+                            border-style: solid;
+                            position: absolute;
+                            top: 0;
+                            @include display-flex(flex);
+                            @include justify-content-center;
+                            @include align-items-center;
+                            @include flex-direction-column(column);
+                            overflow: hidden;
+                            color: $white-color;
+                            text-align: center;
+                            white-space: nowrap;
+                            // background-color: $primary-color;
+                            @include transition(width .6s ease);
+                            border-color:$primary-color;
+                        }
+                    }
+                    &.progress-left{
+                        left:0;
+                        span{
+                            &.custom-progress-bar {
+                                left: 100%;
+                                border-top-right-radius: 80px;
+                                border-bottom-right-radius: 80px;
+                                border-left: 0;
+                                -webkit-transform-origin: center left;
+                                transform-origin: center left;
+                                
+                              }
+                        }
+                    }
+                    &.progress-right {
+                        right: 0;
+                        span{
+                            &.custom-progress-bar {
+                                left: -100%;
+                                border-top-left-radius: 80px;
+                                border-bottom-left-radius: 80px;
+                                border-right: 0;
+                                -webkit-transform-origin: center right;
+                                transform-origin: center right;
+                              }
+                        }
+                    }
+                }
+                .progress-icon {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    @include radius(50%);
+                    @include display-flex(flex);
+                    @include justify-content-center;
+                    @include align-items-center;
+                    height: 100%;
+                    width:100%;
+                    svg{
+                        font-size: 3rem;
+                        color:$white-color;
+                    }
+                  }
+              }
+            .fact-body{
+                padding-top:1.5rem;
+                .progress-value{
+                    h5{
+                        font-size: 3rem;
+                        font-weight: 700;
+                        color:$secondary-color;
+                        margin-bottom: .6125rem;
+                    }
+                    b{
+                        font-weight: 600;
+                        font-size: 1.125rem;
+                    }
+                }
+                
+                p{
+                    font-weight: 500;
+                    color:$body-color;
+                    margin:1rem 0;
+                    font-size: 1rem;
+                    @include trim(3);
+                }
+            }
+            button{
+                margin:0 auto;
+            }
+        }
+        
+    }
+}

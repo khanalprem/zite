@@ -1,0 +1,38 @@
+.qoute-section{
+    margin-top:-100px;
+    padding-top:0;
+    figure{
+        margin:0;
+
+    }
+
+    .quote-item{
+        padding:3rem;
+        background-color: $white-color;
+        @include box-shadow(0 10px 30px rgba(222,222,222,.5));
+        @include display-flex(flex);
+        @include justify-content-center;
+        @include align-items-start;
+        @include flex-direction-column(column);
+        min-height: 530px;
+        .qoute-header{
+            margin-bottom: 1rem;
+            span{
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+            h3{
+                font-size: 2.125rem;
+                font-weight: 700;
+            }
+        }
+        .qoute-body{
+            .form-group{
+                margin-bottom: 1.5rem;
+            }
+            button{
+                margin-top:1rem;
+            }
+        }
+    }
+}

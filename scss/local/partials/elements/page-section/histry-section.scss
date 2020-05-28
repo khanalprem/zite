@@ -1,0 +1,88 @@
+.histry-section{
+    background-color: $primary-light;
+    padding-top:0;
+    position: relative;
+    .histry-container{
+        max-width: 100%;
+        width:100%;
+        margin:0 auto;
+    }
+    figure{
+        &.center-icon{
+            width:120px;
+            height: 120px;
+            @include display-flex(flex);
+            @include justify-content-center;
+            @include align-items-center;
+            @include flex-direction-column(column);
+            @include radius(100%);
+            background-color: $secondary-color;
+            @include box-shadow(0 0 50px rgba($secondary-color,.65));
+            position:absolute;
+            top:50%;
+            @include transform(translateY(-50%));
+            left:0;
+            right:0;
+            margin:auto;
+            z-index: 2;
+        }
+    }
+    .histry-figure{
+        figure{
+            margin:0;
+            @include cover(center);
+            min-height: 750px;
+        }
+    }
+    .histry-content{
+        @include display-flex(flex);
+        @include justify-content-center;
+        @include align-items-start;
+        @include flex-direction-column(column);
+        min-height: 750px;
+        padding:0 7rem;
+        .common-title{
+            margin-bottom: 2rem;
+        }
+        .histry-body{
+            width:100%;
+            .about-histry{
+                @include display-flex(flex);
+                @include justify-content-center;
+                @include align-items-start;
+                margin-top:2rem;
+                figure{
+                    margin:0;
+                    @include flex( 0 0 270px);
+                    max-width: 270px;
+                }
+                .about-histry-text{
+                    flex-grow: 1;
+                    padding-left: 3rem;
+                    .histry-text-header{
+                        margin-bottom: 1rem;
+                        h4{
+                            font-size: 1.4rem;
+                            text-transform: capitalize;
+                            font-weight: 700;
+                            margin-bottom: .6125rem;
+                        }
+                        span{
+                            color:$heading-color;
+                            font-weight: 500;
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+            p{
+                font-weight: 500;
+                margin-bottom: 1rem;
+                font-size: 1rem;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

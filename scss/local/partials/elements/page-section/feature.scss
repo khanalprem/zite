@@ -1,0 +1,34 @@
+.feature-section{
+    .feature-box{
+        text-align: center;
+        .box-in{
+            background-color: $white-color;
+            figure{
+                margin:0;
+            }
+            .feature-body{
+                padding-top:1.5rem;
+                h5{
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                }
+                p{
+                    font-weight: 500;
+                    color:$body-color;
+                    margin:1rem 0;
+                    font-size: 1rem;
+                    @include trim(3);
+                }
+                button{
+                    padding:0;
+                    min-height: initial;
+                    font-size: 1rem;
+                }
+            }
+            button{
+                margin:0 auto;
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,99 @@
+.custom-dropdown{
+    position: relative;
+    a{
+        position: relative;
+        padding-right: 2rem;
+        &::after{
+            content:'arrow_drop_down';
+            font-family: 'Material Icons';
+            position: absolute;
+            top:50%;
+            @include transform(translateY(-50%));
+            z-index: 2;
+            right: 0;
+            font-size: 1.5rem;
+        }
+    }
+    &.is-option{
+        a{
+            padding-right: 0;
+            &:after{
+                display: none;
+            }
+        }
+    }
+    ul{
+        &.custom-dropdown-menu{
+            display: initial;
+            position: absolute;
+            top:100%;
+            min-width: 150px;
+            background-color: $white-color;
+            @include radius(4px);
+            z-index: 1001;
+            display: none;
+            @include box-shadow(0 10px 40px rgba($heading-color,.2));
+            &::before{
+                content: "";
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 10px 10px 10px;
+                border-color: transparent transparent $white-color transparent;
+                position: absolute;
+                left: 30px;
+                top: -10px;
+                @include box-shadow(0 10px 40px rgba($heading-color,.2));
+            }
+            li{
+                margin:0;
+                a{
+                    padding:.5rem .6125rem;
+                    color:$body-color;
+                    @include transition(all .4s ease-in-out);
+                    @include display-flex(flex);
+                    @include justify-content-start;
+                    @include align-items-center;
+                    i,svg{
+                        margin-right: .6125rem;
+                        font-size: 1rem;
+                    }
+                    &::after{
+                        content:none;
+                    }
+                   
+                    &:hover{
+                        background-color: $primary-light;
+                    }
+                }
+                &:not(:last-child){
+                    border-bottom: 1px solid $border-color;
+                }
+            }
+        }
+    }
+    &.is-right{
+        ul{
+            &.custom-dropdown-menu{
+                right:0;
+                &::before,&::after{
+                    right:10px;
+                    left:auto;
+                }
+            }
+        }
+    }
+    &.is-left{
+        ul{
+            &.custom-dropdown-menu{
+                left:0;
+                &::before,&::after{
+                    right:10px;
+                    left:auto;
+                    
+                }
+            }
+        }
+    }
+    
+}

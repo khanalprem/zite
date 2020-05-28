@@ -1,0 +1,36 @@
+ul{
+    &.list{
+        @include radius(5px);
+        li{
+            padding:.5rem .6125rem;
+            color:$heading-color;
+            @include transition(all .4s ease-in-out);
+            @include display-flex(flex);
+            @include justify-content-start;
+            @include align-items-center;
+            border-bottom:1px solid $border-color;
+            figure{
+                @include flex(0 0 45px);
+                max-width: 45px;
+                img{
+                    width:32px;
+                    height: 32px;
+                    @include radius(100%);
+                }
+            }
+            .list-content{
+                p{
+                    a{
+                        font-weight: 600;
+                    }
+                }
+                time{
+                    color:$body-color;
+                }
+            }
+        }
+        &.is-border{
+            border:1px solid $border-color;
+        }
+    }
+}

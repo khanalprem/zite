@@ -1,0 +1,36 @@
+.overlay-section{
+    position: relative;
+    background-size: cover;
+    min-height: 567px;
+    padding:0;
+    margin-top:100px;
+    .overlay{
+        @include overlay(rgba($heading-color,.85));
+    }
+    .overlay-content{
+        position:absolute;
+        left:0;
+        right:0;
+        max-width: 600px;
+        margin:0 auto;
+        @include display-flex(flex);
+        @include justify-content-center;
+        @include align-items-center;
+        @include flex-direction-column(column);
+        color:$white-color;
+        width: 100%;
+        min-height: 567px;
+        text-align: center;
+        z-index: 100;
+        h3{
+            font-family: $body-fonts;
+            font-size: 2rem;
+            font-weight: 700;
+            color:$white-color;
+            margin:1rem 0;
+        }
+        button{
+            margin-top: 1rem;
+        }
+    }
+}

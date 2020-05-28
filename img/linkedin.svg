@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+  <g id="Group_1688" data-name="Group 1688" transform="translate(-693 -608)">
+    <rect id="Rectangle_1819" data-name="Rectangle 1819" width="27" height="27" rx="5" transform="translate(693 608)" fill="#1177b7"/>
+    <g id="linkedin-logo" transform="translate(699 614)">
+      <path id="LinkedIn" d="M15.7,18.758v5.805H12.337V19.146c0-1.361-.487-2.289-1.705-2.289a1.842,1.842,0,0,0-1.727,1.231,2.3,2.3,0,0,0-.112.821v5.654H5.427s.045-9.174,0-10.124H8.793v1.435l-.022.033h.022v-.033A3.343,3.343,0,0,1,11.827,14.2C14.043,14.2,15.7,15.648,15.7,18.758Zm-13.8-9.2a1.754,1.754,0,1,0-.045,3.5h.022a1.755,1.755,0,1,0,.022-3.5ZM.2,24.563H3.566V14.438H.2Z" transform="translate(0 -9.558)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

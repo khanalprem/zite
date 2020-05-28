@@ -1,0 +1,30 @@
+body {
+    font-family: $body-fonts;
+    background-color:$bg-color;
+    position: relative;
+    font-size: .875rem;
+    line-height: 1.8;
+    color:$body-color;
+    font-weight: 400;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-fonts;
+    color:$heading-color;
+  }
+  .section{
+      padding-top:100px;
+  }
+  .site-content{
+      padding:0 2rem;
+      margin:2rem 0;
+  }
+
+
+
+
+
+
+
+
+
+

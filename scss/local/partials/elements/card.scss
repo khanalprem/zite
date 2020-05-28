@@ -1,0 +1,120 @@
+
+
+.custom-card{
+    position: relative;
+    @include display-flex(flex);
+    @include flex-direction-column(column);
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: $white-color;
+    background-clip: border-box;
+    border: 1px solid $border-color;
+    @include radius(5px);
+    .card-header,.card-footer{
+        @include display-flex(flex);
+        @include align-items-center;
+        
+        &.is-start{
+            @include justify-content-start;
+        }
+        &.is-center{
+            @include justify-content-center;
+            h5{
+                @include justify-content-center;
+                @include align-items-center;
+            }
+        }
+        &.is-end{
+            @include justify-content-end;
+        }
+        &.is-between{
+            @include justify-content-between;
+        }
+        &.is-clear{
+            border:0;
+            background-color: transparent;
+        }
+        h5{
+            font-size: 1.125rem;
+            flex-grow: 1;
+            font-weight: 600;
+            @media #{$breakpoint-desktop}{
+               font-size: 1rem;
+            }
+        }
+        @media #{$breakpoint-xs}{
+            @include flex-wrap(wrap);
+            @include justify-content-start;
+         }
+        .source-updated{
+            @include display-flex(flex);
+            @include justify-content-end;
+            @include align-items-center;
+            @media #{$breakpoint-xs}{
+                @include justify-content-start;
+             }
+            i{
+                margin-right: .5rem;
+                font-size: 1.2rem;
+            }
+            .updated-content{
+                @include display-flex(flex);
+                @include justify-content-end;
+                @include align-items-center;
+                @media #{$breakpoint-sm}{
+                    @include flex-wrap(wrap);
+                    @include justify-content-start;
+                 }
+                p{
+                    @include display-flex(flex);
+                    @include justify-content-end;
+                    @include align-items-center;
+                    @media #{$breakpoint-xs}{
+                        @include flex-wrap(wrap);
+                        @include justify-content-start;
+                     }
+                    &:first-child{
+                        b{
+                            font-weight: 400;
+                            &::after{
+                                content:':';
+                                display: inline-flex;
+                                margin:0 .5rem;
+                            }
+                        }
+                    }
+                    &:last-child{
+                        span{
+                            &::after{
+                                content:':';
+                                display: inline-flex;
+                                margin:0 .5rem;
+                            } 
+                        } 
+                        b{
+                            font-weight: 600;
+                        }
+                    }
+                    &:not(:last-child){
+                        &::after{
+                            content:'|';
+                            display: inline-flex;
+                            margin:0 .5rem;
+                        }
+                    } 
+                }  
+            }
+        }
+    }
+    .card-footer{
+        border-top:1px solid $border-color;
+    }
+    .card-header{
+        padding-top:1.5rem;
+    }
+    .card-body{
+        flex: 1 1 auto;
+        min-height: 1px;
+        padding: 1.25rem;
+    }
+}

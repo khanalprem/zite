@@ -1,0 +1,234 @@
+[class*=common-button] {
+    -webkit-font-smoothing: antialiased;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: .5rem 1.5rem;
+    position: relative;
+    @include display-flex(flex);
+    @include justify-content-center;
+    @include align-items-center;
+    min-width: 164px;
+    min-height: 44px;
+    border: none;
+    outline: none;
+    line-height: inherit;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+    overflow: hidden;
+    vertical-align: middle;
+    @include radius(30px);
+    cursor: pointer;
+    @include transition(all .3s ease-in-out);
+    position: relative;
+    
+    &:disabled {
+        color: $white-color;
+        background-color: $body-color;
+        border-color: 0;
+        opacity: 0.65;
+        cursor: not-allowed;
+    }
+  
+    &.is-disable {
+        color: $white-color;
+        background-color: $body-color;
+        border-color: $body-color;
+    }
+  
+    &.is-bg {
+        color: $white-color;
+        background-color: $primary-color;
+        border-color: $primary-color;
+        @include box-shadow(0 10px 40px rgba($primary-color,.25));
+  
+        &:disabled {
+            color: $white-color;
+            background-color: $grey-color;
+            border-color: transparent;
+            opacity: 0.65;
+            cursor: not-allowed;
+        }
+        
+        &:hover {
+            background-color: $primary-dark;
+            border-color: $primary-dark;
+        }
+  
+        &.is-disable {
+            color: $white-color;
+            background-color: $grey-color;
+            border-color: $grey-color;
+  
+            
+        }
+        
+    }
+  
+    &.is-full-line {
+        width: 100%;
+    }
+  
+    &.is-clear {
+        background-color: transparent;
+        border-width: 0;
+        min-width: auto;
+        @include display-flex(flex);
+        @include justify-content-start;
+        @include align-items-center;
+        color: $heading-color;
+        font-size: .9375rem;
+        padding:0;
+        min-height: initial;
+        min-width: initial;
+        
+        svg {
+            margin-left: .5rem;
+            @include transition(margin .5s ease-in-out);
+        }
+  
+        &:hover {
+            color: $secondary-color;
+            svg{
+                margin-left:.6125rem;
+            }
+        }
+    }
+  
+    &.is-border {
+        background-color: transparent;
+        color: $secondary-color;
+        border:1px solid;
+        border-color: $border-color;
+  
+        &.is-icon {
+            @include display-flex(flex);
+            @include justify-content-start;
+            @include align-items-center;
+            color: $heading-color;
+            font-size: .9375rem;
+  
+            i {
+                margin-right: .5rem;
+            }
+        }
+        &:hover{
+            border-color: $secondary-color;
+            color:$secondary-color;
+        }
+    }
+  
+    &.no-border {
+        background-color: transparent;
+        color: $secondary-color;
+        border-color: transparent;
+  
+        &.is-icon {
+            @include display-flex(flex);
+            @include justify-content-start;
+            @include align-items-center;
+            color: $secondary-color;
+            font-size: .9375rem;
+  
+            i {
+                margin-right: .5rem;
+            }
+        }
+    }
+    &.is-icon {
+        @include justify-content-between;
+        color: $white-color;
+
+        i {
+            margin-right: .5rem;
+            font-size: .9375rem;
+        }
+    }
+  
+    // @media #{$break1} {
+    //     &.full-line-mobile {
+    //         width: 100%;
+    //     }
+    // }
+  
+  }
+  
+  .buttons {
+  
+    button,a {
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+  
+    &.is-center {
+        @include display-flex(flex);
+        @include justify-content-center;
+        @include align-items-center;
+    }
+    &.is-between{
+        @include display-flex(flex);
+        @include justify-content-between;
+        @include align-items-center;
+    }
+    &.is-end {
+     @include display-flex(flex);
+     @include justify-content-end;
+     @include align-items-center;
+ }
+  }
+  [class*=circle-icon]{
+      width:40px;
+      height: 40px;
+      @include display-flex(flex);
+      @include justify-content-center;
+      @include align-items-center;
+      @include flex-direction-column(column);
+      color:$body-color;
+      @include radius(100%);
+      min-height: 40px;
+      cursor: pointer;
+      @include transition(all .4s ease-in-out);
+      &.is-bg{
+        background-color: $primary-light;
+        color:$primary-dark;
+        &:hover{
+            background-color: $primary-color;
+            color:$white-color;
+        }
+      }
+      &.is-border{
+          border:1px solid $border-color;
+      }
+        &:not(:last-child){
+            margin-right: .6125rem;
+        }
+  }
+  .circle-icons{
+      @include display-flex(flex);
+      @include align-items-center;
+      &.is-start{
+          @include justify-content-start;
+      }
+      &.is-end{
+        @include justify-content-end;
+        }
+        &.is-center{
+            @include justify-content-center;
+        }
+        &.is-vertical{
+            @include justify-content-center;
+            @include flex-direction-column(column);
+            span,a{
+                margin-right: 0;
+                &:not(:last-child){
+                    margin-bottom: .6125rem;
+                }
+            }
+        }
+    
+  }
