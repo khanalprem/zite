@@ -5,22 +5,23 @@
     .search-wrap{
         @include display-flex(flex);
         @include justify-content-between;
-        border:1px solid $border-dark;
-        @include radius(1.5rem);
+        border:1px solid $border-color;
+        @include radius(5px);
         @include align-items-stretch;
-        background-color: $primary-light;
+        background-color: $bg-color;
         flex-grow: 1;
-        max-width: 150px;
-        padding-right: .6125rem;
+        max-width: 240px;
+        margin-right:1rem;
         input{
             &.form-control{
                 flex-grow: 1;
-                min-height: calc(1.5rem + .75rem + 2px);
+                height: calc(1.6rem + .75rem + 2px);
                 border:none;
                 display: initial;
-                @include radius(1.5rem);
+                @include radius(5px);
+                background-color: $bg-color;
                 &:focus{
-                    background-color: $primary-light;
+                    background-color: $bg-color;
                 }
             }
         }
@@ -35,7 +36,7 @@
             cursor: pointer;
             i{
                 font-size: 1.5rem;
-                color:$secondary-color;
+                color:$primary-dark;
             }
         }
     }

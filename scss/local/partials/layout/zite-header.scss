@@ -34,12 +34,18 @@
             h1{
                 margin-bottom: .5rem;
                 font-size: 1.35rem;
+                @media #{$breakpoint-desktop}{
+                    font-size: 1.125rem;
+                }
             }
             h6{
                 margin:0;
                 a{
                     color:$primary-dark;
                     font-size:.9125rem;
+                    @media #{$breakpoint-desktop}{
+                        font-size: .8125rem;
+                    }
                 }
             }
         }
@@ -58,6 +64,9 @@
                         font-weight: 600;
                         color:$heading-color;
                         margin-right: .6125rem;
+                        @media #{$breakpoint-desktop}{
+                            font-size: 1.125rem;
+                        }
                     }
                     &:not(:last-child){
                         margin-right: 2rem;
@@ -93,6 +102,11 @@
         top:0;
         .tab-list{
             flex-grow: 1;
+            li{
+                a{
+                    padding:.6125rem 1rem;
+                }
+            }
         }
     }
     .filter{

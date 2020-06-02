@@ -1,7 +1,6 @@
 aside{
     &.sidebar{
         position: relative;
-        background-color: $sidebar-color;
         .sidebar-in{
             
             padding:1rem;
@@ -328,7 +327,6 @@ aside{
             bottom:1rem;
             left:1rem;
             right: 1rem;;
-            background-color: $sidebar-color;
             border-top:1px solid $border-color;
         }
     }

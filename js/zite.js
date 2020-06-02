@@ -76,26 +76,6 @@ var pageSection = $(".bg-image");
   customTab();
 
 
-$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-  disableOn: 700,
-  type: 'iframe',
-  mainClass: 'mfp-fade',
-  removalDelay: 160,
-  preloader: false,
-
-  fixedContentPos: false
-});
-
-
-
-$('.gallery-link').magnificPopup({
-    type: 'image',
-    gallery: {
-        enabled: true,
-        navigateByImgClick: true
-    },
-});
-
 $(".custom-progress").each(function() {
 
   var value = $(this).attr('data-value');

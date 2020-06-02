@@ -1,0 +1,44 @@
+.submission-card{
+    .total-submission{
+        @include display-flex(flex);
+        @include align-items-center;
+        @include justify-content-start;
+        .total-submission-text{
+            h2{
+                font-size: 2.6rem;
+                margin: .975rem 0;
+            }
+            h5{
+                font-size: 1.125rem;
+                text-transform: uppercase;
+            
+            }
+            @media #{$breakpoint-desktop}{
+                h2{
+                    font-size: 2rem;
+                }
+                h5{
+                    font-size: 1rem;
+                
+                }
+            }
+        }
+        .submission-progress-summary{
+            flex-grow: 1;
+            padding-left:3rem;
+        }
+        [tooltip]::after {
+            white-space: initial;
+            text-overflow: initial;
+            line-height: 1.5;
+          }
+    }
+    .inline-row{
+        margin-top:.5rem;
+        .inline-item{
+            .square-icon{
+                margin-right: 1.5rem;
+            }
+        }
+    }
+}

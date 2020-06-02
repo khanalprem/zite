@@ -68,7 +68,7 @@
     .container-md,
     .container-sm,
     .container-xl {
-        max-width: 1140px;
+        max-width: 1200px;
     }
 }
 .row {
@@ -1167,4 +1167,82 @@
     .offset-xl-11 {
         margin-left: 91.666667%;
     }
+}
+.row{
+    &.nowrap{
+        @include flex-wrap(nowrap);
+    }
+}
+.min-width-activities{
+    width: 467px;
+}
+.min-width-assignment{
+    width: 340px;
+}
+@media (min-width: 1200px) {
+    .zite-74 {
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+    .zite-26{
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+    .zite-70 {
+        -ms-flex: 0 0 60%;
+        flex: 0 0 60%;
+        max-width: 60%;
+    }
+    .zite-30{
+        -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+}
+@media (min-width: 1500px) {
+    .zite-74 {
+        -ms-flex: 0 0 70%;
+        flex: 0 0 70%;
+        max-width: 70%;
+    }
+    .zite-26{
+        -ms-flex: 0 0 30%;
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+    .zite-70 {
+        -ms-flex: 0 0 64%;
+        flex: 0 0 64%;
+        max-width: 64%;
+    }
+    .zite-30{
+        -ms-flex: 0 0 36%;
+        flex: 0 0 36%;
+        max-width: 36%;
+    }
+}
+@media (min-width: 1680px) {
+    .zite-74 {
+        -ms-flex: 0 0 74%;
+        flex: 0 0 74%;
+        max-width: 74%;
+    }
+    .zite-26{
+        -ms-flex: 0 0 26%;
+        flex: 0 0 26%;
+        max-width: 26%;
+    }
+    .zite-70 {
+        -ms-flex: 0 0 70%;
+        flex: 0 0 70%;
+        max-width: 70%;
+    }
+    .zite-30{
+        -ms-flex: 0 0 30%;
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+    
 }

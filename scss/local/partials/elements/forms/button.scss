@@ -25,7 +25,7 @@
     cursor: pointer;
     @include transition(all .3s ease-in-out);
     position: relative;
-    
+
     &:disabled {
         color: $white-color;
         background-color: $body-color;
@@ -33,19 +33,19 @@
         opacity: 0.65;
         cursor: not-allowed;
     }
-  
+
     &.is-disable {
         color: $white-color;
         background-color: $body-color;
         border-color: $body-color;
     }
-  
+
     &.is-bg {
         color: $white-color;
         background-color: $primary-color;
         border-color: $primary-color;
-        @include box-shadow(0 10px 40px rgba($primary-color,.25));
-  
+        @include box-shadow(0 10px 40px rgba($primary-color, .25));
+
         &:disabled {
             color: $white-color;
             background-color: $grey-color;
@@ -53,26 +53,26 @@
             opacity: 0.65;
             cursor: not-allowed;
         }
-        
+
         &:hover {
             background-color: $primary-dark;
             border-color: $primary-dark;
         }
-  
+
         &.is-disable {
             color: $white-color;
             background-color: $grey-color;
             border-color: $grey-color;
-  
-            
+
+
         }
-        
+
     }
-  
+
     &.is-full-line {
         width: 100%;
     }
-  
+
     &.is-clear {
         background-color: transparent;
         border-width: 0;
@@ -82,63 +82,66 @@
         @include align-items-center;
         color: $heading-color;
         font-size: .9375rem;
-        padding:0;
+        padding: 0;
         min-height: initial;
         min-width: initial;
-        
+
         svg {
             margin-left: .5rem;
             @include transition(margin .5s ease-in-out);
         }
-  
+
         &:hover {
             color: $secondary-color;
-            svg{
-                margin-left:.6125rem;
+
+            svg {
+                margin-left: .6125rem;
             }
         }
     }
-  
+
     &.is-border {
         background-color: transparent;
         color: $secondary-color;
-        border:1px solid;
+        border: 1px solid;
         border-color: $border-color;
-  
+
         &.is-icon {
             @include display-flex(flex);
             @include justify-content-start;
             @include align-items-center;
             color: $heading-color;
             font-size: .9375rem;
-  
+
             i {
                 margin-right: .5rem;
             }
         }
-        &:hover{
+
+        &:hover {
             border-color: $secondary-color;
-            color:$secondary-color;
+            color: $secondary-color;
         }
     }
-  
+
     &.no-border {
         background-color: transparent;
         color: $secondary-color;
         border-color: transparent;
-  
+
         &.is-icon {
             @include display-flex(flex);
             @include justify-content-start;
             @include align-items-center;
             color: $secondary-color;
             font-size: .9375rem;
-  
+
             i {
                 margin-right: .5rem;
             }
         }
     }
+
     &.is-icon {
         @include justify-content-between;
         color: $white-color;
@@ -148,87 +151,144 @@
             font-size: .9375rem;
         }
     }
-  
-    // @media #{$break1} {
-    //     &.full-line-mobile {
-    //         width: 100%;
-    //     }
-    // }
-  
-  }
-  
-  .buttons {
-  
-    button,a {
+}
+
+button.load-more-button,
+a.load-more-button {
+    @include display-flex(flex);
+    @include display-flex(flex);
+    @include justify-content-center;
+    @include align-items-center;
+    background-color: $bg-color;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: $heading-color;
+    width: 100%;
+    padding: .5rem 1rem;
+
+    i {
+        text-transform: initial;
+        color: $primary-dark;
+        margin-left: .5rem;
+    }
+}
+
+.buttons {
+
+    button,
+    a {
         &:not(:last-child) {
             margin-right: 1rem;
         }
     }
-  
+
     &.is-center {
         @include display-flex(flex);
         @include justify-content-center;
         @include align-items-center;
     }
-    &.is-between{
+
+    &.is-between {
         @include display-flex(flex);
         @include justify-content-between;
         @include align-items-center;
     }
+
     &.is-end {
-     @include display-flex(flex);
-     @include justify-content-end;
-     @include align-items-center;
- }
-  }
-  [class*=circle-icon]{
-      width:40px;
-      height: 40px;
-      @include display-flex(flex);
-      @include justify-content-center;
-      @include align-items-center;
-      @include flex-direction-column(column);
-      color:$body-color;
-      @include radius(100%);
-      min-height: 40px;
-      cursor: pointer;
-      @include transition(all .4s ease-in-out);
-      &.is-bg{
-        background-color: $primary-light;
-        color:$primary-dark;
-        &:hover{
-            background-color: $primary-color;
-            color:$white-color;
-        }
-      }
-      &.is-border{
-          border:1px solid $border-color;
-      }
-        &:not(:last-child){
-            margin-right: .6125rem;
-        }
-  }
-  .circle-icons{
-      @include display-flex(flex);
-      @include align-items-center;
-      &.is-start{
-          @include justify-content-start;
-      }
-      &.is-end{
+        @include display-flex(flex);
         @include justify-content-end;
+        @include align-items-center;
+    }
+}
+
+[class*=circle-icon] {
+    width: 40px;
+    height: 40px;
+    @include display-flex(flex);
+    @include justify-content-center;
+    @include align-items-center;
+    @include flex-direction-column(column);
+    color: $body-color;
+    @include radius(100%);
+    min-height: 40px;
+    cursor: pointer;
+    @include transition(all .4s ease-in-out);
+    &.is-bg {
+        background-color: $primary-light;
+        color: $primary-dark;
+
+        &:hover {
+            background-color: $primary-color;
+            color: $white-color;
         }
-        &.is-center{
-            @include justify-content-center;
-        }
-        &.is-vertical{
-            @include justify-content-center;
-            @include flex-direction-column(column);
-            span,a{
-                margin-right: 0;
-                &:not(:last-child){
-                    margin-bottom: .6125rem;
-                }
+    }
+    
+    &.is-border {
+        border: 1px solid $border-color;
+    }
+
+    &:not(:last-child) {
+        margin-right: .6125rem;
+    }
+}
+
+.circle-icons {
+    @include display-flex(flex);
+    @include align-items-center;
+
+    &.is-start {
+        @include justify-content-start;
+    }
+
+    &.is-end {
+        @include justify-content-end;
+    }
+
+    &.is-center {
+        @include justify-content-center;
+    }
+
+    &.is-vertical {
+        @include justify-content-center;
+        @include flex-direction-column(column);
+
+        span,
+        a {
+            margin-right: 0;
+
+            &:not(:last-child) {
+                margin-bottom: .6125rem;
             }
         }
-    
-  }
+    }
+
+}
+
+[class*=square-icon] {
+    width: 50px;
+    height: 50px;
+    @include display-flex(flex);
+    @include justify-content-center;
+    @include align-items-center;
+    @include flex-direction-column(column);
+    color: $body-color;
+    @include radius(5px);
+    cursor: pointer;
+    @include transition(all .4s ease-in-out);
+
+    &.is-blue {
+        background-color: $blue-light;
+    }
+
+    &.is-red {
+        background-color: $red-light;
+    }
+
+    &.is-green {
+        background-color: $primary-light;
+    }
+
+    &.is-orange {
+        background-color: $orange-light;
+    }
+}

@@ -22,19 +22,14 @@
     z-index: 1001; /* absurdity 1 */
   }
   [tooltip]::after {
-    content: attr(tooltip); /* magic! */
-    
+    content: attr(tooltip);
+    @include radius(5px);
     /* most of the rest of this is opinion */
     font-family:$body-fonts;
     text-align: center;
     font-size:.775rem;
-    
-    /* 
-      Let the content set the size of the tooltips 
-      but this will also keep them from being obnoxious
-      */
     min-width: 3em;
-    max-width: 21em;
+    max-width: 10em;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
