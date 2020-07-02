@@ -9,7 +9,6 @@ ul{
             @include display-flex(flex);
             @include justify-content-start;
             
-            border-bottom:1px solid $border-color;
             figure{
                 @include flex(0 0 55px);
                 max-width: 55px;
@@ -49,6 +48,33 @@ ul{
                     }
                 }
             }
+            &:not(:last-child){
+                border-bottom:1px solid $border-color;
+            }
+            .general-form-content{
+                .form-content-info{
+                    @include display-flex(flex);
+                    @include justify-content-start;
+                    @include align-items-start;
+                    margin-top:.35rem;
+                    p{
+                        @include display-flex(flex);
+                        @include justify-content-start;
+                        @include align-items-center;
+                        font-size: .775rem;
+                        b{
+                            font-weight: 500;
+                        }
+                        span{
+                            margin-right: .5rem;
+                        }
+                        &:not(:last-child){
+                            margin-right: 2rem;
+                        }
+                    }
+                }
+            }
+            
         }
         &.is-border{
             border:1px solid $border-color;
@@ -91,11 +117,63 @@ ul{
             }
         }
     }
+    &.is-checkbox{
+        .custom-checkbox{
+            width:100%;
+            margin:0;
+        }
+        .check-content{
+            @include display-flex(flex);
+            @include justify-content-start;
+            @include align-items-center;  
+            flex-grow: 1;
+            b{
+                text-transform: capitalize;
+            }
+        }
+        li{
+            &:focus-within,&:hover{
+                background-color: $primary-light;
+            }
+        }
+    }
+    &.is-overflow{
+        overflow-y:auto;
+            -webkit-overflow-scrolling:touch;
+            -ms-overflow-style:-ms-autohiding-scrollbar;
+            // max-height: calc(100vh - 250px);
+            // height: 100vh;
+            max-height: 200px;
+            height: 100%;
+        
+
+            &::-webkit-scrollbar {
+                width: 4px;
+                background: $border-color;
+                @include radius(4px);
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color:$border-color;
+                @include radius(4px);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                @include radius(4px);
+                background: $border-dark;
+            }
+    }
 }
 .inline-row{
     @include display-flex(flex);
     @include justify-content-between;
     @include align-items-center;
+    &.is-start{
+        @include justify-content-start;  
+    }
+    &.is-end{
+        @include justify-content-end;
+    }
 }
 .inline-item{
     @include display-flex(flex);

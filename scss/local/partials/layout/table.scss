@@ -91,6 +91,10 @@
     border: 0;
 }
 .zite-table{
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     table{
         h6{
             font-size: .9125rem;
@@ -101,6 +105,9 @@
         th{
             &.serial-no{
                 width:50px;
+            }
+            .custom-checkbox{
+                margin:0;
             }
         }
         td{
@@ -117,20 +124,40 @@
                     height: 6px;
                 }
             }
+            .custom-checkbox{
+                width:100%;
+                margin:0;
+            }
+            .check-content{
+                @include display-flex(flex);
+                @include justify-content-start;
+                @include align-items-center;  
+                flex-grow: 1;
+                b{
+                    text-transform: capitalize;
+                }
+            }
             .org{
-                @extend .site-progress;
-                figure{
-                    @include flex(0 0 40px);
-                    max-width: 40px;
-                    margin:0;
-                    img{
-                        max-width: 28px;
-                        height: 28px;
-                        width: 100%;
-                        @include radius(100%);
+                @extend .site-progress;  
+            }
+            figure{
+                @include flex(0 0 40px);
+                max-width: 40px;
+                margin:0;
+                img{
+                    max-width: 28px;
+                    height: 28px;
+                    width: 100%;
+                    @include radius(100%);
+                }
+            }
+            span{
+                &.form-guide{
+                    i{
+                        color:$body-color;
+                        font-size: 1rem;
                     }
                 }
-                
             }
         }
         tr{
@@ -152,6 +179,37 @@
                             @include transform(rotate(180deg));
                         }
                     }
+                }
+            }
+        }
+        .inline-row{
+            .custom-select{
+                max-width: 200px;
+                p{
+                    height: 2.2rem;
+                    line-height: 2.2rem;
+                    background-color: $white-color;
+                }
+            }
+            i{
+                margin-left:1rem;
+                cursor: pointer;
+                &:hover{
+                    color:$primary-color;
+                }
+            }
+        }
+        .icons{
+            @include display-flex(flex);
+            @include justify-content-end;
+            @include align-items-center;
+            i{
+                font-size: 1.2rem;
+                cursor: pointer;
+            }
+            span{
+                &:not(:last-child){
+                    margin-right: .6125rem;
                 }
             }
         }

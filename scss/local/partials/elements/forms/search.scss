@@ -11,7 +11,7 @@
         background-color: $bg-color;
         flex-grow: 1;
         max-width: 240px;
-        margin-right:1rem;
+        
         input{
             &.form-control{
                 flex-grow: 1;
@@ -50,6 +50,7 @@
         margin-left: .6125rem;
         background-color: $white-color;
         color:$secondary-color;
+        margin-left:1rem;
         &:focus,&:hover{
             background-color: $secondary-color;
             color:$white-color;
@@ -67,31 +68,10 @@
             }
         }
     }
+    &.is-full{
+        .search-wrap{
+            max-width: 100%;
+        }
+    }
 }
 
-form.search-form {
-    position: relative;
-    width: 430px;
-	margin: 0 auto;
-    max-width: 100%;
-    .searchform-inner {
-        position: relative;
-    }
-    input.search-field {
-        width: 100%;
-        border: 2px solid $border-color;
-        padding: 12px 25px;
-    }
-    .search-submit {
-        width: 100%;
-        margin-top: 15px;
-    }
-    input.search-submit, input.search-submit:visited {
-        position: absolute;
-        top: 0;
-        margin: 0;
-        right: 0;
-        font-size: 17px;
-        padding: 15px 20px;
-    }
-}

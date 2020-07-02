@@ -25,20 +25,11 @@
     cursor: pointer;
     @include transition(all .3s ease-in-out);
     position: relative;
-
-    &:disabled {
-        color: $white-color;
-        background-color: $body-color;
-        border-color: 0;
-        opacity: 0.65;
-        cursor: not-allowed;
+    &:focus{
+        border-color: $primary-color;
     }
 
-    &.is-disable {
-        color: $white-color;
-        background-color: $body-color;
-        border-color: $body-color;
-    }
+    
 
     &.is-bg {
         color: $white-color;
@@ -46,25 +37,35 @@
         border-color: $primary-color;
         @include box-shadow(0 10px 40px rgba($primary-color, .25));
 
-        &:disabled {
-            color: $white-color;
-            background-color: $grey-color;
-            border-color: transparent;
-            opacity: 0.65;
+        &:disabled,&.is-disable {
+            color: $body-color;
+            background-color: transparent;
+            border:1px solid $border-color;
             cursor: not-allowed;
+            box-shadow: none;
+            &:hover{
+                background-color: transparent;
+                color:$body-color;
+                border-color: $border-color;
+            }
+        }
+        &.is-light{
+            background-color: $primary-light;
+            color:$heading-color;
+            @include radius(5px);
+            box-shadow: none;
+            i{
+                color:$primary-color;
+            }
         }
 
         &:hover {
-            background-color: $primary-dark;
-            border-color: $primary-dark;
-        }
-
-        &.is-disable {
-            color: $white-color;
-            background-color: $grey-color;
-            border-color: $grey-color;
-
-
+            background-color: $primary-color;
+            border-color: $primary-color;
+            color:$white-color;
+            i{
+                color:$white-color;
+            }
         }
 
     }
@@ -122,6 +123,18 @@
             border-color: $secondary-color;
             color: $secondary-color;
         }
+        &:disabled,&.is-disable {
+            color: $body-color;
+            background-color: transparent;
+            border:1px solid $border-color;
+            cursor: not-allowed;
+            box-shadow: none;
+            &:hover{
+                background-color: transparent;
+                color:$body-color;
+                border-color: $border-color;
+            }
+        }
     }
 
     &.no-border {
@@ -149,6 +162,18 @@
         i {
             margin-right: .5rem;
             font-size: .9375rem;
+        }
+    }
+    &:disabled,&.is-disable {
+        color: $body-color;
+        background-color: transparent;
+        border:1px solid $border-color;
+        cursor: not-allowed;
+        box-shadow: none;
+        &:hover{
+            background-color: transparent;
+            color:$body-color;
+            border-color: $border-color;
         }
     }
 }

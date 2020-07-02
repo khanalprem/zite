@@ -2,6 +2,26 @@
 (function ($) {
 
   "use strict";
+
+
+  function openModal() {
+    $('.common-button').on('click', function (e) {
+      e.preventDefault();
+      var targetId = $(this).attr('popup-link');
+      $('#' + targetId).addClass('open');
+    });
+  }
+  openModal();
+  
+  function closeModal() {
+    $('.popup-footer .common-button, .close-icon').on('click', function (e) {
+      e.preventDefault();
+      $(this).closest('.popup').removeClass('open');
+    });
+  }
+  closeModal();
+
+
   function selectToggle() {
     $('.custom-select .selected-item').on('click', function () {
       $(this).closest('.custom-select').toggleClass('show-dropdown');
