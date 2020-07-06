@@ -1,0 +1,12 @@
+.bottom-header{
+    background-color: $bg-color;
+    .bottom-header-in{
+        @include display-flex(flex);
+        @include justify-content-between;
+        @include align-items-center;
+        position: relative;
+    }
+    @media #{$breakpoint-lg}{
+        padding:.6125rem 0;
+    }
+}

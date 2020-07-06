@@ -1,0 +1,70 @@
+@import "./top-header";
+@import "./bottom-header";
+@import "./menu";
+@import "canvas-menu";
+
+header {
+    &.site-header {
+        background-color: $white-color;
+        .search-toggle {
+            position: relative;
+
+            a {
+                @include display-flex(flex);
+                @include justify-content-center;
+                @include align-items-center;
+                @include flex-direction-column(column);
+                color: $body-color;
+                width: 38px;
+                height: 38px;
+                @include radius(100%);
+                border: 1px solid $border-color;
+                color: $body-color;
+                background-color: $white-color;
+                @include transition(all .5s ease-in-out);
+
+                i {
+                    font-size: .875rem;
+                }
+
+                &:hover {
+                    background-color: $secondary-color;
+                    color: $white-color;
+                }
+            }
+
+            .search-bar {
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                top: 150%;
+                right: 0;
+                width: 0;
+                @include transition(all .5s ease-in-out);
+                z-index: -1;
+
+            }
+
+            &.show {
+                .search-bar {
+                    visibility: visible;
+                    opacity: 1;
+                    width: 100%;
+                    top: 100%;
+                    z-index: 99;
+                    min-width: 200px;
+                }
+            }
+        }
+    }
+}
+
+@media #{$breakpoint-lg} {
+    .Is-toggle {
+        .site-header {
+            .main-navigation {
+                right: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,156 @@
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: $color__text-input;
+	border: 1px solid $color__border-input;
+	border-radius: 3px;
+	padding: 3px;
+
+	&:focus {
+		color: $color__text-input-focus;
+	}
+}
+
+select {
+	border: 1px solid $color__border-input;
+}
+
+textarea {
+	width: 100%;
+}
+
+input,textarea {
+    font-size: .875rem;
+
+    &.form-control {
+        display: block;
+        width: 100%;
+        min-height: calc(3rem + .75rem + 2px);
+        padding: .375rem .75rem;
+        font-size: .875rem;
+        font-weight: 400;
+        line-height: 1.5;
+        background-color: $primary-light;
+        background-clip: padding-box;
+        border: 1px solid $border-color;
+        border-radius: .25rem;
+        @include input-placeholder {
+            color: $body-color;
+            font-size: .775rem;
+            text-transform: capitalize;
+        }
+
+        &:focus {
+            box-shadow: none;
+            outline: none;
+            -webkit-outline: none;
+            border-color:$secondary-color;
+            background-color: $white-color;
+        }
+    }
+
+}
+.form-group{
+    margin-bottom: 1rem;
+    label{
+        font-weight: 600;
+        text-transform: capitalize;
+        margin-bottom: .6125rem;
+        display: block;
+        color:$heading-color;
+        font-size: 1rem;
+        sup{
+            color:$secondary-color;
+        }
+    }
+}
+
+.custom-input-group{
+    @include display-flex(flex);
+    @include justify-content-between;
+    border:1px solid $border-dark;
+    @include radius(5px);
+    @include align-items-stretch;
+    background-color: $white-color;
+    position: relative;
+    input{
+        flex-grow: 1;
+        border:none;
+        display: initial;
+        background-color: $white-color;
+        min-width: 250px;
+        width: 100%;
+    }
+    span{
+        &.span-group{
+            padding:0 .5rem;
+            padding-right:0;
+            text-align:center;
+            @include display-flex(flex);
+            @include justify-content-center;
+            @include align-items-center;
+            @include flex-direction-column(column);
+            cursor: pointer;
+            i{
+                font-size: 1.3rem;
+            }
+        }
+    }
+    &.custom-date{
+        &::after {
+            content: "arrow_drop_down";
+            font-family: "Material Icons";
+            position: absolute;
+            right:0;
+            top:-2px;
+            font-size: 1.5rem;
+            color: $secondary-color;
+            z-index: 99;
+            pointer-events: none;
+          }
+    }
+    &.is-bg{
+        background-color: transparent;
+        border:0;
+        input{
+            min-height: calc(2.5rem + .75rem + 2px);
+        }
+        span{
+            &.span-group{
+                padding:0 1rem;
+                background-color: $heading-color;
+                color:$white-color;
+            }
+        }
+    }
+}
+.date-range{
+    @include display-flex(flex);
+    @include justify-content-between;
+    @include radius(5px);
+    @include align-items-stretch;
+    background-color: $white-color;
+    .custom-input-group{
+        border:none;
+        border-radius: none;
+        border-right: 1px solid $border-color;
+        input{
+            min-width: auto;
+            padding-left:.5rem;
+        }
+        
+    }
+}

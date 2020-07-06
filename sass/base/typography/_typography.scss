@@ -1,0 +1,19 @@
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	font-family: $font__main;
+	line-height: $font__line-height-body;
+	font-family: $body-fonts;
+    background-color:$white-color;
+    position: relative;
+    font-size: 1rem;
+    color:$body-color;
+    font-weight: 400;
+    letter-spacing: .5px;
+}
+
+@import "headings";
+@import "copy";

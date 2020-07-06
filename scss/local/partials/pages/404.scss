@@ -1,0 +1,39 @@
+/*==========================
+errorpage
+==========================*/
+
+.error-404 {
+    padding: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    margin: 30px auto;
+    .page-content{
+        strong{
+            display: block;
+            font-size: 145px;
+            line-height: 100px;
+            color: $secondary-color;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 5px 5px 1px #eaeaea;
+            @media #{$breakpoint-md}{
+                font-size: 5rem;
+                line-height: 50px;
+            }
+        }
+        h1{
+            font-size: 40px;
+            line-height: 50px;
+            color: $secondary-color;
+            margin:3rem 0 1.5rem 0;
+            font-weight: 400;
+            @media #{$breakpoint-md}{
+                font-size: 2rem;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+

@@ -195,3 +195,54 @@ ul{
         }
     }
 }
+ul.selected-general-form{
+    li{
+        @include display-flex(flex);
+        @include justify-content-start;
+        @include align-items-start;
+        padding:.6125rem;
+        @include radius(5px);
+        margin-top:10px;
+        background-color: $primary-light;
+        position: relative;
+        .form-icon{
+            @include flex (0 0 50px);
+            max-width: 50px;
+            img{
+                max-width: 40px;
+            }
+        }
+        .general-form-content{
+            .form-content-info{
+                @include display-flex(flex);
+                @include justify-content-start;
+                @include align-items-start;
+                margin-top:.35rem;
+                p{
+                    @include display-flex(flex);
+                    @include justify-content-start;
+                    @include align-items-center;
+                    font-size: .775rem;
+                    b{
+                        font-weight: 500;
+                    }
+                    span{
+                        margin-right: .5rem;
+                    }
+                    &:not(:last-child){
+                        margin-right: 2rem;
+                    }
+                }
+            }
+        }
+        span.close-icon{
+            right: 10px;
+            top:10px;
+            width:34px;
+            height: 34px;
+            i{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

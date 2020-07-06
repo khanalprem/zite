@@ -1,0 +1,97 @@
+.search-bar{
+    @include display-flex(flex);
+    @include justify-content-end;
+    @include align-items-center;
+    .search-wrap{
+        @include display-flex(flex);
+        @include justify-content-between;
+        border:1px solid $border-color;
+        @include radius(1.5rem);
+        @include align-items-stretch;
+        background-color: $white-color;
+        flex-grow: 1;
+        max-width: 250px;
+        padding-right: .6125rem;
+        input{
+            &.form-control{
+                flex-grow: 1;
+                min-height: calc(1.5rem + .75rem + 2px);
+                border:none;
+                display: initial;
+                @include radius(1.5rem);
+                background-color: $white-color;
+                &:focus{
+                    background-color: $white-color;
+                }
+            }
+        }
+        span{
+            padding:0 .5rem;
+            padding-right:0;
+            text-align:center;
+            @include display-flex(flex);
+            @include justify-content-center;
+            @include align-items-center;
+            @include flex-direction-column(column);
+            cursor: pointer;
+            i,svg{
+                font-size: 1rem;
+                color:$secondary-color;
+            }
+        }
+    }
+    button{
+        padding:0;
+        width:40px;
+        height: 37px;
+        min-width: initial;
+        border-color: $border-dark;
+        @include radius(8px);
+        margin-left: .6125rem;
+        background-color: $white-color;
+        color:$secondary-color;
+        &:focus,&:hover{
+            background-color: $secondary-color;
+            color:$white-color;
+            outline: none;
+            -webkit-outline:none;
+            box-shadow: none;
+        }
+    }
+    a{
+        &.toggle-icon{
+            margin-left: 1rem;
+            color:$body-color;
+            svg{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+form.search-form {
+    position: relative;
+    width: 430px;
+	margin: 0 auto;
+    max-width: 100%;
+    .searchform-inner {
+        position: relative;
+    }
+    input.search-field {
+        width: 100%;
+        border: 2px solid $border-color;
+        padding: 12px 25px;
+    }
+    .search-submit {
+        width: 100%;
+        margin-top: 15px;
+    }
+    input.search-submit, input.search-submit:visited {
+        position: absolute;
+        top: 0;
+        margin: 0;
+        right: 0;
+        font-size: 17px;
+        padding: 15px 20px;
+    }
+}

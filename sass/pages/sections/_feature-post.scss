@@ -1,0 +1,65 @@
+article{
+    &.feature-post{
+        position: relative;
+        figure{
+            &.entry-thumb{
+                overflow: hidden;
+                img{
+                    @include transform(scale(1));
+                    @include transition(all .5s ease-in-out);
+                }
+            }
+        }
+        &::after{
+            @include overlay(rgba($heading-color,.6));
+        }
+        .entry-content{
+            position:absolute;
+            left:0;
+            right:0;
+            z-index: 100;
+            color:$white-color;
+            top:auto;
+            bottom:0;
+            padding:0 1rem;
+            text-align: center;
+            @include transition(all .5s ease-in-out);
+            h4{
+                a{
+                    color:$white-color;
+                    font-size: 1rem;
+                    text-transform: capitalize;
+                    @include trim(2);
+                    font-family: $heading-fonts;
+                    line-height: 1.7;
+                }
+            }
+            .category{
+                a{
+                    font-style: italic;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    color:$white-color;
+                }
+                &::after,&::before{
+                    background-color: $white-color;
+                    
+                }
+            }
+
+        }
+        &:hover{
+            figure{
+                img{
+                    @include transform(scale(1.2));
+                    @include backface(hidden);
+                }
+            }
+            .entry-content{
+                bottom:25%;
+                @include backface(hidden);
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,16 @@
+
+.contact{
+    
+    .custom-card{
+        @include radius(5px);
+        margin-top:2rem;
+        .card-header{
+            padding:1rem;
+            background-color: $white-color;
+        }
+        .card-body{
+            padding:1rem;
+            background-color: $white-color;
+        }
+    }
+}

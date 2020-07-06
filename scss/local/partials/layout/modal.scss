@@ -47,20 +47,6 @@
           
             span{
                 &.close-icon{
-                    position: absolute;
-                    right:1rem;
-                    top:1rem;
-                    z-index: 2;
-                    width: 40px;
-                    height: 40px;
-                    @include display-flex(flex);
-                    @include justify-content-center;
-                    @include align-items-center;
-                    @include flex-direction-column(column);
-                    border:1px solid $border-color;
-                    @include radius(100%);
-                    cursor: pointer;
-                    @include transition(all .5s ease-in-out);
                     &:hover{
                         color:$red-color;
                         border-color:$red-color;

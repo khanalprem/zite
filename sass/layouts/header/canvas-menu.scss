@@ -1,0 +1,146 @@
+/* canvas Sidebar */
+
+.canvas-menu {
+    .canvas-overlay {
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+        background: rgba($heading-color, .8);
+        z-index: 1010;
+        visibility: hidden;
+        opacity: 0;
+        cursor: pointer;
+        @include transition(all .4s ease-in .8s);
+    }
+
+    .canvas-sidebar {
+        position: fixed;
+        overflow-y: auto;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        padding: 25px 15px;
+        height: 100%;
+        display: block;
+        background-color: $heading-color;
+        z-index: 9999;
+        @include transition(all 0.5s cubic-bezier(0.9, 0.03, 0, 0.96) 0.6s);
+        @include scrollbar($body-color);
+
+        .close-sidebar {
+            position: absolute;
+            color: $white-color;
+            z-index: 2;
+            font-size: 1rem;
+            left: 10px;
+            top: 10px;
+            background: $secondary-color;
+            width: 30px;
+            height: 30px;
+            @include display-flex(flex);
+            @include justify-content-center();
+            @include align-items-center;
+            @include flex-direction-column(column);
+            @include radius(5px);
+            cursor: pointer;
+
+            &:hover {
+                background: $secondary-color;
+            }
+        }
+    }
+
+    &.active {
+        .canvas-overlay {
+            visibility: visible;
+            opacity: 1;
+            left: 0;
+            @include transition(all .8s ease-out 0s);
+        }
+
+        .canvas-sidebar {
+            right: 0;
+            opacity: 1;
+            visibility: visible;
+            @include transition(all 0.7s cubic-bezier(0.9, 0.03, 0, 0.96) 0.4s);
+        }
+    }
+}
+
+.canvas-button {
+    display: inline-block;
+
+    a.canvas-open {
+        height: 30px;
+        width: 30px;
+        background: transparent;
+        position: relative;
+        display: inline-block;
+
+        span {
+            top: 50%;
+            left: 0;
+            margin: auto;
+            transition: all 0.3s ease-in-out;
+            display: block;
+            @include transform(translateY(-50%));
+            height: 2px;
+            width: 30px;
+            background-color: $body-color;
+            position: relative;
+            @include radius(10px);
+
+            &:before {
+                content: "";
+                height: 2.5px;
+                width: 24px;
+                box-shadow: 0 -8px 0 0 $body-color;
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include transition(all .3s ease-in-out);
+                @include radius(10px);
+            }
+
+            &:after {
+                content: "";
+                height: 2.5px;
+                width: 24px;
+                box-shadow: 0 8px 0 0 $body-color;
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include transition(all .3s ease-in-out);
+                @include radius(10px);
+            }
+        }
+        &.active{
+            span {
+                @include transform(rotate(360deg));
+                @include transition(all 0.6s ease-in-out);
+                background-color: transparent;
+
+                &:before {
+                    top: 0;
+                    left: 10px;
+                    transform: translateY(6px) rotate(-45deg);
+                    @include transform(translateY(6px) rotate(-45deg));
+                }
+
+                &:after {
+                    left: 10px;
+                    @include transform(translateY(-6px) rotate(45deg));
+                    top: 0;
+                }
+            }
+        }
+
+    }
+}
+@media #{$breakpoint-lg} {
+    .canvas-button,.canvas-menu{
+        display: none;
+    }
+}

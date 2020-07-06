@@ -1,0 +1,51 @@
+.newsletter{
+    padding:2rem;
+    background-color: $bg-color;
+    margin-top:2rem;
+    h4{
+        font-size: 1.5rem;
+    }
+    form{
+        @include display-flex(flex);
+        @include justify-content-start;
+        @include align-items-center;
+        margin-top:2rem;
+    }
+    p{
+        margin:0;
+        &.email{
+            flex-grow: 1;
+        }
+        input[type="email"]{
+            height: 50px;
+            padding: 0 30px;
+            color: #000;
+            background: $white-color;
+            box-shadow: 0px 7px 60px 0px rgba(222, 222, 222, 0.48);
+            border: 0;
+            width: 100%;
+        }
+        &.submit{
+            margin-left:2rem;
+            input[type="submit"]{
+                background-color: $secondary-color;
+            }
+        }
+    }
+    @media #{$breakpoint-ls}{
+        h4{
+            font-size: 1.2rem;
+        }
+    }
+    @media #{$breakpoint-sm}{
+        form{
+            @include flex-wrap(wrap);
+        }
+        p{
+            &.submit{
+                margin-left:0;
+                margin-top:.6125rem;
+            }
+        }
+    }
+}

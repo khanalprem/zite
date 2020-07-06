@@ -1,0 +1,130 @@
+/*Page/Post Navigation*/
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	clear: both;
+	overflow: hidden;
+	padding: 0;
+	border-bottom: 1px solid $border-color;
+	padding: 30px 0;
+}
+
+.nav-links{
+	a{
+		display: inline-block;
+	}
+	span{
+		&.meta-nav{
+			display: none;
+		}
+	}
+}
+.pagination{
+	margin-top: 2rem;
+	.nav-links{
+		@include display-flex(flex);
+		@include flex-wrap(wrap);
+		@include align-items-center;
+		.page-numbers{
+			background-color: $white-color;
+			padding: 6px 18px;
+			display: inline-block;
+			margin: 5px;
+			@include transition(all .5s ease-in-out);
+			@include radius(5px);
+			&.dots{
+				background-color: transparent;
+				border:0;
+				color:$body-color;
+			}
+			&.current,
+			&:hover,
+			&:focus,
+			&:active{
+				background-color: $secondary-color;
+				color:$white-color;
+				border-color: $secondary-color;
+			}
+		}
+		&.is-center{
+			@include justify-content-center;
+		}
+		&.is-start{
+			@include justify-content-start;
+		}
+		&.is-end{
+			@include justify-content-end;
+		}
+	}
+}
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+	.nav-links{
+		@include display-flex(flex);
+		@include flex-wrap(wrap);
+		@include align-items-center;
+		@include justify-content-between;
+		.nav-previous{
+			@include flex(0 0 50%);
+			
+			a{
+				background-color:$bg-color;
+				padding:10px;
+				color:$body-color;
+				@include radius(5px);
+				&::before{
+					@include transition(all .5s ease-in-out);
+					content: "\f30a";
+					display: inline-block;
+					font-family: 'Font Awesome 5 Free';
+					margin-right: 10px;
+					font-weight: 900;
+				}
+			}
+		}
+		.nav-next{
+			@include flex(0 0 50%);
+			@include display-flex(flex);
+			@include justify-content-end;
+			@include align-items-center;
+			a{
+				background-color:$bg-color;
+				padding:10px;
+				color:$body-color;
+				@include radius(5px);
+				&::after{
+					@include transition(all .5s ease-in-out);
+					content: "\f30b";
+					display: inline-block;
+					font-family: 'Font Awesome 5 Free';
+					margin-left: 10px;
+					font-weight: 900;
+				}
+			}
+		}
+		a{
+			&:hover{
+				background-color: $secondary-color;
+				color:$white-color;
+				&::before{
+					margin-right: 15px;
+				}
+				&::after{
+					margin-left: 15px;
+				}
+			}
+		}
+		@media #{$breakpoint-md}{
+			@include flex-wrap(wrap);
+			.nav-previous,.nav-next{
+				@include flex(0 0 100%);
+			}
+			.nav-next{
+				margin-top:1rem;
+			}
+		}
+	}
+	
+}

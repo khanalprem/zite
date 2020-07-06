@@ -317,3 +317,24 @@ a.load-more-button {
         background-color: $orange-light;
     }
 }
+
+.close-icon{
+    position: absolute;
+    z-index: 2;
+    top:1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    @include display-flex(flex);
+    @include justify-content-center;
+    @include align-items-center;
+    @include flex-direction-column(column);
+    border:1px solid $border-color;
+    @include radius(100%);
+    @include transition(all .5s ease-in-out);
+    cursor: pointer;
+    &:hover{
+        color:$red-color;
+        border-color:$red-color;
+    }
+}

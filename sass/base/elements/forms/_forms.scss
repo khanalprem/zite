@@ -1,0 +1,23 @@
+
+@import "button";
+@import "fields";
+@import "checkbox";
+@import "search";
+
+.form-group{
+    select{
+        &.form-control{
+            font-size: .875rem;
+            -webkit-outline:none;
+            outline: none;
+            &:focus{
+                box-shadow: none;
+                border-color: $secondary-color;
+            }
+        }
+    }
+}
+
+
+
+
