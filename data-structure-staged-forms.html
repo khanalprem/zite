@@ -290,11 +290,11 @@
                                             </div>
                                             <div class="form-list-body">
                                                 <ul class="list is-between is-border">
-                                                    <li class="active">
+                                                    <li class="">
                                                         <a href="data-structure-general-form.html"><span>General Forms</span><i class="material-icons"
                                                                 tooltip="information" flow="up">help_outline</i></a>
                                                     </li>
-                                                    <li class="">
+                                                    <li class="active">
                                                         <a href="data-structure-schedule-forms.html"><span>Schedule Forms</span><i class="material-icons"
                                                                 tooltip="information" flow="up">help_outline</i></a>
                                                     </li>
@@ -328,16 +328,45 @@
                         <div class="zite-xl-9 zite-lg-12">
                             <div class="zite-card">
                                 <div class="card-header is-between">
-                                    <h5>General Form</h5>
+                                    <h5>staged Forms</h5>
                                     <button class="common-button is-bg is-icon" popup-link="assign-modal"><i
-                                            class="material-icons">add_circle</i><span>assign new</span></button>
+                                        class="material-icons">add_circle</i><span>assign new</span></button>
+
+                                    <div class="inline-row is-end">
+                                        <div class="selected-counter">
+                                            3 <span>selected</span><i class="material-icons">close</i>
+                                         </div>
+                                         <span class="custom-dropdown is-right mlr-10 is-light">
+                                            <a href="#" class="is-light">Move</a>
+                                            <ul class="custom-dropdown-menu">
+                                                <li class="header"><span>new stage</span></li>
+                                                <li><a href="#"><span>pre contruction stage</span></a>
+                                                </li>
+                                                <li><a href="#"><span>Foundation stage</span></a>
+                                                </li>
+                                                <li><a href="#"><span>Undeployed</span></a>
+                                                </li>
+                                            </ul>
+                                        </span>
+                                        <span class="custom-dropdown is-option is-right">
+                                            <a href="#" class="circle-icon is-bg"><i class="material-icons">more_vert</i></a>
+                                            <ul class="custom-dropdown-menu">
+                                                <li><a href="#"><i class="material-icons">edit</i><span>Edit</span></a>
+                                                </li>
+                                                <li><a href="#"><i class="material-icons">delete</i><span>Delete</span></a>
+                                                </li>
+                                                <li><a href="#"><i class="material-icons"><img src="img/undeployed.svg" alt="undeployed"></i><span>Undeployed</span></a>
+                                                </li>
+                                            </ul>
+                                        </span>
+                                    </div>
                                 </div>
                                 <div class="zite-body">
                                     <div class="zite-table ">
                                         <table class="table is-border table-responsive-xl">
                                             <thead>
                                                 <tr>
-                                                    <th width="20%">
+                                                    <th width="30%">
                                                         Name
                                                     </th>
                                                     <th>Response</th>
@@ -349,49 +378,22 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>
+                                                <tr class="row-form-header is-active">
+                                                    <td colspan="7">
                                                         <h6>Incident Report</h6>
                                                     </td>
-                                                    <td><span class="response">2</span></td>
-                                                    <td>
-                                                        <span class="form-guide"><i
-                                                                class="material-icons">import_contacts</i></span>
-                                                    </td>
-                                                    <td>
-                                                        <time>8 Mar. 2020</time>
-                                                    </td>
-                                                    <td><span class="deploy">Yes</span></td>
-                                                    <td><span class="sttus">Open</span></td>
-                                                    <td>
-                                                        <div class="icons">
-                                                            <span class="icon ">
-                                                                <i class="material-icons">edit</i>
-                                                            </span>
-                                                            <span class="icon ">
-                                                                <i class="material-icons">get_app</i>
-                                                            </span>
-                                                            <span class="custom-dropdown is-option is-right">
-                                                                <a href="#"><i class="material-icons">more_vert</i></a>
-                                                                <ul class="custom-dropdown-menu">
-                                                                    <li><a href="#"><i
-                                                                                class="material-icons">edit</i><span>Edit</span></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i
-                                                                                class="material-icons">delete</i><span>Delete</span></a>
-                                                                    </li>
-                                                                    <li><a href="#"><i class="material-icons"><img
-                                                                                    src="img/undeployed.svg"
-                                                                                    alt="undeployed" /></i><span>Undeployed</span></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </span>
-                                                        </div>
-                                                    </td>
+                                                   
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <h6>Incident Report</h6>
+                                                        <div class="custom-checkbox">
+                                                            <input id="Vector" type="checkbox" name="Type">
+                                                            <label for="Vector"></label>
+                                                            <div class="check-content">
+                                                                <img class="drag-icon" src="img/draggable.svg" alt="drag"/>
+                                                                <b>Incident Report</b>
+                                                            </div>
+                                                        </div>
                                                     </td>
                                                     <td><span class="response">2</span></td>
                                                     <td>
@@ -431,7 +433,14 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <h6>Incident Report</h6>
+                                                        <div class="custom-checkbox">
+                                                            <input id="Vector" type="checkbox" name="Type">
+                                                            <label for="Vector"></label>
+                                                            <div class="check-content">
+                                                                <img class="drag-icon" src="img/draggable.svg" alt="drag"/>
+                                                                <b>Incident Report</b>
+                                                            </div>
+                                                        </div>
                                                     </td>
                                                     <td><span class="response">2</span></td>
                                                     <td>
@@ -471,7 +480,14 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <h6>Incident Report</h6>
+                                                        <div class="custom-checkbox">
+                                                            <input id="Vector" type="checkbox" name="Type">
+                                                            <label for="Vector"></label>
+                                                            <div class="check-content">
+                                                                <img class="drag-icon" src="img/draggable.svg" alt="drag"/>
+                                                                <b>Incident Report</b>
+                                                            </div>
+                                                        </div>
                                                     </td>
                                                     <td><span class="response">2</span></td>
                                                     <td>
@@ -509,9 +525,22 @@
                                                         </div>
                                                     </td>
                                                 </tr>
+                                                <tr class="row-form-header">
+                                                    <td colspan="7">
+                                                        <h6>Incident Report</h6>
+                                                    </td>
+                                                   
+                                                </tr>
                                                 <tr>
                                                     <td>
-                                                        <h6>Incident Report</h6>
+                                                        <div class="custom-checkbox">
+                                                            <input id="Vector" type="checkbox" name="Type">
+                                                            <label for="Vector"></label>
+                                                            <div class="check-content">
+                                                                <img class="drag-icon" src="img/draggable.svg" alt="drag"/>
+                                                                <b>Incident Report</b>
+                                                            </div>
+                                                        </div>
                                                     </td>
                                                     <td><span class="response">2</span></td>
                                                     <td>

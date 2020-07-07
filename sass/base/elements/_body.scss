@@ -1,6 +1,3 @@
 body {
-	background: $color__background-body; // Fallback for when there is no custom background color defined.
-}
-.section{
-    padding-top:100px;
+	background-color:$bg-color; // Fallback for when there is no custom background color defined.
 }

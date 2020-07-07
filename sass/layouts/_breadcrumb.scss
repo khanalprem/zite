@@ -1,76 +1,33 @@
-.custom-breadcrumb {
-    position: relative;
-    margin-top:2rem;
-    .breadcrumb-title {
-        position: relative;
+.breadcrumb{
+    padding:.6125rem 1rem;
+    background-color: $white-color;
+    border-bottom: 1px solid $border-color;
+    ol{
         @include display-flex(flex);
-        @include align-items-center;
-        text-transform: uppercase;
-        font-weight: 500;
-        margin-bottom: .6125rem;
         @include justify-content-start;
-
-        h1 {
-            color: $heading-color;
-            font-family: $heading-fonts;
-            font-size: .875rem;
+        @include align-items-center;
+        margin:0;
+        li{
             font-weight: 600;
-            margin: 0;
-            padding-left: .6125rem;
-
-            &:hover {
-                color: $secondary-color;
-            }
-        }
-
-        &:before {
-            content: "";
-            width: 30px;
-            height: 2px;
-            background: $secondary-color;
-            display: inline-flex;
-            @include transition(width .5s ease-in-out);
-
-        }
-    }
-
-    .breadcrumbs {
-        ul {
+            text-transform: capitalize;
             @include display-flex(flex);
-            @include justify-content-start;
             @include align-items-center;
-            @include flex-wrap(wrap);
-
-            li.trail-item {
-                @include transition(all .5s ease-in-out);
-
-                a {
-                    text-transform: capitalize;
-                }
-
-                &:not(:last-child) {
-                    &::after {
-                        content: "\f105";
-                        font-family: "Font Awesome 5 Free";
-                        margin: 0 .5rem;
-                        font-size: .875rem;
-                        font-weight: 900;
-                        text-transform: initial;
-                        color: $body-color;
-                    }
-                }
+            a{
+                color:$body-color;
+                font-weight: 400;
                 &:hover{
-                    a{
-                        color:$secondary-color;
-                    }
+                    color:$primary-dark;
                 }
             }
-        }
-    }
-    &:hover{
-        .breadcrumb-title{
-            &::before{
-                width: 40px;
+            &:not(:last-child){
+                &::after{
+                    content:'chevron_right';
+                    font-family: 'Material Icons';
+                    display: inline-flex;
+                    margin:0 .6125rem;
+                    text-transform: initial;
+                    font-size: 1.2rem;
+                }
             }
         }
     }

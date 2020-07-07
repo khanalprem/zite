@@ -35,6 +35,21 @@
   }
   selectToggle();
 
+  
+  // var t = $(".select-list");
+  // if (
+  //   ($('.custom-select .selected-item').on('click', function () {
+  //     t.slideToggle();
+  //   }),
+  //   0 !== $(".select-list").length)
+  // ){
+  //   t.slideToggle();
+  // }
+
+      
+        
+    
+
   function customDropdown() {
     $('.custom-dropdown').on('click', function (e) {
       e.preventDefault();

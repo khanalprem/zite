@@ -4,6 +4,23 @@
     @include align-items-center;
     position: relative;
     margin-bottom: .6125rem;
+
+    // &::before {
+    //     z-index: 1;
+    //     position: absolute;
+    //     border-radius: 50%;
+    //     opacity: 0;
+    //     pointer-events: none;
+    //     content: "";
+    //     width:30px;
+    //     height: 30px;
+    //     background-color:$blue-light;
+    //     left:-6px;
+    //     top:-5px;
+    //     bottom:-5px;
+    //     @include transition(all .5s linear);
+    //     visibility: hidden;
+    // }
     label{
         margin:0;
         font-weight: 500;
@@ -46,7 +63,7 @@
 
         // Box checked
         &:checked+label:before {
-            background: $secondary-color;
+            background: $primary-color;
         }
 
         // Disabled state label.
@@ -66,8 +83,8 @@
             content: '';
             position: absolute;
             left: 4px;
-            top: 12px;
-            background: $white-color;
+            top: 10px;
+            background: $primary-color;
             width: 2px;
             height: 2px;
             box-shadow:
@@ -81,10 +98,10 @@
         }
 
         &:checked+label:before {
-            border-color: $secondary-color;
+            border-color: $primary-color;
         }
         &:checked+label{
-            color: $secondary-color;
+            color: $primary-color;
         }
     }
     // &:hover{
@@ -159,7 +176,7 @@
 
         // Box checked
         &:checked+label:before {
-            background: $white-color;
+            background: $primary-color;
         }
 
         // Disabled state label.
@@ -180,17 +197,17 @@
             position: absolute;
             left: 5px;
             top: 7px;
-            background: $secondary-color;
+            background: $primary-color;
             width: 8px;
             height: 8px;
             @include radius(50%);
         }
 
         &:checked+label:before {
-            border-color: $secondary-color;
+            border-color: $white-color;
         }
         &:checked+label{
-            color: $secondary-color;
+            color: $primary-color;
         }
     }
     // &:hover{

@@ -1,20 +1,16 @@
 [class*=common-button] {
     -webkit-font-smoothing: antialiased;
-    font-size: .875rem;
+    font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
     text-transform: capitalize;
-    padding: .5rem 2rem;
-    display: -webkit-inline-box;
-    display: inline-flex;
+    padding: .5rem 1.5rem;
     position: relative;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    box-sizing: border-box;
+    @include display-flex(flex);
+    @include justify-content-center;
+    @include align-items-center;
     min-width: 164px;
-    min-height: 40px;
+    min-height: 44px;
     border: none;
     outline: none;
     line-height: inherit;
@@ -25,84 +21,53 @@
     -webkit-appearance: none;
     overflow: hidden;
     vertical-align: middle;
+    @include radius(30px);
     cursor: pointer;
     @include transition(all .3s ease-in-out);
     position: relative;
-    @include radius(4px);
-
-    &:disabled {
-        color: $white-color;
-        background-color: $body-color;
-        border-color: 0;
-        opacity: 0.65;
-        cursor: not-allowed;
+    &:focus{
+        border-color: $primary-color;
     }
 
-    &.is-disable {
-        color: $white-color;
-        background-color: $body-color;
-        border-color: $body-color;
-
-        &.is-icon {
-            @include display-flex(flex);
-            @include justify-content-start;
-            @include align-items-center;
-            color: $white-color;
-
-            i {
-                margin-right: .5rem;
-                font-size: .9375rem;
-            }
-        }
-    }
+    
 
     &.is-bg {
         color: $white-color;
-        background-color: $secondary-color;
-        border-color: $secondary-color;
+        background-color: $primary-color;
+        border-color: $primary-color;
+        @include box-shadow(0 10px 40px rgba($primary-color, .25));
 
-        &:disabled {
-            color: $white-color;
-            background-color: $bg-color;
-            border-color: transparent;
-            opacity: 0.65;
-            cursor: not-allowed;
-        }
-
-        &.is-pink {
-            background-color: $secondary-color;
-        }
-
-        &.is-white {
-            background-color: $white-color;
+        &:disabled,&.is-disable {
             color: $body-color;
+            background-color: transparent;
+            border:1px solid $border-color;
+            cursor: not-allowed;
+            box-shadow: none;
+            &:hover{
+                background-color: transparent;
+                color:$body-color;
+                border-color: $border-color;
+            }
+        }
+        &.is-light{
+            background-color: $primary-light;
+            color:$heading-color;
+            @include radius(5px);
+            box-shadow: none;
+            i{
+                color:$primary-color;
+            }
         }
 
         &:hover {
-            background-color: $secondary-color;
-            border-color: $secondary-color;
-            color: $white-color;
-        }
-
-        &.is-disable {
-            color: $white-color;
-            background-color: $bg-color;
-            border-color: $bg-color;
-
-
-        }
-
-        &.is-icon {
-            @include display-flex(flex);
-            @include justify-content-start;
-            @include align-items-center;
-            color: $white-color;
-
-            i {
-                margin-right: .5rem;
-                font-size: 1.2rem;
+            background-color: $primary-color;
+            border-color: $primary-color;
+            color:$white-color;
+            i{
+                color:$white-color;
             }
         }
+
     }
 
     &.is-full-line {
@@ -123,10 +88,9 @@
         min-width: initial;
 
         svg {
-            margin-left: .6125rem;
+            margin-left: .5rem;
             @include transition(margin .5s ease-in-out);
         }
-
 
         &:hover {
             color: $secondary-color;
@@ -139,7 +103,7 @@
 
     &.is-border {
         background-color: transparent;
-        color: $heading-color;
+        color: $secondary-color;
         border: 1px solid;
         border-color: $border-color;
 
@@ -158,6 +122,18 @@
         &:hover {
             border-color: $secondary-color;
             color: $secondary-color;
+        }
+        &:disabled,&.is-disable {
+            color: $body-color;
+            background-color: transparent;
+            border:1px solid $border-color;
+            cursor: not-allowed;
+            box-shadow: none;
+            &:hover{
+                background-color: transparent;
+                color:$body-color;
+                border-color: $border-color;
+            }
         }
     }
 
@@ -179,7 +155,47 @@
         }
     }
 
+    &.is-icon {
+        @include justify-content-between;
+        color: $white-color;
 
+        i {
+            margin-right: .5rem;
+            font-size: .9375rem;
+        }
+    }
+    &:disabled,&.is-disable {
+        color: $body-color;
+        background-color: transparent;
+        border:1px solid $border-color;
+        cursor: not-allowed;
+        box-shadow: none;
+        &:hover{
+            background-color: transparent;
+            color:$body-color;
+            border-color: $border-color;
+        }
+    }
+}
+
+button.load-more-button,
+a.load-more-button {
+    @include display-flex(flex);
+    @include display-flex(flex);
+    @include justify-content-center;
+    @include align-items-center;
+    background-color: $bg-color;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: $heading-color;
+    width: 100%;
+    padding: .5rem 1rem;
+
+    i {
+        text-transform: initial;
+        color: $primary-dark;
+        margin-left: .5rem;
+    }
 }
 
 .buttons {
@@ -207,5 +223,118 @@
         @include display-flex(flex);
         @include justify-content-end;
         @include align-items-center;
+    }
+}
+
+[class*=circle-icon] {
+    width: 40px;
+    height: 40px;
+    @include display-flex(flex);
+    @include justify-content-center;
+    @include align-items-center;
+    @include flex-direction-column(column);
+    color: $body-color;
+    @include radius(100%);
+    min-height: 40px;
+    cursor: pointer;
+    @include transition(all .4s ease-in-out);
+    &.is-bg {
+        background-color: $primary-light;
+        color: $primary-dark;
+
+        &:hover {
+            background-color: $primary-color;
+            color: $white-color;
+        }
+    }
+    
+    &.is-border {
+        border: 1px solid $border-color;
+    }
+
+    &:not(:last-child) {
+        margin-right: .6125rem;
+    }
+}
+
+.circle-icons {
+    @include display-flex(flex);
+    @include align-items-center;
+
+    &.is-start {
+        @include justify-content-start;
+    }
+
+    &.is-end {
+        @include justify-content-end;
+    }
+
+    &.is-center {
+        @include justify-content-center;
+    }
+
+    &.is-vertical {
+        @include justify-content-center;
+        @include flex-direction-column(column);
+
+        span,
+        a {
+            margin-right: 0;
+
+            &:not(:last-child) {
+                margin-bottom: .6125rem;
+            }
+        }
+    }
+
+}
+
+[class*=square-icon] {
+    width: 50px;
+    height: 50px;
+    @include display-flex(flex);
+    @include justify-content-center;
+    @include align-items-center;
+    @include flex-direction-column(column);
+    color: $body-color;
+    @include radius(5px);
+    cursor: pointer;
+    @include transition(all .4s ease-in-out);
+
+    &.is-blue {
+        background-color: $blue-light;
+    }
+
+    &.is-red {
+        background-color: $red-light;
+    }
+
+    &.is-green {
+        background-color: $primary-light;
+    }
+
+    &.is-orange {
+        background-color: $orange-light;
+    }
+}
+
+.close-icon{
+    position: absolute;
+    z-index: 2;
+    top:1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    @include display-flex(flex);
+    @include justify-content-center;
+    @include align-items-center;
+    @include flex-direction-column(column);
+    border:1px solid $border-color;
+    @include radius(100%);
+    @include transition(all .5s ease-in-out);
+    cursor: pointer;
+    &:hover{
+        color:$red-color;
+        border-color:$red-color;
     }
 }

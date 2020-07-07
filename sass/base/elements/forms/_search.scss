@@ -6,22 +6,22 @@
         @include display-flex(flex);
         @include justify-content-between;
         border:1px solid $border-color;
-        @include radius(1.5rem);
+        @include radius(5px);
         @include align-items-stretch;
-        background-color: $white-color;
+        background-color: $bg-color;
         flex-grow: 1;
-        max-width: 250px;
-        padding-right: .6125rem;
+        max-width: 240px;
+        
         input{
             &.form-control{
                 flex-grow: 1;
-                min-height: calc(1.5rem + .75rem + 2px);
+                height: calc(1.6rem + .75rem + 2px);
                 border:none;
                 display: initial;
-                @include radius(1.5rem);
-                background-color: $white-color;
+                @include radius(5px);
+                background-color: $bg-color;
                 &:focus{
-                    background-color: $white-color;
+                    background-color: $bg-color;
                 }
             }
         }
@@ -34,9 +34,9 @@
             @include align-items-center;
             @include flex-direction-column(column);
             cursor: pointer;
-            i,svg{
-                font-size: 1rem;
-                color:$secondary-color;
+            i{
+                font-size: 1.5rem;
+                color:$primary-dark;
             }
         }
     }
@@ -50,6 +50,7 @@
         margin-left: .6125rem;
         background-color: $white-color;
         color:$secondary-color;
+        margin-left:1rem;
         &:focus,&:hover{
             background-color: $secondary-color;
             color:$white-color;
@@ -67,31 +68,10 @@
             }
         }
     }
+    &.is-full{
+        .search-wrap{
+            max-width: 100%;
+        }
+    }
 }
 
-form.search-form {
-    position: relative;
-    width: 430px;
-	margin: 0 auto;
-    max-width: 100%;
-    .searchform-inner {
-        position: relative;
-    }
-    input.search-field {
-        width: 100%;
-        border: 2px solid $border-color;
-        padding: 12px 25px;
-    }
-    .search-submit {
-        width: 100%;
-        margin-top: 15px;
-    }
-    input.search-submit, input.search-submit:visited {
-        position: absolute;
-        top: 0;
-        margin: 0;
-        right: 0;
-        font-size: 17px;
-        padding: 15px 20px;
-    }
-}
