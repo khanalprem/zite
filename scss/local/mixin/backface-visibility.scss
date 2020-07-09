@@ -1,5 +1,0 @@
-@mixin backface($value){
-    backface-visibility: $value;
-    -moz-backface-visibility: $value;
-    -webkit-backface-visibility: $value;
-}
