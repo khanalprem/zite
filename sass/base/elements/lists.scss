@@ -404,3 +404,49 @@ ul.selected-general-form{
         }
     }
 }
+ul{
+    &.site-info-list{
+        
+        li{
+            @include display-flex(flex);
+            @include justify-content-between;
+            @include align-items-start;
+            padding:10px 10px 0;
+            border:1px solid $border-color;
+            @include radius(5px);
+            @include transition (all .5s ease-in-out);
+            .inline-row{
+                @include align-items-start;
+                .site-info-item{
+                    color:$heading-color;
+                    margin-bottom: 10px;
+                    h5{
+                        img{
+                            max-width: 20px;
+                            margin-right: 10px;
+                        }
+                        &:hover{
+                            cursor: -moz-grab;
+                            cursor:-moz-grabbing;
+                            cursor: move;
+                        }
+                    }
+                    h6{
+                        color:$body-color;
+                        margin-bottom: 5px;
+                        text-transform: capitalize;
+                    }
+                    &:not(:last-child){
+                        margin-right: 50px;
+                    }
+                }
+            }
+            &:not(:last-child){
+                margin-bottom: 1rem;
+            }
+            &:hover{
+                background-color: $primary-light;
+            }
+        }
+    }
+}

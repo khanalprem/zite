@@ -136,6 +136,15 @@
     }
 
 }
+.siteinfo-form-header{
+    @include display-flex(flex);
+    @include justify-content-between;
+    @include align-items-center;
+    margin-bottom: 15px;
+    label{
+        margin:0;
+    }
+}
 
 
 

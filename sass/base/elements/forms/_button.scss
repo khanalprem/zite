@@ -338,3 +338,17 @@ a.load-more-button {
         border-color:$red-color;
     }
 }
+.icons{
+    @include display-flex(flex);
+    @include justify-content-end;
+    @include align-items-center;
+    i{
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+    span{
+        &:not(:last-child){
+            margin-right: .6125rem;
+        }
+    }
+}
