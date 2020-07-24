@@ -1,0 +1,646 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Zite</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=display-width, initial-scale=1.0, maximum-scale=1.0,">
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+        html {
+            width: 100%;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            -webkit-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+            background-color:#f0f0f0; 
+            font-family: 'Poppins', sans-serif;        }
+        
+        img {
+            display: block !important;
+            border: 0;
+            -ms-interpolation-mode: bicubic;
+        }
+        
+        .ReadMsgBody {
+            width: 100%;
+        }
+        
+        .ExternalClass {
+            width: 100%;
+        }
+        
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+            line-height: 100%;
+        }
+        
+        .images {
+            display: block !important;
+            width: 100% !important;
+        }
+        
+        
+        p {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        
+        
+        
+        .display-button a:hover {
+            text-decoration: none !important;
+        }
+        /* MEDIA QUIRES */
+        
+        @media only screen and (min-width:799px) {
+            .saf-table {
+                display: table !important;
+            }
+            .main-width {
+                width: 600px;
+            }
+            .width800 {
+                width: 800px !important;
+                max-width: 800px !important;
+            }
+            .mrt-30{
+            	margin-top:50px;
+            }
+            .mrb-30{
+            	margin-bottom:50px;
+            }
+        }
+        
+        @media only screen and (max-width:799px) {
+            body {
+                width: auto !important;
+            }
+            .display-width {
+                width: 100% !important;
+            }
+            .display-width-inner {
+                width: 600px !important;
+            }
+            .padding {
+                padding: 0 20px !important;
+            }
+            .res-padding-full {
+                padding: 0px !important;
+            }
+            .res-padding-left {
+                padding-left: 0px !important;
+            }
+            .width800 {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+        }
+        
+        @media only screen and (max-width:768px) {
+            .width768 {
+                max-width: 684px !important;
+            }
+            .child1-width {
+                width: 50% !important;
+                max-width: 50% !important;
+            }
+            .child2-width {
+                width: 50% !important;
+                max-width: 50% !important;
+            }
+            .full-width-height {
+                padding-top: 40px !important;
+                padding-bottom: 25px !important;
+            }
+        }
+        
+        @media only screen and (max-width:680px) {
+            .child1-width {
+                width: 50% !important;
+                max-width: 50% !important;
+            }
+            .child2-width {
+                width: 50% !important;
+                max-width: 50% !important;
+            }
+            .res-padding-left {
+                padding-left: 40px !important;
+            }
+            .padding-hide {
+                padding-bottom: 0px !important;
+            }
+            .res-attract-height {
+                padding: 20px 10px 0 10px !important;
+            }
+            .full-width-height {
+                padding-top: 50px !important;
+                padding-bottom: 40px !important;
+            }
+        }
+        
+        @media only screen and (max-width:660px) {
+            .child1-width {
+                width: 50% !important;
+                max-width: 50% !important;
+            }
+            .child2-width {
+                width: 50% !important;
+                max-width: 50% !important;
+            }
+            .res-padding-left {
+                padding-left: 30px !important;
+            }
+            .res-attract-height {
+                padding: 20px 10px 0 10px !important;
+            }
+            .full-width-height {
+                padding-top: 45px !important;
+                padding-bottom: 20px !important;
+            }
+        }
+        
+        @media only screen and (max-width:640px) {
+            .res-attract-height {
+                padding: 20px 10px 0 10px !important;
+            }
+            .child1-width,
+            .child2-width {
+                width: 50% !important;
+                max-width: 50% !important;
+            }
+            .res-padding-left {
+                padding-left: 20px !important;
+            }
+            .full-width-height {
+                padding-top: 40px !important;
+                padding-bottom: 30px !important;
+            }
+        }
+        
+        @media only screen and (max-width:639px) {
+            body {
+                width: auto !important;
+            }
+            .display-width {
+                width: 100% !important;
+            }
+            .display-width-inner,
+            .display-width-child {
+                width: 100% !important;
+            }
+            .display-width-child .button-width .display-button {
+                width: auto !important;
+            }
+            .res-padding-full {
+                padding: 0 20px !important;
+            }
+            .padding-hide {
+                padding: 0px !important;
+            }
+            .padding {
+                padding: 0 20px !important;
+            }
+            .saf-table {
+                display: block !important;
+            }
+            .width282 {
+                width: 282px !important;
+            }
+            .div-width {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            .res-height20-bottom {
+                padding-bottom: 20px !important;
+            }
+            .res-height-top {
+                padding-top: 60px !important;
+            }
+            .full-width-height {
+                padding-bottom: 60px !important;
+            }
+            .footer-width {
+                width: 151px !important;
+            }
+            .height20 {
+                height: 20px !important;
+            }
+            .height30 {
+                height: 30px !important;
+            }
+            .hide-height,
+            .hide-bar {
+                display: none !important;
+            }
+            .txt-center {
+                text-align: center !important;
+            }
+            span.unsub-width {
+                width: 100% !important;
+                display: block !important;
+                padding-bottom: 10px !important;
+            }
+            .res-center {
+                margin: 0 auto !important;
+                display: table !important;
+            }
+        }
+        
+        @media only screen and (max-width:480px) {
+            .display-width table,
+            .display-width-child2 table {
+                width: 100% !important;
+            }
+            .display-width .button-width .display-button {
+                width: auto !important;
+            }
+            .display-width-child .footer-width {
+                width: 151px !important;
+            }
+            .display-width .width282 {
+                width: 282px !important;
+            }
+            .div-width {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+        }
+        
+        @media only screen and (max-width:380px) {
+            .display-width table {
+                width: 100% !important;
+            }
+            .display-width .button-width .display-button {
+                width: auto !important;
+            }
+            .display-width-child .width282 {
+                width: 100% !important;
+            }
+        }
+        
+        @media only screen and (max-width:330px) {
+            .res-font {
+                font-size: 33px !important;
+            }
+        }
+    </style>
+    <table data-thumb="" data-module="Footer" data-bgcolor="Main BG" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f0f0f0" align="center">
+        <tbody>
+            <tr>
+                <td style="font-size:0;" align="center">
+                    <div style="display:inline-block; width:100%; max-width:800px; vertical-align:top;" class="width800 mrt-30">
+                        <!-- ID:BG FOOTER -->
+                        <table class="display-width" style="max-width:800px;" data-bgcolor="Footer BG" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" align="center">
+                            <tbody>
+                                <tr>
+                                    <td class="padding" align="center">
+                                        <div style="display:inline-block; width:100%; max-width:600px; vertical-align:top;" class="main-width">
+                                            <table class="display-width-inner" style="max-width:600px;" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="mso-line-height-rule: exactly; line-height: 25px; font-size:0;" height="25">
+                                                            &nbsp;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center">
+                                                            <table class="display-width" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td style="font-size:0;" align="center">
+                                                                            <table style="width:100%; max-width:100%;" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td style="border-collapse:collapse;" align="center">
+                                                                                            <table style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:auto !important;" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td style="border-collapse:collapse; color:#333333;" align="center">
+                                                                                                            <a href="#" style="color:#333333; text-decoration:none;" data-color="Footer Address"> <img src="https://mcusercontent.com/7548f1bce7a62e405ffe789fd/images/6f9ee5e7-1669-4a3f-bdf9-03e0b474be8b.png" alt="150x50" style="margin:0; border:0; padding:0; display:block;" width="90" ></a>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td style="mso-line-height-rule:exactly; line-height:15px; font-size:0;" height="15">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- OUR PACKAGES-1 TITLE STARTS -->
+    <table data-thumb="" data-module="Our Packages-1 Title" data-bgcolor="Main BG" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f0f0f0" align="center">
+        <tbody>
+            <tr>
+                <td style="font-size:0;" align="center">
+                    <div style="display:inline-block; width:100%; max-width:800px; vertical-align:top;" class="width800">
+                        <!-- ID:BG SECTION-1 -->
+                        <table class="display-width" style="max-width:800px;" data-bgcolor="Title BG-1" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" align="center">
+                            <tbody>
+                                <tr>
+                                    <td class="padding" align="center">
+                                        <div style="display:inline-block; width:100%; max-width:600px; vertical-align:top; font-family: 'Poppins', sans-serif; " class="main-width ">
+                                            <table class="display-width-inner" style="max-width:600px;" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="mso-line-height-rule:exactly; line-height:10px; font-size:0;" height="10">
+                                                            &nbsp;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    </tr>
+                                                    <tr>
+                                                        <!-- ID:TXT TITLE -->
+                                                        <td class="MsoNormal" style="color:#40B449;  font-family: 'Poppins', sans-serif;  font-weight:600; font-size:24px; line-height:34px; letter-spacing:1px;" data-color="Title" data-size="Title" data-min="15" data-max="52" align="left">
+                                                            Thank you,
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="mso-line-height-rule:exactly; line-height:15px; font-size:0;" height="">
+                                                            &nbsp;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="color:#666666;  font-family: 'Poppins', sans-serif;  font-weight:400; font-size:14px; line-height:24px; ">
+                                                        For signing up to <a href="#" style="color:#40B449; text-decoration: none; text-transform: capitalize; font-weight: 500;" >Zite</a> . You have selected the <strong style="color:#40B449; text-decoration: none; text-transform: capitalize; font-weight: 500; margin:0 5px 0 5px;">Free</strong> Plan. Under this plan, you have the following :
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- OUR PACKAGES-1 STARTS -->
+    <table data-thumb="" data-module="Our Packages-1" data-bgcolor="Main BG" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f0f0f0" align="center">
+        <tbody>
+            <tr>
+                <td style="font-size:0;" align="center">
+                    <div style="display:inline-block; width:100%; max-width:800px; vertical-align:top;" class="width800">
+                        <!-- ID:BG SECTION-1 -->
+                        <table class="display-width" style="max-width:800px;" data-bgcolor="Section 1 BG" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" align="center">
+                            <tbody>
+                                <tr>
+                                    <td class="padding" align="center">
+                                        <div style="display:inline-block; width:100%; max-width:600px; vertical-align:top;" class="main-width">
+                                            <table class="display-width-inner" style="max-width:600px;" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <table class="display-width" width="100%" cellspacing="0" cellpadding="0" border="0" align="">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td style="font-size:0;" align="center">
+                                                                            <div style="display:inline-block; max-width:100%; vertical-align:top; width:100%;" class="div-width">
+                                                                                <div style="display:inline-block; max-width:100%; vertical-align:top; width:100%;">
+                                                                                    <!-- TABLE LEFT -->
+                                                                                    <table class="display-width-child" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; max-width:100%; width:100%;" width="100%" cellspacing="0" cellpadding="0" border="0" align="left">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="mso-line-height-rule: exactly; line-height: 15px; font-size:0;" height="15">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <!-- ID:TXT PACKAGES-1 NUM -->
+                                                                                                <td class="MsoNormal" style="color:#40B449; font-family: 'Poppins', sans-serif; font-size:24px; font-weight:600; line-height:44px; letter-spacing:1px;" data-color="Packages 1 Num" data-size="Packages 1 Num" data-min="15" data-max="54" align="">
+                                                                                                    $0/<small>Yr</small>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td style="mso-line-height-rule: exactly; line-height: 10px; font-size:0;" height="10">
+                                                                                                    &nbsp;
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <!-- ID:TXT PACKAGES-1 CONTENT -->
+                                                                                                <td class="MsoNormal" style="color:#666666; font-family: 'Poppins', sans-serif;  font-size:13px; line-height:24px; letter-spacing:1px; text-transform: capitalize; border-bottom:1px solid #f0f0f0; " data-color="Packages 1 Content" data-size="Packages 1 Content" data-min="10" data-max="34" align="left">
+                                                                                                    <span style="margin-right: 5px;"><strong style="margin-right: 4px;">250</strong>Submissions</span>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td style="mso-line-height-rule: exactly; line-height:3px; font-size:0;" height="3">
+                                                                                                    &nbsp;
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <!-- ID:TXT PACKAGES-1 CONTENT -->
+                                                                                                <td class="MsoNormal" style="color:#666666; font-family: 'Poppins', sans-serif;  font-size:13px; line-height:24px; letter-spacing:1px; text-transform: capitalize; border-bottom:1px solid #f0f0f0; " data-color="Packages 1 Content" data-size="Packages 1 Content" data-min="10" data-max="34" align="left">
+                                                                                                    <span style="margin-right: 5px;"><strong style="margin-right: 4px;">15</strong>Users</span> 
+                                                                                                    <span style="margin-right: 5px;"><strong style="margin-right: 4px;">2</strong>Projects</span> <span style="margin-right: 5px;"><strong style="margin-right: 4px;">10</strong>Sites</span>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td style="mso-line-height-rule: exactly; line-height:3px; font-size:0;" height="3">
+                                                                                                    &nbsp;
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <!-- ID:TXT PACKAGES-1 CONTENT -->
+                                                                                                <td class="MsoNormal" style="color:#666666; font-family: 'Poppins', sans-serif;  font-size:13px; line-height:24px; letter-spacing:1px; text-transform: capitalize;" data-color="Packages 1 Content" data-size="Packages 1 Content" data-min="10" data-max="34" align="left">
+                                                                                                    <span style="margin-right: 5px;"><strong style="margin-right: 4px;">Unlimited</strong>Reports, Dashboard & Maps</span>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td style="mso-line-height-rule: exactly; line-height: 25px; font-size:0;" height="25">
+                                                                                                    &nbsp;
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table data-thumb="" data-module="Our Packages-1 Title" data-bgcolor="Main BG" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f0f0f0" align="center">
+        <tbody>
+            <tr>
+                <td style="font-size:0;" align="center">
+                    <div style="display:inline-block; width:100%; max-width:800px; vertical-align:top;" class="width800">
+                        <!-- ID:BG SECTION-1 -->
+                        <table class="display-width" style="max-width:800px;" data-bgcolor="Title BG-1" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" align="center">
+                            <tbody>
+                                <tr>
+                                    <td class="padding" align="center">
+                                        <div style="display:inline-block; width:100%; max-width:600px; vertical-align:top; font-family: 'Poppins', sans-serif; " class="main-width">
+                                            <table class="display-width-inner" style="max-width:600px;" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="mso-line-height-rule:exactly; line-height:15px; font-size:0;" height="">
+                                                            &nbsp;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="color:#666666;  font-family: 'Poppins', sans-serif;  font-weight:400; font-size:14px; line-height:24px; "> Your subscription period is from<strong style="color:#40B449; text-decoration: none; text-transform: capitalize; font-weight: 500;  margin:0 5px 0 5px;">01- 01 - 2019</strong> to <strong style="color:#40B449; text-decoration: none; text-transform: capitalize; font-weight: 500;  margin:0 5px 0 5px;">01- 01 - 2020</strong>. You can find the receipt for your payment <a href="#" style="color:#40B449;  text-transform: capitalize; font-weight: 500;  margin:0 0 0 5px;">here</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table data-thumb="" data-module="Footer" data-bgcolor="Main BG" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f0f0f0" align="center">
+        <tbody>
+            <tr>
+                <td style="font-size:0;" align="center">
+                    <div style="display:inline-block; width:100%; max-width:800px; vertical-align:top;" class="width800 mrb-30">
+                        <!-- ID:BG FOOTER -->
+                        <table class="display-width" style="max-width:800px;" data-bgcolor="Footer BG" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" align="center">
+                            <tbody>
+                                <tr>
+                                    <td class="padding" align="center">
+                                        <div style="display:inline-block; width:100%; max-width:600px; vertical-align:top;" class="main-width">
+                                            <table class="display-width-inner" style="max-width:600px;" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="mso-line-height-rule:exactly; line-height:10px; font-size:0;" height="10">
+                                                            &nbsp;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <!-- ID:BR FOOTER BORDER -->
+                                                        <td style="line-height:15px; mso-line-height-rule:exactly; border-bottom:1px solid #e5e5e5; font-size:0;" data-border-bottom-color="Footer Border" height="15">
+                                                            &nbsp;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="line-height:30px; mso-line-height-rule:exactly; font-size:0;" height="30">
+                                                            &nbsp;
+                                                        </td>
+                                                    </tr>
+                                                    <!-- SOCIAL ICONS -->
+                                                    <tr>
+                                                        <td align="center">
+                                                            <table style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td align="center">
+                                                                            <table style="width:auto !important;" cellspacing="0" cellpadding="0" border="0" align="center">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <!-- ID:TXT FOOTER ADDRESS -->
+                                                                                        <td width="48" valign="middle" align="left">
+                                                                                            <a href="#" style="color:#666666;text-decoration:none;" data-color="Footer Address"> <img src="https://gallery.mailchimp.com/7548f1bce7a62e405ffe789fd/images/f88d9797-3048-46f4-a85a-91199ac4fbe8.png" alt="48x48x7" style="max-width:48px; width:100%; height:auto; margin:0; border:0; padding:0; display:block;" width="48" height="48"></a>
+                                                                                        </td>
+                                                                                        <td width="20">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td width="48" valign="middle" align="left">
+                                                                                            <a href="#" style="color:#666666;text-decoration:none;" data-color="Footer Address"> <img src="https://gallery.mailchimp.com/7548f1bce7a62e405ffe789fd/images/967baf62-2b3f-44c7-8e33-12dc3a129a73.png" alt="48x48x9" style="max-width:48px; width:100%; height:auto; margin:0; border:0; padding:0; display:block;" width="48" height="48"></a>
+                                                                                        </td>
+                                                                                        <td width="20">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td width="48" valign="middle" align="left">
+                                                                                            <a href="#" style="color:#666666;text-decoration:none;" data-color="Footer Address"> <img src="https://gallery.mailchimp.com/7548f1bce7a62e405ffe789fd/images/37fa1236-687b-4e42-b789-557bd17ec3bf.png" alt="48x48x10" style="max-width:48px; width:100%; height:auto; margin:0; border:0; padding:0; display:block;" width="48" height="48"></a>
+                                                                                        </td>
+                                                                                        <td width="20">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td width="48" valign="middle" align="left">
+                                                                                            <a href="#" style="color:#666666;text-decoration:none;" data-color="Footer Address"> <img src="https://gallery.mailchimp.com/7548f1bce7a62e405ffe789fd/images/10225790-a833-491d-8cf8-7c7c40cea499.png" alt="48x48x10" style="max-width:48px; width:100%; height:auto; margin:0; border:0; padding:0; display:block;" width="48" height="48"></a>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <!-- ID:BR FOOTER BORDER -->
+                                                        <td style="line-height:30px; mso-line-height-rule:exactly; border-bottom:1px solid #e5e5e5; font-size:0;" data-border-bottom-color="Footer Border" height="30">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="line-height:30px; mso-line-height-rule:exactly; font-size:0;" height="30">
+                                                            &nbsp;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="MsoNormal" style="padding:0 10px; color:#666666; font-family: 'Poppins', sans-serif;  font-size:12px; font-weight:300; line-height:22px; letter-spacing:1px;" align="center">
+                                                            <span class="txt-copyright unsub-width" data-color="Copyright" data-size="Copyright" data-min="10" data-max="32">© All Rights Reserved </span> <span class="txt-copyright hide-bar" data-color="Copyright" data-size="Copyright" data-min="10" data-max="32"> </span> 
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="mso-line-height-rule:exactly; line-height:10px; font-size:0;" height="10">
+                                                            &nbsp;
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- FOOTER ENDS -->
+    </body>
+
+</html>
