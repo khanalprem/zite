@@ -3,7 +3,17 @@
 @import "home";
 @import "manage-user";
 @import "data-structure";
+@import "error";
 @import "sections/section";
 .page-header{
     margin-bottom: 1rem;
+    &.is-center{
+        text-align: center;
+        h1{
+            font-size: 2.5rem;
+            @media #{breakpoint-desktop}{
+                font-size: 1.7rem;
+            }
+        }
+    }
 }
