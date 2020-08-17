@@ -51,6 +51,12 @@ ul{
                 i{
                     font-size: 1rem;
                 }
+                
+                &.svg{
+                    img{
+                        max-width: 22px;
+                    }
+                }
             }
             .list-content{
                 font-size: .9125rem;

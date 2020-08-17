@@ -268,7 +268,7 @@
         height: 4px;
         border-radius: 4px;
         width: 100%;
-        background-color: $secondary-color;
+        background-color: $primary-color;
         top: 0;
         transition: transform .2s ease-in-out, opacity .2s ease-in-out;
         z-index: 1101;
@@ -302,12 +302,12 @@
 
             &:nth-child(2) {
                 transform: rotate(45deg);
-                background-color: $secondary-color;
+                background-color: $primary-color;
             }
 
             &:nth-child(3) {
                 transform: rotate(-45deg);
-                background-color: $secondary-color;
+                background-color: $primary-color;
             }
         }
     }
@@ -319,7 +319,7 @@
         margin-bottom: .25rem;
     }
 }
-@media #{$breakpoint-md}{
+@media #{$breakpoint-ls}{
     .toggle-button {
         display: block;
         margin-left: 1rem;

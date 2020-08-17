@@ -287,6 +287,10 @@
           margin-right: -4px;
           border:1px solid $white-color;
           @include transform(scale(1));
+          &.is-pd{
+              padding:.5px 10px;
+              text-transform: capitalize;
+          }
           &.is-blue {
               background-color: $blue-light;
               color:$blue-color;

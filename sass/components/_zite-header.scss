@@ -22,6 +22,7 @@
         }
         .org-info{
             flex-grow: 1;
+            
             a{
                 text-transform: capitalize;
                 color:$heading-color;
@@ -102,6 +103,7 @@
         top:0;
         .tab-list{
             flex-grow: 1;
+            margin-top: 2rem;
             li{
                 a{
                     padding:.6125rem 1rem;
