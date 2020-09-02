@@ -55,54 +55,7 @@
     .form-body{
         padding:1rem 2rem;
         padding-bottom: 2rem;
-        .upload{
-            position: relative;
-            padding:2rem;
-            border:1px solid $border-color;
-            @include radius(16px);
-            @include display-flex(flex);
-            @include justify-content-center;
-            @include align-items-center;
-            @include flex-direction-column(column);
-            input{
-                position:absolute;
-                width:100%;
-                height: 100%;
-                top:0;
-                right: 0;
-                top:0;
-                bottom: 0;
-                opacity: 0;
-                z-index: 99;
-            }
-            label{
-                // @include display-flex(flex);
-                // @include justify-content-start;
-                // @include align-items-center;
-                display: initial;
-                text-align: center;
-                text-transform: capitalize;
-                
-                .upload-icon{
-                    margin-bottom: 1rem;
-                }
-                .upload-text{
-                    b{
-                        font-size: .875rem;
-                        font-weight: 600;
-                    }
-                    p{
-                        margin:0;
-                        font-size: .775rem;
-                        color:$body-color;
-                        a{
-                            color:$primary-color;
-                            font-weight: 600;
-                        }
-                    }
-                }
-            }
-        }
+        
         .map{
             min-height: 240px;
         }
@@ -135,6 +88,54 @@
         }
     }
 
+}
+.upload{
+    position: relative;
+    padding:2rem;
+    border:1px solid $border-color;
+    @include radius(16px);
+    @include display-flex(flex);
+    @include justify-content-center;
+    @include align-items-center;
+    @include flex-direction-column(column);
+    input{
+        position:absolute;
+        width:100%;
+        height: 100%;
+        top:0;
+        right: 0;
+        top:0;
+        bottom: 0;
+        opacity: 0;
+        z-index: 99;
+    }
+    label{
+        // @include display-flex(flex);
+        // @include justify-content-start;
+        // @include align-items-center;
+        display: initial;
+        text-align: center;
+        text-transform: capitalize;
+        
+        .upload-icon{
+            margin-bottom: 1rem;
+        }
+        .upload-text{
+            b{
+                font-size: .875rem;
+                font-weight: 600;
+            }
+            p{
+                margin:0;
+                font-size: .775rem;
+                color:$body-color;
+                a{
+                    color:$primary-color;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
 }
 .siteinfo-form-header{
     @include display-flex(flex);

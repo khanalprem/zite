@@ -271,61 +271,62 @@
           }
       }
   }
-  .table-status{
-      @include display-flex(flex);
-      @include align-items-center;
-      [class*=status] {
-          @include display-flex(flex);
-          @include justify-content-center;
-          @include align-items-center;
-          color: $body-color;
-          @include radius(20px);
-          cursor: pointer;
-          @include transition(all .4s ease-in-out);
-          min-width: 28px;
-          min-height: 28px;
-          margin-right: -4px;
-          border:1px solid $white-color;
-          @include transform(scale(1));
-          &.is-pd{
-              padding:.5px 10px;
-              text-transform: capitalize;
-          }
-          &.is-blue {
-              background-color: $blue-light;
-              color:$blue-color;
-          }
-      
-          &.is-red {
-              background-color: $red-light;
-              color:$red-color;
-          }
-      
-          &.is-green {
-              background-color: $primary-light;
-              color:$primary-color;
-          }
-      
-          &.is-orange {
-              background-color: $orange-light;
-              color:$orange-color;
-          }
-          &:hover{
-              @include transform(scale(1.2));
-          }
-      }
-      
-      &.is-start {
-          @include justify-content-start;
-      }
-
-      &.is-end {
-          @include justify-content-end;
-      }
-
-      &.is-center {
-          @include justify-content-center;
-      }
-  }
   
+  
+}
+.table-status{
+    @include display-flex(flex);
+    @include align-items-center;
+    [class*=status] {
+        @include display-flex(flex);
+        @include justify-content-center;
+        @include align-items-center;
+        color: $body-color;
+        @include radius(20px);
+        cursor: pointer;
+        @include transition(all .4s ease-in-out);
+        min-width: 28px;
+        min-height: 28px;
+        margin-right: -4px;
+        border:1px solid $white-color;
+        @include transform(scale(1));
+        &.is-pd{
+            padding:.5px 10px;
+            text-transform: capitalize;
+        }
+        &.is-blue {
+            background-color: $blue-light;
+            color:$blue-color;
+        }
+    
+        &.is-red {
+            background-color: $red-light;
+            color:$red-color;
+        }
+    
+        &.is-green {
+            background-color: $primary-light;
+            color:$primary-color;
+        }
+    
+        &.is-orange {
+            background-color: $orange-light;
+            color:$orange-color;
+        }
+        &:hover{
+            @include transform(scale(1.2));
+        }
+    }
+    
+    &.is-start {
+        @include justify-content-start;
+    }
+
+    &.is-end {
+        @include justify-content-end;
+    }
+
+    &.is-center {
+        @include justify-content-center;
+    }
 }
