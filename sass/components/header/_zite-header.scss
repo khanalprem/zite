@@ -65,7 +65,7 @@
                         color:$heading-color;
                         margin-right: .6125rem;
                         @media #{$breakpoint-desktop}{
-                            font-size: 1.125rem;
+                            font-size: 1rem;
                         }
                     }
                     &:not(:last-child){

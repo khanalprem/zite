@@ -19,6 +19,10 @@ body {
     position: relative;
     font-size: .875rem;
     color:$body-color;
+    
+        @media #{$breakpoint-md-desktop}{
+            font-size: .775rem;
+        }
 }
 
  

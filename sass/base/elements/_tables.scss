@@ -72,7 +72,6 @@
 }
 @media (max-width: 1440px) {
   .table-responsive-xl {
-      display: block;
       width: 100%;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
@@ -99,9 +98,10 @@
       h6{
           font-size: .9125rem;
           @media #{$breakpoint-desktop}{
-              font-size: .8125rem;
+              font-size: .775rem;
           }
       }
+      
       th{
           &.serial-no{
               width:50px;
@@ -135,6 +135,9 @@
               flex-grow: 1;
               b{
                   text-transform: capitalize;
+                  @media #{breakpoint-md-desktop}{
+                    font-size: .8rem;
+                }
               }
           }
           .org{
@@ -158,6 +161,11 @@
                       font-size: 1rem;
                   }
               }
+          }
+          b{
+            @media #{breakpoint-desktop}{
+                font-size: .775rem;
+            }
           }
       }
       tr{

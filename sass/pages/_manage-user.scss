@@ -11,4 +11,7 @@
             padding-top:1rem;
         }
     }
+    @media #{$breakpoint-md-desktop}{
+        padding: 1rem;
+    }
 }

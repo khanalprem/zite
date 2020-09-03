@@ -24,6 +24,12 @@
                         color:$body-color;
                     }
                 }
+                @media #{$breakpoint-md-desktop}{
+                    font-size: .875rem;
+                    i,svg{
+                        max-width: 18px;
+                    }
+                }
                 &.active,&:hover{
                     color:$primary-color;
                     svg,i{

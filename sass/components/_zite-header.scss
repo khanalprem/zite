@@ -35,8 +35,8 @@
             h1{
                 margin-bottom: .5rem;
                 font-size: 1.35rem;
-                @media #{$breakpoint-desktop}{
-                    font-size: 1.125rem;
+                @media #{$breakpoint-md-desktop}{
+                    font-size: 1rem;
                 }
             }
             h6{
@@ -44,7 +44,7 @@
                 a{
                     color:$primary-dark;
                     font-size:.9125rem;
-                    @media #{$breakpoint-desktop}{
+                    @media #{$breakpoint-md-desktop}{
                         font-size: .8125rem;
                     }
                 }
@@ -65,14 +65,17 @@
                         font-weight: 600;
                         color:$heading-color;
                         margin-right: .6125rem;
-                        @media #{$breakpoint-desktop}{
-                            font-size: 1.125rem;
+                        @media #{$breakpoint-md-desktop}{
+                            font-size: 1rem;
                         }
                     }
                     &:not(:last-child){
                         margin-right: 2rem;
                     }
                 }
+            }
+            @media #{$breakpoint-md-desktop} {
+                margin-top:1rem;
             }
         }
     }
@@ -109,6 +112,9 @@
                     padding:.6125rem 1rem;
                 }
             }
+            @media #{$breakpoint-md-desktop}{
+                margin-top:.5rem;
+            }
         }
     }
     .filter{
@@ -142,7 +148,7 @@
                 
                 p {
                   display: block;
-                min-width: 160px;
+                  min-width: 160px;
                   &.selected-item {
                     border: 1px solid $border-color;
                     height: 2.3rem;

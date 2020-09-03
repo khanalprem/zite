@@ -30,7 +30,7 @@
             border:1px solid transparent;
             color:$body-light;
             @media #{$breakpoint-desktop}{
-                font-size: .8125rem;
+                font-size: .775rem;
             }
         }
         &:not(:last-child){

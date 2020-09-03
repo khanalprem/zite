@@ -1572,14 +1572,14 @@ Primary use: Monitoring system
     max-width: 33.333333%; }
 
   .zite-70 {
-    -ms-flex: 0 0 60%;
-    flex: 0 0 60%;
-    max-width: 60%; }
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%; }
 
   .zite-30 {
-    -ms-flex: 0 0 40%;
-    flex: 0 0 40%;
-    max-width: 40%; } }
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%; } }
 @media (min-width: 1500px) {
   .zite-74 {
     -ms-flex: 0 0 70%;
@@ -1589,17 +1589,7 @@ Primary use: Monitoring system
   .zite-26 {
     -ms-flex: 0 0 30%;
     flex: 0 0 30%;
-    max-width: 30%; }
-
-  .zite-70 {
-    -ms-flex: 0 0 64%;
-    flex: 0 0 64%;
-    max-width: 64%; }
-
-  .zite-30 {
-    -ms-flex: 0 0 36%;
-    flex: 0 0 36%;
-    max-width: 36%; } }
+    max-width: 30%; } }
 @media (min-width: 1680px) {
   .zite-74 {
     -ms-flex: 0 0 74%;
@@ -1611,6 +1601,16 @@ Primary use: Monitoring system
     flex: 0 0 26%;
     max-width: 26%; }
 
+  .zite-70 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%; }
+
+  .zite-30 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%; } }
+@media (min-width: 1681px) {
   .zite-70 {
     -ms-flex: 0 0 70%;
     flex: 0 0 70%;
@@ -1936,6 +1936,9 @@ body {
   position: relative;
   font-size: .875rem;
   color: #757575; }
+  @media only screen and (max-width: 1368px) {
+    body {
+      font-size: .775rem; } }
 
 .site-content {
   padding: 0 2rem;
@@ -2201,6 +2204,9 @@ ul {
         @media only screen and (max-width: 1440px) {
           ul.list li .list-content {
             font-size: .8125rem; } }
+        @media only screen and (max-width: 1368px) {
+          ul.list li .list-content {
+            font-size: .775rem; } }
         ul.list li .list-content p a {
           font-weight: 600;
           color: #333333; }
@@ -2212,6 +2218,12 @@ ul {
           font-weight: 600;
           color: #40B449;
           font-size: .875rem; }
+          @media only screen and (max-width: 1368px) {
+            ul.list li .list-content a.phone-number {
+              font-size: .775rem; } }
+        @media only screen and (max-width: 1368px) {
+          ul.list li .list-content h5 {
+            font-size: .875rem; } }
       ul.list li:not(:last-child) {
         border-bottom: 1px solid #e6e6e6; }
       ul.list li .general-form-content .form-content-info {
@@ -2274,7 +2286,7 @@ ul {
       font-size: .9125rem; }
       @media only screen and (max-width: 1440px) {
         ul.address li {
-          font-size: .8125rem; } }
+          font-size: .775rem; } }
       ul.address li i {
         color: #40B449;
         margin-right: .6125rem; }
@@ -2682,7 +2694,6 @@ figure {
     border: 0; } }
 @media (max-width: 1440px) {
   .table-responsive-xl {
-    display: block;
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch; }
@@ -2707,7 +2718,7 @@ figure {
     font-size: .9125rem; }
     @media only screen and (max-width: 1440px) {
       .zite-table table h6 {
-        font-size: .8125rem; } }
+        font-size: .775rem; } }
   .zite-table table th.serial-no {
     width: 50px; }
   .zite-table table th .custom-checkbox {
@@ -2744,6 +2755,9 @@ figure {
     flex-grow: 1; }
     .zite-table table td .check-content b {
       text-transform: capitalize; }
+      @media breakpoint-md-desktop {
+        .zite-table table td .check-content b {
+          font-size: .8rem; } }
   .zite-table table td figure {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 40px;
@@ -2761,6 +2775,9 @@ figure {
   .zite-table table td span.form-guide i {
     color: #757575;
     font-size: 1rem; }
+  @media breakpoint-desktop {
+    .zite-table table td b {
+      font-size: .775rem; } }
   .zite-table table tr {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -3204,6 +3221,12 @@ figure {
       background-color: transparent;
       color: #757575;
       border-color: #e6e6e6; }
+  @media only screen and (max-width: 1368px) {
+    [class*=common-button] {
+      padding: .25rem 1rem;
+      min-width: inherit;
+      min-height: initial;
+      font-size: .875rem; } }
 
 button.load-more-button,
 a.load-more-button {
@@ -4583,6 +4606,11 @@ ul.social-list {
         margin-right: .6125rem; }
         .main-navigation ul li a i fill, .main-navigation ul li a svg fill {
           color: #757575; }
+      @media only screen and (max-width: 1368px) {
+        .main-navigation ul li a {
+          font-size: .875rem; }
+          .main-navigation ul li a i, .main-navigation ul li a svg {
+            max-width: 18px; } }
       .main-navigation ul li a.active, .main-navigation ul li a:hover {
         color: #40B449; }
         .main-navigation ul li a.active svg, .main-navigation ul li a.active i, .main-navigation ul li a:hover svg, .main-navigation ul li a:hover i {
@@ -5094,7 +5122,7 @@ body.home-3 .bottom-header {
             margin-right: .6125rem; }
             @media only screen and (max-width: 1440px) {
               .zite-header .org-details ul.org-summary li b {
-                font-size: 1.125rem; } }
+                font-size: 1rem; } }
           .zite-header .org-details ul.org-summary li:not(:last-child) {
             margin-right: 2rem; }
   .zite-header .header-icons {
@@ -5319,15 +5347,15 @@ header.site-header {
       .zite-header .org-details .org-info h1 {
         margin-bottom: .5rem;
         font-size: 1.35rem; }
-        @media only screen and (max-width: 1440px) {
+        @media only screen and (max-width: 1368px) {
           .zite-header .org-details .org-info h1 {
-            font-size: 1.125rem; } }
+            font-size: 1rem; } }
       .zite-header .org-details .org-info h6 {
         margin: 0; }
         .zite-header .org-details .org-info h6 a {
           color: #1E8E45;
           font-size: .9125rem; }
-          @media only screen and (max-width: 1440px) {
+          @media only screen and (max-width: 1368px) {
             .zite-header .org-details .org-info h6 a {
               font-size: .8125rem; } }
     .zite-header .org-details ul {
@@ -5357,11 +5385,14 @@ header.site-header {
             font-weight: 600;
             color: #333333;
             margin-right: .6125rem; }
-            @media only screen and (max-width: 1440px) {
+            @media only screen and (max-width: 1368px) {
               .zite-header .org-details ul.org-summary li b {
-                font-size: 1.125rem; } }
+                font-size: 1rem; } }
           .zite-header .org-details ul.org-summary li:not(:last-child) {
             margin-right: 2rem; }
+      @media only screen and (max-width: 1368px) {
+        .zite-header .org-details ul {
+          margin-top: 1rem; } }
   .zite-header .header-icons {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5388,6 +5419,9 @@ header.site-header {
       margin-top: 2rem; }
       .zite-header .bottom-header .tab-list li a {
         padding: .6125rem 1rem; }
+      @media only screen and (max-width: 1368px) {
+        .zite-header .bottom-header .tab-list {
+          margin-top: .5rem; } }
   .zite-header .filter {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5651,7 +5685,7 @@ header.site-header {
       text-transform: uppercase;
       font-weight: 600;
       font-size: .875rem; }
-      @media only screen and (max-width: 1440px) {
+      @media only screen and (max-width: 1368px) {
         .acc.profile-acc .acc-list .org .org-text h5 {
           font-size: .775rem; } }
   .acc.profile-acc .acc-list .org-links i {
@@ -5717,6 +5751,9 @@ header.site-header {
     flex: 1 1 auto;
     min-height: 1px;
     padding: 1.25rem; }
+    @media only screen and (max-width: 1368px) {
+      .zite-card .zite-body {
+        padding: 1rem; } }
     .zite-card .zite-body.pd-0 {
       padding: 0; }
   .zite-card.no-boxshadow {
@@ -5771,6 +5808,9 @@ header.site-header {
     @media only screen and (max-width: 1440px) {
       .card-header h5, .card-footer h5 {
         font-size: 1rem; } }
+    @media only screen and (max-width: 1368px) {
+      .card-header h5, .card-footer h5 {
+        font-size: .875rem; } }
   .card-header .selected-counter, .card-footer .selected-counter {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6066,7 +6106,7 @@ header.site-header {
     color: #989898; }
     @media only screen and (max-width: 1440px) {
       .tab-list li a {
-        font-size: .8125rem; } }
+        font-size: .775rem; } }
   .tab-list li:not(:last-child) {
     margin-right: .6125rem; }
   .tab-list.is-bg li a {
@@ -6548,6 +6588,9 @@ header.site-header {
     .manage-user .zite-card .zite-body {
       padding: 0;
       padding-top: 1rem; }
+  @media only screen and (max-width: 1368px) {
+    .manage-user {
+      padding: 1rem; } }
 
 .data-structure-form .form-list {
   background-color: #F1F4F9;
@@ -6584,6 +6627,9 @@ header.site-header {
       .data-structure-form .form-list .form-header h5 i {
         font-size: 1rem;
         color: #989898; }
+      @media only screen and (max-width: 1368px) {
+        .data-structure-form .form-list .form-header h5 {
+          font-size: .775rem; } }
     .data-structure-form .form-list .form-header:hover {
       background-color: #E7F6E9; }
   .data-structure-form .form-list .form-list-body {
@@ -6657,7 +6703,7 @@ header.site-header {
     text-transform: uppercase; }
   @media only screen and (max-width: 1440px) {
     .submission-card .total-submission .total-submission-text h2 {
-      font-size: 2rem; }
+      font-size: 1.5rem; }
     .submission-card .total-submission .total-submission-text h5 {
       font-size: 1rem; } }
   .submission-card .total-submission .submission-progress-summary {
@@ -6712,12 +6758,12 @@ header.site-header {
 
 .page-header {
   margin-bottom: 1rem; }
+  .page-header h1 {
+    font-size: 2.5rem; }
+    @media only screen and (max-width: 1440px) {
+      .page-header h1 {
+        font-size: 1.5rem; } }
   .page-header.is-center {
     text-align: center; }
-    .page-header.is-center h1 {
-      font-size: 2.5rem; }
-      @media breakpoint-desktop {
-        .page-header.is-center h1 {
-          font-size: 1.7rem; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -63,6 +63,9 @@ ul{
                 @media #{$breakpoint-desktop}{
                     font-size: .8125rem;
                 }
+                @media #{$breakpoint-md-desktop} {
+                    font-size: .775rem;
+                }
                 p{
                     a{
                         font-weight: 600;
@@ -79,6 +82,14 @@ ul{
                     font-weight: 600;
                     color:$primary-color;
                     font-size: .875rem;
+                    @media #{$breakpoint-md-desktop} {
+                        font-size: .775rem;
+                    }
+                    }
+                }
+                h5{
+                    @media #{$breakpoint-md-desktop} {
+                        font-size: .875rem;
                     }
                 }
             }
@@ -131,7 +142,7 @@ ul{
             padding:.25rem 0;
             font-size: .9125rem;
             @media #{$breakpoint-desktop}{
-                font-size: .8125rem;
+                font-size: .775rem;
             }
             i{
                 color:$primary-color;

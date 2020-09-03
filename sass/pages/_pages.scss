@@ -7,13 +7,14 @@
 @import "sections/section";
 .page-header{
     margin-bottom: 1rem;
+    h1{
+        font-size: 2.5rem;
+        @media #{$breakpoint-desktop}{
+            font-size: 1.5rem;
+        }
+    }
     &.is-center{
         text-align: center;
-        h1{
-            font-size: 2.5rem;
-            @media #{breakpoint-desktop}{
-                font-size: 1.7rem;
-            }
-        }
+        
     }
 }

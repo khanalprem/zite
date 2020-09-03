@@ -226,7 +226,7 @@
                         text-transform: uppercase;
                         font-weight: 600;
                         font-size: .875rem;
-                        @media #{$breakpoint-desktop}{
+                        @media #{$breakpoint-md-desktop}{
                             font-size: .775rem;
                         }
                     }

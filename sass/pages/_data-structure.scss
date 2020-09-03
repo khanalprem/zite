@@ -21,6 +21,9 @@
                     font-size: 1rem;
                     color:$body-light;
                 }
+                @media #{$breakpoint-md-desktop}{
+                    font-size: .775rem;
+                }
             }
             &:hover {
                 background-color: $primary-light;
