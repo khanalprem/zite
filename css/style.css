@@ -6680,6 +6680,111 @@ header.site-header {
     top: 100%;
     z-index: 99; }
 
+.stageform-list {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  width: 100%; }
+  .stageform-list::-webkit-scrollbar {
+    width: 4px;
+    background: #e6e6e6;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px; }
+  .stageform-list::-webkit-scrollbar-track {
+    background-color: #e6e6e6;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px; }
+  .stageform-list::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    background: #C7C7C7; }
+  .stageform-list .inline-row {
+    width: 100%; }
+  .stageform-list .stageform-header {
+    background-color: #F1F4F9;
+    padding: 10px; }
+    .stageform-list .stageform-header ul li {
+      text-transform: capitalize; }
+      .stageform-list .stageform-header ul li:not(:last-child) {
+        padding-right: 20px; }
+      @media only screen and (max-width: 1368px) {
+        .stageform-list .stageform-header ul li {
+          padding-right: 10px; } }
+  .stageform-list .stageform-body span.form-guide i {
+    font-size: 1rem; }
+  .stageform-list .stageform-body ul.list li {
+    border-collapse: collapse; }
+    .stageform-list .stageform-body ul.list li.row-form-header {
+      display: block; }
+      .stageform-list .stageform-body ul.list li.row-form-header .thead {
+        margin-bottom: .5rem; }
+      .stageform-list .stageform-body ul.list li.row-form-header h6 {
+        color: #40B449;
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        .stageform-list .stageform-body ul.list li.row-form-header h6::before {
+          content: 'arrow_drop_down';
+          font-family: 'Material Icons';
+          display: inline-block;
+          margin-right: .5rem;
+          font-size: 1.4rem; }
+      .stageform-list .stageform-body ul.list li.row-form-header.is-active h6::before {
+        content: 'arrow_drop_up';
+        font-family: 'Material Icons';
+        display: inline-block;
+        margin-right: .5rem;
+        font-size: 1.4rem; }
+  .stageform-list .stageform-body ul.list.is-border ul.inline-row {
+    border-top: 1px solid #e6e6e6; }
+    .stageform-list .stageform-body ul.list.is-border ul.inline-row li {
+      border: none; }
+      .stageform-list .stageform-body ul.list.is-border ul.inline-row li .check-content b {
+        font-weight: 600;
+        font-size: .875rem; }
+      .stageform-list .stageform-body ul.list.is-border ul.inline-row li .check-content .drag-icon {
+        max-width: 20px;
+        margin-right: .6125rem;
+        cursor: move; }
+      .stageform-list .stageform-body ul.list.is-border ul.inline-row li .custom-dropdown .custom-dropdown-menu li {
+        padding: 0; }
+        .stageform-list .stageform-body ul.list.is-border ul.inline-row li .custom-dropdown .custom-dropdown-menu li:not(:last-child) {
+          border: 1px solid #e6e6e6; }
+      .stageform-list .stageform-body ul.list.is-border ul.inline-row li:not(:last-child) {
+        padding-right: 20px; }
+        @media only screen and (max-width: 1368px) {
+          .stageform-list .stageform-body ul.list.is-border ul.inline-row li:not(:last-child) {
+            padding-right: 10px; } }
+  .stageform-list .icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%; }
+    .stageform-list .icons i {
+      font-size: 1.2rem;
+      cursor: pointer; }
+    .stageform-list .icons span:not(:last-child) {
+      margin-right: .6125rem; }
+
 .error {
   text-align: center; }
   .error figure {
@@ -6759,10 +6864,11 @@ header.site-header {
 .page-header {
   margin-bottom: 1rem; }
   .page-header h1 {
-    font-size: 2.5rem; }
+    font-size: 1.8rem;
+    text-transform: capitalize; }
     @media only screen and (max-width: 1440px) {
       .page-header h1 {
-        font-size: 1.5rem; } }
+        font-size: 1.3rem; } }
   .page-header.is-center {
     text-align: center; }
 

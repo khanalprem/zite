@@ -213,6 +213,7 @@ ul{
     @include display-flex(flex);
     @include justify-content-between;
     @include align-items-center;
+    
     &.is-start{
         @include justify-content-start;  
     }
