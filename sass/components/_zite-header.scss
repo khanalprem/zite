@@ -1,6 +1,8 @@
 .zite-header{
     padding:1.5rem 2rem 0 2rem;
     background-color: $white-color;
+    position:relative;
+    z-index: 1;
     .top-header,.bottom-header{
         @include display-flex(flex);
         @include justify-content-between;

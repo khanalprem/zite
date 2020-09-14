@@ -41,8 +41,8 @@
                 min-width: 360px;
             }
             @media #{$breakpoint-xs}{
-                max-width: 300px;
-                min-width: 300px;
+                max-width: 280px;
+                min-width: 280px;
             }
           
             span{
@@ -129,6 +129,24 @@
                 padding:0 2rem 2rem 2rem;
                 // border-top: 1px solid $border-color;
             }
+        }
+        &.sm-popup{
+           .popup-body{
+            max-width: 576px;
+            min-width: 576px;
+            @media #{$breakpoint-desktop}{
+                max-width: 480px;
+                min-width: 480px;
+            }
+            @media #{$breakpoint-sm}{
+                max-width: 300px;
+                min-width: 300px;
+            }
+            @media #{$breakpoint-xs}{
+                max-width: 280px;
+                min-width: 280px;
+            }
+           } 
         }
         &.lg-popup{
             .popup-body{

@@ -113,8 +113,9 @@
                         background-color: $white-color;
                         @include radius(5px);
                         @include transition(all .5s ease-in-out);
-                        &:hover{
+                        &:hover,&.active{
                             background-color: $primary-light;
+                            cursor: pointer;
                         }
                     }
                 }

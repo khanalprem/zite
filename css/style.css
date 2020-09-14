@@ -1562,21 +1562,17 @@ Primary use: Monitoring system
 
 @media (min-width: 1200px) {
   .zite-74 {
-    -ms-flex: 0 0 66.666667%;
-    flex: 0 0 66.666667%;
-    max-width: 66.666667%; }
+    -ms-flex: 0 0 68%;
+    flex: 0 0 68%;
+    max-width: 68%; }
 
   .zite-26 {
-    -ms-flex: 0 0 33.333333%;
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%; }
+    -ms-flex: 0 0 32%;
+    flex: 0 0 32%;
+    max-width: 32%; }
 
-  .zite-70 {
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%; }
-
-  .zite-30 {
+  .zite-destktop16-74,
+  .zite-desktop16-26 {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%; } }
@@ -1601,12 +1597,8 @@ Primary use: Monitoring system
     flex: 0 0 26%;
     max-width: 26%; }
 
-  .zite-70 {
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%; }
-
-  .zite-30 {
+  .zite-destktop16-74,
+  .zite-desktop16-26 {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%; } }
@@ -1619,7 +1611,20 @@ Primary use: Monitoring system
   .zite-30 {
     -ms-flex: 0 0 30%;
     flex: 0 0 30%;
-    max-width: 30%; } }
+    max-width: 30%; }
+
+  .zite-destktop16-74 {
+    -ms-flex: 0 0 74%;
+    flex: 0 0 74%;
+    max-width: 74%; }
+
+  .zite-desktop16-26 {
+    -ms-flex: 0 0 26%;
+    flex: 0 0 26%;
+    max-width: 26%; } }
+@media screen and (max-width: 1600px) {
+  .zite-desktop16-26 {
+    margin-top: 30px; } }
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -4157,6 +4162,34 @@ ul.social-list {
           content: none; }
         .custom-dropdown ul.custom-dropdown-menu li a:hover {
           background-color: #E7F6E9; }
+      .custom-dropdown ul.custom-dropdown-menu li span {
+        padding: .5rem .6125rem;
+        color: #333333;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        font-weight: 600; }
+        .custom-dropdown ul.custom-dropdown-menu li span i, .custom-dropdown ul.custom-dropdown-menu li span svg {
+          margin-right: .6125rem;
+          font-size: 1rem;
+          color: #757575; }
+          .custom-dropdown ul.custom-dropdown-menu li span i img, .custom-dropdown ul.custom-dropdown-menu li span svg img {
+            max-width: 16px; }
+        .custom-dropdown ul.custom-dropdown-menu li span::after {
+          content: none; }
+        .custom-dropdown ul.custom-dropdown-menu li span:hover {
+          background-color: #E7F6E9; }
       .custom-dropdown ul.custom-dropdown-menu li:not(:last-child) {
         border-bottom: 1px solid #e6e6e6; }
   .custom-dropdown.is-light ul.custom-dropdown-menu {
@@ -5297,7 +5330,9 @@ header.site-header {
 --------------------------------------------- */
 .zite-header {
   padding: 1.5rem 2rem 0 2rem;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  position: relative;
+  z-index: 1; }
   .zite-header .top-header, .zite-header .bottom-header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5599,8 +5634,9 @@ header.site-header {
     -o-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out; }
-    .acc .acc-list .acc-body ul.list li:hover {
-      background-color: #E7F6E9; }
+    .acc .acc-list .acc-body ul.list li:hover, .acc .acc-list .acc-body ul.list li.active {
+      background-color: #E7F6E9;
+      cursor: pointer; }
 .acc .acc-list.is-bg {
   background-color: #F1F4F9;
   -webkit-border-radius: 5px;
@@ -5945,8 +5981,8 @@ header.site-header {
           min-width: 360px; } }
       @media only screen and (max-width: 480px) {
         .popup .popup-container .popup-body, .window-popup .popup-container .popup-body {
-          max-width: 300px;
-          min-width: 300px; } }
+          max-width: 280px;
+          min-width: 280px; } }
       .popup .popup-container .popup-body span.close-icon:hover, .window-popup .popup-container .popup-body span.close-icon:hover {
         color: #FF0F0F;
         border-color: #FF0F0F; }
@@ -6022,6 +6058,21 @@ header.site-header {
         min-height: 52px;
         margin: 0;
         padding: 0 2rem 2rem 2rem; }
+    .popup .popup-container.sm-popup .popup-body, .window-popup .popup-container.sm-popup .popup-body {
+      max-width: 576px;
+      min-width: 576px; }
+      @media only screen and (max-width: 1440px) {
+        .popup .popup-container.sm-popup .popup-body, .window-popup .popup-container.sm-popup .popup-body {
+          max-width: 480px;
+          min-width: 480px; } }
+      @media only screen and (max-width: 576px) {
+        .popup .popup-container.sm-popup .popup-body, .window-popup .popup-container.sm-popup .popup-body {
+          max-width: 300px;
+          min-width: 300px; } }
+      @media only screen and (max-width: 480px) {
+        .popup .popup-container.sm-popup .popup-body, .window-popup .popup-container.sm-popup .popup-body {
+          max-width: 280px;
+          min-width: 280px; } }
     .popup .popup-container.lg-popup .popup-body, .window-popup .popup-container.lg-popup .popup-body {
       position: relative;
       padding: 2rem;
@@ -6103,7 +6154,8 @@ header.site-header {
     transition: all 0.5s linear;
     font-size: .9125rem;
     border: 1px solid transparent;
-    color: #989898; }
+    color: #989898;
+    cursor: pointer; }
     @media only screen and (max-width: 1440px) {
       .tab-list li a {
         font-size: .775rem; } }
@@ -6670,6 +6722,14 @@ header.site-header {
           background-color: #E7F6E9; }
   .data-structure-form .form-list:not(:last-child) {
     margin-bottom: 1rem; }
+  .data-structure-form .form-list.no-bg {
+    background-color: transparent; }
+    .data-structure-form .form-list.no-bg .form-header {
+      background-color: #F1F4F9; }
+      .data-structure-form .form-list.no-bg .form-header.active {
+        background-color: #E7F6E9; }
+      .data-structure-form .form-list.no-bg .form-header:not(:last-child) {
+        margin-bottom: 1rem; }
 
 .choose-form {
   position: relative; }

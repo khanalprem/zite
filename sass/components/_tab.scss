@@ -29,6 +29,7 @@
             font-size:.9125rem;
             border:1px solid transparent;
             color:$body-light;
+            cursor: pointer;
             @media #{$breakpoint-desktop}{
                 font-size: .775rem;
             }

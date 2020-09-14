@@ -76,6 +76,18 @@
         &:not(:last-child) {
             margin-bottom: 1rem;
         }
+        &.no-bg{
+            background-color: transparent;
+            .form-header{
+                background-color: $bg-color;
+                &.active{
+                    background-color: $primary-light;
+                }
+                &:not(:last-child){
+                    margin-bottom: 1rem;
+                }
+            }
+        }
     }
 
 }

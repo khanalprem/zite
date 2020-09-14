@@ -90,6 +90,33 @@
                         background-color: $primary-light;
                     }
                 }
+
+                span{
+                    padding:.5rem .6125rem;
+                    color:$heading-color;
+                    @include transition(all .4s ease-in-out);
+                    @include display-flex(flex);
+                    @include justify-content-start;
+                    @include align-items-center;
+                    font-weight: 600;
+
+                    i,svg{
+                        margin-right: .6125rem;
+                        font-size: 1rem;
+                        color:$body-color;
+                        img{
+                            max-width: 16px;
+                        }
+                    }
+                    
+                    &::after{
+                        content:none;
+                    }
+                   
+                    &:hover{
+                        background-color: $primary-light;
+                    }
+                }
                 &:not(:last-child){
                     border-bottom: 1px solid $border-color;
                 }
