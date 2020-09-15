@@ -6726,6 +6726,11 @@ header.site-header {
     background-color: transparent; }
     .data-structure-form .form-list.no-bg .form-header {
       background-color: #F1F4F9; }
+      .data-structure-form .form-list.no-bg .form-header h5 {
+        cursor: pointer; }
+        .data-structure-form .form-list.no-bg .form-header h5 a {
+          display: block;
+          color: #333333; }
       .data-structure-form .form-list.no-bg .form-header.active {
         background-color: #E7F6E9; }
       .data-structure-form .form-list.no-bg .form-header:not(:last-child) {
@@ -6924,11 +6929,11 @@ header.site-header {
 .page-header {
   margin-bottom: 1rem; }
   .page-header h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     text-transform: capitalize; }
     @media only screen and (max-width: 1440px) {
       .page-header h1 {
-        font-size: 1.3rem; } }
+        font-size: 1.1rem; } }
   .page-header.is-center {
     text-align: center; }
 

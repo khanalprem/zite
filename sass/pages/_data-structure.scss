@@ -80,6 +80,13 @@
             background-color: transparent;
             .form-header{
                 background-color: $bg-color;
+                h5{
+                    cursor: pointer;
+                    a{
+                        display: block;
+                        color:$heading-color;
+                    }
+                }
                 &.active{
                     background-color: $primary-light;
                 }
