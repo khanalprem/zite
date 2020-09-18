@@ -92,7 +92,7 @@
                 }
 
                 span{
-                    padding:.5rem .6125rem;
+                    // padding:.5rem .6125rem;
                     color:$heading-color;
                     @include transition(all .4s ease-in-out);
                     @include display-flex(flex);

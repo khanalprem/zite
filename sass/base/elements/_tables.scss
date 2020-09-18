@@ -224,7 +224,35 @@
             }
           }
         }
+        &.row-form-header-2{
+          td{
+            &:first-child{
+              padding-left:2rem;
+            }
+            h6 {
+              color: $heading-color;
+              position: relative;
+              @include display-flex(flex);
+              @include justify-content-start;
+              @include align-items-center;
       
+              &::before {
+                content: 'arrow_drop_down';
+                font-family: 'Material Icons';
+                display: inline-block;
+                margin-right: .5rem;
+                font-size: 1.4rem;
+              }
+            }
+          }
+        }
+        &.row-form-header-3{
+          td{
+            &:first-child{
+              padding-left:3.5rem;
+            }
+          }
+        }
         .custom-checkbox {
           label {
             color: $heading-color;

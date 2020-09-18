@@ -68,6 +68,10 @@
         font-weight: 600;
         margin:0;
         text-transform: uppercase;
+        span{
+            text-transform: capitalize;
+            font-weight: 500;
+        }
         @media #{$breakpoint-desktop}{
             font-size: 1rem;
         }

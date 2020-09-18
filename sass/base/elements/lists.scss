@@ -239,7 +239,7 @@ ul{
                 position: relative;
                 cursor: pointer;
                 margin:0;
-                padding:7px 10px;
+                padding:7px 20px;
                 width:100%;
                 text-transform: uppercase;
                 font-weight: 600;
@@ -264,6 +264,13 @@ ul{
                 color:$primary-color;
                 &::before{
                     border-color:$primary-color;
+                }
+            }
+        }
+        &.min-142{
+            input{
+                &+label{
+                    min-width: 142px;
                 }
             }
         }

@@ -2395,7 +2395,7 @@ ul {
         position: relative;
         cursor: pointer;
         margin: 0;
-        padding: 7px 10px;
+        padding: 7px 20px;
         width: 100%;
         text-transform: uppercase;
         font-weight: 600;
@@ -2418,6 +2418,8 @@ ul {
         color: #40B449; }
         .inline-row .flat-checkbox input:checked + label::before {
           border-color: #40B449; }
+    .inline-row .flat-checkbox.min-142 input + label {
+      min-width: 142px; }
     .inline-row .flat-checkbox:not(:last-child) {
       margin-right: 0; }
     .inline-row .flat-checkbox:last-child {
@@ -2832,6 +2834,28 @@ figure {
     display: inline-block;
     margin-right: .5rem;
     font-size: 1.4rem; }
+  .zite-table table tr.row-form-header-2 td:first-child {
+    padding-left: 2rem; }
+  .zite-table table tr.row-form-header-2 td h6 {
+    color: #333333;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .zite-table table tr.row-form-header-2 td h6::before {
+      content: 'arrow_drop_down';
+      font-family: 'Material Icons';
+      display: inline-block;
+      margin-right: .5rem;
+      font-size: 1.4rem; }
+  .zite-table table tr.row-form-header-3 td:first-child {
+    padding-left: 3.5rem; }
   .zite-table table tr .custom-checkbox label {
     color: #333333;
     font-weight: 600;
@@ -3525,7 +3549,7 @@ input[type="time"].form-control {
 .form-group {
   margin-bottom: 1.5rem; }
   .form-group label {
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     margin-bottom: .6125rem;
     display: block;
@@ -4163,7 +4187,6 @@ ul.social-list {
         .custom-dropdown ul.custom-dropdown-menu li a:hover {
           background-color: #E7F6E9; }
       .custom-dropdown ul.custom-dropdown-menu li span {
-        padding: .5rem .6125rem;
         color: #333333;
         -webkit-transition: all 0.4s ease-in-out;
         -moz-transition: all 0.4s ease-in-out;
@@ -5841,6 +5864,9 @@ header.site-header {
     font-weight: 600;
     margin: 0;
     text-transform: uppercase; }
+    .card-header h5 span, .card-footer h5 span {
+      text-transform: capitalize;
+      font-weight: 500; }
     @media only screen and (max-width: 1440px) {
       .card-header h5, .card-footer h5 {
         font-size: 1rem; } }
@@ -5998,8 +6024,8 @@ header.site-header {
         align-items: center;
         flex-shrink: 0;
         margin: 0;
-        padding: 0 2rem;
-        padding-top: 2rem; }
+        padding: 0 1.5rem;
+        padding-top: 1.5rem; }
         .popup .popup-container .popup-body .popup-header h3, .window-popup .popup-container .popup-body .popup-header h3 {
           font-size: 1.25rem;
           line-height: 2rem;
@@ -6012,8 +6038,7 @@ header.site-header {
         -webkit-box-flex: 1;
         flex-grow: 1;
         margin: 0;
-        padding: 2rem;
-        padding-top: 1rem;
+        padding: 1.5rem;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: -ms-autohiding-scrollbar; }
@@ -6055,9 +6080,9 @@ header.site-header {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        min-height: 52px;
+        min-height: 50px;
         margin: 0;
-        padding: 0 2rem 2rem 2rem; }
+        padding: 1rem 1rem 2rem 1rem; }
     .popup .popup-container.sm-popup .popup-body, .window-popup .popup-container.sm-popup .popup-body {
       max-width: 576px;
       min-width: 576px; }
@@ -6075,7 +6100,6 @@ header.site-header {
           min-width: 280px; } }
     .popup .popup-container.lg-popup .popup-body, .window-popup .popup-container.lg-popup .popup-body {
       position: relative;
-      padding: 2rem;
       max-width: 991px;
       width: 100%;
       min-width: 991px; }
@@ -6104,6 +6128,46 @@ header.site-header {
           min-width: 360px; } }
       @media only screen and (max-width: 480px) {
         .popup .popup-container.lg-popup .popup-body, .window-popup .popup-container.lg-popup .popup-body {
+          max-width: 300px;
+          min-width: 300px; } }
+    .popup .popup-container.xl-popup .popup-body, .window-popup .popup-container.xl-popup .popup-body {
+      position: relative;
+      max-width: 1200px;
+      width: 100%;
+      min-width: 1200px; }
+      .popup .popup-container.xl-popup .popup-body span.close-icon, .window-popup .popup-container.xl-popup .popup-body span.close-icon {
+        right: 2rem;
+        top: 2rem; }
+      @media only screen and (max-width: 1440px) {
+        .popup .popup-container.xl-popup .popup-body, .window-popup .popup-container.xl-popup .popup-body {
+          max-width: 991px;
+          min-width: 991px;
+          padding: 1.5rem; }
+          .popup .popup-container.xl-popup .popup-body span.close-icon, .window-popup .popup-container.xl-popup .popup-body span.close-icon {
+            right: 1.5rem;
+            top: 1.5rem; } }
+      @media only screen and (max-width: 1024px) {
+        .popup .popup-container.xl-popup .popup-body, .window-popup .popup-container.xl-popup .popup-body {
+          max-width: 768px;
+          min-width: 768px;
+          padding: 1rem; }
+          .popup .popup-container.xl-popup .popup-body span.close-icon, .window-popup .popup-container.xl-popup .popup-body span.close-icon {
+            right: 1rem;
+            top: 1rem; } }
+      @media only screen and (max-width: 768px) {
+        .popup .popup-container.xl-popup .popup-body, .window-popup .popup-container.xl-popup .popup-body {
+          max-width: 576px;
+          min-width: 576px;
+          padding: 1rem; }
+          .popup .popup-container.xl-popup .popup-body span.close-icon, .window-popup .popup-container.xl-popup .popup-body span.close-icon {
+            right: 1rem;
+            top: 1rem; } }
+      @media only screen and (max-width: 576px) {
+        .popup .popup-container.xl-popup .popup-body, .window-popup .popup-container.xl-popup .popup-body {
+          max-width: 360px;
+          min-width: 360px; } }
+      @media only screen and (max-width: 480px) {
+        .popup .popup-container.xl-popup .popup-body, .window-popup .popup-container.xl-popup .popup-body {
           max-width: 300px;
           min-width: 300px; } }
   .popup.open, .window-popup.open {
@@ -6640,9 +6704,39 @@ header.site-header {
     .manage-user .zite-card .zite-body {
       padding: 0;
       padding-top: 1rem; }
+  .manage-user.pd-0 {
+    padding: 0; }
   @media only screen and (max-width: 1368px) {
     .manage-user {
       padding: 1rem; } }
+
+.manage-region ul.list.is-between li h5 {
+  flex-grow: 1;
+  font-size: .875rem;
+  text-transform: capitalize;
+  font-weight: 500; }
+.manage-region ul.list.is-between li span {
+  font-size: .875rem; }
+  .manage-region ul.list.is-between li span.place {
+    flex: 0 0 130px;
+    max-width: 130px; }
+.manage-region ul.list.is-between li .icons {
+  margin-left: 2rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  visibility: hidden; }
+  .manage-region ul.list.is-between li .icons .icon {
+    cursor: pointer; }
+  .manage-region ul.list.is-between li .icons i {
+    font-size: 1rem;
+    color: #757575; }
+.manage-region ul.list.is-between li:hover .icons {
+  visibility: visible;
+  opacity: 1; }
 
 .data-structure-form .form-list {
   background-color: #F1F4F9;
