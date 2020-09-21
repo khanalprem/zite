@@ -87,6 +87,11 @@ ul{
                     }
                     }
                 }
+                h6{
+                    margin-bottom: .6125rem;
+                    font-weight: 600;
+                    font-size: .875rem;
+                }
                 h5{
                     @media #{$breakpoint-md-desktop} {
                         font-size: .875rem;

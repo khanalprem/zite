@@ -2226,6 +2226,10 @@ ul {
           @media only screen and (max-width: 1368px) {
             ul.list li .list-content a.phone-number {
               font-size: .775rem; } }
+        ul.list li .list-content h6 {
+          margin-bottom: .6125rem;
+          font-weight: 600;
+          font-size: .875rem; }
         @media only screen and (max-width: 1368px) {
           ul.list li .list-content h5 {
             font-size: .875rem; } }
@@ -2782,6 +2786,8 @@ figure {
   .zite-table table td span.form-guide i {
     color: #757575;
     font-size: 1rem; }
+  .zite-table table td b.counter {
+    margin-left: .6125rem; }
   @media breakpoint-desktop {
     .zite-table table td b {
       font-size: .775rem; } }
@@ -2931,7 +2937,8 @@ figure {
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     -o-transform: scale(1);
-    transform: scale(1); }
+    transform: scale(1);
+    position: relative; }
     .table-status [class*=status].is-pd {
       padding: .5px 10px;
       text-transform: capitalize; }
@@ -2947,6 +2954,18 @@ figure {
     .table-status [class*=status].is-orange {
       background-color: rgba(255, 177, 0, 0.15);
       color: #FFB100; }
+    .table-status [class*=status] img {
+      position: absolute;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%; }
     .table-status [class*=status]:hover {
       -webkit-transform: scale(1.2);
       -moz-transform: scale(1.2);

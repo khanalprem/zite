@@ -163,6 +163,9 @@
               }
           }
           b{
+            &.counter{
+              margin-left:.6125rem;
+            }
             @media #{breakpoint-desktop}{
                 font-size: .775rem;
             }
@@ -326,6 +329,7 @@
         margin-right: -4px;
         border:1px solid $white-color;
         @include transform(scale(1));
+        position: relative;
         &.is-pd{
             padding:.5px 10px;
             text-transform: capitalize;
@@ -348,6 +352,16 @@
         &.is-orange {
             background-color: $orange-light;
             color:$orange-color;
+        }
+        img{
+          position: absolute;
+          right:0;
+          left:0;
+          width:100%;
+          height: 100%;
+          top:0;
+          bottom:0;
+          @include radius(50%);
         }
         &:hover{
             @include transform(scale(1.2));
