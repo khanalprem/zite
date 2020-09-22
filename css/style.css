@@ -2153,15 +2153,15 @@ ul ul {
   margin-bottom: 0;
   padding: 0; }
 
-ul
-dt {
+ul dt {
   font-weight: 700; }
 
 dd {
   margin-bottom: 0.5rem;
   margin-left: 0; }
 
-ul, ol {
+ul,
+ol {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -2187,6 +2187,8 @@ ul {
       -webkit-box-pack: start;
       -ms-flex-pack: start;
       justify-content: flex-start; }
+      ul.list li a {
+        color: #333333; }
       ul.list li figure {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 55px;
@@ -2200,6 +2202,20 @@ ul {
           -moz-border-radius: 100%;
           -ms-border-radius: 100%;
           border-radius: 100%; }
+      ul.list li span.counter {
+        padding: 0 8px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+        background-color: #E7F6E9;
+        color: #40B449;
+        font-weight: 500;
+        margin-left: .5rem;
+        border: 1px solid #ffffff; }
+        ul.list li span.counter:hover {
+          background-color: #40B449;
+          color: #ffffff; }
       ul.list li .circle-icon i {
         font-size: 1rem; }
       ul.list li .circle-icon.svg img {
@@ -2273,6 +2289,43 @@ ul {
       -webkit-box-align: start;
       -ms-flex-align: start;
       align-items: flex-start; }
+    ul.list.is-after li {
+      position: relative; }
+      ul.list.is-after li::after {
+        content: 'expand_more';
+        margin-left: .6125rem;
+        content: 'chevron_right';
+        font-size: 1.4rem;
+        font-family: 'Material Icons';
+        color: #757575;
+        z-index: 99;
+        line-height: 1;
+        position: absolute;
+        top: 10px;
+        right: 10px; }
+    ul.list.is-plus {
+      padding-left: 10px; }
+      ul.list.is-plus li {
+        position: relative;
+        cursor: pointer; }
+        ul.list.is-plus li a {
+          margin-left: 2rem;
+          color: #333333; }
+        ul.list.is-plus li::before {
+          content: 'add_circle_outline';
+          font-size: 1.4rem;
+          font-family: 'Material Icons';
+          color: #40B449;
+          z-index: 99;
+          line-height: 1;
+          position: absolute;
+          top: 10px;
+          left: 10px; }
+        ul.list.is-plus li.active a {
+          color: #757575; }
+        ul.list.is-plus li.active::before {
+          content: 'remove_circle_outline';
+          color: #757575; }
   ul.address {
     margin-top: 1rem; }
     ul.address li {
@@ -2481,6 +2534,36 @@ ul {
       border-radius: 0 5px 5px 0; }
     .inline-row .flat-radio:first-child {
       border-radius: 5px 0 0 5px; }
+  .inline-row.chips {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .inline-row.chips li {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border: 1px solid #40B449;
+      background-color: #E7F6E9;
+      color: #1E8E45;
+      font-size: .775rem;
+      -webkit-border-radius: 24px;
+      -moz-border-radius: 24px;
+      -ms-border-radius: 24px;
+      border-radius: 24px;
+      padding: 0 .5rem;
+      margin-left: .6125rem;
+      margin-bottom: .6125rem;
+      font-weight: 600; }
+      .inline-row.chips li i {
+        font-size: .875rem;
+        line-height: 1; }
+      .inline-row.chips li span {
+        padding: 0 .25rem; }
   .inline-row.is-3 .flat-checkbox {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 33.33333%;
@@ -2507,7 +2590,8 @@ ul {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-  .inline-item .cricle-icon, .inline-item .square-icon {
+  .inline-item .cricle-icon,
+  .inline-item .square-icon {
     margin-right: 1rem; }
   .inline-item .inline-text h3 {
     font-size: 1.8rem;
@@ -6239,6 +6323,16 @@ header.site-header {
     border: 1px solid transparent;
     color: #989898;
     cursor: pointer; }
+    .tab-list li a span.counter {
+      padding: 0 6px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%;
+      background-color: #40B449;
+      color: #ffffff;
+      font-weight: 500;
+      margin-left: .5rem; }
     @media only screen and (max-width: 1440px) {
       .tab-list li a {
         font-size: .775rem; } }

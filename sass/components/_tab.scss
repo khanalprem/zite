@@ -30,6 +30,16 @@
             border:1px solid transparent;
             color:$body-light;
             cursor: pointer;
+            span{
+                &.counter{
+                    padding:0 6px;
+                    @include radius(50%);
+                    background-color: $primary-color;
+                    color:$white-color;
+                    font-weight: 500;
+                    margin-left: .5rem;
+                }
+            }
             @media #{$breakpoint-desktop}{
                 font-size: .775rem;
             }
