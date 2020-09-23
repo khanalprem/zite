@@ -5309,61 +5309,6 @@ body.home-3 .bottom-header {
       flex-grow: 1; }
       .zite-header .bottom-header .tab-list li a {
         padding: .6125rem 1rem; }
-  .zite-header .filter {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
-    .zite-header .filter .filter-content {
-      flex-grow: 1;
-      display: none; }
-      .zite-header .filter .filter-content .filter-row {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
-        justify-content: flex-end;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center; }
-      .zite-header .filter .filter-content .form-group {
-        margin: 0 10px 0 0;
-        max-width: 160px; }
-        .zite-header .filter .filter-content .form-group input.form-control {
-          height: calc(1.5em + 0.75rem + 2px); }
-          .zite-header .filter .filter-content .form-group input.form-control.placeholder {
-            color: #e6e6e6;
-            font-size: .775rem;
-            text-transform: capitalize; }
-          .zite-header .filter .filter-content .form-group input.form-control:-moz-placeholder {
-            color: #e6e6e6;
-            font-size: .775rem;
-            text-transform: capitalize; }
-          .zite-header .filter .filter-content .form-group input.form-control::-moz-placeholder {
-            color: #e6e6e6;
-            font-size: .775rem;
-            text-transform: capitalize; }
-          .zite-header .filter .filter-content .form-group input.form-control:-ms-input-placeholder {
-            color: #e6e6e6;
-            font-size: .775rem;
-            text-transform: capitalize; }
-          .zite-header .filter .filter-content .form-group input.form-control::-webkit-input-placeholder {
-            color: #e6e6e6;
-            font-size: .775rem;
-            text-transform: capitalize; }
-      .zite-header .filter .filter-content .custom-select p {
-        display: block;
-        min-width: 160px; }
-        .zite-header .filter .filter-content .custom-select p.selected-item {
-          border: 1px solid #e6e6e6;
-          height: 2.3rem;
-          line-height: 2.3rem; }
 
 header.site-header {
   padding: .6125rem 1rem;
@@ -6561,6 +6506,65 @@ header.site-header {
 [tooltip][flow^="right"]:hover::before,
 [tooltip][flow^="right"]:hover::after {
   animation: tooltips-horz 300ms ease-out forwards; }
+
+/* Filter
+--------------------------------------------- */
+.filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.filter-content {
+  flex-grow: 1;
+  display: none; }
+  .filter-content .filter-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .filter-content .form-group {
+    margin: 0 10px 0 0;
+    max-width: 160px; }
+    .filter-content .form-group input.form-control {
+      height: calc(1.5em + 0.75rem + 2px); }
+      .filter-content .form-group input.form-control.placeholder {
+        color: #e6e6e6;
+        font-size: .775rem;
+        text-transform: capitalize; }
+      .filter-content .form-group input.form-control:-moz-placeholder {
+        color: #e6e6e6;
+        font-size: .775rem;
+        text-transform: capitalize; }
+      .filter-content .form-group input.form-control::-moz-placeholder {
+        color: #e6e6e6;
+        font-size: .775rem;
+        text-transform: capitalize; }
+      .filter-content .form-group input.form-control:-ms-input-placeholder {
+        color: #e6e6e6;
+        font-size: .775rem;
+        text-transform: capitalize; }
+      .filter-content .form-group input.form-control::-webkit-input-placeholder {
+        color: #e6e6e6;
+        font-size: .775rem;
+        text-transform: capitalize; }
+  .filter-content .custom-select p {
+    display: block;
+    min-width: 160px; }
+    .filter-content .custom-select p.selected-item {
+      border: 1px solid #e6e6e6;
+      height: 2.3rem;
+      line-height: 2.3rem; }
 
 /* Galleries
 --------------------------------------------- */
