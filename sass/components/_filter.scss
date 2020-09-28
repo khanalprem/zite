@@ -11,6 +11,7 @@
       @include display-flex(flex);
       @include justify-content-end;
       @include align-items-center;
+      @include flex-wrap(wrap);
       
   }
   .form-group{
@@ -36,6 +37,20 @@
           border: 1px solid $border-color;
           height: 2.3rem;
           line-height: 2.3rem;
+        }
+      }
+    }
+    &.project-summary-filter{
+      display: block;
+      margin-top:15px;
+      .form-group{
+        @include flex (0 0 16.666666%);
+        max-width: 16.666666%;
+        margin-right: 0;
+        padding-right: 15px;
+        @media #{$breakpoint-desktop}{
+          @include flex (0 0 25%);
+          max-width: 25%;
         }
       }
     }

@@ -268,9 +268,6 @@
     <div id="content" class="site-content ">
         <main id="main" class="site-main">
             <div class="container">
-                <div class="page-header">
-                    <h1>Manager users</h1>
-                </div>
                 <div class="manage-user">
                     <div class="zite-card">
                         <div class="card-header is-between">
@@ -303,7 +300,7 @@
                                     </ul>
                                 </span>
                                 <span class="custom-dropdown is-option is-right">
-                                    <a href="#" class="circle-icon is-bg"><i class="material-icons">more_vert</i></a>
+                                    <a href="#" class="circle-icon is-bg mr-0"><i class="material-icons">more_vert</i></a>
                                     <ul class="custom-dropdown-menu">
                                         <li><a href="#"><i class="material-icons">get_app</i><span>export all sites</span></a>
                                         </li>
@@ -319,59 +316,105 @@
                         <div class="inline-row is-between mt-15">
                             <p>Contains high level overview of the project in form of numbers, graphs and map.</p>
                             <div class="filter">
-                                <div class="filter-content">
-                                    <div class="filter-row">
-                                        <div class="form-group">
-                                            <div class="custom-select">
-                                                <p class="selected-item">
-                                                    Region
-                                                </p>
-                                                <ul class="select-list left-dropdown">
-                                                    <li>
-                                                        <span>Kathmandu</span>
-                                                    </li>
-                                                    <li>
-                                                        <span>Pokhara</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="custom-select">
-                                                <p class="selected-item">
-                                                    Type
-                                                </p>
-                                                <ul class="select-list left-dropdown">
-                                                    <li>
-                                                        <span>Kathmandu</span>
-                                                    </li>
-                                                    <li>
-                                                        <span>Pokhara</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                
-                                            <div class="custom-input-group custom-date">
-                                                <span class="span-group">
-                                                    <i class="material-icons">date_range</i>
-                                                </span>
-                                                <input class="form-control" placeholder="Project Period">
-                                            </div>
-                
-                                        </div>
-                                    </div>
-                
-                                </div>
+                                
                                 <a class="circle-icon is-border">
                                     <i class="material-icons">filter_list</i>
                                 </a>
                             </div>
                         </div>
+                        <div class="filter-content project-summary-filter">
+                            <div class="filter-row">
+                                <div class="form-group">
+                                    <div class="custom-select">
+                                        <p class="selected-item">
+                                            Project
+                                        </p>
+                                        <ul class="select-list left-dropdown">
+                                            <li>
+                                                <span>Kathmandu</span>
+                                            </li>
+                                            <li>
+                                                <span>Pokhara</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-select">
+                                        <p class="selected-item">
+                                            Region
+                                        </p>
+                                        <ul class="select-list left-dropdown">
+                                            <li>
+                                                <span>Kathmandu</span>
+                                            </li>
+                                            <li>
+                                                <span>Pokhara</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-select">
+                                        <p class="selected-item">
+                                            User roles
+                                        </p>
+                                        <ul class="select-list left-dropdown">
+                                            <li>
+                                                <span>Kathmandu</span>
+                                            </li>
+                                            <li>
+                                                <span>Pokhara</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+        
+                                    <div class="custom-input-group custom-date">
+                                        <span class="span-group">
+                                            <i class="material-icons">date_range</i>
+                                        </span>
+                                        <input class="form-control" placeholder="Project Period">
+                                    </div>
+        
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-select">
+                                        <p class="selected-item">
+                                            Site Informations
+                                        </p>
+                                        <ul class="select-list left-dropdown">
+                                            <li>
+                                                <span>Kathmandu</span>
+                                            </li>
+                                            <li>
+                                                <span>Pokhara</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-select">
+                                        <p class="selected-item">
+                                            sub group
+                                        </p>
+                                        <ul class="select-list left-dropdown">
+                                            <li>
+                                                <span>Kathmandu</span>
+                                            </li>
+                                            <li>
+                                                <span>Pokhara</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div>
                     </div>
                     <div class="zite-body">
-                        <div class="zite-table mt-30">
+                        <div class="zite-table mt-30 project-summary-table">
                             <table class="table is-border table-responsive-xl">
                                 <thead>
                                     <tr>
@@ -386,6 +429,10 @@
                                         <th>submitted on</th>
                                         <th>record</th>
                                         <th>choose</th>
+                                        <th>enter the</th>
+                                        <th>select the</th>
+                                        <th>enter the</th>
+                                        <th>select the</th>
                                         <th>enter the</th>
                                         <th>select the</th>
                                         <th>enter the</th>
@@ -416,26 +463,6 @@
                                         <td>Bsihnu</td>
                                         <td>Strong back</td>
                                         <td>type4</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            244980
-                                        </td>
-                                        <td>
-                                            <span class="">R-28-18-8-9-003</span>
-                                        </td>
-                                        <td>
-                                            <h6 class="">Narahari Nepal</h6>
-                                        </td>
-
-                                        <td>
-                                            promisha@buildchan…
-                                        </td>
-                                        <td>Approved</td>
-                                        <td>
-                                            <time>2019-09-18</time>
-                                        </td>
-                                        <td><time>2019-09-18</time></td>
                                         <td>Call1</td>
                                         <td>Bsihnu</td>
                                         <td>Strong back</td>
@@ -464,26 +491,6 @@
                                         <td>Bsihnu</td>
                                         <td>Strong back</td>
                                         <td>type4</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            244980
-                                        </td>
-                                        <td>
-                                            <span class="">R-28-18-8-9-003</span>
-                                        </td>
-                                        <td>
-                                            <h6 class="">Narahari Nepal</h6>
-                                        </td>
-
-                                        <td>
-                                            promisha@buildchan…
-                                        </td>
-                                        <td>Approved</td>
-                                        <td>
-                                            <time>2019-09-18</time>
-                                        </td>
-                                        <td><time>2019-09-18</time></td>
                                         <td>Call1</td>
                                         <td>Bsihnu</td>
                                         <td>Strong back</td>
@@ -512,26 +519,6 @@
                                         <td>Bsihnu</td>
                                         <td>Strong back</td>
                                         <td>type4</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            244980
-                                        </td>
-                                        <td>
-                                            <span class="">R-28-18-8-9-003</span>
-                                        </td>
-                                        <td>
-                                            <h6 class="">Narahari Nepal</h6>
-                                        </td>
-
-                                        <td>
-                                            promisha@buildchan…
-                                        </td>
-                                        <td>Approved</td>
-                                        <td>
-                                            <time>2019-09-18</time>
-                                        </td>
-                                        <td><time>2019-09-18</time></td>
                                         <td>Call1</td>
                                         <td>Bsihnu</td>
                                         <td>Strong back</td>
@@ -560,6 +547,10 @@
                                         <td>Bsihnu</td>
                                         <td>Strong back</td>
                                         <td>type4</td>
+                                        <td>Call1</td>
+                                        <td>Bsihnu</td>
+                                        <td>Strong back</td>
+                                        <td>type4</td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -580,6 +571,94 @@
                                             <time>2019-09-18</time>
                                         </td>
                                         <td><time>2019-09-18</time></td>
+                                        <td>Call1</td>
+                                        <td>Bsihnu</td>
+                                        <td>Strong back</td>
+                                        <td>type4</td>
+                                        <td>Call1</td>
+                                        <td>Bsihnu</td>
+                                        <td>Strong back</td>
+                                        <td>type4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            244980
+                                        </td>
+                                        <td>
+                                            <span class="">R-28-18-8-9-003</span>
+                                        </td>
+                                        <td>
+                                            <h6 class="">Narahari Nepal</h6>
+                                        </td>
+
+                                        <td>
+                                            promisha@buildchan…
+                                        </td>
+                                        <td>Approved</td>
+                                        <td>
+                                            <time>2019-09-18</time>
+                                        </td>
+                                        <td><time>2019-09-18</time></td>
+                                        <td>Call1</td>
+                                        <td>Bsihnu</td>
+                                        <td>Strong back</td>
+                                        <td>type4</td>
+                                        <td>Call1</td>
+                                        <td>Bsihnu</td>
+                                        <td>Strong back</td>
+                                        <td>type4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            244980
+                                        </td>
+                                        <td>
+                                            <span class="">R-28-18-8-9-003</span>
+                                        </td>
+                                        <td>
+                                            <h6 class="">Narahari Nepal</h6>
+                                        </td>
+
+                                        <td>
+                                            promisha@buildchan…
+                                        </td>
+                                        <td>Approved</td>
+                                        <td>
+                                            <time>2019-09-18</time>
+                                        </td>
+                                        <td><time>2019-09-18</time></td>
+                                        <td>Call1</td>
+                                        <td>Bsihnu</td>
+                                        <td>Strong back</td>
+                                        <td>type4</td>
+                                        <td>Call1</td>
+                                        <td>Bsihnu</td>
+                                        <td>Strong back</td>
+                                        <td>type4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            244980
+                                        </td>
+                                        <td>
+                                            <span class="">R-28-18-8-9-003</span>
+                                        </td>
+                                        <td>
+                                            <h6 class="">Narahari Nepal</h6>
+                                        </td>
+
+                                        <td>
+                                            promisha@buildchan…
+                                        </td>
+                                        <td>Approved</td>
+                                        <td>
+                                            <time>2019-09-18</time>
+                                        </td>
+                                        <td><time>2019-09-18</time></td>
+                                        <td>Call1</td>
+                                        <td>Bsihnu</td>
+                                        <td>Strong back</td>
+                                        <td>type4</td>
                                         <td>Call1</td>
                                         <td>Bsihnu</td>
                                         <td>Strong back</td>
@@ -588,6 +667,20 @@
                                 </tbody>
                             </table>
                         </div>
+                        <ul class="inline-row is-center table-info">
+                            <li>
+                                <div class="row-info">
+                                    <b>152</b><span>rows</span>,
+                                </div>
+                                <div class="row-info">
+                                    <b>27</b><span>columns</span>
+                                </div>
+                            </li>
+                            <li><b>4104</b><span>cells</span></li>
+                            <li>
+                                <b>3mb</b><span>est.size</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="popup" id="assign-modal">

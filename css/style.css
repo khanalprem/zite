@@ -2003,6 +2003,9 @@ body {
 .pt-0 {
   padding-top: 0 !important; }
 
+.mr-0 {
+  margin: 0 !important; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
   color: #333333;
@@ -2814,10 +2817,12 @@ figure {
     @media only screen and (max-width: 1440px) {
       .zite-table table h6 {
         font-size: .775rem; } }
-  .zite-table table th.serial-no {
-    width: 50px; }
-  .zite-table table th .custom-checkbox {
-    margin: 0; }
+  .zite-table table th {
+    vertical-align: middle; }
+    .zite-table table th.serial-no {
+      width: 50px; }
+    .zite-table table th .custom-checkbox {
+      margin: 0; }
   .zite-table table td .site-progress, .zite-table table td .org {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2984,6 +2989,8 @@ figure {
       cursor: pointer; }
     .zite-table table .icons span:not(:last-child) {
       margin-right: .6125rem; }
+  .zite-table.project-summary-table table thead th {
+    min-width: 120px; }
 
 .table-status {
   display: -webkit-box;
@@ -3068,6 +3075,31 @@ figure {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
+
+.table-info {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .table-info li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: .875rem;
+    color: #757575; }
+    .table-info li b {
+      font-weight: 600;
+      margin-right: .35rem;
+      color: #333333; }
+    .table-info li:not(:last-child)::after {
+      content: '|';
+      display: inline-flex;
+      margin: 0 .5rem; }
 
 /* Links
 --------------------------------------------- */
@@ -6532,7 +6564,9 @@ header.site-header {
     justify-content: flex-end;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
   .filter-content .form-group {
     margin: 0 10px 0 0;
     max-width: 160px; }
@@ -6565,6 +6599,22 @@ header.site-header {
       border: 1px solid #e6e6e6;
       height: 2.3rem;
       line-height: 2.3rem; }
+  .filter-content.project-summary-filter {
+    display: block;
+    margin-top: 15px; }
+    .filter-content.project-summary-filter .form-group {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 16.666666%;
+      flex: 0 0 16.666666%;
+      max-width: 16.666666%;
+      margin-right: 0;
+      padding-right: 15px; }
+      @media only screen and (max-width: 1440px) {
+        .filter-content.project-summary-filter .form-group {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+          max-width: 25%; } }
 
 /* Galleries
 --------------------------------------------- */
