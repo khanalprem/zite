@@ -133,7 +133,7 @@ textarea{
             }
         }
     }
-    &.custom-date{
+    &.is-date{
         &::after {
             content: "arrow_drop_down";
             font-family: "Material Icons";

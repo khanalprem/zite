@@ -69,6 +69,10 @@
         }
 
     }
+    &.is-auto{
+        min-width: initial;
+    min-height: initial;
+    }
 
     &.is-full-line {
         width: 100%;

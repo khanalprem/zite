@@ -3,7 +3,8 @@
   margin-bottom: 1rem;
   color: $body-color;
   @include radius(5px);
-
+  table-layout: fixed;
+  overflow: hidden;
   &.is-border {
     border-top: 1px solid $border-color;
 
@@ -11,6 +12,19 @@
       border: 1px solid $border-color;
     }
   }
+  // thead{
+  //   position: relative;
+  //   display: block;
+  //   overflow: visible;
+  //   width: 100%;
+  // }
+  // tbody {
+  //   position: relative;
+  //   display: block;
+  //   height: 550px;
+  //   overflow: scroll;
+  //   width: 100%;
+  // }
 }
 
 .table td,

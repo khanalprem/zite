@@ -209,3 +209,22 @@
       opacity: 1;
   }
 }
+.zite-map{
+  .map-row{
+
+  }
+  aside{
+    &.map-sidebar{
+      @include flex(0 0 400px);
+      max-width: 400px;
+      @media #{$breakpoint-desktop}{
+        @include flex(0 0 300px);
+      max-width: 300px;
+      }
+    }
+  }
+  .map-card{
+    flex-grow: 1;
+    padding-left:30px;
+  }
+}

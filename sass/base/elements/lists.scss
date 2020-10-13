@@ -508,6 +508,13 @@ ul {
             span{
                 padding:0 .25rem;
             }
+            &.mb-0{
+                margin-bottom: 0;
+            }
+       }
+       &.is-bg{
+           background-color: $white-color;
+           padding-top:10px;
        }
    }
 
