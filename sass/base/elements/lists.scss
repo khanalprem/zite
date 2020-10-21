@@ -77,6 +77,12 @@ ul {
                     }
 
                 }
+
+                &.drag-icon {
+                    display: inline-flex;
+                    color: $body-color;
+                    margin-right: .6125rem;
+                }
             }
 
             .circle-icon {
@@ -212,6 +218,7 @@ ul {
             li {
                 position: relative;
                 cursor: pointer;
+
                 a {
                     margin-left: 2rem;
                     color: $heading-color;
@@ -239,6 +246,19 @@ ul {
                         color: $body-color;
 
                     }
+                }
+            }
+        }
+
+        &.is-drag {
+            li {
+                .drag-icon {
+                    max-width: 20px;
+                    margin-right: .6125rem;
+                }
+
+                &:hover {
+                    cursor: move;
                 }
             }
         }
@@ -292,6 +312,10 @@ ul {
             @include justify-content-start;
             @include align-items-center;
             flex-grow: 1;
+
+            i {
+                margin-right: 5px;
+            }
 
             b {
                 text-transform: capitalize;
@@ -486,37 +510,43 @@ ul {
             border-radius: 5px 0 0 5px;
         }
     }
-   &.chips{
-       @include flex-wrap(wrap);
-       li{
+
+    &.chips {
+        @include flex-wrap(wrap);
+
+        li {
             @include display-flex(flex);
             @include justify-content-start;
             @include align-items-center;
-            border:1px solid $primary-color;
+            border: 1px solid $primary-color;
             background-color: $primary-light;
-            color:$primary-dark;
+            color: $primary-dark;
             font-size: .775rem;
             @include radius(24px);
-            padding:0 .5rem;
+            padding: 0 .5rem;
             margin-left: .6125rem;
             margin-bottom: .6125rem;
             font-weight: 600;
-            i{
+
+            i {
                 font-size: .875rem;
                 line-height: 1;
             }
-            span{
-                padding:0 .25rem;
+
+            span {
+                padding: 0 .25rem;
             }
-            &.mb-0{
+
+            &.mb-0 {
                 margin-bottom: 0;
             }
-       }
-       &.is-bg{
-           background-color: $white-color;
-           padding-top:10px;
-       }
-   }
+        }
+
+        &.is-bg {
+            background-color: $white-color;
+            padding-top: 10px;
+        }
+    }
 
     &.is-3 {
         .flat-checkbox {

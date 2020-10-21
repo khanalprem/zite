@@ -80,21 +80,25 @@
 
         // Checkmark. Could be replaced with an image
         &:checked+label:after {
-            content: '';
+            content: 'check';
             position: absolute;
             left: 4px;
-            top: 10px;
-            background: $primary-color;
-            width: 2px;
-            height: 2px;
-            box-shadow:
-                2px 0 0 $white-color,
-                4px 0 0 $white-color,
-                4px -2px 0 $white-color,
-                4px -4px 0 $white-color,
-                4px -6px 0 $white-color,
-                4px -8px 0 $white-color;
-            transform: rotate(45deg);
+            top: 6px;
+            line-height: 1;
+
+            // background: $primary-color;
+            font-family: 'Material Icons';
+            color:$white-color;
+            // width: 2px;
+            // height: 2px;
+            // box-shadow:
+            //     2px 0 0 $white-color,
+            //     4px 0 0 $white-color,
+            //     4px -2px 0 $white-color,
+            //     4px -4px 0 $white-color,
+            //     4px -6px 0 $white-color,
+            //     4px -8px 0 $white-color;
+            // transform: rotate(45deg);
         }
 
         &:checked+label:before {

@@ -2219,6 +2219,10 @@ ul {
         ul.list li span.counter:hover {
           background-color: #40B449;
           color: #ffffff; }
+      ul.list li span.drag-icon {
+        display: inline-flex;
+        color: #757575;
+        margin-right: .6125rem; }
       ul.list li .circle-icon i {
         font-size: 1rem; }
       ul.list li .circle-icon.svg img {
@@ -2329,6 +2333,11 @@ ul {
         ul.list.is-plus li.active::before {
           content: 'remove_circle_outline';
           color: #757575; }
+    ul.list.is-drag li .drag-icon {
+      max-width: 20px;
+      margin-right: .6125rem; }
+    ul.list.is-drag li:hover {
+      cursor: move; }
   ul.address {
     margin-top: 1rem; }
     ul.address li {
@@ -2384,6 +2393,8 @@ ul {
     -ms-flex-align: center;
     align-items: center;
     flex-grow: 1; }
+    ul.is-checkbox .check-content i {
+      margin-right: 5px; }
     ul.is-checkbox .check-content b {
       text-transform: capitalize; }
   ul.is-checkbox li:focus-within, ul.is-checkbox li:hover {
@@ -3889,15 +3900,13 @@ textarea.form-control.is-valid {
       box-shadow: none;
       background: #ddd; }
     .custom-checkbox input:checked + label:after {
-      content: '';
+      content: 'check';
       position: absolute;
       left: 4px;
-      top: 10px;
-      background: #40B449;
-      width: 2px;
-      height: 2px;
-      box-shadow: 2px 0 0 #ffffff, 4px 0 0 #ffffff, 4px -2px 0 #ffffff, 4px -4px 0 #ffffff, 4px -6px 0 #ffffff, 4px -8px 0 #ffffff;
-      transform: rotate(45deg); }
+      top: 6px;
+      line-height: 1;
+      font-family: 'Material Icons';
+      color: #ffffff; }
     .custom-checkbox input:checked + label:before {
       border-color: #40B449; }
     .custom-checkbox input:checked + label {
