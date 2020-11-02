@@ -85,6 +85,63 @@
             color: $red-color;
         }
     }
+    &.invitation-toast{
+        display: block;
+        .card-header{
+            padding:0;
+            margin-bottom: 10px;
+            h5{
+                font-size: .875rem;
+            }
+            .inline-item{
+                &:last-child{
+                    .common-button{
+                        i{
+                            color:$secondary-color;
+                        }
+                        color:$secondary-color;
+                    }
+                }
+                &:not(:last-child){
+                    margin-right: .6125rem;
+                }
+            }
+        }
+        .common-button{
+            min-width: initial;
+            min-height: initial;
+            font-size: .875rem;
+            padding:.5rem .6125rem;
+        }
+        .buttons{
+            .common-button{
+                @include radius(4px);
+            }
+        }
+        ul{
+            li{
+                display: block;
+                p{
+                    a{
+                        color:$primary-dark;
+                    }
+                }
+                .buttons{
+                    @include display-flex(flex);
+                    @include justify-content-start;
+                    @include align-items-center;
+                    margin-top:8px;
+                    .common-button{
+                        padding:5px 10px;
+                        &.success{
+                            border-color:$primary-color;
+                            color:$primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
     &:not(:last-child){
         margin-bottom: 1rem;
     }

@@ -6908,7 +6908,7 @@ header.site-header {
   height: 27px;
   margin-left: 4px;
   margin-top: 4px;
-  font: 12px Helvetica Neue,Arial,Helvetica,sans-serif !important; }
+  font: 12px Helvetica Neue, Arial, Helvetica, sans-serif !important; }
 
 .marker-cluster span {
   line-height: 27px; }
@@ -6999,7 +6999,29 @@ header.site-header {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 400px;
   flex: 0 0 400px;
-  max-width: 400px; }
+  max-width: 400px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar; }
+  .zite-map aside.map-sidebar::-webkit-scrollbar {
+    width: 4px;
+    background: #e6e6e6;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px; }
+  .zite-map aside.map-sidebar::-webkit-scrollbar-track {
+    background-color: #e6e6e6;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px; }
+  .zite-map aside.map-sidebar::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    background: #C7C7C7; }
   @media only screen and (max-width: 1440px) {
     .zite-map aside.map-sidebar {
       -webkit-box-flex: 0;
@@ -7103,6 +7125,49 @@ header.site-header {
     background-color: #FF0F0F; }
   .toast.is-error .type {
     color: #FF0F0F; }
+  .toast.invitation-toast {
+    display: block; }
+    .toast.invitation-toast .card-header {
+      padding: 0;
+      margin-bottom: 10px; }
+      .toast.invitation-toast .card-header h5 {
+        font-size: .875rem; }
+      .toast.invitation-toast .card-header .inline-item:last-child .common-button {
+        color: #E12454; }
+        .toast.invitation-toast .card-header .inline-item:last-child .common-button i {
+          color: #E12454; }
+      .toast.invitation-toast .card-header .inline-item:not(:last-child) {
+        margin-right: .6125rem; }
+    .toast.invitation-toast .common-button {
+      min-width: initial;
+      min-height: initial;
+      font-size: .875rem;
+      padding: .5rem .6125rem; }
+    .toast.invitation-toast .buttons .common-button {
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      border-radius: 4px; }
+    .toast.invitation-toast ul li {
+      display: block; }
+      .toast.invitation-toast ul li p a {
+        color: #1E8E45; }
+      .toast.invitation-toast ul li .buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-top: 8px; }
+        .toast.invitation-toast ul li .buttons .common-button {
+          padding: 5px 10px; }
+          .toast.invitation-toast ul li .buttons .common-button.success {
+            border-color: #40B449;
+            color: #40B449; }
   .toast:not(:last-child) {
     margin-bottom: 1rem; }
 

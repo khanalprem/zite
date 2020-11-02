@@ -3,7 +3,12 @@
 
   "use strict";
 
-
+ var  $winHeight = $(window).innerHeight(),
+      $ziteHeaderH = $('.zite-header').height(),
+      $breadcrumbH = $('.breadcrumb').height(),
+      $siteheaderH = $('.site-header').height(),
+      $mapSidebarH = $winHeight - $ziteHeaderH + $breadcrumbH + $siteheaderH;
+      $('.map-sidebar').css({'max-height': $mapSidebarH - 290 , 'min-height':$mapSidebarH - 290});
   function openModal() {
     $('.common-button').on('click', function (e) {
       e.preventDefault();
