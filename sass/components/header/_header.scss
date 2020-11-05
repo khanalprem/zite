@@ -50,7 +50,8 @@ header{
                                 ul{
                                     &.custom-dropdown-menu{
                                         min-width:300px;
-                                        min-height: 250px;
+                                        min-height:300px;
+                                        max-width: 300px;
                                         li{
                                             a{
                                                 @include align-items-start;
@@ -70,6 +71,30 @@ header{
                                                 p{
                                                     margin:0;
                                                     font-size: .875rem;
+                                                }
+                                            }
+                                            &.list-header{
+                                                a{
+                                                    @include align-items-center;
+                                                    @include justify-content-center;
+                                                    @include display-flex(flex);
+                                                    width:30px;
+                                                    height: 30px;
+                                                    min-height: 30px;
+                                                    i{
+                                                        margin:0;
+                                                        color:$primary-color;
+                                                    }
+                                                }
+                                            }
+                                            &.list-footer{
+                                                a{
+                                                    @include align-items-center;
+                                                    @include justify-content-center;
+                                                    @include display-flex(flex);
+                                                    i{
+                                                        margin:0;
+                                                    }
                                                 }
                                             }
                                         }

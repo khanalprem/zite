@@ -177,6 +177,25 @@ ul {
                     }
                 }
             }
+            &.list-header{
+                @include justify-content-between;
+                h5{
+                    text-transform: capitalize;
+                }
+                
+                i{
+                    font-size: 1rem;
+                    color:$primary-color;
+                }
+            }
+            &.list-footer{
+                
+                a{
+                    width:24px;
+                    height: 24px;
+                    min-height: 24px;
+                }
+            }
 
         }
 
