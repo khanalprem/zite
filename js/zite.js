@@ -9,6 +9,13 @@
       $siteheaderH = $('.site-header').height(),
       $mapSidebarH = $winHeight - $ziteHeaderH + $breadcrumbH + $siteheaderH;
       $('.map-sidebar').css({'max-height': $mapSidebarH - 290 , 'min-height':$mapSidebarH - 290});
+
+
+      function preloader() {
+        $('.preloader').delay(5000).fadeOut(5000);
+      };
+        preloader();
+
   function openModal() {
     $('.common-button').on('click', function (e) {
       e.preventDefault();
