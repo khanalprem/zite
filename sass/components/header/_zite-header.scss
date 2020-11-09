@@ -32,17 +32,21 @@
                 }
             }
             h1{
-                margin-bottom: .5rem;
-                font-size: 1.35rem;
+                margin-bottom: .35rem;
+                font-size: 1.3rem;
+                font-weight: 700;
+                text-transform: capitalize;
                 @media #{$breakpoint-desktop}{
                     font-size: 1.125rem;
                 }
             }
             h6{
                 margin:0;
+                font-weight: 700;
                 a{
                     color:$primary-dark;
                     font-size:.9125rem;
+                    font-weight: 700;
                     @media #{$breakpoint-desktop}{
                         font-size: .8125rem;
                     }
@@ -97,9 +101,7 @@
     }
     .bottom-header{
         background-color: $white-color;
-        position: -webkit-sticky;
-        position: sticky;
-        top:0;
+        margin-top:1rem;
         .tab-list{
             flex-grow: 1;
             li{

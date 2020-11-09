@@ -209,6 +209,8 @@
       }
 
       b {
+        font-weight: 500;
+          color:$heading-color;
         &.counter {
           margin-left: .6125rem;
         }

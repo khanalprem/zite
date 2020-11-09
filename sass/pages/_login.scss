@@ -34,21 +34,24 @@
         .auth-info-footer{
             text-align: center;
             h5{
-                font-size: 1.8rem;
+                font-size: 1.6rem;
                 font-weight: 600;
+                margin-bottom: .6125rem;
             }
             p{
-                font-size: .9125rem;
+                font-size: .875rem;
                 color:$heading-color;
+                font-weight: 500;
+                line-height: 1.5;
             }
         }
         @media #{$breakpoint-desktop}{
             .auth-info-footer{
                 h5{
-                    font-size: 1.4rem;
+                    font-size: 1.2rem;
                 }
                 p{
-                    font-size: .875rem;
+                    font-size: .775rem;
                 }
             }
         }
@@ -149,6 +152,7 @@
                     a{
                        text-decoration: underline;
                        color:$heading-color;
+                       font-weight: 500;
                     }
                 }
             }

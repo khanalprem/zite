@@ -63,7 +63,7 @@
         padding:0;
     }
     h5{
-        font-size: 1.1rem;
+        font-size: 1rem;
         flex-grow: 1;
         font-weight: 600;
         margin:0;
@@ -73,11 +73,9 @@
             font-weight: 500;
         }
         @media #{$breakpoint-desktop}{
-            font-size: 1rem;
-        }
-        @media #{$breakpoint-md-desktop}{
             font-size: .875rem;
         }
+        
         
     }
     .selected-counter{
@@ -115,6 +113,7 @@
     button{
         &.common-button{
             @include radius(5px);
+            min-width: initial;
             &.is-bg{
                 background-color: $primary-light;
                 color:$heading-color;

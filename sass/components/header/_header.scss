@@ -71,6 +71,14 @@ header{
                                                 p{
                                                     margin:0;
                                                     font-size: .875rem;
+                                                    a{
+                                                        color:$heading-color;
+                                                    }
+                                                    b{
+                                                        a{
+                                                            color:$heading-color;
+                                                        }
+                                                    }
                                                 }
                                             }
                                             &.list-header{

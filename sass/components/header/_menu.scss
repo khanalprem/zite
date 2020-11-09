@@ -10,7 +10,7 @@
             position: relative;
             a{
                 color:$body-color;
-                padding:0 1rem;
+                padding:0 1.5rem;
                 font-size: .9375rem;
                 font-weight: 600;
                 @include transition(all .3s ease-in-out);
@@ -20,12 +20,11 @@
                 @include align-items-center;
                 i,svg{
                     margin-right: .6125rem;
-                    fill{
-                        color:$body-color;
-                    }
+                    fill:$body-color;
                 }
                 @media #{$breakpoint-md-desktop}{
                     font-size: .875rem;
+                    padding:0 1rem;
                     i,svg{
                         max-width: 18px;
                     }

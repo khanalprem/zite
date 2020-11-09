@@ -40,5 +40,13 @@
                 margin-right: 1.5rem;
             }
         }
+        @media #{$breakpoint-pt}{
+            @include flex-wrap(wrap);
+            .inline-item{
+                @include flex(0 0 50%);
+                max-width: 50%;
+                margin-bottom: .6125rem;
+            }
+        }
     }
 }

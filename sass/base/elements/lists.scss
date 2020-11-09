@@ -180,7 +180,8 @@ ul {
             &.list-header{
                 @include justify-content-between;
                 h5{
-                    text-transform: capitalize;
+                    text-transform: uppercase;
+                    font-weight: 700;
                 }
                 
                 i{
