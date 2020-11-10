@@ -13,7 +13,7 @@
                 @include display-flex(flex);
                 @include align-items-center;
                 @include justify-content-start;
-                font-size: .9125rem;
+                font-size: .8125rem;
                 text-transform: uppercase;
                 font-weight: 600;
 
@@ -251,7 +251,7 @@
         @include align-items-center;
         width:100%;
         i {
-            font-size: 1.2rem;
+            font-size: 1rem;
             cursor: pointer;
         }
 

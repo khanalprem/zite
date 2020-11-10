@@ -36,12 +36,12 @@
             h5{
                 font-size: 1.6rem;
                 font-weight: 600;
-                margin-bottom: .6125rem;
+                margin-bottom: .775rem;
+                
             }
             p{
                 font-size: .875rem;
                 color:$heading-color;
-                font-weight: 500;
                 line-height: 1.5;
             }
         }
@@ -63,15 +63,16 @@
         @include radius(5px);
         .login-header{
             text-align: center;
+            margin-bottom: 1rem;
             figure{
                 max-width: 300px;
                 margin:0 auto;
             }
             h3{
-                margin-top: 1rem;
-                font-size: 1.2rem;
-                font-weight: 700;
-                text-transform: uppercase;
+                margin-top: .6125rem;
+                font-size: 1.3rem;
+                font-weight: 600;
+                text-transform: initial;
             }
             b{
                 color:$red-color
@@ -95,6 +96,7 @@
                 text-transform: uppercase;
                 font-weight: 600;
                 @include justify-content-center;
+                margin-top:.6125rem;
             }
 
         }
@@ -127,6 +129,7 @@
                     label{
                         font-size:.875rem;
                         font-weight: 400;
+                        text-transform:initial;
                     }
                 }
                 &.forgot-password{
@@ -137,9 +140,11 @@
                         flex-grow: 1;
                     }
                     &.privacy{
+                        @include align-items-start;
                         .custom-checkbox{
                             max-width: 400px;
                             margin:0 auto;
+                            @include align-items-start;
                             label{
                                 text-transform: initial;
                                 display: initial;
@@ -147,6 +152,9 @@
                         }
                         .custom-checkbox{
                             flex-grow: initial;
+                        }
+                        span{
+                            margin-top:-3px;
                         }
                     }
                     a{

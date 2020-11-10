@@ -10,8 +10,8 @@
             position: relative;
             a{
                 color:$body-color;
-                padding:0 1.5rem;
-                font-size: .9375rem;
+                padding:0 .6125rem;
+                font-size: .875rem;
                 font-weight: 600;
                 @include transition(all .3s ease-in-out);
                 text-transform: capitalize;
@@ -23,8 +23,7 @@
                     fill:$body-color;
                 }
                 @media #{$breakpoint-md-desktop}{
-                    font-size: .875rem;
-                    padding:0 1rem;
+                    font-size: .8125rem;
                     i,svg{
                         max-width: 18px;
                     }
@@ -255,6 +254,12 @@
                     svg,i{
                         fill:$primary-color;
                     }
+                }
+            }
+            &:not(:last-child){
+                margin-right: 2.2rem;
+                @media #{$breakpoint-xl-desktop}{
+                    margin-right: 1.5rem;
                 }
             }
         }

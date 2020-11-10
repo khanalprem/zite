@@ -58,6 +58,7 @@ ul {
                     width: 40px;
                     height: 40px;
                     @include radius(100%);
+                    border:1px solid $border-color;
                 }
             }
 
@@ -98,12 +99,6 @@ ul {
             }
 
             .list-content {
-                font-size: .9125rem;
-
-                @media #{$breakpoint-desktop} {
-                    font-size: .8125rem;
-                }
-
                 @media #{$breakpoint-md-desktop} {
                     font-size: .775rem;
                 }
@@ -118,14 +113,15 @@ ul {
                 time {
                     color: $body-color;
                     display: block;
-                    margin-top: .5rem;
+                    margin-top: .15rem;
+                    font-size: .775rem;
                 }
 
                 a {
                     &.phone-number {
                         font-weight: 600;
                         color: $primary-color;
-                        font-size: .875rem;
+                        font-size: .775rem;
 
                         @media #{$breakpoint-md-desktop} {
                             font-size: .775rem;
@@ -140,9 +136,7 @@ ul {
                 }
 
                 h5 {
-                    @media #{$breakpoint-md-desktop} {
-                        font-size: .875rem;
-                    }
+                    font-size: .875rem;
                 }
             }
 
@@ -294,7 +288,6 @@ ul {
             @include align-items-center;
             color: $heading-color;
             padding: .25rem 0;
-            font-size: .9125rem;
 
             @media #{$breakpoint-desktop} {
                 font-size: .775rem;
@@ -315,7 +308,7 @@ ul {
 
             li {
                 &:not(:last-child) {
-                    margin-right: 2rem;
+                    margin-right: 2.5rem;
                 }
             }
         }
@@ -600,11 +593,12 @@ ul {
 
     .inline-text {
         h3 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
+            line-height: 1.2;
             margin: 0;
 
             @media #{$breakpoint-desktop} {
-                font-size: 1.5rem;
+                font-size: 1.1rem;
             }
         }
 

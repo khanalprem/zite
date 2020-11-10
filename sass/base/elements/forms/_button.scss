@@ -1,6 +1,6 @@
 [class*=common-button] {
     -webkit-font-smoothing: antialiased;
-    font-size: 1rem;
+    font-size: .875rem;
     font-weight: 600;
     text-decoration: none;
     text-transform: capitalize;
@@ -10,7 +10,7 @@
     @include justify-content-center;
     @include align-items-center;
     min-width: 160px;
-    min-height: 44px;
+    min-height: 40px;
     border: none;
     outline: none;
     line-height: inherit;
@@ -64,6 +64,7 @@
             background-color: $primary-color;
             border-color: $primary-color;
             color:$white-color;
+            @include box-shadow(0 30px 40px rgba($primary-dark, .25));
             i{
                 color:$white-color;
             }
@@ -238,17 +239,20 @@ a.load-more-button {
 }
 
 [class*=circle-icon] {
-    width: 40px;
-    height: 40px;
+    width: 34px;
+    height: 34px;
     @include display-flex(flex);
     @include justify-content-center;
     @include align-items-center;
     @include flex-direction-column(column);
     color: $body-color;
     @include radius(100%);
-    min-height: 40px;
+    min-height: 34px;
     cursor: pointer;
     @include transition(all .4s ease-in-out);
+    i{
+        font-size: 1.2rem;
+    }
     &.is-bg {
         background-color: $primary-light;
         color: $primary-dark;

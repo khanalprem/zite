@@ -127,7 +127,7 @@
 
   table {
     h6 {
-      font-size: .9125rem;
+      font-size: .8125rem;
 
       @media #{$breakpoint-desktop} {
         font-size: .775rem;
@@ -146,6 +146,7 @@
     }
 
     td {
+      color:$heading-color;
       .site-progress {
         @include display-flex(flex);
         @include align-items-center;
@@ -184,6 +185,11 @@
 
       .org {
         @extend .site-progress;
+        .org-text{
+          h6{
+            @include trim(1);
+          }
+        }
       }
 
       figure {
@@ -365,7 +371,7 @@
       @include align-items-center;
 
       i {
-        font-size: 1.2rem;
+        font-size: 1rem;
         cursor: pointer;
       }
 

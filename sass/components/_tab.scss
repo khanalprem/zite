@@ -26,7 +26,6 @@
             font-weight: 600;
             position: relative;
             @include transition(all .5s linear);
-            font-size:.9125rem;
             border:1px solid transparent;
             color:$body-light;
             cursor: pointer;
@@ -46,6 +45,9 @@
         }
         &:not(:last-child){
             margin-right: .6125rem;
+            @media #{$breakpoint-desktop}{
+                margin-right:.5rem;
+            }
         }
         
     }

@@ -18,9 +18,9 @@
     .zite-body{
         flex: 1 1 auto;
         min-height: 1px;
-        padding: 1.25rem;
-        @media #{$breakpoint-md-desktop}{
-            padding:1rem;
+        padding: 1rem;
+        @media #{$breakpoint-desktop}{
+            padding:.775rem;
         }
         &.pd-0{
             padding:0;
@@ -63,7 +63,7 @@
         padding:0;
     }
     h5{
-        font-size: 1rem;
+        font-size: .975rem;
         flex-grow: 1;
         font-weight: 600;
         margin:0;
@@ -124,8 +124,37 @@
             }
         }
     }
+    @media #{$breakpoint-desktop}{
+        padding-top:.775rem;
+     }
     @media #{$breakpoint-xs}{
         @include flex-wrap(wrap);
         @include justify-content-start;
      }
+}
+
+.is-overflow {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    // max-height: calc(100vh - 250px);
+    // height: 100vh;
+    height: 100%;
+
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        background: $border-color;
+        @include radius(4px);
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: $border-color;
+        @include radius(4px);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        @include radius(4px);
+        background: $border-dark;
+    }
 }

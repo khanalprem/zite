@@ -15,13 +15,16 @@
         input{
             &.form-control{
                 flex-grow: 1;
-                height: calc(1.6rem + .75rem + 2px);
+                height: calc(1.4rem + .75rem + 2px);
                 border:none;
                 display: initial;
                 @include radius(5px);
                 background-color: $bg-color;
                 &:focus{
                     background-color: $bg-color;
+                }
+                @include input-placeholder{
+                    color:$heading-color;
                 }
             }
         }

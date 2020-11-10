@@ -12,12 +12,14 @@
         @include align-items-start;
         flex-grow: 1;
         .org-logo{
-            @include flex(0 0 75px);
-            max-width: 75px;
+            @include flex(0 0 65px);
+            max-width: 65px;
+            margin:0;
             img{
-                width: 60px;
-                height: 60px;
+                width: 50px;
+                height: 50px;
                 @include radius(100%);
+                border:1px solid $border-color;
             }
         }
         .org-info{
@@ -32,12 +34,12 @@
                 }
             }
             h1{
-                margin-bottom: .35rem;
-                font-size: 1.3rem;
+                margin-bottom:0;
+                font-size: 1.2rem;
                 font-weight: 700;
                 text-transform: capitalize;
                 @media #{$breakpoint-desktop}{
-                    font-size: 1.125rem;
+                    font-size: 1rem;
                 }
             }
             h6{
@@ -45,16 +47,16 @@
                 font-weight: 700;
                 a{
                     color:$primary-dark;
-                    font-size:.9125rem;
+                    font-size:.8125rem;
                     font-weight: 700;
                     @media #{$breakpoint-desktop}{
-                        font-size: .8125rem;
+                        font-size: .775rem;
                     }
                 }
             }
         }
         ul{
-            margin-top:1.5rem;
+            margin-top:1rem;
             &.org-summary{
                 @include display-flex(flex);
                 @include justify-content-start;
