@@ -1,80 +1,90 @@
-.search-bar{
+.search-bar {
     @include display-flex(flex);
     @include justify-content-end;
     @include align-items-center;
-    .search-wrap{
+
+    .search-wrap {
         @include display-flex(flex);
         @include justify-content-between;
-        border:1px solid $border-color;
+        border: 1px solid $border-color;
         @include radius(5px);
         @include align-items-stretch;
         background-color: $bg-color;
         flex-grow: 1;
         max-width: 240px;
-        
-        input{
-            &.form-control{
+
+        input {
+            &.form-control {
                 flex-grow: 1;
                 height: calc(1.4rem + .75rem + 2px);
-                border:none;
+                border: none;
                 display: initial;
                 @include radius(5px);
                 background-color: $bg-color;
-                &:focus{
+
+                &:focus {
                     background-color: $bg-color;
                 }
-                @include input-placeholder{
-                    color:$heading-color;
+
+                @include input-placeholder {
+                    color: $heading-color;
                 }
             }
         }
-        span{
-            padding:0 .5rem;
-            padding-right:0;
-            text-align:center;
+
+        span {
+            padding: 0 .5rem;
+            padding-right: 0;
+            text-align: center;
             @include display-flex(flex);
             @include justify-content-center;
             @include align-items-center;
             @include flex-direction-column(column);
             cursor: pointer;
-            i{
+
+            i {
                 font-size: 1.5rem;
-                color:$primary-dark;
+                color: $primary-dark;
             }
         }
     }
-    button{
-        padding:0;
-        width:40px;
+
+    button {
+        padding: 0;
+        width: 40px;
         height: 37px;
         min-width: initial;
         border-color: $border-dark;
         @include radius(8px);
         margin-left: .6125rem;
         background-color: $white-color;
-        color:$secondary-color;
-        margin-left:1rem;
-        &:focus,&:hover{
+        color: $secondary-color;
+        margin-left: 1rem;
+
+        &:focus,
+        &:hover {
             background-color: $secondary-color;
-            color:$white-color;
+            color: $white-color;
             outline: none;
-            -webkit-outline:none;
+            -webkit-outline: none;
             box-shadow: none;
         }
     }
-    a{
-        &.toggle-icon{
+
+    a {
+        &.toggle-icon {
             margin-left: 1rem;
-            color:$body-color;
-            svg{
+            color: $body-color;
+
+            svg {
                 font-size: 1.5rem;
             }
         }
     }
-    &.is-full{
-        .search-wrap{
+
+    &.is-full {
+        .search-wrap {
             max-width: 100%;
         }
     }
 }
-
