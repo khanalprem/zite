@@ -119,6 +119,13 @@ textarea {
     }
 }
 
+[role='menuitem'],
+[role='button']:focus {
+    cursor: pointer;
+    border-color: $primary-color;
+    outline: none;
+}
+
 .custom-input-group {
     @include display-flex(flex);
     @include justify-content-between;
@@ -149,7 +156,7 @@ textarea {
             cursor: pointer;
 
             i {
-                font-size: 1.3rem;
+                font-size: 1.1rem;
             }
         }
 
@@ -163,6 +170,9 @@ textarea {
     }
 
     &.is-date {
+        padding-right: 1.5rem;
+        @include justify-content-start;
+
         &::after {
             content: "arrow_drop_down";
             font-family: "Material Icons";
@@ -182,6 +192,7 @@ textarea {
             &.span-group {
                 i {
                     color: $primary-color;
+                    font-size: 1.1rem;
                 }
             }
         }

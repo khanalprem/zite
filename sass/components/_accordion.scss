@@ -7,10 +7,13 @@
             @include display-flex(flex);
             @include align-items-center;
             cursor: pointer;
-            h5{
+
+            h5 {
                 font-size: .8125rem;
             }
-            &::after,&::before {
+
+            &::after,
+            &::before {
                 font-size: 1.4rem;
                 font-family: 'Material Icons';
                 color: $body-color;
@@ -20,12 +23,11 @@
                 @include justify-content-center;
                 @include align-items-center;
                 @include flex-direction-column(column);
-                
                 @include radius(100%);
-                
+
             }
 
-            
+
             .custom-checkbox {
                 margin: 0;
 
@@ -62,7 +64,7 @@
             }
 
             ul {
-                
+
                 &.checkbox-list {
                     li {
                         a {
@@ -110,12 +112,15 @@
                         }
                     }
                 }
-                &.list{
-                    li{
+
+                &.list {
+                    li {
                         background-color: $white-color;
                         @include radius(5px);
                         @include transition(all .5s ease-in-out);
-                        &:hover,&.active{
+
+                        &:hover,
+                        &.active {
                             background-color: $primary-light;
                             cursor: pointer;
                         }
@@ -123,54 +128,65 @@
                 }
             }
         }
-        &.is-bg{
+
+        &.is-bg {
             background-color: $bg-color;
             @include radius(5px);
-            .acc-header{
-                padding:.6125rem;
+
+            .acc-header {
+                padding: .6125rem;
             }
-            .acc-body{
-                padding:0 .6125rem .6125rem .6125rem;
-                &.is-bg{
+
+            .acc-body {
+                padding: 0 .6125rem .6125rem .6125rem;
+
+                &.is-bg {
                     background-color: $white-color;
-                    border:1px solid $border-color;
+                    border: 1px solid $border-color;
                     @include radius(5px);
-                    padding-top:10px;
+                    padding-top: 10px;
                 }
             }
         }
+
         &.active {
-            .acc-header{
+            .acc-header {
                 h5 {
                     color: $primary-color;
                 }
             }
-            .acc-body{
+
+            .acc-body {
                 display: block;
             }
         }
-        
+
     }
-    &.is-start{
+
+    &.is-start {
         @include justify-content-start;
     }
-    &.is-end{
+
+    &.is-end {
         @include justify-content-end;
     }
-    &.is-between{
+
+    &.is-between {
         @include justify-content-between;
     }
-    &.is-before{
-        .acc-list{
-            .acc-hader{
+
+    &.is-before {
+        .acc-list {
+            .acc-header {
                 &::before {
                     content: 'arrow_drop_down';
                     margin-right: .5rem;
                 }
             }
-            &.active{
-                .acc-header{
-                    &::before{
+
+            &.active {
+                .acc-header {
+                    &::before {
                         content: 'arrow_drop_up';
                         margin-right: .5rem;
                     }
@@ -178,34 +194,37 @@
             }
         }
     }
-    &.is-after{
-        .acc-list{
-            .acc-header{
+
+    &.is-after {
+        .acc-list {
+            .acc-header {
                 &::after {
                     content: 'expand_more';
-                    width:24px;
+                    width: 24px;
                     height: 24px;
-                    border:1px solid $border-color;
+                    border: 1px solid $border-color;
                     margin-left: .6125rem;
                     font-size: 1rem;
                 }
             }
+
             &.active {
-                .acc-header{
-        
+                .acc-header {
+
                     &::after {
                         content: 'expand_less';
-                        background-color:$primary-light;
+                        background-color: $primary-light;
                         border-color: $primary-color;
                     }
                 }
-    
+
             }
         }
     }
 
     &.profile-acc {
         margin-bottom: 1rem;
+
         .acc-list {
             .org-details {
                 @include display-flex(flex);
@@ -213,6 +232,7 @@
                 @include align-items-center;
                 flex-grow: 1;
             }
+
             .org {
                 @include display-flex(flex);
                 @include justify-content-start;
@@ -223,12 +243,13 @@
                     @include flex(0 0 40px);
                     max-width: 40px;
                     margin: 0;
+
                     img {
                         max-width: 28px;
                         height: 28px;
                         width: 100%;
                         @include radius(100%);
-                        border:1px solid $border-color;
+                        border: 1px solid $border-color;
                     }
                 }
 
@@ -237,7 +258,8 @@
                         text-transform: uppercase;
                         font-weight: 600;
                         font-size: .8125rem;
-                        @media #{$breakpoint-md-desktop}{
+
+                        @media #{$breakpoint-md-desktop} {
                             font-size: .775rem;
                         }
                     }
@@ -246,29 +268,33 @@
 
             .org-links {
                 display: inline-flex;
+
                 i {
                     color: $body-color;
                     font-size: 1rem;
                 }
             }
-            .acc-body{
-                ul{
-                    &.list{
-                        li{
+
+            .acc-body {
+                ul {
+                    &.list {
+                        li {
                             @include align-items-center;
-                            .org{
-                                .org-text{
-                                    h5{
+
+                            .org {
+                                .org-text {
+                                    h5 {
                                         font-weight: 400;
                                         text-transform: capitalize;
                                         font-size: .8125rem;
-                                        
+
                                     }
                                 }
                             }
-                            .org-links{
-                                
-                                i{
+
+                            .org-links {
+
+                                i {
                                     font-size: 1rem;
                                 }
                             }
@@ -276,42 +302,50 @@
                     }
                 }
             }
-            &:not(:last-child){
+
+            &:not(:last-child) {
                 margin-bottom: .6125rem;
             }
-            &.active{
-                .org{
-                    .org-text{
-                        h5{
-                            color:$heading-color;
+
+            &.active {
+                .org {
+                    .org-text {
+                        h5 {
+                            color: $heading-color;
                         }
                     }
                 }
             }
         }
-        
+
     }
-    &.is-border{
-        border:1px solid $border-color;
+
+    &.is-border {
+        border: 1px solid $border-color;
         @include radius(4px);
-        .acc-list{
-            
-            .acc-header{
+
+        .acc-list {
+
+            .acc-header {
                 border-bottom: 1px solid $border-color;
-                padding:.5rem .6125rem;
+                padding: .5rem .6125rem;
             }
-            .acc-body{
-                padding:0;
-                ul{
-                    li{
+
+            .acc-body {
+                padding: 0;
+
+                ul {
+                    li {
                         padding-left: 2.2rem;
-                        a{
+
+                        a {
                             text-transform: capitalize;
                         }
                     }
                 }
             }
-            &:not(:last-child){
+
+            &:not(:last-child) {
                 border-bottom: 1px solid $border-color;
             }
         }

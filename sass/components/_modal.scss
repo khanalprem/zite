@@ -1,4 +1,5 @@
-.popup,.window-popup{
+.popup,
+.window-popup {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
@@ -12,12 +13,14 @@
     opacity: 0;
     visibility: hidden;
     @include transition(all .5s ease-in-out);
-    .popup-container{
+
+    .popup-container {
         @include display-flex(flex);
         @include flex-direction-row(row);
         @include justify-content-around;
-        margin:2rem;
-        .popup-body{
+        margin: 2rem;
+
+        .popup-body {
             max-width: 768px;
             width: 100%;
             min-width: 768px;
@@ -32,60 +35,73 @@
             position: relative;
             @include transform(scale(0));
             @include transition(all .9s ease-in-out);
-            @media #{$breakpoint-desktop}{
+
+            @media #{$breakpoint-desktop} {
                 max-width: 576px;
                 min-width: 576px;
             }
-            @media #{$breakpoint-sm}{
+
+            @media #{$breakpoint-sm} {
                 max-width: 360px;
                 min-width: 360px;
             }
-            @media #{$breakpoint-xs}{
+
+            @media #{$breakpoint-xs} {
                 max-width: 280px;
                 min-width: 280px;
             }
-          
-            span{
-                &.close-icon{
-                    &:hover{
-                        color:$red-color;
-                        border-color:$red-color;
+
+            form {
+                max-height: inherit;
+                @include display-flex(flex);
+                @include flex-direction-column(column);
+            }
+
+            span {
+                &.close-icon {
+                    &:hover {
+                        color: $red-color;
+                        border-color: $red-color;
                     }
                 }
             }
-            .popup-header{
+
+            .popup-header {
                 @include display-flex(flex);
                 @include justify-content-between;
                 @include align-items-center;
                 flex-shrink: 0;
                 margin: 0;
                 padding: 0 1.2rem;
-                padding-top:1.2rem;
-                
+                padding-top: 1.2rem;
+
                 // border-bottom: 1px solid $border-color;
-                h3{
+                h3 {
                     font-size: 1rem;
                     font-weight: 600;
                     text-transform: capitalize;
                 }
-                &.no-flex{
+
+                &.no-flex {
                     display: initial;
                 }
             }
-            .popup-content{
+
+            .popup-content {
                 -webkit-box-flex: 1;
                 flex-grow: 1;
                 margin: 0;
                 padding: 1rem;
-                overflow-y:auto;
-                -webkit-overflow-scrolling:touch;
-                -ms-overflow-style:-ms-autohiding-scrollbar;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+                -ms-overflow-style: -ms-autohiding-scrollbar;
+
                 // max-height: calc(100vh - 250px);
                 // height: 100vh;
-                @media #{$breakpoint-ls}{
-                    padding:1rem;
+                @media #{$breakpoint-ls} {
+                    padding: 1rem;
                 }
-            
+
 
                 &::-webkit-scrollbar {
                     width: 4px;
@@ -94,7 +110,7 @@
                 }
 
                 &::-webkit-scrollbar-track {
-                    background-color:$border-color;
+                    background-color: $border-color;
                     @include radius(4px);
                 }
 
@@ -102,20 +118,22 @@
                     @include radius(4px);
                     background: $border-dark;
                 }
-                .custom-tab{
-                    .tab-list{
-                        li{
-                            a{
+
+                .custom-tab {
+                    .tab-list {
+                        li {
+                            a {
                                 font-size: .8rem;
                             }
                         }
                     }
                 }
-               
-                
+
+
             }
-            .popup-footer{
-                
+
+            .popup-footer {
+
                 @include display-flex(flex);
                 position: relative;
                 flex-shrink: 0;
@@ -124,141 +142,164 @@
                 @include align-items-center;
                 min-height: 50px;
                 margin: 0;
-                padding:1rem 1rem 2rem 1rem;
+                padding: 1rem 1rem 2rem 1rem;
                 // border-top: 1px solid $border-color;
             }
         }
-        &.sm-popup{
-           .popup-body{
-            max-width: 576px;
-            min-width: 576px;
-            @media #{$breakpoint-desktop}{
-                max-width: 480px;
-                min-width: 480px;
+
+        &.sm-popup {
+            .popup-body {
+                max-width: 576px;
+                min-width: 576px;
+
+                @media #{$breakpoint-desktop} {
+                    max-width: 480px;
+                    min-width: 480px;
+                }
+
+                @media #{$breakpoint-sm} {
+                    max-width: 300px;
+                    min-width: 300px;
+                }
+
+                @media #{$breakpoint-xs} {
+                    max-width: 280px;
+                    min-width: 280px;
+                }
             }
-            @media #{$breakpoint-sm}{
-                max-width: 300px;
-                min-width: 300px;
-            }
-            @media #{$breakpoint-xs}{
-                max-width: 280px;
-                min-width: 280px;
-            }
-           } 
         }
-        &.lg-popup{
-            .popup-body{
+
+        &.lg-popup {
+            .popup-body {
                 position: relative;
                 max-width: 991px;
                 width: 100%;
                 min-width: 991px;
-                span{
-                    &.close-icon{
-                        right:2rem;
-                        top:2rem;
+
+                span {
+                    &.close-icon {
+                        right: 2rem;
+                        top: 2rem;
                     }
                 }
-                @media #{$breakpoint-ls}{
+
+                @media #{$breakpoint-ls} {
                     max-width: 768px;
                     min-width: 768px;
-                    padding:1.5rem;
-                    span{
-                        &.close-icon{
-                            right:1.5rem;
-                            top:1.5rem;
+                    padding: 1.5rem;
+
+                    span {
+                        &.close-icon {
+                            right: 1.5rem;
+                            top: 1.5rem;
                         }
                     }
                 }
-                @media #{$breakpoint-pt}{
+
+                @media #{$breakpoint-pt} {
                     max-width: 576px;
                     min-width: 576px;
-                    padding:1rem;
-                    span{
-                        &.close-icon{
-                            right:1rem;
-                            top:1rem;
+                    padding: 1rem;
+
+                    span {
+                        &.close-icon {
+                            right: 1rem;
+                            top: 1rem;
                         }
                     }
                 }
-                @media #{$breakpoint-sm}{
+
+                @media #{$breakpoint-sm} {
                     max-width: 360px;
                     min-width: 360px;
                 }
-                @media #{$breakpoint-xs}{
+
+                @media #{$breakpoint-xs} {
                     max-width: 300px;
                     min-width: 300px;
                 }
             }
-                    
+
         }
-        &.xl-popup{
-            .popup-body{
+
+        &.xl-popup {
+            .popup-body {
                 position: relative;
                 max-width: 1200px;
                 width: 100%;
                 min-width: 1200px;
-                span{
-                    &.close-icon{
-                        right:2rem;
-                        top:2rem;
+
+                span {
+                    &.close-icon {
+                        right: 2rem;
+                        top: 2rem;
                     }
                 }
-                @media #{$breakpoint-desktop}{
+
+                @media #{$breakpoint-desktop} {
                     max-width: 991px;
                     min-width: 991px;
-                    padding:1.5rem;
-                    span{
-                        &.close-icon{
-                            right:1.5rem;
-                            top:1.5rem;
+                    padding: 1.5rem;
+
+                    span {
+                        &.close-icon {
+                            right: 1.5rem;
+                            top: 1.5rem;
                         }
                     }
                 }
-                @media #{$breakpoint-ls}{
+
+                @media #{$breakpoint-ls} {
                     max-width: 768px;
                     min-width: 768px;
-                    padding:1rem;
-                    span{
-                        &.close-icon{
-                            right:1rem;
-                            top:1rem;
+                    padding: 1rem;
+
+                    span {
+                        &.close-icon {
+                            right: 1rem;
+                            top: 1rem;
                         }
                     }
                 }
-                @media #{$breakpoint-pt}{
+
+                @media #{$breakpoint-pt} {
                     max-width: 576px;
                     min-width: 576px;
-                    padding:1rem;
-                    span{
-                        &.close-icon{
-                            right:1rem;
-                            top:1rem;
+                    padding: 1rem;
+
+                    span {
+                        &.close-icon {
+                            right: 1rem;
+                            top: 1rem;
                         }
                     }
                 }
-                @media #{$breakpoint-sm}{
+
+                @media #{$breakpoint-sm} {
                     max-width: 360px;
                     min-width: 360px;
                 }
-                @media #{$breakpoint-xs}{
+
+                @media #{$breakpoint-xs} {
                     max-width: 300px;
                     min-width: 300px;
                 }
             }
-                    
+
         }
     }
 
-    &.open{
+    &.open {
         z-index: 1011;
         opacity: 1;
         visibility: visible;
-        .popup-container{
-            .popup-body{
+
+        .popup-container {
+            .popup-body {
                 @include transform(scale(1));
                 filter: alpha(opacity=100);
             }
         }
-            
+
     }
 }

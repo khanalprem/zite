@@ -356,6 +356,7 @@ ul {
 
         &::-webkit-scrollbar {
             width: 4px;
+            height: 8px;
             background: $border-color;
             @include radius(4px);
         }
