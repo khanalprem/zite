@@ -41,6 +41,25 @@ header {
                             }
 
                             &.notifications {
+                                .sup {
+                                    position: absolute;
+                                    top: 5px;
+                                    right: 0;
+                                    @include radius(50%);
+                                    background-color: $secondary-color;
+                                    padding: 2px 5px;
+                                    @include display-flex(flex);
+                                    @include justify-content-center;
+                                    @include align-items-center;
+                                    @include flex-direction-column(column);
+                                    color: $white-color;
+                                    font-size: .6125rem;
+
+                                    i {
+                                        margin: 0;
+                                    }
+                                }
+
                                 a {
                                     color: $body-color;
                                     padding-right: 1rem;
@@ -48,6 +67,8 @@ header {
                                     i {
                                         margin-top: .6rem;
                                     }
+
+
 
                                     &::after {
                                         display: none;
@@ -110,13 +131,48 @@ header {
                                             }
 
                                             &.list-footer {
-                                                a {
+                                                @include align-items-center;
+                                                @include justify-content-between;
+                                                @include display-flex(flex);
+
+                                                a.circle-icon {
                                                     @include align-items-center;
                                                     @include justify-content-center;
                                                     @include display-flex(flex);
 
                                                     i {
                                                         margin: 0;
+                                                    }
+                                                }
+
+                                                a.common-button {
+                                                    width: unset;
+                                                    height: unset;
+                                                    min-height: unset;
+                                                    padding: 0;
+                                                    @include align-items-center;
+
+                                                    span {
+                                                        display: unset;
+                                                        justify-content: unset;
+                                                        align-items: unset;
+                                                        margin-right: .25rem;
+                                                        font-size: .875rem;
+                                                    }
+
+                                                    i {
+                                                        color: $primary-color;
+                                                        margin: 0;
+                                                        line-height: 1;
+                                                    }
+
+                                                    &:hover {
+                                                        background-color: transparent;
+
+                                                        span {
+                                                            color: $primary-color;
+                                                            background-color: transparent;
+                                                        }
                                                     }
                                                 }
                                             }
@@ -154,7 +210,7 @@ header {
         }
 
         &.sticky {
-            z-index: 9999999 !important;
+            z-index: 1011 !important;
         }
     }
 }

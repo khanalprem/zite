@@ -16,6 +16,7 @@
             @include justify-content-start;
             @include align-items-center;
             margin: 0 -5px;
+            @include flex-wrap(wrap);
 
             li {
                 padding: 0 5px;
@@ -27,6 +28,7 @@
                     display: block;
                     min-height: 130px;
                     max-height: 130px;
+                    margin-bottom: 10px;
 
                     img {
                         position: absolute;

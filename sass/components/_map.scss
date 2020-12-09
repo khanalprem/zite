@@ -2,7 +2,7 @@
   line-height: 27px;
 }
 
-.leaflet-popup {
+.leaflet-popup.left-shifted-popup {
   left: -145px !important;
 }
 
@@ -118,11 +118,6 @@
 .marker-cluster span {
   line-height: 27px;
 }
-
-.leaflet-popup {
-  left: -145px !important;
-}
-
 
 
 

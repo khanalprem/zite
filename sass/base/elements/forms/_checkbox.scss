@@ -21,8 +21,8 @@
     //     @include transition(all .5s linear);
     //     visibility: hidden;
     // }
-    label{
-        margin:0;
+    label {
+        margin: 0;
         font-weight: 500;
         font-size: .775rem;
     }
@@ -82,13 +82,13 @@
         &:checked+label:after {
             content: 'check';
             position: absolute;
-            left: 4px;
-            top: 6px;
+            left: 2.5px;
+            top: 3.5px;
             line-height: 1;
 
             // background: $primary-color;
             font-family: 'Material Icons';
-            color:$white-color;
+            color: $white-color;
             // width: 2px;
             // height: 2px;
             // box-shadow:
@@ -104,10 +104,12 @@
         &:checked+label:before {
             border-color: $primary-color;
         }
-        &:checked+label{
+
+        &:checked+label {
             color: $primary-color;
         }
     }
+
     // &:hover{
     //     &::before{
     //         opacity: 1;
@@ -115,6 +117,7 @@
     //     }
     // }
 }
+
 .custom-radio {
     @include display-flex(flex);
     @include justify-content-start;
@@ -138,8 +141,8 @@
     //     @include transition(all .5s linear);
     //     visibility: hidden;
     // }
-    label{
-        margin:0;
+    label {
+        margin: 0;
         font-weight: 500;
         font-size: .775rem;
     }
@@ -210,10 +213,12 @@
         &:checked+label:before {
             border-color: $white-color;
         }
-        &:checked+label{
+
+        &:checked+label {
             color: $primary-color;
         }
     }
+
     // &:hover{
     //     &::before{
     //         opacity: 1;
@@ -221,13 +226,16 @@
     //     }
     // }
 }
-.inline-group{
+
+.inline-group {
     @include display-flex(flex);
     @include justify-content-start;
     @include align-items-center;
     @include flex-wrap(wrap);
-    .custom-radio,.custom-checkbox{
-        &:not(:last-child){
+
+    .custom-radio,
+    .custom-checkbox {
+        &:not(:last-child) {
             margin-right: 1rem;
         }
     }

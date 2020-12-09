@@ -5,13 +5,15 @@
   @include radius(5px);
   table-layout: fixed;
   overflow: hidden;
+  border-collapse: collapse;
+
   &.is-border {
-    border-top: 1px solid $border-color;
 
     tr {
       border: 1px solid $border-color;
     }
   }
+
   // thead{
   //   position: relative;
   //   display: block;
@@ -136,6 +138,7 @@
 
     th {
       vertical-align: middle;
+
       &.serial-no {
         width: 50px;
       }
@@ -146,7 +149,8 @@
     }
 
     td {
-      color:$heading-color;
+      color: $heading-color;
+
       .site-progress {
         @include display-flex(flex);
         @include align-items-center;
@@ -185,8 +189,9 @@
 
       .org {
         @extend .site-progress;
-        .org-text{
-          h6{
+
+        .org-text {
+          h6 {
             @include trim(1);
           }
         }
@@ -216,7 +221,8 @@
 
       b {
         font-weight: 500;
-          color:$heading-color;
+        color: $heading-color;
+
         &.counter {
           margin-left: .6125rem;
         }
@@ -376,17 +382,21 @@
       }
 
       span {
+        color: $body-light;
+
         &:not(:last-child) {
           margin-right: .6125rem;
         }
       }
     }
   }
-  &.project-summary-table{
-    table{
-      thead{
-        th{
-          min-width: 120px;;
+
+  &.project-summary-table {
+    table {
+      thead {
+        th {
+          min-width: 120px;
+          ;
         }
       }
     }
