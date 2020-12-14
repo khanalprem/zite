@@ -31,12 +31,13 @@
       @include radius(5px);
       position: relative;
       cursor: pointer;
-      color: $body-color;
+      color: $heading-color;
       background-color: $white-color;
       @include line-clamp(1);
       @include display-flex(flex);
       @include justify-content-start;
       @include align-items-center;
+      min-width: 120px;
 
       i {
         margin-right: .5rem;

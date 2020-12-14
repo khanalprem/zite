@@ -2471,6 +2471,12 @@ ul {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end; }
+  .inline-row.is-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .inline-row sm {
+    padding: 0 .6125rem; }
   .inline-row .flat-checkbox {
     position: relative;
     -webkit-transition: all 0.5s ease-in-out;
@@ -2499,7 +2505,8 @@ ul {
         text-transform: uppercase;
         font-weight: 600;
         display: inline-block;
-        font-size: .8rem; }
+        font-size: .8rem;
+        color: #333333; }
         .inline-row .flat-checkbox input + label::before {
           content: '';
           position: absolute;
@@ -2626,6 +2633,9 @@ ul {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     border-radius: 5px; }
+  .inline-row.is-wrap {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
 
 .inline-item {
   display: -webkit-box;
@@ -4365,10 +4375,25 @@ ul.social-list {
       font-weight: 600;
       color: #333333; }
     .custom-dropdown a.is-light {
-      background-color: #E7F6E9; }
+      background-color: #E7F6E9;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .custom-dropdown a.is-light i {
+        font-size: 1rem;
+        color: #40B449;
+        margin-right: .5rem; }
       .custom-dropdown a.is-light:hover {
         background-color: #40B449;
         color: #ffffff; }
+        .custom-dropdown a.is-light:hover i {
+          color: #ffffff; }
   .custom-dropdown.is-option a {
     padding-right: 0; }
     .custom-dropdown.is-option a:after {
@@ -4463,7 +4488,7 @@ ul.social-list {
       .custom-dropdown ul.custom-dropdown-menu li:not(:last-child) {
         border-bottom: 1px solid #e6e6e6; }
   .custom-dropdown.is-light ul.custom-dropdown-menu {
-    min-width: 250px; }
+    min-width: 180px; }
     .custom-dropdown.is-light ul.custom-dropdown-menu li a {
       font-weight: 400;
       font-size: .8rem; }
@@ -4514,7 +4539,7 @@ ul.social-list {
       border-radius: 5px;
       position: relative;
       cursor: pointer;
-      color: #757575;
+      color: #333333;
       background-color: #ffffff;
       display: -webkit-box;
       -webkit-line-clamp: 1;
@@ -4528,7 +4553,8 @@ ul.social-list {
       justify-content: flex-start;
       -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center; }
+      align-items: center;
+      min-width: 120px; }
       .custom-select p.selected-item i {
         margin-right: .5rem;
         font-size: 1rem; }

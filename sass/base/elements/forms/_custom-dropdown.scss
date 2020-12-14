@@ -26,12 +26,26 @@
             color: $heading-color;
         }
 
+
         &.is-light {
             background-color: $primary-light;
+            @include display-flex(flex);
+            @include justify-content-start;
+            @include align-items-center;
+
+            i {
+                font-size: 1rem;
+                color: $primary-color;
+                margin-right: .5rem;
+            }
 
             &:hover {
                 background-color: $primary-color;
                 color: $white-color;
+
+                i {
+                    color: $white-color
+                }
             }
         }
     }
@@ -142,7 +156,7 @@
     &.is-light {
         ul {
             &.custom-dropdown-menu {
-                min-width: 250px;
+                min-width: 180px;
 
                 li {
                     a {

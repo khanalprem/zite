@@ -58,7 +58,7 @@ ul {
                     width: 40px;
                     height: 40px;
                     @include radius(100%);
-                    border:1px solid $border-color;
+                    border: 1px solid $border-color;
                 }
             }
 
@@ -171,22 +171,25 @@ ul {
                     }
                 }
             }
-            &.list-header{
+
+            &.list-header {
                 @include justify-content-between;
-                h5{
+
+                h5 {
                     text-transform: uppercase;
                     font-weight: 700;
                 }
-                
-                i{
+
+                i {
                     font-size: 1rem;
-                    color:$primary-color;
+                    color: $primary-color;
                 }
             }
-            &.list-footer{
-                
-                a{
-                    width:24px;
+
+            &.list-footer {
+
+                a {
+                    width: 24px;
                     height: 24px;
                     min-height: 24px;
                 }
@@ -386,10 +389,19 @@ ul {
         @include justify-content-end;
     }
 
+    &.is-center {
+        @include justify-content-center;
+    }
+
+    sm {
+        padding: 0 .6125rem;
+    }
+
     .flat-checkbox {
         position: relative;
         @include transition(all .5s ease-in-out);
         text-align: center;
+
 
         input {
             position: absolute;
@@ -413,6 +425,7 @@ ul {
                 font-weight: 600;
                 display: inline-block;
                 font-size: .8rem;
+                color: $heading-color;
 
                 &::before {
                     content: '';
@@ -579,6 +592,10 @@ ul {
 
     &.is-border {
         @include radius(5px);
+    }
+
+    &.is-wrap {
+        @include flex-wrap(wrap);
     }
 }
 
