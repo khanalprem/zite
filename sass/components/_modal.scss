@@ -66,6 +66,41 @@
                 }
             }
 
+            .next-prev {
+                position: absolute;
+                left: -25px;
+                right: -25px;
+                top: 50%;
+                @include transform(translateY(-50%));
+                @include display-flex(flex);
+                @include justify-content-between;
+                @include align-items-center;
+                z-index: 999;
+
+                span {
+                    width: 40px;
+                    height: 40px;
+                    background-color: $primary-light;
+                    @include radius(5px);
+                    text-align: center;
+                    @include display-flex(flex);
+                    @include justify-content-center;
+                    @include align-items-center;
+                    @include flex-direction-column(column);
+                    cursor: pointer;
+                    @include transition(all .5s ease-in-out);
+
+                    &.next {
+                        @include transform(rotate(180deg));
+                    }
+
+                    &:hover {
+                        background-color: $primary-color;
+                        color: $white-color;
+                    }
+                }
+            }
+
             .popup-header {
                 @include display-flex(flex);
                 @include justify-content-between;
@@ -117,6 +152,10 @@
                 &::-webkit-scrollbar-thumb {
                     @include radius(4px);
                     background: $border-dark;
+                }
+
+                &.is-center {
+                    text-align: center;
                 }
 
                 .custom-tab {
