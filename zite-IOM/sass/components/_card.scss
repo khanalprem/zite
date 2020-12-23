@@ -1,0 +1,161 @@
+
+
+.zite-card{
+    position: relative;
+    @include display-flex(flex);
+    @include flex-direction-column(column);
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: $white-color;
+    background-clip: border-box;
+    @include box-shadow(0 0 40px $shadow-color);
+    @include radius(5px);
+    
+    .card-footer{
+        padding:1rem;
+        padding-top:0;
+    }
+    .zite-body{
+        flex: 1 1 auto;
+        min-height: 1px;
+        padding: 1rem;
+        @media #{$breakpoint-desktop}{
+            padding:.775rem;
+        }
+        &.pd-0{
+            padding:0;
+        }
+    }
+    &.no-boxshadow{
+        box-shadow: none;
+    }
+}
+.card-header,.card-footer{
+    @include display-flex(flex);
+    @include align-items-center;
+    padding:1rem;
+    padding-bottom: 0;
+    width:100%;
+    &.is-start{
+        @include justify-content-start;
+        h5{
+            flex-grow: initial;
+        }
+    }
+    &.is-center{
+        @include justify-content-center;
+        h5{
+            @include justify-content-center;
+            @include align-items-center;
+        }
+    }
+    &.is-end{
+        @include justify-content-end;
+    }
+    &.is-between{
+        @include justify-content-between;
+    }
+    &.is-clear{
+        border:0;
+        background-color: transparent;
+    }
+    &.pd-0{
+        padding:0;
+    }
+    h5{
+        font-size: .975rem;
+        flex-grow: 1;
+        font-weight: 600;
+        margin:0;
+        text-transform: uppercase;
+        span{
+            text-transform: capitalize;
+            font-weight: 500;
+        }
+        @media #{$breakpoint-desktop}{
+            font-size: .875rem;
+        }
+        
+        
+    }
+    .selected-counter{
+        @include display-flex(flex);
+        @include justify-content-start;
+        @include align-items-center;
+        border:1px solid $primary-color;
+        background-color: $primary-light;
+        color:$primary-dark;
+        font-size: .775rem;
+        @include radius(24px);
+        padding:0 .5rem;
+        margin-left: .6125rem;
+        font-weight: 600;
+        i{
+            font-size: .875rem;
+            line-height: 1;
+        }
+        span{
+            padding:0 .25rem;
+        }
+        
+    }
+    .custom-select{
+        max-width: 140px;
+        margin-left: .6125rem;
+        p{
+            height: 2.5rem;
+            line-height: 2.5rem;
+            span{
+                @include trim(1);
+            }
+        }
+    }
+    button{
+        &.common-button{
+            @include radius(5px);
+            min-width: initial;
+            &.is-bg{
+                background-color: $primary-light;
+                color:$heading-color;
+                box-shadow: none;
+                i{
+                    color:$primary-color;
+                }
+            }
+        }
+    }
+    @media #{$breakpoint-desktop}{
+        padding-top:.775rem;
+     }
+    @media #{$breakpoint-xs}{
+        @include flex-wrap(wrap);
+        @include justify-content-start;
+     }
+}
+
+.is-overflow {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    // max-height: calc(100vh - 250px);
+    // height: 100vh;
+    height: 100%;
+
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 8px;
+        background: $border-color;
+        @include radius(4px);
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: $border-color;
+        @include radius(4px);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        @include radius(4px);
+        background: $border-dark;
+    }
+}

@@ -1,0 +1,178 @@
+.zite-header {
+    padding: 1.5rem 2rem 0 2rem;
+    background-color: $white-color;
+
+    .top-header,
+    .bottom-header {
+        @include display-flex(flex);
+        @include justify-content-between;
+        @include align-items-start;
+        position: relative;
+    }
+
+    ;
+
+    .org-details {
+        @include display-flex(flex);
+        @include justify-content-start;
+        @include align-items-start;
+        flex-grow: 1;
+
+        .org-logo {
+            @include flex(0 0 65px);
+            max-width: 65px;
+            margin: 0;
+
+            img {
+                width: 50px;
+                height: 50px;
+                @include radius(100%);
+                border: 1px solid $border-color;
+            }
+        }
+
+        .org-info {
+            flex-grow: 1;
+
+            a {
+                text-transform: capitalize;
+                color: $heading-color;
+                font-weight: 600;
+                @include transition(all .4s ease-in-out);
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+
+            h1 {
+                margin-bottom: 0;
+                font-size: 1.2rem;
+                font-weight: 700;
+                text-transform: capitalize;
+
+                @media #{$breakpoint-desktop} {
+                    font-size: 1rem;
+                }
+            }
+
+            h6 {
+                margin: 0;
+                font-weight: 700;
+
+                a {
+                    color: $primary-dark;
+                    font-size: .8125rem;
+                    font-weight: 700;
+
+                    @media #{$breakpoint-desktop} {
+                        font-size: .775rem;
+                    }
+                }
+            }
+
+            p {
+                time {
+                    margin-left: .5rem;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        ul {
+            margin-top: 1rem;
+
+            &.org-summary {
+                @include display-flex(flex);
+                @include justify-content-start;
+                @include align-items-center;
+
+                li {
+                    @include display-flex(flex);
+                    @include justify-content-start;
+                    @include align-items-center;
+
+                    b {
+                        font-size: 1.35rem;
+                        font-weight: 600;
+                        color: $heading-color;
+                        margin-right: .6125rem;
+
+                        @media #{$breakpoint-desktop} {
+                            font-size: 1rem;
+                        }
+                    }
+
+                    &:not(:last-child) {
+                        margin-right: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-icons {
+        @include display-flex(flex);
+        @include justify-content-end;
+        @include align-items-center;
+        margin-top: 1rem;
+
+        .custom-dropdown {
+            ul {
+                &.custom-dropdown-menu {
+                    li {
+                        border: 0;
+
+                        a {
+                            font-weight: 600;
+
+                            color: $heading-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom-header {
+        background-color: $white-color;
+        margin-top: 1rem;
+
+        .tab-list {
+            flex-grow: 1;
+
+            li {
+                a {
+                    padding: .6125rem 1rem;
+                }
+            }
+        }
+    }
+
+    .slider-nav {
+        position: absolute;
+        right: 0;
+        top: 0;
+        @include display-flex(flex);
+        @include justify-content-end;
+        @include align-items-center;
+
+        a {
+            width: 32px;
+            height: 32px;
+            border: 1px solid $border-color;
+            @include display-flex(flex);
+            @include justify-content-center;
+            @include align-items-center;
+            @include flex-direction-column(column);
+            @include radius(50%);
+            background-color: $white-color;
+            color: $body-color;
+            cursor: pointer;
+
+            &:not(:last-child) {
+                margin-right: .5rem;
+            }
+        }
+    }
+}

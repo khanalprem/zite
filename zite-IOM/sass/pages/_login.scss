@@ -1,0 +1,171 @@
+
+.authentication {
+    @include cover(center -25%);
+    min-height: 100vh;
+    @include display-flex(flex);
+    @include justify-content-center;
+    @include align-items-center;
+    @include flex-direction-column(column);
+    .zite-container{
+        max-width: 1000px;
+    }
+    .zite-row{
+        @include align-items-stretch;
+        .zite-md-7{
+            background-color: $white-color;
+            @include box-shadow(0 0 50px rgba(0,0,0,.1));
+        }
+        .zite-md-5{
+            background-color: $primary-light;
+            @include box-shadow(0 0 50px rgba(0,0,0,.1));
+        }
+    }
+    .auth-info{
+        padding:2rem;
+        text-align: center;
+        .auth-info-body{
+            margin:3rem  auto;
+            text-align: center;
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        .auth-info-footer{
+            text-align: center;
+            h5{
+                font-size: 1.6rem;
+                font-weight: 600;
+                margin-bottom: .775rem;
+                
+            }
+            p{
+                font-size: .875rem;
+                color:$heading-color;
+                line-height: 1.5;
+            }
+        }
+        @media #{$breakpoint-desktop}{
+            .auth-info-footer{
+                h5{
+                    font-size: 1.2rem;
+                }
+                p{
+                    font-size: .775rem;
+                }
+            }
+        }
+    }
+    .auth-form {
+        @include transition(all .5s ease-in-out);
+        padding:2rem;
+        width: 100%;
+        @include radius(5px);
+        .login-header{
+            text-align: center;
+            margin-bottom: 1rem;
+            figure{
+                max-width: 300px;
+                margin:0 auto;
+            }
+            h3{
+                margin-top: .6125rem;
+                font-size: 1.3rem;
+                font-weight: 600;
+                text-transform: initial;
+            }
+            b{
+                color:$red-color
+            }
+            // &.login-footer{
+
+            // }
+        }
+        button{
+            padding: 0.5rem 2rem;
+            @include transition(all .5s ease-in-out);
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size:.875rem;
+            min-width: 200px;
+            i{
+                text-transform: initial;
+            }
+            &.is-clear{
+                color:$primary-color;
+                text-transform: uppercase;
+                font-weight: 600;
+                @include justify-content-center;
+                margin-top:.6125rem;
+            }
+
+        }
+        form{
+            @include radius(5px);
+            .form-group{
+                .input-in{
+                    position: relative;
+                    span{
+
+                        &.toggle-password{
+                            position: absolute;
+                            cursor: pointer;
+                            top:50%;
+                            @include transform(translateY(-50%));
+                            right:1rem;
+                            z-index: 99;
+                            i{
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+                input{
+                    &.form-control{
+                        height: calc(2em + 0.75rem + 2px);
+                    }
+                }
+                .custom-checkbox{
+                    label{
+                        font-size:.875rem;
+                        font-weight: 400;
+                        text-transform:initial;
+                    }
+                }
+                &.forgot-password{
+                    @include display-flex(flex);
+                    @include justify-content-between;
+                    @include align-items-center;
+                    .custom-checkbox{
+                        flex-grow: 1;
+                    }
+                    &.privacy{
+                        @include align-items-start;
+                        .custom-checkbox{
+                            max-width: 400px;
+                            margin:0 auto;
+                            @include align-items-start;
+                            label{
+                                text-transform: initial;
+                                display: initial;
+                            }
+                        }
+                        .custom-checkbox{
+                            flex-grow: initial;
+                        }
+                        span{
+                            margin-top:-3px;
+                        }
+                    }
+                    a{
+                       text-decoration: underline;
+                       color:$heading-color;
+                       font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+
+}
+

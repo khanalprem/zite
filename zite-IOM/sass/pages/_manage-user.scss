@@ -1,0 +1,52 @@
+.manage-user {
+    background-color: $white-color;
+    padding: 1.5rem;
+
+    .zite-card {
+        box-shadow: none;
+
+        .card-header {
+            padding: 0;
+        }
+
+        .zite-body {
+            padding: 0;
+            padding-top: 1rem;
+        }
+    }
+
+    .workflow-popup-wrapper {
+        background-color: $bg-color;
+        padding: 1rem;
+
+        .zite-card {
+            background-color: transparent;
+
+            .card-header {
+                padding: 0 15px 10px 15px
+            }
+
+            .zite-body {
+                padding: 15px;
+                min-height: 472px;
+                background-color: $white-color;
+                @include radius(5px);
+            }
+        }
+    }
+
+    &.pd-0 {
+        padding: 0;
+    }
+
+    @media #{$breakpoint-md-desktop} {
+        padding: 1rem;
+    }
+
+    .acc {
+        h3 {
+            font-size: .875rem;
+            padding: .5rem .6125rem 0 .6125rem;
+        }
+    }
+}

@@ -1,0 +1,369 @@
+[class*=common-button] {
+    -webkit-font-smoothing: antialiased;
+    font-size: .875rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: .5rem 1.5rem;
+    position: relative;
+    @include display-flex(flex);
+    @include justify-content-center;
+    @include align-items-center;
+    min-width: 160px;
+    min-height: 40px;
+    border: none;
+    outline: none;
+    line-height: inherit;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+    overflow: hidden;
+    vertical-align: middle;
+    @include radius(30px);
+    cursor: pointer;
+    @include transition(all .3s ease-in-out);
+    position: relative;
+    &:focus{
+        border-color: $primary-color;
+    }
+
+    
+
+    &.is-bg {
+        color: $white-color;
+        background-color: $primary-color;
+        border-color: $primary-color;
+        @include box-shadow(0 10px 40px rgba($primary-color, .25));
+
+        &:disabled,&.is-disable {
+            color: $body-color;
+            background-color: transparent;
+            border:1px solid $border-color;
+            cursor: not-allowed;
+            box-shadow: none;
+            &:hover{
+                background-color: transparent;
+                color:$body-color;
+                border-color: $border-color;
+            }
+        }
+        &.is-light{
+            background-color: $primary-light;
+            color:$heading-color;
+            @include radius(5px);
+            box-shadow: none;
+            min-width: 124px;
+            i{
+                color:$primary-color;
+            }
+        }
+
+        &:hover {
+            background-color: $primary-color;
+            border-color: $primary-color;
+            color:$white-color;
+            @include box-shadow(0 30px 40px rgba($primary-dark, .25));
+            i{
+                color:$white-color;
+            }
+        }
+
+    }
+    &.is-auto{
+        min-width: initial;
+    min-height: initial;
+    }
+
+    &.is-full-line {
+        width: 100%;
+    }
+
+    &.is-clear {
+        background-color: transparent;
+        border-width: 0;
+        min-width: auto;
+        @include display-flex(flex);
+        @include justify-content-start;
+        @include align-items-center;
+        color: $heading-color;
+        font-size: .9375rem;
+        padding: 0;
+        min-height: initial;
+        min-width: initial;
+
+        svg {
+            margin-left: .5rem;
+            @include transition(margin .5s ease-in-out);
+        }
+
+        &:hover {
+            color: $secondary-color;
+
+            svg {
+                margin-left: .6125rem;
+            }
+        }
+    }
+
+    &.is-border {
+        background-color: transparent;
+        color: $secondary-color;
+        border: 1px solid;
+        border-color: $border-color;
+
+        &.is-icon {
+            @include display-flex(flex);
+            @include justify-content-start;
+            @include align-items-center;
+            color: $heading-color;
+            font-size: .9375rem;
+
+            i {
+                margin-right: .5rem;
+            }
+        }
+
+        &:hover {
+            border-color: $secondary-color;
+            color: $secondary-color;
+        }
+        &:disabled,&.is-disable {
+            color: $body-color;
+            background-color: transparent;
+            border:1px solid $border-color;
+            cursor: not-allowed;
+            box-shadow: none;
+            &:hover{
+                background-color: transparent;
+                color:$body-color;
+                border-color: $border-color;
+            }
+        }
+    }
+
+    &.no-border {
+        background-color: transparent;
+        color: $secondary-color;
+        border-color: transparent;
+
+        &.is-icon {
+            @include display-flex(flex);
+            @include justify-content-start;
+            @include align-items-center;
+            color: $secondary-color;
+            font-size: .9375rem;
+
+            i {
+                margin-right: .5rem;
+            }
+        }
+    }
+
+    &.is-icon {
+        @include justify-content-between;
+        color: $white-color;
+
+        i {
+            margin-right: .5rem;
+            font-size: .9375rem;
+        }
+    }
+    &:disabled,&.is-disable {
+        color: $body-color;
+        background-color: transparent;
+        border:1px solid $border-color;
+        cursor: not-allowed;
+        box-shadow: none;
+        &:hover{
+            background-color: transparent;
+            color:$body-color;
+            border-color: $border-color;
+        }
+    }
+    @media #{$breakpoint-md-desktop}{
+        padding:.25rem 1rem;
+        min-width: inherit;
+        min-height: initial;
+        font-size: .875rem;
+    }
+}
+
+button.load-more-button,
+a.load-more-button {
+    @include display-flex(flex);
+    @include display-flex(flex);
+    @include justify-content-center;
+    @include align-items-center;
+    background-color: $bg-color;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: $heading-color;
+    width: 100%;
+    padding: .5rem 1rem;
+
+    i {
+        text-transform: initial;
+        color: $primary-dark;
+        margin-left: .5rem;
+    }
+}
+
+.buttons {
+
+    button,
+    a {
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+
+    &.is-center {
+        @include display-flex(flex);
+        @include justify-content-center;
+        @include align-items-center;
+    }
+
+    &.is-between {
+        @include display-flex(flex);
+        @include justify-content-between;
+        @include align-items-center;
+    }
+
+    &.is-end {
+        @include display-flex(flex);
+        @include justify-content-end;
+        @include align-items-center;
+    }
+}
+
+[class*=circle-icon] {
+    width: 34px;
+    height: 34px;
+    @include display-flex(flex);
+    @include justify-content-center;
+    @include align-items-center;
+    @include flex-direction-column(column);
+    color: $body-color;
+    @include radius(100%);
+    min-height: 34px;
+    cursor: pointer;
+    @include transition(all .4s ease-in-out);
+    i{
+        font-size: 1.2rem;
+    }
+    &.is-bg {
+        background-color: $primary-light;
+        color: $primary-dark;
+
+        &:hover {
+            background-color: $primary-color;
+            color: $white-color;
+        }
+    }
+    
+    &.is-border {
+        border: 1px solid $border-color;
+    }
+
+    &:not(:last-child) {
+        margin-right: .6125rem;
+    }
+}
+
+.circle-icons {
+    @include display-flex(flex);
+    @include align-items-center;
+
+    &.is-start {
+        @include justify-content-start;
+    }
+
+    &.is-end {
+        @include justify-content-end;
+    }
+
+    &.is-center {
+        @include justify-content-center;
+    }
+
+    &.is-vertical {
+        @include justify-content-center;
+        @include flex-direction-column(column);
+
+        span,
+        a {
+            margin-right: 0;
+
+            &:not(:last-child) {
+                margin-bottom: .6125rem;
+            }
+        }
+    }
+
+}
+
+[class*=square-icon] {
+    width: 50px;
+    height: 50px;
+    @include display-flex(flex);
+    @include justify-content-center;
+    @include align-items-center;
+    @include flex-direction-column(column);
+    color: $body-color;
+    @include radius(5px);
+    cursor: pointer;
+    @include transition(all .4s ease-in-out);
+
+    &.is-blue {
+        background-color: $blue-light;
+    }
+
+    &.is-red {
+        background-color: $red-light;
+    }
+
+    &.is-green {
+        background-color: $primary-light;
+    }
+
+    &.is-orange {
+        background-color: $orange-light;
+    }
+}
+
+.close-icon{
+    position: absolute;
+    z-index: 2;
+    top:1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    @include display-flex(flex);
+    @include justify-content-center;
+    @include align-items-center;
+    @include flex-direction-column(column);
+    border:1px solid $border-color;
+    @include radius(100%);
+    @include transition(all .5s ease-in-out);
+    cursor: pointer;
+    &:hover{
+        color:$red-color;
+        border-color:$red-color;
+    }
+}
+.icons{
+    @include display-flex(flex);
+    @include justify-content-end;
+    @include align-items-center;
+    i{
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+    span{
+        &:not(:last-child){
+            margin-right: .6125rem;
+        }
+    }
+}

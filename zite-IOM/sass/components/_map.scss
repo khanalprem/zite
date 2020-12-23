@@ -1,0 +1,267 @@
+.marker-cluster span {
+  line-height: 27px;
+}
+
+.leaflet-popup.left-shifted-popup {
+  left: -145px !important;
+}
+
+
+
+/*legend css*/
+
+.dot {
+  height: 13px;
+  width: 13px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.info.legend {
+  @include radius(4px);
+  padding: .5rem;
+  background-color: $white-color;
+}
+
+.legend {
+  text {
+    b {
+      font-size: .7125rem;
+    }
+  }
+
+  p {
+    @include display-flex(flex);
+    @include justify-content-start;
+    @include align-items-center;
+    margin-top: 0;
+
+    i {
+      margin-right: .5rem;
+      @include radius(4px);
+      width: 12px;
+      height: 12px;
+    }
+
+    span {
+      font-size: .7125rem;
+    }
+
+  }
+
+  @media #{$breakpoint-lg} {
+    #ageLegendContainer {
+      display: none;
+    }
+
+    p {
+      display: none;
+      // span{
+      //     display: none;
+      // }
+      // i{
+      //     margin:0;
+      // }
+    }
+
+    // text,br,input{
+    //     display: none;
+    // }
+
+  }
+}
+
+.leaflet-container.leaflet-touch-drag {
+  //   height: calc(100vh - 94.35px) !important;
+}
+
+.marker-cluster-large {
+  background-color: #bbd9fb !important;
+  width: 35px !important;
+  height: 35px !important;
+}
+
+.marker-cluster-large div {
+  background-color: #1672c6 !important;
+}
+
+.marker-cluster-medium {
+  background-color: #bbd9fb !important;
+  width: 35px !important;
+  height: 35px !important;
+}
+
+.marker-cluster-medium div {
+  background-color: #1672c6 !important;
+}
+
+.marker-cluster-small {
+  background-color: #bbd9fb !important;
+  width: 35px !important;
+  height: 35px !important;
+}
+
+.marker-cluster-small div {
+  background-color: #1672c6 !important;
+}
+
+.marker-cluster div {
+  color: #ffffff;
+  width: 27px;
+  height: 27px;
+  margin-left: 4px;
+  margin-top: 4px;
+  font: 12px Helvetica Neue, Arial, Helvetica, sans-serif !important;
+}
+
+.marker-cluster span {
+  line-height: 27px;
+}
+
+
+
+.leaflet-control-container {
+  .leaflet-left {
+    left: auto;
+    right: 1rem;
+    z-index: 999;
+
+    .leaflet-control {
+      margin: 0 !important;
+    }
+
+    &.leaflet-top {
+      top: auto;
+      bottom: 1rem;
+
+    }
+
+    .leaflet-bar {
+      border: none;
+      box-shadow: none;
+      border: 1px solid $grey-color;
+
+      a {
+        width: 34px;
+        height: 30px;
+        line-height: 30px;
+        color: $body-color;
+        @include transition(all .5s);
+        border-color: $grey-color;
+
+        &:hover {
+          background-color: $primary-light;
+          color: $primary-color;
+        }
+      }
+
+
+    }
+
+    .loc {
+      width: 30px;
+      height: 30px;
+      line-height: 40px;
+      color: $blue-light;
+      @include transition(all .5s linear);
+      background-color: $white-color;
+      text-align: center;
+      border: 0;
+      margin-top: 1.2rem !important;
+
+      i {
+        font-size: 1rem;
+        color: $blue-color;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: $blue-light;
+
+        i {
+          color: $blue-color;
+        }
+      }
+    }
+
+    &.leaflet-bottom {
+      right: 5rem;
+      bottom: 1rem;
+    }
+
+  }
+
+  .leaflet-bottom {
+    &.leaflet-right {
+      right: 1rem;
+      left: auto;
+      top: 2rem;
+      bottom: auto;
+      @include radius(2px);
+
+      .leaflet-control-attribution {
+        display: none;
+      }
+
+      .leaflet-control {
+        float: none;
+        margin: 0;
+        box-shadow: none;
+        opacity: 1;
+        @include radius(2px);
+      }
+    }
+  }
+
+  .leaflet-control-layers-toggle {
+    width: 33px;
+    height: 30px;
+    background-size: 12px 12px;
+    box-shadow: none;
+    opacity: 1;
+  }
+}
+
+.zite-map {
+  .map-row {}
+
+  aside {
+    &.map-sidebar {
+      @include flex(0 0 400px);
+      max-width: 400px;
+      overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        // max-height: calc(100vh - 250px);
+        // height: 100vh;
+
+
+        &::-webkit-scrollbar {
+            width: 4px;
+            background: $border-color;
+            @include radius(4px);
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: $border-color;
+            @include radius(4px);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            @include radius(4px);
+            background: $border-dark;
+        }
+
+      @media #{$breakpoint-desktop} {
+        @include flex(0 0 300px);
+        max-width: 300px;
+      }
+    }
+  }
+
+  .map-card {
+    flex-grow: 1;
+    padding-left: 30px;
+  }
+}

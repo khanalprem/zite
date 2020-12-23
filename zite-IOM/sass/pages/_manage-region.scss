@@ -1,0 +1,43 @@
+.manage-region{
+    ul{
+        &.list{
+            &.is-between{
+               li{
+                   
+                   h5{
+                       flex-grow: 1;
+                       font-size: .875rem;
+                       text-transform: capitalize;
+                       font-weight: 500;
+                   }
+                   span{
+                       font-size: .875rem;
+                       &.place{
+                           flex:0 0 130px;
+                           max-width: 130px;
+                       }
+                   }
+                   .icons{
+                       margin-left:2rem;
+                       @include transition(all .5s ease-in-out);
+                       opacity: 0;
+                       visibility: hidden;
+                       .icon{
+                           cursor: pointer;
+                       }
+                       i{
+                           font-size: 1rem;
+                           color:$body-color;
+                       }
+                   }
+                   &:hover{
+                       .icons{
+                           visibility: visible;
+                           opacity: 1;
+                       }
+                   }
+               } 
+            }
+        }
+    }
+}
