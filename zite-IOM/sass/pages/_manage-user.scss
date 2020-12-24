@@ -33,6 +33,28 @@
                 @include radius(5px);
             }
         }
+
+        &.is-disable {
+    .zite-card {
+        .zite-body {
+            background-color: transparent;
+        }
+    }
+
+    .acc {
+        .acc-list {
+            .acc-body {
+                ul {
+                    &.list {
+                        li {
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
     }
 
     &.pd-0 {

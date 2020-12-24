@@ -7,6 +7,12 @@ Description: Zite is the first humanitarian digital platform designed for projec
 Version: 1.0.0
 Primary use: Monitoring system
 */
+ /**
+* DARK MODE MIXIN
+* 
+* A little wrapper that lets you define your dark mode custom 
+* properties in a way that supports the theme toggle web component
+*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @-webkit-keyframes rotate3d {
   0% {
@@ -406,6 +412,9 @@ Primary use: Monitoring system
     background-position: 120% 0; }
   100% {
     background-position: 0 0; } }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: 'dark'; } }
 .container {
   width: 100%;
   padding-right: 15px;
@@ -7895,6 +7904,10 @@ header.site-header {
         -moz-border-radius: 5px;
         -ms-border-radius: 5px;
         border-radius: 5px; }
+    .manage-user .workflow-popup-wrapper.is-disable .zite-card .zite-body {
+      background-color: transparent; }
+    .manage-user .workflow-popup-wrapper.is-disable .acc .acc-list .acc-body ul.list li {
+      background-color: transparent; }
   .manage-user.pd-0 {
     padding: 0; }
   @media only screen and (max-width: 1368px) {

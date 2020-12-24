@@ -1,0 +1,211 @@
+// --------------------------------------------------
+// zite containers
+// --------------------------------------------------
+
+.#{$zite-prefix}container,
+.#{$zite-prefix}container-full {
+    @include box-sizing(border-box);
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: ($zite-grid-spacing * 2);
+    padding-left: ($zite-grid-spacing * 2);
+
+    .#{$zite-prefix}grid {
+        margin-right: -$zite-grid-spacing;
+        margin-left: -$zite-grid-spacing;
+    }
+}
+
+.#{$zite-prefix}container {
+    @media (min-width: $zite-xs) {
+        max-width: $zite-xs;
+    }
+
+    @media (min-width: $zite-sm) {
+        max-width: $zite-sm;
+    }
+
+    @media (min-width: $zite-md) {
+        max-width: $zite-md;
+    }
+
+    @media (min-width: $zite-lg) {
+        max-width: $zite-lg;
+    }
+
+    @media (min-width: $zite-xlg) {
+        max-width: $zite-xlg;
+    }
+}
+
+// --------------------------------------------------
+// zite grid
+// --------------------------------------------------
+
+.#{$zite-prefix}grid {
+    @include box-sizing(border-box);
+    display: block;
+    @include display-flex();
+    @include flex-wrap();
+    padding: 0;
+    margin: 0 auto;
+    position: relative;
+    @include setup-whitespace();
+
+    &::before,
+    &::after {
+        @include box-sizing(border-box);
+        @include reset-whitespace();
+    }
+
+    // handle when lists are used as a grid
+    list-style-type: none;
+}
+
+// --------------------------------------------------
+// zite col defaults
+// --------------------------------------------------
+
+[class*="#{$zite-prefix}col-"] {
+    @include box-sizing(border-box);
+    @include reset-whitespace();
+    position: relative;
+    width: 100%;
+    vertical-align: top;
+    padding: $zite-grid-spacing;
+
+    &::before,
+    &::after {
+        @include box-sizing(border-box);
+        @include reset-whitespace();
+    }
+
+    // handle grids nested in columns
+    .#{$zite-prefix}grid {
+        @include flex(1, 1, auto);
+        margin: -$zite-grid-spacing;
+    }
+
+    @if $legacy-support==true {
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+    }
+}
+
+// --------------------------------------------------
+// zite grid generation
+// --------------------------------------------------
+
+@include make-zite-grid(col-);
+
+@media (min-width: $zite-xs) {
+    @include make-zite-grid(col-xs-);
+}
+
+@media (min-width: $zite-sm) {
+    @include make-zite-grid(col-sm-);
+}
+
+@media (min-width: $zite-md) {
+    @include make-zite-grid(col-md-);
+}
+
+@media (min-width: $zite-lg) {
+    @include make-zite-grid(col-lg-);
+}
+
+@media (min-width: $zite-xlg) {
+    @include make-zite-grid(col-xlg-);
+}
+
+// --------------------------------------------------
+// zite col-auto
+// --------------------------------------------------
+
+.#{$zite-prefix}col-auto {
+    @include setup-auto-cols();
+}
+
+@media (min-width: $zite-xs) {
+    .#{$zite-prefix}col-xs-auto {
+        @include setup-auto-cols();
+    }
+}
+
+@media (min-width: $zite-sm) {
+    .#{$zite-prefix}col-sm-auto {
+        @include setup-auto-cols();
+    }
+}
+
+@media (min-width: $zite-md) {
+    .#{$zite-prefix}col-md-auto {
+        @include setup-auto-cols();
+    }
+}
+
+@media (min-width: $zite-lg) {
+    .#{$zite-prefix}col-lg-auto {
+        @include setup-auto-cols();
+    }
+}
+
+@media (min-width: $zite-xlg) {
+    .#{$zite-prefix}col-xlg-auto {
+        @include setup-auto-cols();
+    }
+}
+
+// --------------------------------------------------
+// zite order helpers generation
+// --------------------------------------------------
+
+@include make-order-helpers();
+
+@media only screen and (min-width: $zite-xs) {
+    @include loop-order-helpers($zite-columns, '-xs');
+}
+
+@media only screen and (min-width: $zite-sm) {
+    @include loop-order-helpers($zite-columns, '-sm');
+}
+
+@media only screen and (min-width: $zite-md) {
+    @include loop-order-helpers($zite-columns, '-md');
+}
+
+@media only screen and (min-width: $zite-lg) {
+    @include loop-order-helpers($zite-columns, '-lg');
+}
+
+@media only screen and (min-width: $zite-xlg) {
+    @include loop-order-helpers($zite-columns, '-xlg');
+}
+
+// --------------------------------------------------
+// zite offset helpers generation
+// --------------------------------------------------
+
+@include make-offset-helpers();
+
+@media only screen and (min-width: $zite-xs) {
+    @include loop-offset-helpers($zite-columns - 1, '-xs');
+}
+
+@media only screen and (min-width: $zite-sm) {
+    @include loop-offset-helpers($zite-columns - 1, '-sm');
+}
+
+@media only screen and (min-width: $zite-md) {
+    @include loop-offset-helpers($zite-columns - 1, '-md');
+}
+
+@media only screen and (min-width: $zite-lg) {
+    @include loop-offset-helpers($zite-columns - 1, '-lg');
+}
+
+@media only screen and (min-width: $zite-xlg) {
+    @include loop-offset-helpers($zite-columns - 1, '-xlg');
+}
