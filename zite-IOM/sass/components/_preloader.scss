@@ -29,7 +29,7 @@
   -moz-animation: bounce 1s infinite ease-in;
   -ms-animation: bounce 1s infinite ease-in;
   -webkit-animation: bounce 1s infinite ease-in;
-    animation: bounce 1s infinite ease-in;
+  animation: bounce 1s infinite ease-in;
 
   &::after {
     content: '';
@@ -41,6 +41,17 @@
     border-radius: 50%;
     border: 3px solid $white-color;
   }
+}
+
+.pin1 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 50% 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -20px 0 0 -20px;
+  @include animation(rotated 1s infinite ease-out);
 }
 
 .pulse {

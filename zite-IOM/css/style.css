@@ -2025,7 +2025,7 @@ body {
   padding-left: 2rem; }
 
 .pd-0 {
-  padding: 0; }
+  padding: 0 !important; }
 
 .pt-0 {
   padding-top: 0 !important; }
@@ -2332,6 +2332,8 @@ ul {
         width: 24px;
         height: 24px;
         min-height: 24px; }
+      ul.list li.is-active {
+        background-color: #E7F6E9; }
     ul.list.is-border {
       border: 1px solid #e6e6e6; }
     ul.list.is-center {
@@ -2374,11 +2376,13 @@ ul {
           position: absolute;
           top: 10px;
           left: 10px; }
-        ul.list.is-plus li.active a {
-          color: #757575; }
-        ul.list.is-plus li.active::before {
-          content: 'remove_circle_outline';
-          color: #757575; }
+        ul.list.is-plus li.active {
+          background-color: #E7F6E9; }
+          ul.list.is-plus li.active a {
+            color: #757575; }
+          ul.list.is-plus li.active::before {
+            content: 'remove_circle_outline';
+            color: #757575; }
         ul.list.is-plus li.is-checked {
           background-color: #E7F6E9;
           color: #40B449; }
@@ -3097,6 +3101,8 @@ figure {
       position: -webkit-sticky;
       position: sticky;
       top: 0; }
+  .zite-table.is-siteinfo table b {
+    text-transform: capitalize; }
 
 .table-status {
   display: -webkit-box;
@@ -4032,7 +4038,8 @@ textarea.form-control.is-valid {
       top: 3.5px;
       line-height: 1;
       font-family: 'Material Icons';
-      color: #ffffff; }
+      color: #ffffff;
+      text-transform: none; }
     .custom-checkbox input:checked + label:before {
       border-color: #40B449; }
     .custom-checkbox input:checked + label {
@@ -5159,6 +5166,17 @@ ul.social-list {
     position: absolute;
     border-radius: 50%;
     border: 3px solid #ffffff; }
+
+.pin1 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 50% 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -20px 0 0 -20px;
+  -webkit-animation: rotated 1s infinite ease-out;
+  animation: rotated 1s infinite ease-out; }
 
 .pulse {
   background: rgba(30, 142, 69, 0.4);
@@ -7897,13 +7915,24 @@ header.site-header {
       .manage-user .workflow-popup-wrapper .zite-card .card-header {
         padding: 0 15px 10px 15px; }
       .manage-user .workflow-popup-wrapper .zite-card .zite-body {
-        padding: 15px;
-        min-height: 472px;
+        min-height: 220px;
         background-color: #ffffff;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         -ms-border-radius: 5px;
         border-radius: 5px; }
+        .manage-user .workflow-popup-wrapper .zite-card .zite-body.is-border {
+          border: 1px solid #e6e6e6; }
+    .manage-user .workflow-popup-wrapper .overlay-wrapper {
+      position: relative; }
+      .manage-user .workflow-popup-wrapper .overlay-wrapper::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(241, 244, 249, 0.7); }
     .manage-user .workflow-popup-wrapper.is-disable .zite-card .zite-body {
       background-color: transparent; }
     .manage-user .workflow-popup-wrapper.is-disable .acc .acc-list .acc-body ul.list li {

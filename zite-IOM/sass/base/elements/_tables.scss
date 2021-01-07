@@ -409,6 +409,14 @@
     }
   }
 
+  &.is-siteinfo {
+    table {
+      b {
+        text-transform: capitalize;
+      }
+    }
+  }
+
 }
 
 .table-status {
