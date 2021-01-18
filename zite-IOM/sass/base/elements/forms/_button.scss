@@ -25,11 +25,12 @@
     cursor: pointer;
     @include transition(all .3s ease-in-out);
     position: relative;
-    &:focus{
+
+    &:focus {
         border-color: $primary-color;
     }
 
-    
+
 
     &.is-bg {
         color: $white-color;
@@ -37,43 +38,49 @@
         border-color: $primary-color;
         @include box-shadow(0 10px 40px rgba($primary-color, .25));
 
-        &:disabled,&.is-disable {
+        &:disabled,
+        &.is-disable {
             color: $body-color;
             background-color: transparent;
-            border:1px solid $border-color;
+            border: 1px solid $border-color;
             cursor: not-allowed;
             box-shadow: none;
-            &:hover{
+
+            &:hover {
                 background-color: transparent;
-                color:$body-color;
+                color: $body-color;
                 border-color: $border-color;
             }
         }
-        &.is-light{
+
+        &.is-light {
             background-color: $primary-light;
-            color:$heading-color;
+            color: $heading-color;
             @include radius(5px);
             box-shadow: none;
             min-width: 124px;
-            i{
-                color:$primary-color;
+
+            i {
+                color: $primary-color;
             }
         }
 
         &:hover {
             background-color: $primary-color;
             border-color: $primary-color;
-            color:$white-color;
+            color: $white-color;
             @include box-shadow(0 30px 40px rgba($primary-dark, .25));
-            i{
-                color:$white-color;
+
+            i {
+                color: $white-color;
             }
         }
 
     }
-    &.is-auto{
+
+    &.is-auto {
         min-width: initial;
-    min-height: initial;
+        min-height: initial;
     }
 
     &.is-full-line {
@@ -123,21 +130,30 @@
             i {
                 margin-right: .5rem;
             }
+
+        }
+
+        &.is-danger {
+            border-color: $secondary-color;
+            color: $secondary-color;
         }
 
         &:hover {
             border-color: $secondary-color;
             color: $secondary-color;
         }
-        &:disabled,&.is-disable {
+
+        &:disabled,
+        &.is-disable {
             color: $body-color;
             background-color: transparent;
-            border:1px solid $border-color;
+            border: 1px solid $border-color;
             cursor: not-allowed;
             box-shadow: none;
-            &:hover{
+
+            &:hover {
                 background-color: transparent;
-                color:$body-color;
+                color: $body-color;
                 border-color: $border-color;
             }
         }
@@ -170,20 +186,24 @@
             font-size: .9375rem;
         }
     }
-    &:disabled,&.is-disable {
+
+    &:disabled,
+    &.is-disable {
         color: $body-color;
         background-color: transparent;
-        border:1px solid $border-color;
+        border: 1px solid $border-color;
         cursor: not-allowed;
         box-shadow: none;
-        &:hover{
+
+        &:hover {
             background-color: transparent;
-            color:$body-color;
+            color: $body-color;
             border-color: $border-color;
         }
     }
-    @media #{$breakpoint-md-desktop}{
-        padding:.25rem 1rem;
+
+    @media #{$breakpoint-md-desktop} {
+        padding: .25rem 1rem;
         min-width: inherit;
         min-height: initial;
         font-size: .875rem;
@@ -250,9 +270,11 @@ a.load-more-button {
     min-height: 34px;
     cursor: pointer;
     @include transition(all .4s ease-in-out);
-    i{
+
+    i {
         font-size: 1.2rem;
     }
+
     &.is-bg {
         background-color: $primary-light;
         color: $primary-dark;
@@ -262,7 +284,7 @@ a.load-more-button {
             color: $white-color;
         }
     }
-    
+
     &.is-border {
         border: 1px solid $border-color;
     }
@@ -333,10 +355,10 @@ a.load-more-button {
     }
 }
 
-.close-icon{
+.close-icon {
     position: absolute;
     z-index: 2;
-    top:1rem;
+    top: 1rem;
     right: 1rem;
     width: 40px;
     height: 40px;
@@ -344,25 +366,29 @@ a.load-more-button {
     @include justify-content-center;
     @include align-items-center;
     @include flex-direction-column(column);
-    border:1px solid $border-color;
+    border: 1px solid $border-color;
     @include radius(100%);
     @include transition(all .5s ease-in-out);
     cursor: pointer;
-    &:hover{
-        color:$red-color;
-        border-color:$red-color;
+
+    &:hover {
+        color: $red-color;
+        border-color: $red-color;
     }
 }
-.icons{
+
+.icons {
     @include display-flex(flex);
     @include justify-content-end;
     @include align-items-center;
-    i{
+
+    i {
         font-size: 1.2rem;
         cursor: pointer;
     }
-    span{
-        &:not(:last-child){
+
+    span {
+        &:not(:last-child) {
             margin-right: .6125rem;
         }
     }

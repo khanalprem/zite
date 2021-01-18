@@ -47,7 +47,15 @@ ul {
 
             a {
                 color: $heading-color;
-                font-weight: 500
+                font-weight: 500;
+
+
+            }
+
+            .project {
+                @include flex-grow(1);
+                max-width: 250px;
+                text-align: left;
             }
 
             figure {
@@ -204,6 +212,14 @@ ul {
 
             &.is-active {
                 background-color: $primary-light;
+            }
+
+            &.is-between {
+                @include justify-content-between;
+            }
+
+            &.is-around {
+                @include justify-content-around;
             }
 
         }
@@ -794,4 +810,35 @@ ul {
             }
         }
     }
+}
+
+.is-flex {
+    @include display-flex(flex);
+
+    @include align-items-center;
+
+    &.is-start {
+        @include justify-content-start;
+    }
+
+    &.is-between {
+        @include justify-content-between;
+    }
+
+    &.is-around {
+        @include justify-content-around;
+    }
+
+    &.is-end {
+        @include justify-content-end;
+    }
+
+    &.is-center {
+        @include justify-content-center;
+    }
+
+}
+
+.is-grow {
+    @include flex-grow(1);
 }

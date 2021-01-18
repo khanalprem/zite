@@ -1,6 +1,4 @@
-
-
-.zite-card{
+.zite-card {
     position: relative;
     @include display-flex(flex);
     @include flex-direction-column(column);
@@ -10,127 +8,178 @@
     background-clip: border-box;
     @include box-shadow(0 0 40px $shadow-color);
     @include radius(5px);
-    
-    .card-footer{
-        padding:1rem;
-        padding-top:0;
+
+    .card-footer {
+        padding: 1rem;
+        padding-top: 0;
     }
-    .zite-body{
+
+    .zite-body {
         flex: 1 1 auto;
         min-height: 1px;
         padding: 1rem;
-        @media #{$breakpoint-desktop}{
-            padding:.775rem;
+
+        @media #{$breakpoint-desktop} {
+            padding: .775rem;
         }
-        &.pd-0{
-            padding:0;
+
+        &.pd-0 {
+            padding: 0;
         }
     }
-    &.no-boxshadow{
+
+    &.no-boxshadow {
         box-shadow: none;
     }
+
+    &.assign-card {
+        position: absolute;
+        right: 0;
+        top: 100%;
+        min-width: 600px;
+        background-color: $white-color;
+        z-index: 2;
+
+
+
+    }
 }
-.card-header,.card-footer{
+
+.card-header,
+.card-footer {
     @include display-flex(flex);
     @include align-items-center;
-    padding:1rem;
+    padding: 1rem;
     padding-bottom: 0;
-    width:100%;
-    &.is-start{
+    width: 100%;
+    position: relative;
+
+    &.is-start {
         @include justify-content-start;
-        h5{
+
+        h5 {
             flex-grow: initial;
         }
     }
-    &.is-center{
+
+    &.is-center {
         @include justify-content-center;
-        h5{
+
+        h5 {
             @include justify-content-center;
             @include align-items-center;
         }
     }
-    &.is-end{
+
+    &.is-end {
         @include justify-content-end;
     }
-    &.is-between{
+
+    &.is-between {
         @include justify-content-between;
     }
-    &.is-clear{
-        border:0;
+
+    &.is-clear {
+        border: 0;
         background-color: transparent;
     }
-    &.pd-0{
-        padding:0;
+
+    &.pd-0 {
+        padding: 0;
     }
-    h5{
+
+    h5 {
         font-size: .975rem;
         flex-grow: 1;
         font-weight: 600;
-        margin:0;
+        margin: 0;
         text-transform: uppercase;
-        span{
+
+        span {
             text-transform: capitalize;
             font-weight: 500;
         }
-        @media #{$breakpoint-desktop}{
+
+        @media #{$breakpoint-desktop} {
             font-size: .875rem;
         }
-        
-        
+
+
     }
-    .selected-counter{
+
+    .selected-counter {
         @include display-flex(flex);
         @include justify-content-start;
         @include align-items-center;
-        border:1px solid $primary-color;
+        border: 1px solid $primary-color;
         background-color: $primary-light;
-        color:$primary-dark;
+        color: $primary-dark;
         font-size: .775rem;
         @include radius(24px);
-        padding:0 .5rem;
+        padding: 0 .5rem;
         margin-left: .6125rem;
         font-weight: 600;
-        i{
+
+        i {
             font-size: .875rem;
             line-height: 1;
         }
-        span{
-            padding:0 .25rem;
+
+        span {
+            padding: 0 .25rem;
         }
-        
+
     }
-    .custom-select{
+
+    .custom-select {
         max-width: 140px;
         margin-left: .6125rem;
-        p{
+
+        p {
             height: 2.5rem;
             line-height: 2.5rem;
-            span{
+
+            span {
                 @include trim(1);
             }
         }
     }
-    button{
-        &.common-button{
+
+    button {
+        &.common-button {
             @include radius(5px);
             min-width: initial;
-            &.is-bg{
+
+            &.is-bg {
                 background-color: $primary-light;
-                color:$heading-color;
+                color: $heading-color;
                 box-shadow: none;
-                i{
-                    color:$primary-color;
+
+                i {
+                    color: $primary-color;
                 }
             }
         }
     }
-    @media #{$breakpoint-desktop}{
-        padding-top:.775rem;
-     }
-    @media #{$breakpoint-xs}{
+
+    @media #{$breakpoint-desktop} {
+        padding-top: .775rem;
+    }
+
+    @media #{$breakpoint-xs} {
         @include flex-wrap(wrap);
         @include justify-content-start;
-     }
+    }
+}
+
+.assign-new {
+    .zite-card {
+        &.assign-card {
+            .custom-select {
+                max-width: 100%;
+            }
+        }
+    }
 }
 
 .is-overflow {

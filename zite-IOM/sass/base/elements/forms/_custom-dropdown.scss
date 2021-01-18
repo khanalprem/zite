@@ -4,6 +4,7 @@
     a {
         position: relative;
         padding-right: 2rem;
+        @include transition(all .5s ease-in-out);
 
         &::after {
             content: 'arrow_drop_down';
@@ -18,7 +19,7 @@
 
         &.is-border,
         &.is-light {
-            padding: 6px 10px;
+            padding: 10px;
             @include radius (5px);
             padding-right: 2rem;
             display: inline-block;
@@ -51,20 +52,20 @@
     }
 
     &.is-option {
-        a {
-            padding-right: 0;
+        // a {
+        //     padding-right: 0;
 
-            &:after {
-                display: none;
-            }
-        }
+        //     &:after {
+        //         display: none;
+        //     }
+        // }
     }
 
     ul {
         &.custom-dropdown-menu {
             display: initial;
             position: absolute;
-            top: 100%;
+            top: 110%;
             min-width: 150px;
             background-color: $white-color;
             @include radius(4px);

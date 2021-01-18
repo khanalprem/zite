@@ -135,6 +135,7 @@ textarea {
     background-color: $white-color;
     position: relative;
     height: calc(1.6em + 0.75rem + 2px);
+    overflow: hidden;
 
     input {
         flex-grow: 1;
