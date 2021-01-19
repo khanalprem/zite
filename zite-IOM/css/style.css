@@ -2371,6 +2371,19 @@ ul {
         position: absolute;
         top: 10px;
         right: 10px; }
+    ul.list.is-after.is-check li::after {
+      content: none;
+      top: 7px;
+      font-size: 1.3rem; }
+    ul.list.is-after.is-check li.is-active {
+      background-color: #E7F6E9; }
+      ul.list.is-after.is-check li.is-active::after {
+        content: "check"; }
+      ul.list.is-after.is-check li.is-active a {
+        background-color: #E7F6E9;
+        color: #40B449; }
+        ul.list.is-after.is-check li.is-active a a {
+          color: #40B449; }
     ul.list.is-plus {
       padding-left: 10px; }
       ul.list.is-plus li {
@@ -4493,6 +4506,10 @@ ul.social-list {
         color: #ffffff; }
         .custom-dropdown a.is-light:hover i {
           color: #ffffff; }
+  .custom-dropdown.is-option a.circle-icon {
+    padding-right: 0; }
+    .custom-dropdown.is-option a.circle-icon::after {
+      display: none; }
   .custom-dropdown ul.custom-dropdown-menu {
     display: initial;
     position: absolute;
@@ -6336,6 +6353,8 @@ header.site-header {
     -ms-border-radius: 4px;
     border-radius: 4px;
     background: #C7C7C7; }
+  .acc .acc-list .acc-body ul li h6 a {
+    font-weight: 600; }
   .acc .acc-list .acc-body ul.checkbox-list li a {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6389,6 +6408,14 @@ header.site-header {
     .acc .acc-list .acc-body ul.list li:hover, .acc .acc-list .acc-body ul.list li.active {
       background-color: #E7F6E9;
       cursor: pointer; }
+  .acc .acc-list .acc-body ul.list.is-after li {
+    position: relative; }
+  .acc .acc-list .acc-body ul.list.is-after.is-check li.is-active {
+    background-color: #E7F6E9; }
+    .acc .acc-list .acc-body ul.list.is-after.is-check li.is-active a {
+      color: #333333; }
+  .acc .acc-list .acc-body ul.list ul li {
+    padding-left: 3.5rem; }
 .acc .acc-list.is-bg {
   background-color: #F1F4F9;
   -webkit-border-radius: 5px;

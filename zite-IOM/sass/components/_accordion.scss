@@ -64,6 +64,13 @@
             }
 
             ul {
+                li {
+                    h6 {
+                        a {
+                            font-weight: 600;
+                        }
+                    }
+                }
 
                 &.checkbox-list {
                     li {
@@ -119,10 +126,35 @@
                         @include radius(5px);
                         @include transition(all .5s ease-in-out);
 
+
                         &:hover,
                         &.active {
                             background-color: $primary-light;
                             cursor: pointer;
+                        }
+                    }
+
+                    &.is-after {
+                        li {
+                            position: relative;
+                        }
+
+                        &.is-check {
+                            li {
+                                &.is-active {
+                                    background-color: $primary-light;
+
+                                    a {
+                                        color: $heading-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    ul {
+                        li {
+                            padding-left: 3.5rem;
                         }
                     }
                 }

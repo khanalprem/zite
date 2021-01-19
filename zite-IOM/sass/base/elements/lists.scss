@@ -254,6 +254,36 @@ ul {
                     right: 10px;
                 }
             }
+
+            &.is-check {
+                li {
+                    &::after {
+                        content: none;
+                        top: 7px;
+                        font-size: 1.3rem;
+                    }
+
+                    &.is-active {
+                        background-color: $primary-light;
+
+                        &::after {
+                            content: "check";
+
+                        }
+
+                        a {
+                            background-color: $primary-light;
+                            color: $primary-color;
+
+                            a {
+                                color: $primary-color;
+                            }
+
+
+                        }
+                    }
+                }
+            }
         }
 
         &.is-plus {
@@ -322,6 +352,8 @@ ul {
                 }
             }
         }
+
+
     }
 
     &.address {
