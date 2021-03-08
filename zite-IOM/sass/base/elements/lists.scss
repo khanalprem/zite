@@ -396,22 +396,33 @@ ul {
         .custom-checkbox {
             width: 100%;
             margin: 0;
-        }
 
-        .check-content {
-            @include display-flex(flex);
-            @include justify-content-start;
-            @include align-items-center;
-            flex-grow: 1;
-
-            i {
-                margin-right: 5px;
+            label {
+                color: $heading-color;
+                font-weight: 500;
             }
 
-            b {
-                text-transform: capitalize;
+            .check-content {
+                @include display-flex(flex);
+                @include justify-content-start;
+                @include align-items-center;
+                flex-grow: 1;
+
+                i {
+                    margin-right: 5px;
+                }
+
+                b {
+                    text-transform: capitalize;
+                    color: $heading-color;
+                    font-weight: 500;
+                }
+
+
             }
         }
+
+
 
         li {
 
@@ -449,7 +460,35 @@ ul {
             background: $border-dark;
         }
     }
+
 }
+
+.is-multi-list {
+    .is-parent {
+        .parent-header {
+            padding: .5rem .6125rem;
+            border-bottom: 1px solid $border-color;
+
+            .custom-checkbox {
+                margin: 0;
+
+                label {
+                    font-weight: 600;
+                    color: $heading-color;
+                    font-size: .875rem;
+                    text-transform: capitalize;
+                }
+            }
+        }
+
+        ul {
+            li {
+                padding-left: 1.5rem;
+            }
+        }
+    }
+}
+
 
 .inline-row {
     @include display-flex(flex);

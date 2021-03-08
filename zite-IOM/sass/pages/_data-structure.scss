@@ -8,6 +8,10 @@
             padding: .6125rem;
             @include transition(all .5s ease-in-out);
 
+            &.active {
+                background-color: $primary-light;
+            }
+
             h5 {
 
                 @include display-flex(flex);

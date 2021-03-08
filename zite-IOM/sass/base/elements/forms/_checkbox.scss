@@ -5,26 +5,11 @@
     position: relative;
     margin-bottom: .6125rem;
 
-    // &::before {
-    //     z-index: 1;
-    //     position: absolute;
-    //     border-radius: 50%;
-    //     opacity: 0;
-    //     pointer-events: none;
-    //     content: "";
-    //     width:30px;
-    //     height: 30px;
-    //     background-color:$blue-light;
-    //     left:-6px;
-    //     top:-5px;
-    //     bottom:-5px;
-    //     @include transition(all .5s linear);
-    //     visibility: hidden;
-    // }
     label {
         margin: 0;
         font-weight: 500;
         font-size: .775rem;
+        text-transform: capitalize;
     }
 
     input {
@@ -82,41 +67,34 @@
         &:checked+label:after {
             content: 'check';
             position: absolute;
-            left: 2.5px;
-            top: 3.5px;
+            left: 2px;
+            top: 50%;
+            @include transform(translateY(-50%));
             line-height: 1;
-
-            // background: $primary-color;
             font-family: 'Material Icons';
             color: $white-color;
             text-transform: none;
-            // width: 2px;
-            // height: 2px;
-            // box-shadow:
-            //     2px 0 0 $white-color,
-            //     4px 0 0 $white-color,
-            //     4px -2px 0 $white-color,
-            //     4px -4px 0 $white-color,
-            //     4px -6px 0 $white-color,
-            //     4px -8px 0 $white-color;
-            // transform: rotate(45deg);
+            font-size: .875rem;
+
+            &:checked+label:before {
+                border-color: $primary-color;
+                box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+            }
+
+            &:checked+label {
+                color: $primary-color;
+            }
         }
 
-        &:checked+label:before {
-            border-color: $primary-color;
-        }
-
-        &:checked+label {
-            color: $primary-color;
-        }
     }
 
-    // &:hover{
-    //     &::before{
-    //         opacity: 1;
-    //         visibility: visible;
-    //     }
-    // }
+    &.is-full {
+        width: 100%;
+
+        label {
+            width: 100%;
+        }
+    }
 }
 
 .custom-radio {
@@ -126,22 +104,6 @@
     position: relative;
     margin-bottom: .6125rem;
 
-    // &::before {
-    //     z-index: 1;
-    //     position: absolute;
-    //     border-radius: 50%;
-    //     opacity: 0;
-    //     pointer-events: none;
-    //     content: "";
-    //     width:30px;
-    //     height: 30px;
-    //     background-color:$blue-light;
-    //     left:-6px;
-    //     top:-5px;
-    //     bottom:-5px;
-    //     @include transition(all .5s linear);
-    //     visibility: hidden;
-    // }
     label {
         margin: 0;
         font-weight: 500;
@@ -213,6 +175,7 @@
 
         &:checked+label:before {
             border-color: $white-color;
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
         }
 
         &:checked+label {

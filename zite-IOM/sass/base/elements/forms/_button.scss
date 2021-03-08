@@ -393,3 +393,9 @@ a.load-more-button {
         }
     }
 }
+
+[role="button"] {
+    &:focus {
+        border-color: transparent !important;
+    }
+}

@@ -3,19 +3,19 @@
 
     a {
         position: relative;
-        padding-right: 2rem;
+        // padding-right: 2rem;
         @include transition(all .5s ease-in-out);
 
-        &::after {
-            content: 'arrow_drop_down';
-            font-family: 'Material Icons';
-            position: absolute;
-            top: 50%;
-            @include transform(translateY(-50%));
-            z-index: 2;
-            right: 0;
-            font-size: 1.2rem;
-        }
+        // &::after {
+        //     content: 'arrow_drop_down';
+        //     font-family: 'Material Icons';
+        //     position: absolute;
+        //     top: 50%;
+        //     @include transform(translateY(-50%));
+        //     z-index: 2;
+        //     right: 0;
+        //     font-size: 1.2rem;
+        // }
 
         &.is-border,
         &.is-light {
@@ -193,7 +193,8 @@
 
                 &::before,
                 &::after {
-                    right: 10px;
+                    // right: 10px;
+                    right: 8px;
                     left: auto;
                 }
             }

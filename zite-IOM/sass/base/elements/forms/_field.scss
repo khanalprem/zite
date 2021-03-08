@@ -143,12 +143,16 @@ textarea {
         display: initial;
         background-color: $white-color;
         width: 100%;
+
+        &:focus {
+            border: none;
+            outline: none;
+        }
     }
 
     span {
         &.span-group {
             padding: 0 .5rem;
-            padding-right: 0;
             text-align: center;
             @include display-flex(flex);
             @include justify-content-center;
@@ -195,6 +199,14 @@ textarea {
                     color: $primary-color;
                     font-size: 1.1rem;
                 }
+            }
+        }
+    }
+
+    &.is-active {
+        span {
+            &.span-group {
+                color: $primary-color;
             }
         }
     }

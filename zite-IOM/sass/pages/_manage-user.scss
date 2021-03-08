@@ -34,6 +34,10 @@
                 &.is-border {
                     border: 1px solid $border-color;
                 }
+
+                &.is-bg {
+                    background-color: $bg-color;
+                }
             }
         }
 
