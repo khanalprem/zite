@@ -634,7 +634,7 @@
                                             <input type="file" id="attached-data" />
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <label>action</label>
                                         <div class="inline-row is-start">
                                             <div class="flat-checkbox">
@@ -647,9 +647,33 @@
                                             </div>
 
                                         </div>
+                                    </div> -->
+                                    <div class="form-group">
+                                        <label><span>status</span> </label>
+                                        <div class="input-in">
+                                            <div class="custom-select">
+                                                <p class="selected-item">
+                                                    <span>Select</span>
+                                                </p>
+                                                <ul class="select-list left-dropdown">
+                                                    <li>
+                                                        <span>Approved</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>Rejected</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>Flagged</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>Pending</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="form-group">
-                                        <label><span>Refer</span> </label>
+                                        <label><span>Reason</span> </label>
                                         <div class="input-in">
                                             <div class="custom-select">
                                                 <p class="selected-item">
@@ -667,21 +691,108 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label>status</label>
-                                        <div class="inline-row is-3">
-
-                                            <div class="flat-checkbox">
-                                                <input id="flat-checkbox" type="checkbox" name="Type">
-                                                <label for="flat-checkbox">resolved</label>
-                                            </div>
-                                            <div class="flat-checkbox">
+                                        <div class="is-flex is-between">
+                                            <label>Refer</label>
+                                            <label class="switch">
+                                                <input type="checkbox" value="">
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
+                                        <div class="inline-row is-start mt-15">
+                                            <div class="flat-checkbox sm-flat-checkbox ">
                                                 <input id="flat-checkbox" type="checkbox" name="Type" checked>
-                                                <label for="flat-checkbox">flagged</label>
+                                                <label for="flat-checkbox">To roles</label>
                                             </div>
-                                            <div class="flat-checkbox">
+                                            <div class="flat-checkbox sm-flat-checkbox ">
                                                 <input id="flat-checkbox" type="checkbox" name="Type">
-                                                <label for="flat-checkbox">rejected</label>
+                                                <label for="flat-checkbox">To indivuals</label>
                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="is-multi-list is-overflow" style="max-height: 220px;">
+                                        <div class="is-parent">
+                                            <div class="parent-header">
+                                                <div class="custom-checkbox is-full">
+                                                    <input id="Vector" type="checkbox" name="Type">
+                                                    <label for="Vector">Owner</label>
+                                                </div>
+                                            </div>
+                                            <ul class="list is-checkbox ">
+                                                <li class="is-active">
+                                                    <div class="custom-checkbox is-full">
+                                                        <input id="Vector" type="checkbox" name="Type">
+                                                        <label for="Vector">Owner</label>
+                                                    </div>
+                                                </li>
+                                                <li class="">
+                                                    <div class="custom-checkbox is-full">
+                                                        <input id="Vector" type="checkbox" name="Type">
+                                                        <label for="Vector">manager</label>
+                                                    </div>
+                                                </li>
+                                                <li class="">
+                                                    <div class="custom-checkbox is-full">
+                                                        <input id="Vector" type="checkbox" name="Type">
+                                                        <label for="Vector">Editor</label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="is-parent">
+                                            <div class="parent-header">
+                                                <div class="custom-checkbox is-full">
+                                                    <input id="Vector" type="checkbox" name="Type">
+                                                    <label for="Vector">Owner</label>
+                                                </div>
+                                            </div>
+                                            <ul class="list is-checkbox ">
+                                                <li class="is-active">
+                                                    <div class="custom-checkbox is-full">
+                                                        <input id="Vector" type="checkbox" name="Type">
+                                                        <label for="Vector">Owner</label>
+                                                    </div>
+                                                </li>
+                                                <li class="">
+                                                    <div class="custom-checkbox is-full">
+                                                        <input id="Vector" type="checkbox" name="Type">
+                                                        <label for="Vector">manager</label>
+                                                    </div>
+                                                </li>
+                                                <li class="">
+                                                    <div class="custom-checkbox is-full">
+                                                        <input id="Vector" type="checkbox" name="Type">
+                                                        <label for="Vector">Editor</label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="is-parent">
+                                            <div class="parent-header">
+                                                <div class="custom-checkbox is-full">
+                                                    <input id="Vector" type="checkbox" name="Type">
+                                                    <label for="Vector">Owner</label>
+                                                </div>
+                                            </div>
+                                            <ul class="list is-checkbox ">
+                                                <li class="is-active">
+                                                    <div class="custom-checkbox is-full">
+                                                        <input id="Vector" type="checkbox" name="Type">
+                                                        <label for="Vector">Owner</label>
+                                                    </div>
+                                                </li>
+                                                <li class="">
+                                                    <div class="custom-checkbox is-full">
+                                                        <input id="Vector" type="checkbox" name="Type">
+                                                        <label for="Vector">manager</label>
+                                                    </div>
+                                                </li>
+                                                <li class="">
+                                                    <div class="custom-checkbox is-full">
+                                                        <input id="Vector" type="checkbox" name="Type">
+                                                        <label for="Vector">Editor</label>
+                                                    </div>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                     <div class="buttons is-center mt-30">

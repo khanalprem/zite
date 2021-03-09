@@ -3301,101 +3301,70 @@ figure {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: .6125rem 1rem; }
-  .switch-filter h6 {
-    color: #333333;
-    font-weight: 600;
-    font-size: .7125rem;
-    flex-grow: 1;
-    position: relative;
-    padding-right: 1.5rem;
-    padding-left: 1rem;
-    flex-grow: 1;
-    margin: 0;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out; }
-    .switch-filter h6 img {
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 22px;
+  margin: 0; }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0; }
+  .switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f1f4f9;
+    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    -ms-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    border-radius: 30px;
+    border: 1px solid #e6e6e6; }
+    .switch .slider::before {
       position: absolute;
-      left: 0;
-      max-width: 14px;
-      top: -1px; }
-    .switch-filter h6 i {
-      position: absolute;
-      width: 8px;
-      height: 8px;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 1px;
+      bottom: 0px;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
       border-radius: 50%;
-      left: 0;
-      top: 2px; }
-    .switch-filter h6:hover {
-      color: #E12454; }
-  .switch-filter .switch {
-    position: relative;
-    display: inline-block;
-    width: 24px;
-    height: 6px;
-    margin: 0; }
-    .switch-filter .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0; }
-    .switch-filter .switch .slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(225, 36, 84, 0.3);
+      background-color: #ffffff;
       -webkit-transition: 0.4s ease-in-out;
       -moz-transition: 0.4s ease-in-out;
       -o-transition: 0.4s ease-in-out;
       -ms-transition: 0.4s ease-in-out;
       transition: 0.4s ease-in-out;
-      -webkit-border-radius: 30px;
-      -moz-border-radius: 30px;
-      -ms-border-radius: 30px;
-      border-radius: 30px; }
-      .switch-filter .switch .slider::before {
-        position: absolute;
-        content: "";
-        height: 14px;
-        width: 14px;
-        left: 0;
-        bottom: -3px;
+      border: 1px solid #e6e6e6; }
+    .switch .slider .round {
+      -webkit-border-radius: 34px;
+      -moz-border-radius: 34px;
+      -ms-border-radius: 34px;
+      border-radius: 34px; }
+      .switch .slider .round::before {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
-        border-radius: 50%;
-        background-color: rgba(225, 36, 84, 0.5);
-        -webkit-transition: 0.4s ease-in-out;
-        -moz-transition: 0.4s ease-in-out;
-        -o-transition: 0.4s ease-in-out;
-        -ms-transition: 0.4s ease-in-out;
-        transition: 0.4s ease-in-out;
-        -webkit-box-shadow: 0 1px 6px rgba(230, 230, 230, 0.5);
-        box-shadow: 0 1px 6px rgba(230, 230, 230, 0.5); }
-      .switch-filter .switch .slider .round {
-        -webkit-border-radius: 34px;
-        -moz-border-radius: 34px;
-        -ms-border-radius: 34px;
-        border-radius: 34px; }
-        .switch-filter .switch .slider .round::before {
-          -webkit-border-radius: 50%;
-          -moz-border-radius: 50%;
-          -ms-border-radius: 50%;
-          border-radius: 50%; }
-    .switch-filter .switch input:checked + .slider {
-      background-color: rgba(225, 36, 84, 0.8); }
-    .switch-filter .switch input:checked + .slider:before {
-      -webkit-transform: translateX(14px);
-      -ms-transform: translateX(14px);
-      transform: translateX(14px);
-      background-color: #e12454; }
+        border-radius: 50%; }
+  .switch input:checked + .slider {
+    background-color: #E12454; }
+  .switch input:checked + .slider:before {
+    -webkit-transform: translateX(12px);
+    -ms-transform: translateX(12px);
+    transform: translateX(12px);
+    background-color: #ffffff; }
 
 [class*=common-button] {
   -webkit-font-smoothing: antialiased;

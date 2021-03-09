@@ -1,264 +1,68 @@
+.switch-filter {
+  @include display-flex(flex);
+  @include align-items-center;
+  @include justify-content-between;
+  padding: .6125rem 1rem;
 
-.switch-filter{
-    @include display-flex(flex);
-    @include align-items-center;
-    @include justify-content-between;
-    padding:.6125rem 1rem;
-    h6{
-        color:$heading-color;
-        font-weight: 600;
-        font-size: .7125rem;
-        flex-grow: 1;
-        position: relative;
-        padding-right: 1.5rem;
-        padding-left: 1rem;
-        flex-grow: 1;
-        margin:0;
-        @include transition(all .4s ease-in-out);
-        img{
-          position:absolute;
-          left:0;
-          max-width: 14px;
-          top:-1px;
-        }
-        i{
-            position: absolute;
-            width: 8px;
-            height: 8px;
-            @include radius(50%);
-            left: 0;
-            top: 2px;
-        }
-        // &.green{
-        //     &::before{
-        //         background-color: $green-color;
-        //         -webkit-animation: greenpulse 2s infinite;
-        //     -moz-animation: greenpulse 2s infinite;
-        //     animation: greenpulse 2s infinite;
-        //     }
-        // }
-        // &.orange{
-        //     &::before{
-        //         background-color:$orange-color;
-        //         -webkit-animation: orangepulse 2s infinite;
-        //     -moz-animation: orangepulse 2s infinite;
-        //     animation: orangepulse 2s infinite;
-        //     }
-        // }
-        // &.red{
-        //     &::before{
-        //         background-color:$red-color;
-        //         -webkit-animation: redpulse 2s infinite;
-        //     -moz-animation: redpulse 2s infinite;
-        //     animation: redpulse 2s infinite;
-        //     }
-        // }
-        // &.red-dark{
-        //     &::before{
-        //         background-color:$red-dark;
-        //         -webkit-animation: purplepusle 2s infinite;
-        //     -moz-animation: purplepusle 2s infinite;
-        //     animation: purplepusle 2s infinite;
-        //     }
-        // }
-        // &.yellow{
-        //     &::before{
-        //         background-color:$yellow-color;
-        //         -webkit-animation: yellowpulse 2s infinite;
-        //     -moz-animation: yellowpulse 2s infinite;
-        //     animation: yellowpulse 2s infinite;
-        //     }
-        // }
-        &:hover{
-          color:$secondary-color;
-        }
 
-    }
-    .switch {
-        position: relative;
-        display: inline-block;
-        width: 24px;
-        height: 6px;
-        margin:0;
-    
-        input {
-          opacity: 0;
-          width: 0;
-          height: 0;
-        }
-    
-        .slider {
-          position: absolute;
-          cursor: pointer;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-color: rgba($secondary-color,.3);
-          @include transition(.4s ease-in-out);
-          @include radius(30px);
-    
-          &::before {
-            position: absolute;
-            content: "";
-            height: 14px;
-            width: 14px;
-            left: 0;
-            bottom:-3px;
-            @include radius(50%);
-            background-color: rgba($secondary-color,.5);
-            @include transition(.4s ease-in-out);
-            @include box-shadow(0 1px 6px rgba($border-color, 0.5));
-          }
-    
-          .round {
-            @include radius(34px);
-    
-            &::before {
-              @include radius(50%);
-            }
-          }
-        }
-    
-        input:checked+.slider {
-          background-color: rgba($secondary-color,.8);
-        }
-    
-        input:checked+.slider:before {
-          -webkit-transform: translateX(14px);
-          -ms-transform: translateX(14px);
-          transform: translateX(14px);
-          background-color: rgba($secondary-color,1);
-        }
-    
-      }
 }
-// @-webkit-keyframes greenpulse {
-//     0% {
-//       -webkit-box-shadow: 0 0 0 0 rgba($green-color, 0.6);
-//     }
-//     70% {
-//         -webkit-box-shadow: 0 0 0 10px rgba($green-color, 0);
-//     }
-//     100% {
-//         -webkit-box-shadow: 0 0 0 0 rgba($green-color, 0);
-//     }
-//   }
-//   @keyframes greenpulse {
-//     0% {
-//       -moz-box-shadow: 0 0 0 0 rgba($green-color, 0.6);
-//       box-shadow: 0 0 0 0 rgba($green-color, 0.6);
-//     }
-//     70% {
-//         -moz-box-shadow: 0 0 0 10px rgba($green-color, 0);
-//         box-shadow: 0 0 0 10px rgba($green-color, 0);
-//     }
-//     100% {
-//         -moz-box-shadow: 0 0 0 0 rgba($green-color, 0);
-//         box-shadow: 0 0 0 0 rgba($green-color, 0);
-//     }
-//   }
-  
-  
-//   @-webkit-keyframes orangepulse {
-//     0% {
-//       -webkit-box-shadow: 0 0 0 0 rgba($orange-color, 0.6);
-//     }
-//     70% {
-//         -webkit-box-shadow: 0 0 0 10px rgba($orange-color, 0);
-//     }
-//     100% {
-//         -webkit-box-shadow: 0 0 0 0 rgba($orange-color, 0);
-//     }
-//   }
-//   @keyframes orangepulse {
-//     0% {
-//       -moz-box-shadow: 0 0 0 0 rgba($orange-color, 0.6);
-//       box-shadow: 0 0 0 0 rgba($orange-color, 0.6);
-//     }
-//     70% {
-//         -moz-box-shadow: 0 0 0 10px rgba($orange-color, 0);
-//         box-shadow: 0 0 0 10px rgba($orange-color, 0);
-//     }
-//     100% {
-//         -moz-box-shadow: 0 0 0 0 rgba($orange-color, 0);
-//         box-shadow: 0 0 0 0 rgba($orange-color, 0);
-//     }
-//   }
-  
-//   @-webkit-keyframes redpulse {
-//     0% {
-//       -webkit-box-shadow: 0 0 0 0 rgba($red-color, 0.6);
-//     }
-//     70% {
-//         -webkit-box-shadow: 0 0 0 10px rgba($red-color, 0);
-//     }
-//     100% {
-//         -webkit-box-shadow: 0 0 0 0 rgba($red-color, 0);
-//     }
-//   }
-//   @keyframes redpulse {
-//     0% {
-//       -moz-box-shadow: 0 0 0 0 rgba($red-color, 0.6);
-//       box-shadow: 0 0 0 0 rgba($red-color, 0.6);
-//     }
-//     70% {
-//         -moz-box-shadow: 0 0 0 10px rgba($red-color, 0);
-//         box-shadow: 0 0 0 10px rgba($red-color, 0);
-//     }
-//     100% {
-//         -moz-box-shadow: 0 0 0 0 rgba($red-color, 0);
-//         box-shadow: 0 0 0 0 rgba(193,244,65, 0);
-//     }
-//   }
-  
-//   @-webkit-keyframes purplepusle {
-//     0% {
-//       -webkit-box-shadow: 0 0 0 0 rgba($red-dark, 0.6);
-//     }
-//     70% {
-//         -webkit-box-shadow: 0 0 0 10px rgba($red-dark, 0);
-//     }
-//     100% {
-//         -webkit-box-shadow: 0 0 0 0 rgba($red-dark, 0);
-//     }
-//   }
-//   @keyframes purplepusle {
-//     0% {
-//       -moz-box-shadow: 0 0 0 0 rgba($red-dark, 0.6);
-//       box-shadow: 0 0 0 0 rgba($red-dark, 0.6);
-//     }
-//     70% {
-//         -moz-box-shadow: 0 0 0 10px rgba($red-dark, 0);
-//         box-shadow: 0 0 0 10px rgba($red-dark, 0);
-//     }
-//     100% {
-//         -moz-box-shadow: 0 0 0 0 rgba($red-dark, 0);
-//         box-shadow: 0 0 0 0 rgba($red-dark, 0);
-//     }
-//   }
-//   @-webkit-keyframes yellowpulse {
-//     0% {
-//       -webkit-box-shadow: 0 0 0 0 rgba($yellow-color, 0.6);
-//     }
-//     70% {
-//         -webkit-box-shadow: 0 0 0 10px rgba($yellow-color, 0);
-//     }
-//     100% {
-//         -webkit-box-shadow: 0 0 0 0 rgba($yellow-color, 0);
-//     }
-//   }
-//   @keyframes yellowpulse {
-//     0% {
-//       -moz-box-shadow: 0 0 0 0 rgba($yellow-color, 0.6);
-//       box-shadow: 0 0 0 0 rgba($yellow-color, 0.6);
-//     }
-//     70% {
-//         -moz-box-shadow: 0 0 0 10px rgba($yellow-color, 0);
-//         box-shadow: 0 0 0 10px rgba($yellow-color, 0);
-//     }
-//     100% {
-//         -moz-box-shadow: 0 0 0 0 rgba($yellow-color, 0);
-//         box-shadow: 0 0 0 0 rgba($yellow-color, 0);
-//     }
-//   }
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 22px;
+  margin: 0;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $grey-color;
+    @include transition(.4s ease-in-out);
+    @include radius(30px);
+    border: 1px solid $border-color;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 1px;
+      bottom: 0px;
+      @include radius(50%);
+      background-color: $white-color;
+      @include transition(.4s ease-in-out);
+      border: 1px solid $border-color;
+    }
+
+    .round {
+      @include radius(34px);
+
+      &::before {
+        @include radius(50%);
+      }
+    }
+  }
+
+  input:checked+.slider {
+    background-color: $secondary-color;
+  }
+
+  input:checked+.slider:before {
+    -webkit-transform: translateX(12px);
+    -ms-transform: translateX(12px);
+    transform: translateX(12px);
+    background-color: $white-color;
+  }
+
+}
