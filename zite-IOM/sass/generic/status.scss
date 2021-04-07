@@ -1,0 +1,59 @@
+.open-bg {
+  background-color: rgba($open-color, 0.15);
+}
+
+.flagged-bg {
+  background-color: rgba($flaggedColor, 0.15);
+}
+
+.rejected-bg {
+  background-color: rgba($rejectedColor, 0.15);
+}
+
+.approved-bg {
+  background-color: rgba($approvedColor, 0.15);
+}
+
+.inprogress-bg {
+  background-color: rgba($inProgressColor, 0.15);
+}
+
+.open-dark-bg {
+  background-color: $open-color;
+}
+
+.flagged-dark-bg {
+  background-color: $flaggedColor;
+}
+
+.rejected-dark-bg {
+  background-color: $rejectedColor;
+}
+
+.approved-dark-bg {
+  background-color: $approvedColor;
+}
+
+.inprogress-dark-bg {
+  background-color: $inProgressColor;
+}
+
+.open {
+  color: $open-color;
+}
+
+.flagged {
+  color: $flaggedColor;
+}
+
+.rejected {
+  color: $rejectedColor;
+}
+
+.approved {
+  color: $approvedColor;
+}
+
+.inprogress {
+  color: $inProgressColor;
+}

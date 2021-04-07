@@ -9,7 +9,7 @@ Primary use: Monitoring system
 */
 
 // Import variables and mixins.
-@import "abstracts/abstracts";
+@import 'abstracts/abstracts';
 
 /*--------------------------------------------------------------
 # Generic
@@ -17,39 +17,39 @@ Primary use: Monitoring system
 
 /* Normalize
 --------------------------------------------- */
-@import "generic/normalize";
+@import 'generic/normalize';
 
 /* Box sizing
 --------------------------------------------- */
-@import "generic/box-sizing";
+@import 'generic/box-sizing';
 
+// @import 'generic/status.scss';
 
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
-@import "base/base";
+@import 'base/base';
 
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
 // @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
 // @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
-@import "layouts/layout";
+@import 'layouts/layout';
 
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-@import "components/components";
-
+@import 'components/components';
 
 /* Accessibility
 --------------------------------------------- */
-@import "utilities/accessibility";
+@import 'utilities/accessibility';
 
 /* Alignments
 --------------------------------------------- */
-@import "utilities/alignments";
+@import 'utilities/alignments';
 
 /* pages
 --------------------------------------------- */
-@import "pages/pages";
+@import 'pages/pages';

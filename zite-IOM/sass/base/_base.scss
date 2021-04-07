@@ -17,3 +17,390 @@
 /* Forms
 --------------------------------------------- */
 @import "elements/forms/forms";
+
+.is-grow {
+    @include flex-grow(1);
+}
+
+.is-truncate {
+    @include trim();
+}
+
+.is-trim {
+    @include trim(2);
+
+}
+
+.is-flex {
+    @include display-flex(flex);
+
+    @include align-items-center;
+
+    &.is-start {
+        @include justify-content-start;
+    }
+
+    &.is-between {
+        @include justify-content-between;
+    }
+
+    &.is-around {
+        @include justify-content-around;
+    }
+
+    &.is-end {
+        @include justify-content-end;
+    }
+
+    &.is-center {
+        @include justify-content-center;
+    }
+
+    &.is-align-start {
+        @include align-items-start;
+    }
+
+}
+
+.is-multi-list {
+    .is-parent {
+        .parent-header {
+            padding: .5rem .6125rem;
+            border-bottom: 1px solid $border-color;
+
+            .custom-checkbox {
+                margin: 0;
+
+                label {
+                    font-weight: 600;
+                    color: $heading-color;
+                    font-size: .875rem;
+                    text-transform: capitalize;
+                }
+            }
+        }
+
+        ul {
+            li {
+                padding-left: 1.5rem;
+            }
+        }
+    }
+
+    &.is-after {
+        .is-parent {
+            .parent-header {
+                position: relative;
+
+                &::after {
+                    font-size: 1.4rem;
+                    font-family: 'Material Icons';
+                    color: $body-color;
+                    z-index: 99;
+                    line-height: 1;
+                    @include display-flex(flex);
+                    @include justify-content-center;
+                    @include align-items-center;
+                    @include flex-direction-column(column);
+                    @include radius(100%);
+                    content: 'expand_more';
+                    width: 20px;
+                    height: 20px;
+                    border: 1px solid $border-color;
+                    margin-left: .6125rem;
+                    font-size: 1rem;
+                    position: absolute;
+                    right: 7px;
+                    top: 7px;
+                    cursor: pointer;
+                }
+
+                &.is-active {
+                    &::after {
+                        content: 'expand_less';
+                        border-color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+.inline-row {
+    @include display-flex(flex);
+    @include justify-content-between;
+    @include align-items-center;
+
+    &.is-start {
+        @include justify-content-start;
+    }
+
+    &.is-end {
+        @include justify-content-end;
+    }
+
+    &.is-center {
+        @include justify-content-center;
+    }
+
+    sm {
+        padding: 0 .6125rem;
+    }
+
+    .flat-checkbox {
+        position: relative;
+        @include transition(all .5s ease-in-out);
+        text-align: center;
+
+        input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            opacity: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            cursor: pointer;
+
+            &+label {
+                position: relative;
+                cursor: pointer;
+                margin: 0;
+                padding: 7px 20px;
+                width: 100%;
+                text-transform: capitalize;
+                font-weight: 600;
+                display: inline-block;
+                font-size: .8rem;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    z-index: 1;
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                    border: 1px solid $border-color;
+                }
+            }
+
+            &:checked+label {
+                background: $primary-light;
+                color: $primary-color;
+
+                &::before {
+                    border-color: $primary-color;
+                }
+            }
+        }
+
+        &.min-142 {
+            input {
+                &+label {
+                    min-width: 142px;
+                }
+            }
+        }
+
+        &.sm-flat-checkbox {
+            input {
+
+                &+label {
+                    padding: 7px 15px;
+                    text-transform: capitalize;
+                    font-size: .775rem;
+                    color: $body-color;
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 0;
+        }
+
+        &:last-child {
+            input {
+
+                &+label {
+
+                    &::before {
+                        border-radius: 0 5px 5px 0;
+                    }
+                }
+            }
+        }
+
+        &:first-child {
+            input {
+
+                &+label {
+
+                    &::before {
+                        border-radius: 5px 0 0 5px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .flat-radio {
+        position: relative;
+        @include transition(all .5s ease-in-out);
+        text-align: center;
+
+        input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            opacity: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            cursor: pointer;
+
+            &+label {
+                position: relative;
+                cursor: pointer;
+                margin: 0;
+                padding: 7px 30px;
+                text-transform: uppercase;
+                font-weight: 600;
+                display: inline-block;
+                font-size: .775rem;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    z-index: 1;
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                    border: 1px solid $border-color;
+                }
+            }
+
+            &:checked+label {
+                background: $primary-light;
+                color: $primary-color;
+
+                &::before {
+                    border-color: $primary-color;
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 0;
+        }
+
+        &:last-child {
+            border-radius: 0 5px 5px 0;
+        }
+
+        &:first-child {
+            border-radius: 5px 0 0 5px;
+        }
+    }
+
+    &.chips {
+        @include flex-wrap(wrap);
+
+        li {
+            @include display-flex(flex);
+            @include justify-content-start;
+            @include align-items-center;
+            border: 1px solid $primary-color;
+            background-color: $primary-light;
+            color: $primary-color;
+            font-size: .775rem;
+            @include radius(24px);
+            padding: 0 .5rem;
+            margin-left: .6125rem;
+            margin-bottom: .6125rem;
+            font-weight: 500;
+
+            i {
+                font-size: .875rem;
+                line-height: 1;
+            }
+
+            span {
+                padding: 0 .25rem;
+            }
+
+            &.mb-0 {
+                margin-bottom: 0;
+            }
+        }
+
+        &.is-bg {
+            background-color: $white-color;
+            padding-top: 10px;
+        }
+    }
+
+    &.is-3 {
+        .flat-checkbox {
+            @include flex(0 0 33.33333%);
+            max-width: 33.33333%;
+        }
+    }
+
+    &.is-4 {
+        .flat-checkbox {
+            @include flex(0 0 25%);
+            max-width: 25%;
+
+        }
+    }
+
+    &.is-border {
+        @include radius(5px);
+    }
+
+    &.is-wrap {
+        @include flex-wrap(wrap);
+    }
+}
+
+.inline-item {
+    @include display-flex(flex);
+    @include justify-content-start;
+    @include align-items-center;
+
+    .cricle-icon,
+    .square-icon {
+        margin-right: 1rem;
+    }
+
+    .inline-text {
+        h3 {
+            font-size: 1.4rem;
+            line-height: 1.2;
+            margin: 0;
+
+            @media #{$breakpoint-desktop} {
+                font-size: 1.1rem;
+            }
+        }
+
+        span {
+            text-transform: capitalize;
+        }
+    }
+}

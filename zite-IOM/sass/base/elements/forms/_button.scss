@@ -222,6 +222,8 @@ a.load-more-button {
     color: $heading-color;
     width: 100%;
     padding: .5rem 1rem;
+    border: none;
+    cursor: pointer;
 
     i {
         text-transform: initial;
