@@ -2423,6 +2423,102 @@ ul {
             height: 28px; }
           ul.list li .review-card .review-footer .table-status .is-more {
             margin-left: .6125rem; }
+      ul.list li.cfp-review-card {
+        width: 100%; }
+        ul.list li.cfp-review-card .cfp-review-left,
+        ul.list li.cfp-review-card .cfp-review-right {
+          padding: 0; }
+        ul.list li.cfp-review-card .review-header {
+          margin-bottom: .5rem;
+          position: relative; }
+        ul.list li.cfp-review-card .custom-dropdown .circle-icon {
+          background-color: #ffffff;
+          width: 24px;
+          height: 24px;
+          min-height: 24px; }
+          ul.list li.cfp-review-card .custom-dropdown .circle-icon i {
+            font-size: 1.1rem;
+            color: #757575; }
+        ul.list li.cfp-review-card .custom-dropdown ul li {
+          display: block;
+          padding: 0; }
+        ul.list li.cfp-review-card .is-review-breadcrumb .rvw-breadcrumb-item {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          color: #757575; }
+          ul.list li.cfp-review-card .is-review-breadcrumb .rvw-breadcrumb-item a {
+            text-transform: uppercase;
+            font-size: .8125rem;
+            color: #757575;
+            max-width: 130px;
+            font-weight: 500; }
+          ul.list li.cfp-review-card .is-review-breadcrumb .rvw-breadcrumb-item:not(:last-child)::after {
+            content: 'chevron_right';
+            font-size: 1.3rem;
+            font-family: 'Material Icons';
+            line-height: 1;
+            display: inline-flex;
+            text-transform: initial; }
+        ul.list li.cfp-review-card figure {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 40px;
+          flex: 0 0 40px;
+          max-width: 40px; }
+          ul.list li.cfp-review-card figure img {
+            width: auto;
+            height: auto;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -ms-border-radius: 0;
+            border-radius: 0;
+            border: none; }
+          ul.list li.cfp-review-card figure .circle-icon {
+            background-color: transparent; }
+        ul.list li.cfp-review-card .list-content {
+          padding-right: 1rem; }
+          ul.list li.cfp-review-card .list-content h6 {
+            margin: 0; }
+          ul.list li.cfp-review-card .list-content .case-id,
+          ul.list li.cfp-review-card .list-content time {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 100px;
+            flex: 0 0 100px;
+            max-width: 100px;
+            text-align: right;
+            margin: 0;
+            padding-right: 1rem; }
+          ul.list li.cfp-review-card .list-content .case-id {
+            color: #40B449;
+            font-weight: 600; }
+        ul.list li.cfp-review-card .cfp-review-right .review-submission b {
+          margin-right: .5rem; }
+        ul.list li.cfp-review-card .cfp-review-right .review-submission span {
+          font-weight: 500;
+          color: #757575; }
+        ul.list li.cfp-review-card .cfp-review-right .review-submission-by {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 120px;
+          flex: 0 0 120px;
+          max-width: 120px; }
+          ul.list li.cfp-review-card .cfp-review-right .review-submission-by b {
+            font-weight: 500;
+            margin-right: .5rem;
+            color: #757575; }
+          ul.list li.cfp-review-card .cfp-review-right .review-submission-by span {
+            color: #333333;
+            max-width: 140px;
+            font-weight: 500; }
+        ul.list li.cfp-review-card .cfp-review-right .table-status {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 100px;
+          flex: 0 0 100px;
+          max-width: 100px; }
+          ul.list li.cfp-review-card .cfp-review-right .table-status.is-figure .status {
+            width: 28px;
+            height: 28px; }
+          ul.list li.cfp-review-card .cfp-review-right .table-status .is-more {
+            margin-left: .6125rem; }
     ul.list.is-border {
       border: 1px solid #e6e6e6; }
     ul.list.is-center {
@@ -3040,9 +3136,17 @@ figure {
     flex-wrap: nowrap;
     word-break: keep-all;
     font-weight: 500; }
+    .table-status [class*='status']:hover {
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      transform: scale(1.2); }
     .table-status [class*='status'].is-pd {
       padding: 0.5px 10px;
       text-transform: capitalize; }
+      .table-status [class*='status'].is-pd:hover {
+        transform: none; }
     .table-status [class*='status'].is-blue {
       background-color: rgba(0, 118, 255, 0.15);
       color: #0076ff; }
@@ -3067,12 +3171,6 @@ figure {
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
       border-radius: 50%; }
-    .table-status [class*='status']:hover {
-      -webkit-transform: scale(1.2);
-      -moz-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-      -o-transform: scale(1.2);
-      transform: scale(1.2); }
   .table-status.is-start {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
@@ -5068,6 +5166,13 @@ ul.social-list {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start; }
+  .is-flex.is-align-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end; }
+  .is-flex.is-wrap {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
 
 .is-multi-list .is-parent .parent-header {
   padding: .5rem .6125rem;

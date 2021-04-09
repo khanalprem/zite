@@ -60,6 +60,14 @@
         @include align-items-start;
     }
 
+    &.is-align-end {
+        @include align-items-end;
+    }
+
+    &.is-wrap {
+        @include flex-wrap(wrap);
+    }
+
 }
 
 .is-multi-list {

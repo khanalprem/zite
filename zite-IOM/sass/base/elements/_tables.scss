@@ -437,9 +437,17 @@
     word-break: keep-all;
     font-weight: 500;
 
+    &:hover {
+      @include transform(scale(1.2));
+    }
+
     &.is-pd {
       padding: 0.5px 10px;
       text-transform: capitalize;
+
+      &:hover {
+        transform: none;
+      }
     }
 
     &.is-blue {
@@ -473,9 +481,7 @@
       @include radius(50%);
     }
 
-    &:hover {
-      @include transform(scale(1.2));
-    }
+
   }
 
   &.is-start {

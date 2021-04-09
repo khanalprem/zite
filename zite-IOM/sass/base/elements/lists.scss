@@ -354,6 +354,155 @@ ul {
                 }
             }
 
+            &.cfp-review-card {
+                width: 100%;
+
+                .cfp-review-left,
+                .cfp-review-right {
+                    padding: 0;
+                }
+
+                .review-header {
+                    margin-bottom: .5rem;
+                    position: relative;
+                }
+
+                .custom-dropdown {
+                    .circle-icon {
+                        background-color: $white-color;
+                        width: 24px;
+                        height: 24px;
+                        min-height: 24px;
+
+                        i {
+                            font-size: 1.1rem;
+                            color: $body-color;
+                        }
+                    }
+
+                    ul {
+                        li {
+                            display: block;
+                            padding: 0;
+                        }
+                    }
+                }
+
+                .is-review-breadcrumb {
+                    .rvw-breadcrumb-item {
+                        @include display-flex(flex);
+                        color: $body-color;
+
+                        a {
+                            text-transform: uppercase;
+                            font-size: .8125rem;
+                            color: $body-color;
+                            max-width: 130px;
+                            font-weight: 500;
+                        }
+
+                        &:not(:last-child) {
+                            &::after {
+                                content: 'chevron_right';
+                                font-size: 1.3rem;
+                                font-family: 'Material Icons';
+                                line-height: 1;
+                                display: inline-flex;
+                                text-transform: initial;
+                            }
+                        }
+                    }
+                }
+
+                figure {
+                    @include flex(0 0 40px);
+                    max-width: 40px;
+
+                    img {
+                        width: auto;
+                        height: auto;
+                        @include radius(0);
+                        border: none;
+
+                    }
+
+                    .circle-icon {
+                        background-color: transparent;
+
+                    }
+                }
+
+                .list-content {
+                    padding-right: 1rem;
+
+                    h6 {
+                        margin: 0;
+                    }
+
+                    .case-id,
+                    time {
+                        @include flex(0 0 100px);
+                        max-width: 100px;
+                        text-align: right;
+                        margin: 0;
+                        padding-right: 1rem;
+                    }
+
+                    .case-id {
+                        color: $primary-color;
+                        font-weight: 600;
+                    }
+                }
+
+                .cfp-review-right {
+                    .review-submission {
+                        b {
+                            margin-right: .5rem;
+                        }
+
+                        span {
+                            font-weight: 500;
+                            color: $body-color;
+                        }
+                    }
+
+                    .review-submission-by {
+                        @include flex(0 0 120px);
+                        max-width: 120px;
+
+                        b {
+                            font-weight: 500;
+                            margin-right: .5rem;
+                            color: $body-color;
+                        }
+
+                        span {
+                            color: $heading-color;
+                            max-width: 140px;
+                            font-weight: 500;
+                        }
+                    }
+
+                    .table-status {
+                        @include flex(0 0 100px);
+                        max-width: 100px;
+
+                        &.is-figure {
+
+
+                            .status {
+                                width: 28px;
+                                height: 28px;
+                            }
+                        }
+
+                        .is-more {
+                            margin-left: .6125rem;
+                        }
+                    }
+                }
+            }
+
         }
 
         &.is-border {
