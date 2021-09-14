@@ -1,95 +1,95 @@
 .manage-user {
-    background-color: $white-color;
-    padding: 1.5rem;
+  background-color: $white-color;
+  padding: 1.5rem;
+
+  .zite-card {
+    box-shadow: none;
+
+    .card-header {
+      padding: 0;
+    }
+
+    .zite-body {
+      padding: 0;
+      padding-top: 1rem;
+    }
+  }
+
+  .workflow-popup-wrapper {
+    background-color: $bg-color;
+    padding: 1rem;
 
     .zite-card {
-        box-shadow: none;
+      background-color: transparent;
 
-        .card-header {
-            padding: 0;
+      .card-header {
+        padding: 0 15px 10px 15px;
+      }
+
+      .zite-body {
+        min-height: 220px;
+        background-color: $white-color;
+        @include radius(5px);
+
+        &.is-border {
+          border: 1px solid $border-color;
         }
 
+        &.is-bg {
+          background-color: $bg-color;
+        }
+      }
+    }
+
+    .overlay-wrapper {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba($bg-color, 0.7);
+      }
+    }
+
+    &.is-disable {
+      .zite-card {
         .zite-body {
-            padding: 0;
-            padding-top: 1rem;
+          background-color: transparent;
         }
-    }
+      }
 
-    .workflow-popup-wrapper {
-        background-color: $bg-color;
-        padding: 1rem;
-
-        .zite-card {
-            background-color: transparent;
-
-            .card-header {
-                padding: 0 15px 10px 15px
-            }
-
-            .zite-body {
-                min-height: 220px;
-                background-color: $white-color;
-                @include radius(5px);
-
-                &.is-border {
-                    border: 1px solid $border-color;
+      .acc {
+        .acc-list {
+          .acc-body {
+            ul {
+              &.list {
+                li {
+                  background-color: transparent;
                 }
-
-                &.is-bg {
-                    background-color: $bg-color;
-                }
+              }
             }
+          }
         }
-
-        .overlay-wrapper {
-            position: relative;
-
-            &::after {
-                content: '';
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                background-color: rgba($bg-color, .7);
-            }
-        }
-
-        &.is-disable {
-            .zite-card {
-                .zite-body {
-                    background-color: transparent;
-                }
-            }
-
-            .acc {
-                .acc-list {
-                    .acc-body {
-                        ul {
-                            &.list {
-                                li {
-                                    background-color: transparent;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+      }
     }
+  }
 
-    &.pd-0 {
-        padding: 0;
-    }
+  &.pd-0 {
+    padding: 0;
+  }
 
-    @media #{$breakpoint-md-desktop} {
-        padding: 1rem;
-    }
+  @media #{$breakpoint-md-desktop} {
+    padding: 1rem;
+  }
 
-    .acc {
-        h3 {
-            font-size: .875rem;
-            padding: .5rem .6125rem 0 .6125rem;
-        }
+  .acc {
+    h3 {
+      font-size: 0.875rem;
+      padding: 0.5rem 0.6125rem 0 0.6125rem;
     }
+  }
 }

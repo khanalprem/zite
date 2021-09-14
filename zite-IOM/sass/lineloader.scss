@@ -1,0 +1,22 @@
+.loader__element {
+    height: 2px;
+    width: 100%;
+    background: rgba($primary-color, 0.4);
+    // position: fixed;
+    // top: 20px
+}
+
+.loader__element:before {
+    content: '';
+    display: block;
+    background-color: $primary-color;
+    height: 2px;
+    width: 0;
+    animation: getWidth 400ms ease-in infinite;
+}
+
+@keyframes getWidth {
+    100% {
+        width: 100%;
+    }
+}

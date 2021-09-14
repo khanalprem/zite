@@ -20,7 +20,7 @@
     $('.common-button').on('click', function (e) {
       e.preventDefault();
       var targetId = $(this).attr('popup-link');
-      $('#' + targetId).addClass('open');
+      $('#' + targetId).addClass('is-open');
     });
   }
   openModal();
@@ -28,7 +28,7 @@
   function closeModal() {
     $('.popup-footer .common-button, .close-icon').on('click', function (e) {
       e.preventDefault();
-      $(this).closest('.popup').removeClass('open');
+      $(this).closest('.popup').removeClass('is-open');
     });
   }
   closeModal();

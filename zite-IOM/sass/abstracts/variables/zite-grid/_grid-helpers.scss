@@ -7,11 +7,11 @@
 // --------------------------------------------------
 
 .#{$zite-prefix}wrap {
-    @include flex-wrap(wrap);
+    @include flexWrap(wrap);
 }
 
 .#{$zite-prefix}no-wrap {
-    @include flex-wrap(nowrap);
+    @include flexWrap(nowrap);
 
     // This is mostly needed to stop the grid contents overflowing in the
     // ie10 implementation of flexbox but it can't hurt in other browsers
@@ -22,7 +22,7 @@
 }
 
 .#{$zite-prefix}wrap-reverse {
-    @include flex-wrap(wrap-reverse);
+    @include flexWrap(wrap-reverse);
 }
 
 // --------------------------------------------------

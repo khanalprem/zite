@@ -30,7 +30,7 @@
   text-transform: capitalize;
 }
 
-.table tbody+tbody {
+.table tbody + tbody {
   border-top: 2px solid $border-color;
 }
 
@@ -52,7 +52,7 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  .table-responsive-sm>.table-bordered {
+  .table-responsive-sm > .table-bordered {
     border: 0;
   }
 }
@@ -65,7 +65,7 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  .table-responsive-md>.table-bordered {
+  .table-responsive-md > .table-bordered {
     border: 0;
   }
 }
@@ -78,7 +78,7 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  .table-responsive-lg>.table-bordered {
+  .table-responsive-lg > .table-bordered {
     border: 0;
   }
 }
@@ -90,7 +90,7 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  .table-responsive-xl>.table-bordered {
+  .table-responsive-xl > .table-bordered {
     border: 0;
   }
 }
@@ -102,7 +102,7 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.table-responsive>.table-bordered {
+.table-responsive > .table-bordered {
   border: 0;
 }
 
@@ -480,8 +480,6 @@
       bottom: 0;
       @include radius(50%);
     }
-
-
   }
 
   &.is-start {

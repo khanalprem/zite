@@ -39,21 +39,22 @@
 }
 
 .open {
-  color: $open-color;
+  color: $open-color !important;
 }
 
 .flagged {
-  color: $flaggedColor;
+  color: $flaggedColor !important;
 }
 
 .rejected {
-  color: $rejectedColor;
+  color: $rejectedColor !important;
 }
 
 .approved {
-  color: $approvedColor;
+  color: $approvedColor !important;
 }
 
 .inprogress {
-  color: $inProgressColor;
+  color: $inProgressColor !important;
 }
+ 

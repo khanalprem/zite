@@ -23,7 +23,7 @@
     flex-grow: $value;
 }
 
-@mixin flex-wrap($value) {
+@mixin flexWrap($value) {
     -ms-flex-wrap: $value;
     flex-wrap: $value;
 }

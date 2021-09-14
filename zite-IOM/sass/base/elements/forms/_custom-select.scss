@@ -40,15 +40,15 @@
       min-width: 120px;
 
       i {
-        margin-right: .5rem;
+        margin-right: 0.5rem;
         font-size: 1rem;
       }
 
       &::after {
-        content: "arrow_drop_down";
-        font-family: "Material Icons";
+        content: 'arrow_drop_down';
+        font-family: 'Material Icons';
         position: absolute;
-        right: .5rem;
+        right: 0.5rem;
         top: 0;
         font-size: 1.3rem;
         color: $body-color;
@@ -68,7 +68,7 @@
     -ms-overflow-style: -ms-autohiding-scrollbar;
     background-color: $white-color;
     @include box-shadow(0 5px 15px rgba(0, 0, 0, 0.15));
-    max-height: 300px;
+    max-height: 220px;
     display: none;
 
     &::-webkit-scrollbar {
@@ -88,7 +88,7 @@
     }
 
     li {
-      padding: .35rem 0.6125rem;
+      padding: 0.35rem 0.6125rem;
       @include display-flex(flex);
       @include justify-content-start;
       @include align-items-center;
@@ -143,8 +143,8 @@
         color: $primary-color;
 
         &::after {
-          content: "arrow_drop_up";
-          font-family: "Material Icons";
+          content: 'arrow_drop_up';
+          font-family: 'Material Icons';
           float: right;
           font-size: 1.3rem;
           color: $primary-color;
@@ -165,5 +165,4 @@
       }
     }
   }
-
 }

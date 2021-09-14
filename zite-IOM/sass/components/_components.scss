@@ -1,47 +1,51 @@
 /* Preloader
 --------------------------------------------- */
-@import "preloader";
+@import 'preloader';
+
+/* content loader
+--------------------------------------------- */
+@import 'content-loader';
 
 /* Header
 --------------------------------------------- */
-@import "header/header";
+@import 'header/header';
 
 /* Accordion
 --------------------------------------------- */
-@import "accordion";
+@import 'accordion';
 
 /* Card
 --------------------------------------------- */
-@import "card";
+@import 'card';
 
 /* Modal
 --------------------------------------------- */
-@import "modal";
+@import 'modal';
 
 /* Tab
 --------------------------------------------- */
-@import "tab";
+@import 'tab';
 
 /* Media
 --------------------------------------------- */
-@import "media/media";
+@import 'media/media';
 
 /* Tooltip
 --------------------------------------------- */
-@import "tooltip";
+@import 'tooltip';
 
 /* Filter
 --------------------------------------------- */
-@import "filter";
+@import 'filter';
 
 /* Galleries
 --------------------------------------------- */
-@import "media/galleries";
+@import 'media/galleries';
 
 /* map
 --------------------------------------------- */
-@import "map";
+@import 'map';
 
 /* toast
 --------------------------------------------- */
-@import "toaster";
+@import 'toaster';

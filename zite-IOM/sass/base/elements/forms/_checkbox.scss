@@ -1,206 +1,205 @@
 .custom-checkbox {
-    @include display-flex(flex);
-    @include justify-content-start;
-    @include align-items-center;
-    position: relative;
-    margin-bottom: .6125rem;
+  @include display-flex(flex);
+  @include justify-content-start;
+  @include align-items-center;
+  position: relative;
+  margin-bottom: 0.6125rem;
+
+  label {
+    margin: 0;
+    font-weight: 500;
+    font-size: 0.775rem;
+    text-transform: capitalize;
+  }
+
+  input {
+    position: absolute; // take it out of document flow
+    opacity: 0; // hide it
+    z-index: 9;
+
+    & + label {
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    // Box.
+    & + label:before {
+      content: '';
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: text-top;
+      width: 18px;
+      height: 18px;
+      background: $white-color;
+      border: 1.5px solid $border-dark;
+      @include radius(4px);
+    }
+
+    // Box hover
+    // &:hover + label:before {
+    //     background: $blue-color;
+    // }
+
+    // Box focus
+    &:focus + label:before {
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+    }
+
+    // Box checked
+    &:checked + label:before {
+      background: $primary-color;
+    }
+
+    // Disabled state label.
+    &:disabled + label {
+      color: #b8b8b8;
+      cursor: auto;
+    }
+
+    // Disabled box.
+    &:disabled + label:before {
+      box-shadow: none;
+      background: #ddd;
+    }
+
+    // Checkmark. Could be replaced with an image
+    &:checked + label:after {
+      content: 'check';
+      position: absolute;
+      left: 2px;
+      top: 50%;
+      @include transform(translateY(-50%));
+      line-height: 1;
+      font-family: 'Material Icons';
+      color: $white-color;
+      text-transform: none;
+      font-size: 0.875rem;
+
+      &:checked + label:before {
+        border-color: $primary-color;
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+      }
+
+      &:checked + label {
+        color: $primary-color;
+      }
+    }
+  }
+
+  &.is-full {
+    width: 100%;
 
     label {
-        margin: 0;
-        font-weight: 500;
-        font-size: .775rem;
-        text-transform: capitalize;
+      width: 100%;
     }
-
-    input {
-        position: absolute; // take it out of document flow
-        opacity: 0; // hide it
-        z-index: 9;
-
-        &+label {
-            position: relative;
-            cursor: pointer;
-            padding: 0;
-        }
-
-        // Box.
-        &+label:before {
-            content: '';
-            margin-right: 10px;
-            display: inline-block;
-            vertical-align: text-top;
-            width: 18px;
-            height: 18px;
-            background: $white-color;
-            border: 1.5px solid $border-dark;
-            @include radius(4px);
-        }
-
-        // Box hover
-        // &:hover + label:before {
-        //     background: $blue-color;
-        // }
-
-        // Box focus
-        &:focus+label:before {
-            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
-        }
-
-        // Box checked
-        &:checked+label:before {
-            background: $primary-color;
-        }
-
-        // Disabled state label.
-        &:disabled+label {
-            color: #b8b8b8;
-            cursor: auto;
-        }
-
-        // Disabled box.
-        &:disabled+label:before {
-            box-shadow: none;
-            background: #ddd;
-        }
-
-        // Checkmark. Could be replaced with an image
-        &:checked+label:after {
-            content: 'check';
-            position: absolute;
-            left: 2px;
-            top: 50%;
-            @include transform(translateY(-50%));
-            line-height: 1;
-            font-family: 'Material Icons';
-            color: $white-color;
-            text-transform: none;
-            font-size: .875rem;
-
-            &:checked+label:before {
-                border-color: $primary-color;
-                box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
-            }
-
-            &:checked+label {
-                color: $primary-color;
-            }
-        }
-
-    }
-
-    &.is-full {
-        width: 100%;
-
-        label {
-            width: 100%;
-        }
-    }
+  }
 }
 
 .custom-radio {
-    @include display-flex(flex);
-    @include justify-content-start;
-    @include align-items-center;
-    position: relative;
-    margin-bottom: .6125rem;
+  @include display-flex(flex);
+  @include justify-content-start;
+  @include align-items-center;
+  position: relative;
+  margin-bottom: 0.6125rem;
 
-    label {
-        margin: 0;
-        font-weight: 500;
-        font-size: .775rem;
+  label {
+    margin: 0;
+    font-weight: 500;
+    font-size: 0.775rem;
+  }
+
+  input {
+    position: absolute; // take it out of document flow
+    opacity: 0; // hide it
+    z-index: 9;
+
+    & + label {
+      position: relative;
+      cursor: pointer;
+      padding: 0;
     }
 
-    input {
-        position: absolute; // take it out of document flow
-        opacity: 0; // hide it
-        z-index: 9;
-
-        &+label {
-            position: relative;
-            cursor: pointer;
-            padding: 0;
-        }
-
-        // Box.
-        &+label:before {
-            content: '';
-            margin-right: 10px;
-            display: inline-block;
-            vertical-align: text-top;
-            width: 18px;
-            height: 18px;
-            @include radius(50%);
-            background: $white-color;
-            border: 1.5px solid $border-dark;
-        }
-
-        // Box hover
-        // &:hover + label:before {
-        //     background: $blue-color;
-        // }
-
-        // Box focus
-        &:focus+label:before {
-            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
-        }
-
-        // Box checked
-        &:checked+label:before {
-            background: $primary-color;
-        }
-
-        // Disabled state label.
-        &:disabled+label {
-            color: #b8b8b8;
-            cursor: auto;
-        }
-
-        // Disabled box.
-        &:disabled+label:before {
-            box-shadow: none;
-            background: #ddd;
-        }
-
-        // Checkmark. Could be replaced with an image
-        &:checked+label:after {
-            content: '';
-            position: absolute;
-            left: 5px;
-            top: 7px;
-            background: $primary-color;
-            width: 8px;
-            height: 8px;
-            @include radius(50%);
-        }
-
-        &:checked+label:before {
-            border-color: $white-color;
-            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
-        }
-
-        &:checked+label {
-            color: $primary-color;
-        }
+    // Box.
+    & + label:before {
+      content: '';
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: text-top;
+      width: 18px;
+      height: 18px;
+      @include radius(50%);
+      background: $white-color;
+      border: 1.5px solid $border-dark;
     }
 
-    // &:hover{
-    //     &::before{
-    //         opacity: 1;
-    //         visibility: visible;
-    //     }
+    // Box hover
+    // &:hover + label:before {
+    //     background: $blue-color;
     // }
+
+    // Box focus
+    &:focus + label:before {
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+    }
+
+    // Box checked
+    &:checked + label:before {
+      background: $primary-color;
+    }
+
+    // Disabled state label.
+    &:disabled + label {
+      color: #b8b8b8;
+      cursor: auto;
+    }
+
+    // Disabled box.
+    &:disabled + label:before {
+      box-shadow: none;
+      background: #ddd;
+    }
+
+    // Checkmark. Could be replaced with an image
+    &:checked + label:after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 7px;
+      background: $primary-color;
+      width: 8px;
+      height: 8px;
+      @include radius(50%);
+    }
+
+    &:checked + label:before {
+      border-color: $white-color;
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+    }
+
+    &:checked + label {
+      color: $primary-color;
+    }
+  }
+
+  // &:hover{
+  //     &::before{
+  //         opacity: 1;
+  //         visibility: visible;
+  //     }
+  // }
 }
 
 .inline-group {
-    @include display-flex(flex);
-    @include justify-content-start;
-    @include align-items-center;
-    @include flex-wrap(wrap);
+  @include display-flex(flex);
+  @include justify-content-start;
+  @include align-items-center;
+  @include flexWrap(wrap);
 
-    .custom-radio,
-    .custom-checkbox {
-        &:not(:last-child) {
-            margin-right: 1rem;
-        }
+  .custom-radio,
+  .custom-checkbox {
+    &:not(:last-child) {
+      margin-right: 1rem;
     }
+  }
 }

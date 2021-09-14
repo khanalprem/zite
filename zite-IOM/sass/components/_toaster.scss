@@ -1,198 +1,192 @@
 .toaster {
-    position: fixed;
-    right: -100%;
-    @include transition(all .9s ease-in-out);
-    top: 10%;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1021;
+  position: fixed;
+  right: -100%;
+  @include transition(all 0.9s ease-in-out);
+  top: 10%;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1021;
 
-    &.active {
-        opacity: 1;
-        right: 0;
-        visibility: visible;
-    }
+  &.active {
+    opacity: 1;
+    right: 0;
+    visibility: visible;
+  }
 }
 
 .toast {
-    padding: 1.2rem 1rem;
-    background-color: $white-color;
-    @include radius(4px);
-    max-width: 500px;
-    position: relative;
-    box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.2);
+  padding: 1.2rem 1rem;
+  background-color: $white-color;
+  @include radius(4px);
+  max-width: 500px;
+  position: relative;
+  box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.2);
+  @include display-flex(flex);
+  @include justify-content-start;
+  @include align-items-center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  .toast__svg {
+    fill: $white-color;
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+    padding: 7px;
+    @include radius(50%);
     @include display-flex(flex);
-    @include justify-content-start;
+    @include flex-direction-column(column);
+    @include justify-content-center;
     @include align-items-center;
+  }
 
+  .type {
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    text-transform: capitalize;
+  }
+
+  .message {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  .content {
+    flex-grow: 1;
+    padding: 0 1rem;
+  }
+
+  &.is-success {
+    .icon,
     &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 4px;
-        height: 100%;
-        border-top-left-radius: 4px;
-        border-bottom-left-radius: 4px;
-
-    }
-
-    .toast__svg {
-        fill: $white-color;
-    }
-
-    .icon {
-        width: 30px;
-        height: 30px;
-        padding: 7px;
-        @include radius(50%);
-        @include display-flex(flex);
-        @include flex-direction-column(column);
-        @include justify-content-center;
-        @include align-items-center;
+      background-color: $primary-dark;
     }
 
     .type {
-        font-weight: 700;
-        margin-bottom: 8px;
-        font-size: 1rem;
-        text-transform: capitalize;
+      color: $primary-dark;
+    }
+  }
+
+  &.is-pending {
+    .icon,
+    &::before {
+      background-color: $blue-color;
     }
 
-    .message {
-        font-size: 14px;
-        margin-top: 0;
-        margin-bottom: 0;
+    .type {
+      color: $blue-color;
+    }
+  }
 
-        &::first-letter {
-            text-transform: capitalize;
-        }
+  &.is-error {
+    .icon,
+    &::before {
+      background-color: $red-color;
     }
 
-    .content {
-        flex-grow: 1;
-        padding: 0 1rem;
+    .type {
+      color: $red-color;
+    }
+  }
+
+  &.invitation-toast {
+    display: block;
+
+    .card-header {
+      padding: 0;
+      margin-bottom: 10px;
+
+      h5 {
+        font-size: 0.875rem;
+      }
+
+      .inline-item {
+        &:last-child {
+          .common-button {
+            i {
+              color: $secondary-color;
+            }
+
+            color: $secondary-color;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-right: 0.6125rem;
+        }
+      }
     }
 
-    &.is-success {
-
-        .icon,
-        &::before {
-            background-color: $primary-dark;
-        }
-
-        .type {
-            color: $primary-dark;
-        }
+    .common-button {
+      min-width: initial;
+      min-height: initial;
+      font-size: 0.875rem;
+      padding: 0.5rem 0.6125rem;
     }
 
-    &.is-pending {
-
-        .icon,
-        &::before {
-            background-color: $blue-color;
-        }
-
-        .type {
-            color: $blue-color;
-        }
+    .buttons {
+      .common-button {
+        @include radius(4px);
+      }
     }
 
-    &.is-error {
-
-        .icon,
-        &::before {
-            background-color: $red-color;
-        }
-
-        .type {
-            color: $red-color;
-        }
-    }
-
-    &.invitation-toast {
+    ul {
+      li {
         display: block;
 
-        .card-header {
-            padding: 0;
-            margin-bottom: 10px;
-
-            h5 {
-                font-size: .875rem;
-            }
-
-            .inline-item {
-                &:last-child {
-                    .common-button {
-                        i {
-                            color: $secondary-color;
-                        }
-
-                        color:$secondary-color;
-                    }
-                }
-
-                &:not(:last-child) {
-                    margin-right: .6125rem;
-                }
-            }
-        }
-
-        .common-button {
-            min-width: initial;
-            min-height: initial;
-            font-size: .875rem;
-            padding: .5rem .6125rem;
+        p {
+          a {
+            color: $primary-dark;
+          }
         }
 
         .buttons {
-            .common-button {
-                @include radius(4px);
+          @include display-flex(flex);
+          @include justify-content-start;
+          @include align-items-center;
+          margin-top: 8px;
+
+          .common-button {
+            padding: 5px 10px;
+
+            &.success {
+              border-color: $primary-color;
+              color: $primary-color;
             }
+          }
         }
-
-        ul {
-            li {
-                display: block;
-
-                p {
-                    a {
-                        color: $primary-dark;
-                    }
-                }
-
-                .buttons {
-                    @include display-flex(flex);
-                    @include justify-content-start;
-                    @include align-items-center;
-                    margin-top: 8px;
-
-                    .common-button {
-                        padding: 5px 10px;
-
-                        &.success {
-                            border-color: $primary-color;
-                            color: $primary-color;
-                        }
-                    }
-                }
-            }
-        }
+      }
     }
+  }
 
-    &:not(:last-child) {
-        margin-bottom: 1rem;
-    }
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
 }
 
-
-
 .close {
-    position: absolute;
-    right: 22px;
-    top: 20px;
-    width: 14px;
-    cursor: pointer;
-    height: 14px;
-    fill: $body-color;
+  position: absolute;
+  right: 22px;
+  top: 20px;
+  width: 14px;
+  cursor: pointer;
+  height: 14px;
+  fill: $body-color;
 }

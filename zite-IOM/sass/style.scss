@@ -53,3 +53,12 @@ Primary use: Monitoring system
 /* pages
 --------------------------------------------- */
 @import 'pages/pages';
+
+@import 'generic/status.scss';
+
+
+/* custom scss By Varun
+--------------------------------------------- */
+
+@import 'custom.scss';
+@import 'lineloader.scss';

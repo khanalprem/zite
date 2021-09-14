@@ -1,51 +1,91 @@
-.submission-card{
-    .total-submission{
-        @include display-flex(flex);
-        @include align-items-center;
-        @include justify-content-start;
-        .total-submission-text{
-            h2{
-                font-size: 2rem;
-                margin-bottom: .975rem;
-            }
-            h5{
-                text-transform: uppercase;
-            
-            }
-            @media #{$breakpoint-desktop}{
-                h2{
-                    font-size: 1.5rem;
-                }
-                h5{
-                    font-size: 1rem;
-                
-                }
-            }
+.submission-card {
+  .total-submission {
+    @include display-flex(flex);
+    @include align-items-center;
+    @include justify-content-start;
+
+    .total-submission-text {
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 0.975rem;
+      }
+
+      h5 {
+        text-transform: uppercase;
+      }
+
+      @media #{$breakpoint-desktop} {
+        h2 {
+          font-size: 1.5rem;
         }
-        .submission-progress-summary{
-            flex-grow: 1;
-            padding-left:3rem;
+
+        h5 {
+          font-size: 1rem;
         }
-        [tooltip]::after {
-            white-space: initial;
-            text-overflow: initial;
-            line-height: 1.5;
-          }
+      }
     }
-    .inline-row{
-        margin-top:.5rem;
-        .inline-item{
-            .square-icon{
-                margin-right: 1.5rem;
-            }
-        }
-        @media #{$breakpoint-pt}{
-            @include flex-wrap(wrap);
-            .inline-item{
-                @include flex(0 0 50%);
-                max-width: 50%;
-                margin-bottom: .6125rem;
-            }
-        }
+
+    .submission-progress-summary {
+      flex-grow: 1;
+      padding-left: 3rem;
     }
+
+    [tooltip]::after {
+      white-space: initial;
+      text-overflow: initial;
+      line-height: 1.5;
+    }
+  }
+
+  .inline-row {
+    .inline-item {
+      padding: 10px;
+      @include radius(5px);
+      @include transition(all 0.5s ease-in-out);
+
+      .square-icon {
+        margin-right: 1.5rem;
+      }
+
+      &.is-open {
+        &.is-active {
+          background-color: rgba($open-color, 0.15);
+        }
+      }
+
+      &.is-flagged {
+        &.is-active {
+          background-color: rgba($flaggedColor, 0.15);
+        }
+      }
+
+      &.is-rejected {
+        &.is-active {
+          background-color: rgba($rejectedColor, 0.15);
+        }
+      }
+
+      &.is-inprogress {
+        &.is-active {
+          background-color: rgba($inProgressColor, 0.15);
+        }
+      }
+
+      &.is-approved {
+        &.is-active {
+          background-color: rgba($approvedColor, 0.15);
+        }
+      }
+    }
+
+    @media #{$breakpoint-pt} {
+      @include flexWrap(wrap);
+
+      .inline-item {
+        @include flex(0 0 50%);
+        max-width: 50%;
+        margin-bottom: 0.6125rem;
+      }
+    }
+  }
 }
