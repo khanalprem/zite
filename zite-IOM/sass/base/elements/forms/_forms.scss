@@ -10,108 +10,75 @@
 @import 'custom-upload';
 @import 'progress';
 @import './date-picker';
-
-.close-icon {
-  width: 32px;
-  height: 32px;
-  @include display-flex(flex);
-  @include justify-content-center;
-  @include align-items-center;
-  @include flex-direction-column(column);
-  border: 1px solid $border-color;
-  @include radius(100%);
-  cursor: pointer;
-  @include transition(all 0.5s ease-in-out);
-
-  &:hover {
-    color: $primary-color;
-    border-color: $primary-color;
-    background-color: $primary-light;
-  }
-}
-
 .form-group {
-  select {
-    &.form-control {
-      font-size: 0.875rem;
-      -webkit-outline: none;
-      outline: none;
-
-      &:focus {
-        box-shadow: none;
-        border-color: $secondary-color;
-      }
+    select {
+        &.form-control {
+            font-size: 0.875rem;
+            -webkit-outline: none;
+            outline: none;
+            &:focus {
+                box-shadow: none;
+                border-color: $secondary-color;
+            }
+        }
     }
-  }
 }
 
 .form-card {
-  background-color: $white-color;
-
-  .form-header {
-    @include display-flex(flex);
-    @include justify-content-between;
-    @include align-items-center;
-    padding: 1rem 2rem;
-
-    h5 {
-      font-size: 1rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      margin: 0;
-    }
-  }
-
-  .form-body {
-    padding: 1rem 2rem;
-    padding-bottom: 2rem;
-
-    .map {
-      min-height: 240px;
-    }
-
-    .map-input {
-      min-height: 240px;
-      @include display-flex(flex);
-      @include justify-content-center;
-      @include align-items-center;
-      @include flex-direction-column(column);
-
-      .form-group {
-        width: 100%;
-
-        label {
-          text-transform: capitalize;
+    background-color: $white-color;
+    .form-header {
+        @include display-flex(flex);
+        @include justify-content-between;
+        @include align-items-center;
+        padding: 1rem 2rem;
+        h5 {
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin: 0;
         }
-      }
     }
-
-    .privacy {
-      text-align: center;
-
-      .custom-checkbox {
-        @include justify-content-center;
-
-        label {
-          text-transform: none;
+    .form-body {
+        padding: 1rem 2rem;
+        padding-bottom: 2rem;
+        .map {
+            min-height: 240px;
         }
-      }
-
-      a {
-        text-decoration: underline;
-        margin-left: 0.5rem;
-      }
+        .map-input {
+            min-height: 240px;
+            @include display-flex(flex);
+            @include justify-content-center;
+            @include align-items-center;
+            @include flex-direction-column(column);
+            .form-group {
+                width: 100%;
+                label {
+                    text-transform: capitalize;
+                }
+            }
+        }
+        .privacy {
+            text-align: center;
+            .custom-checkbox {
+                @include justify-content-center;
+                label {
+                    text-transform: none;
+                }
+            }
+            a {
+                text-decoration: underline;
+                margin-left: 0.5rem;
+            }
+        }
     }
-  }
 }
 
 .siteinfo-form-header {
-  @include display-flex(flex);
-  @include justify-content-between;
-  @include align-items-center;
-  margin-bottom: 15px;
-
-  label {
-    margin: 0;
-  }
+    @include display-flex(flex);
+    @include justify-content-between;
+    @include align-items-center;
+    margin-bottom: 15px;
+    label {
+        margin: 0;
+    }
 }

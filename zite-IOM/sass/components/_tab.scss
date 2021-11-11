@@ -13,7 +13,7 @@
   @include display-flex(flex);
   @include justify-content-start;
   @include align-items-center;
-  @include flexWrap(wrap);
+  @include flex-wrap(wrap);
   margin: 0;
   li {
     a {

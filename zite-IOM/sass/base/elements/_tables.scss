@@ -305,6 +305,19 @@
             }
           }
         }
+        &.is-active {
+          td {
+            h6 {
+              &::before {
+                content: 'arrow_drop_up';
+                font-family: 'Material Icons';
+                display: inline-block;
+                margin-right: 0.5rem;
+                font-size: 1.4rem;
+              }
+            }
+          }
+        }
       }
 
       &.row-form-header-3 {

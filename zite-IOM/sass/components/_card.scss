@@ -170,7 +170,7 @@
   }
 
   @media #{$breakpoint-xs} {
-    @include flexWrap(wrap);
+    @include flex-wrap(wrap);
     @include justify-content-start;
   }
 }

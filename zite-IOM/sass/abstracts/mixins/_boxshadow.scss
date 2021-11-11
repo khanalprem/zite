@@ -1,4 +1,4 @@
 @mixin box-shadow($value) {
-    -webkit-box-shadow: $value;
-    box-shadow: $value;
+  -webkit-box-shadow: $value;
+  box-shadow: $value;
 }

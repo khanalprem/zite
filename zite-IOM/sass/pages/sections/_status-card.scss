@@ -79,7 +79,7 @@
     }
 
     @media #{$breakpoint-pt} {
-      @include flexWrap(wrap);
+      @include flex-wrap(wrap);
 
       .inline-item {
         @include flex(0 0 50%);

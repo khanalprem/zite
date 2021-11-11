@@ -11,11 +11,6 @@
       &.active {
         background-color: $primary-light;
       }
-      i {
-        font-size: 1rem;
-        color: $body-light;
-        cursor: pointer;
-      }
 
       h5 {
         @include display-flex(flex);

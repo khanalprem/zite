@@ -1,46 +1,44 @@
 @mixin ellipsis() {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 @mixin line-clamp($value) {
-    display: -webkit-box;
-    -webkit-line-clamp: $value;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $value;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 @mixin ellipsis() {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 @mixin line-clamp($value) {
+  display: -webkit-box;
+  -webkit-line-clamp: $value;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+@mixin trim($numLines: null) {
+  @if $numLines != null {
     display: -webkit-box;
-    -webkit-line-clamp: $value;
+    -webkit-line-clamp: $numLines;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  } @else {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+  }
 }
-@mixin trim($numLines: null){
-    @if $numLines != null {
-       display:-webkit-box;
-       -webkit-line-clamp:$numLines;
-       -webkit-box-orient:vertical; 
-       overflow:hidden;
-    }
-    @else{
-       text-overflow:ellipsis;
-       white-space:nowrap;
-       overflow:hidden;
-       display:block;
-    }
- }
 
-//  .foo{ 
+//  .foo{
 //     @include trim; /*will use the ellipsis = else result*/
 // }
 // .bar{
 //     @include trim(3); /*will use the line-clamp = if result*/
 // }
-
