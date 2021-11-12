@@ -229,6 +229,13 @@
         padding-left: 1rem;
         position: relative;
     }
+    &.is-active {
+        aside {
+            &.map-sidebar {
+                display: none;
+            }
+        }
+    }
 }
 
 .acc {
@@ -294,6 +301,80 @@
     }
 }
 
+.acc {
+    &.acc-metric {
+        .acc-list {
+            .acc {
+                border: none;
+                .acc-header {
+                    h5 {
+                        font-weight: 400;
+                        font-size: .8rem;
+                    }
+                    span {
+                        &.counter {
+                            padding: 0 8px;
+                            @include radius(50%);
+                            background-color: $primary-light;
+                            color: $primary-color;
+                            font-weight: 500;
+                            margin-left: 0.5rem;
+                            height: 24px;
+                            border: 1px solid $white-color;
+                            display: inline-flex;
+                            @include align-items-center;
+                            &:hover {
+                                background-color: $primary-color;
+                                color: $white-color;
+                            }
+                        }
+                        &.drag-icon {
+                            display: inline-flex;
+                            color: $body-color;
+                            margin-right: 0.6125rem;
+                        }
+                    }
+                    .acc-list {
+                        &.active {
+                            .acc-header {
+                                background-color: $primary-light;
+                            }
+                        }
+                    }
+                }
+                .acc-body {
+                    ul {
+                        li {
+                            a {
+                                font-weight: 400;
+                                font-size: .775rem;
+                            }
+                            &.is-disable {
+                                a {
+                                    color: $body-color;
+                                }
+                                .add-remove {
+                                    i {
+                                        color: $body-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.active,
+            &:hover {
+                .acc-header {
+                    h5 {
+                        color: $heading-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .color-bar {
     width: 70px;
     height: 8px;
@@ -331,15 +412,31 @@
 }
 
 .aside-toggle {
-    &.circle-icon {
-        background-color: $white-color;
-    }
-}
-
-.aside-toggle {
     position: absolute;
     top: 1rem;
     left: 2rem;
+    z-index: 1111;
+    overflow: hidden;
+    .right-icon {
+        display: none;
+    }
+    .left-icon {
+        display: block;
+    }
+    &.circle-icon {
+        background-color: $white-color;
+        &:hover {
+            background-color: $primary-light;
+        }
+    }
+    &.is-active {
+        .right-icon {
+            display: block;
+        }
+        .left-icon {
+            display: none;
+        }
+    }
 }
 
 .map-edit-card {
@@ -393,11 +490,33 @@
 
 .add-remove {
     i {
-        color: $body-color;
+        color: $primary-color;
         font-size: 1.1rem;
     }
 }
 
 .sm-font {
     font-size: .775rem !important;
+}
+
+.acc {
+    .acc {
+        padding-left: 1rem;
+    }
+}
+
+.list {
+    &.is-drag {
+        &.selected-column-list {
+            li {
+                background-color: $primary-light;
+                @include align-items-start;
+                .edit-close {
+                    opacity: 1;
+                    visibility: visible;
+                    top: 15px;
+                }
+            }
+        }
+    }
 }

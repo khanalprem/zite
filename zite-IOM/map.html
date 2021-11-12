@@ -524,7 +524,7 @@
                                                         <label for="status">status </label>
                                                     </div>
                                                 </li>
-                                                <li>
+                                                <li class="submission-date">
                                                     <div class="custom-checkbox">
                                                         <input id="date" type="checkbox" name="Type">
                                                         <label for="date">Submissions date</label>
@@ -552,7 +552,7 @@
                                                     <h5 class="is-uppercase">colors</h5>
 
                                                 </div>
-                                                <a href="#" class="add-more" popup-link="add-metrics"><i class="material-icons">add_circle</i></a>
+                                                <a href="#" class="add-more" popup-link="add-colors"><i class="material-icons">add_circle</i></a>
                                             </div>
 
                                         </div>
@@ -632,7 +632,8 @@
                             </div>
                         </div>
                         <a href="" class="aside-toggle circle-icon is-border">
-                            <i class="material-icons">chevron_left</i>
+                            <i class="material-icons left-icon">chevron_left</i>
+                            <i class="material-icons right-icon">chevron_right</i>
                         </a>
                         <div class="search-down is-flex is-end is-align-center">
                             <div class="search-bar mr-15">
@@ -648,7 +649,6 @@
                                 <i class="material-icons">get_app</i>
                             </a>
                         </div>
-
 
                         <div class="zite-card style-card map-edit-card">
                             <div class="card-header">
@@ -796,6 +796,40 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="zite-card date-card map-edit-card">
+                            <div class="card-header">
+                                <h5 class="is-flex is-start">Date </h5>
+                                <i class="material-icons style-close">close</i>
+                            </div>
+                            <div class="zite-body">
+
+                                <div class="content-body is-overflow " style="max-height: 150px;">
+                                    <div class="form-group">
+
+                                        <div class="custom-input-group custom-date">
+                                            <span class="span-group">
+                                                <i class="material-icons">date_range</i>
+                                            </span>
+                                            <input class="form-control" placeholder="From">
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+
+                                        <div class="custom-input-group custom-date">
+                                            <span class="span-group">
+                                                <i class="material-icons">date_range</i>
+                                            </span>
+                                            <input class="form-control" placeholder="To">
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="marker-type-footer is-flex is-center ">
+                                    <a href="#" class="common-button is-bg is-light is-sm">Apply</a>
+                                </div>
+                            </div>
+                        </div>
                         <div class="popup" id="add-metrics">
                             <div class="popup-container lg-popup">
                                 <div class="popup-body">
@@ -831,36 +865,46 @@
                                                                         <h5>Submissions</h5>
                                                                     </div>
                                                                     <div class="acc-body">
-                                                                        <ul class="list ">
-                                                                            <li>
-                                                                                <div class="is-grow">
-                                                                                    <a href="#">No. of Pending Submissions</a>
-                                                                                    <span class="counter">2</span>
+                                                                        <div class="acc is-border is-start is-before acc-metric">
+                                                                            <div class="acc-list">
+                                                                                <div class="acc-header">
+                                                                                    <h5>Submissions <span class="counter">2</span></h5>
                                                                                 </div>
-                                                                                <div class="add-remove">
-                                                                                    <i class="material-icons">add_circle_outline</i>
-                                                                                </div>
+                                                                                <div class="acc-body">
+                                                                                    <ul class="list ">
+                                                                                        <li class="is-disable">
+                                                                                            <div class="is-grow">
+                                                                                                <a href="#">No. of Pending Submissions</a>
+                                                                                                <span class="counter">2</span>
+                                                                                            </div>
+                                                                                            <div class="add-remove">
+                                                                                                <i class="material-icons">remove_circle_outline</i>
+                                                                                            </div>
 
-                                                                            </li>
-                                                                            <li>
-                                                                                <div class="is-grow">
-                                                                                    <a href="#">No. of Pending Submissions</a>
-                                                                                    <span class="counter">2</span>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <div class="is-grow">
+                                                                                                <a href="#">No. of Pending Submissions</a>
+                                                                                                <span class="counter">2</span>
+                                                                                            </div>
+                                                                                            <div class="add-remove">
+                                                                                                <i class="material-icons">add_circle_outline</i>
+                                                                                            </div>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <div class="is-grow">
+                                                                                                <a href="#">No. of Pending Submissions</a>
+
+                                                                                            </div>
+                                                                                            <div class="add-remove">
+                                                                                                <i class="material-icons">add_circle_outline</i>
+                                                                                            </div>
+                                                                                        </li>
+                                                                                    </ul>
                                                                                 </div>
-                                                                                <div class="add-remove">
-                                                                                    <i class="material-icons">add_circle_outline</i>
-                                                                                </div>
-                                                                            </li>
-                                                                            <li>
-                                                                                <div class="is-grow">
-                                                                                    <a href="#">No. of Pending Submissions</a>
-                                                                                    <span class="counter">2</span>
-                                                                                </div>
-                                                                                <div class="add-remove">
-                                                                                    <i class="material-icons">add_circle_outline</i>
-                                                                                </div>
-                                                                            </li>
-                                                                        </ul>
+                                                                            </div>
+                                                                        </div>
+
                                                                     </div>
                                                                 </div>
                                                                 <div class="acc-list ">
@@ -892,12 +936,12 @@
                                                     <div class="zite-card mt-30">
                                                         <div class="card-header is-start">
                                                             <h5>Selected Columns</h5>
-                                                            <div class="selected-counter">
+                                                            <div class="selected-counter no-border">
                                                                 3 <span>selected</span><i class="material-icons">close</i>
                                                             </div>
                                                         </div>
                                                         <div class="zite-body">
-                                                            <ul class="list is-between is-border is-checkbox is-drag">
+                                                            <ul class="list is-between is-border is-checkbox is-drag selected-column-list">
 
 
                                                                 <li>
@@ -937,6 +981,209 @@
                                     </div>
                                     <div class="popup-footer buttons is-center">
                                         <button class="common-button is-bg is-icon"><span>apply</span><i
+                                            class="material-icons">arrow_forward</i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup" id="add-colors">
+                            <div class="popup-container lg-popup">
+                                <div class="popup-body">
+                                    <span class="close-icon"><i class="material-icons">close</i></span>
+                                    <div class="popup-header no-flex">
+                                        <h3>color schemes</h3>
+                                    </div>
+                                    <div class="popup-content">
+                                        <div class="manage-user manage-region pd-0">
+                                            <div class="row">
+                                                <div class="zite-xl-6 zite-lg-12">
+                                                    <div class="zite-card">
+                                                        <div class="card-header is-start">
+                                                            <ul class="tab-list is-border">
+                                                                <li class="current"><a href="#">Metrics <span class="counter">2</span></a> </li>
+                                                                <li><a href="#">Site information</a></li>
+                                                                <li><a href="#">form information</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="zite-body">
+                                                            <div class="search-bar is-full mb-15">
+                                                                <div class="search-wrap">
+                                                                    <span class="span-group">
+                                                                    <i class="material-icons">search</i>
+                                                                </span>
+                                                                    <input class="form-control" placeholder="Search">
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="acc is-border is-start is-before acc-metric">
+                                                                <div class="acc-list active">
+                                                                    <div class="acc-header">
+                                                                        <h5>Submissions</h5>
+                                                                    </div>
+                                                                    <div class="acc-body">
+                                                                        <div class="acc is-border is-start is-before acc-metric">
+                                                                            <div class="acc-list">
+                                                                                <div class="acc-header">
+                                                                                    <h5>Submissions <span class="counter">2</span></h5>
+                                                                                </div>
+                                                                                <div class="acc-body">
+                                                                                    <ul class="list ">
+                                                                                        <li class="is-disable">
+                                                                                            <div class="is-grow">
+                                                                                                <a href="#">No. of Pending Submissions</a>
+                                                                                                <span class="counter">2</span>
+                                                                                            </div>
+                                                                                            <div class="add-remove">
+                                                                                                <i class="material-icons">remove_circle_outline</i>
+                                                                                            </div>
+
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <div class="is-grow">
+                                                                                                <a href="#">No. of Pending Submissions</a>
+                                                                                                <span class="counter">2</span>
+                                                                                            </div>
+                                                                                            <div class="add-remove">
+                                                                                                <i class="material-icons">add_circle_outline</i>
+                                                                                            </div>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <div class="is-grow">
+                                                                                                <a href="#">No. of Pending Submissions</a>
+
+                                                                                            </div>
+                                                                                            <div class="add-remove">
+                                                                                                <i class="material-icons">add_circle_outline</i>
+                                                                                            </div>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="acc-list ">
+                                                                    <div class="acc-header">
+                                                                        <h5>site</h5>
+                                                                    </div>
+                                                                    <div class="acc-body">
+                                                                        <ul class="list">
+                                                                            <li>
+                                                                                <a href="#">owner</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">manager</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">editor</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">director</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="zite-xl-6 zite-lg-12">
+                                                    <div class="zite-card mt-30">
+                                                        <div class="card-header is-start">
+                                                            <h5>Selected Columns</h5>
+                                                            <div class="selected-counter no-border">
+                                                                3 <span>selected</span><i class="material-icons">close</i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="zite-body">
+                                                            <ul class="list is-between is-border is-checkbox is-drag selected-column-list">
+
+
+                                                                <li>
+                                                                    <img class="drag-icon" src="img/draggable.svg" alt="drag">
+                                                                    <span class="sm-font pr-15">Household Version group_gb7rt89 / Name_of_the_household living in …</span>
+                                                                    <div class="edit-close is-flex is-start">
+                                                                        <i class="material-icons">close</i>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <img class="drag-icon" src="img/draggable.svg" alt="drag">
+                                                                    <span class="sm-font pr-15">Household Version group_gb7rt89 / Name_of_the_household living in …</span>
+                                                                    <div class="edit-close is-flex is-start">
+                                                                        <i class="material-icons">close</i>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <img class="drag-icon" src="img/draggable.svg" alt="drag">
+                                                                    <span class="sm-font pr-15">Household Version group_gb7rt89 / Name_of_the_household living in …</span>
+                                                                    <div class="edit-close is-flex is-start">
+                                                                        <i class="material-icons">close</i>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <img class="drag-icon" src="img/draggable.svg" alt="drag">
+                                                                    <span class="sm-font pr-15">Household Version group_gb7rt89 / Name_of_the_household living in …</span>
+                                                                    <div class="edit-close is-flex is-start">
+                                                                        <i class="material-icons">close</i>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="zite-xl-6 zite-lg-12">
+                                                    <div class="zite-card mt-30">
+                                                        <div class="card-header is-start">
+                                                            <h5>color schemes</h5>
+
+                                                        </div>
+                                                        <div class="zite-body">
+                                                            <ul class="list is-between is-border">
+                                                                <li>
+                                                                    <span class="is-grow">color schemes 1</span>
+                                                                    <div class="is-flex is-end is-align-center color-content">
+                                                                        <div class="color-bar">
+                                                                            <div class="color-progress"></div>
+                                                                        </div>
+                                                                        <span class="check-icon">
+                                                                            <i class="material-icons">check</i>
+                                                                        </span>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="is-grow">color schemes 2</span>
+                                                                    <div class="is-flex is-end is-align-center color-content">
+                                                                        <div class="color-bar">
+                                                                            <div class="color-progress"></div>
+                                                                        </div>
+                                                                        <span class="check-icon">
+                                                                            <i class="material-icons">check</i>
+                                                                        </span>
+
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="is-grow">color schemes 3</span>
+                                                                    <div class="is-flex is-end is-align-center color-content">
+                                                                        <div class="color-bar">
+                                                                            <div class="color-progress"></div>
+                                                                        </div>
+                                                                        <span class="check-icon">
+                                                                            <i class="material-icons">check</i>
+                                                                        </span>
+
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="popup-footer buttons is-center">
+                                        <button class="common-button is-bg is-icon"><span>Create</span><i
                                             class="material-icons">arrow_forward</i></button>
                                     </div>
                                 </div>
@@ -1077,17 +1324,18 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
 
         </main>
-        </div>
+    </div>
 
 
-        <!-- Jquery Core Js -->
-        <script src="js/jquery-3.4.1.min.js"></script>
-        <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
-        <script src="js/map.js"></script>
-        <script src="js/zite.js"></script>
+    <!-- Jquery Core Js -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/zite.js"></script>
 </body>
 
 </html>

@@ -83,6 +83,25 @@
     }
     progressList();
 
+    function submissionDate() {
+        $('.submission-date').on('click', function() {
+            $('.date-card').show(200);
+        });
+        $('.style-close').on('click', function() {
+            $('.date-card').hide(200);
+        })
+    }
+    submissionDate();
+
+    function asideToggle() {
+        $('.aside-toggle').on('click', function(e) {
+            e.preventDefault();
+            $(this).toggleClass('is-active');
+            $('.zite-map').toggleClass('is-active');
+        })
+    }
+    asideToggle();
+
 
 
 

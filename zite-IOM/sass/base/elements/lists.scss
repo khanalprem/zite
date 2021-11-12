@@ -71,6 +71,9 @@ ul {
                     font-weight: 500;
                     margin-left: 0.5rem;
                     border: 1px solid $white-color;
+                    display: inline-flex;
+                    @include align-items-center;
+                    height: 24px;
                     &:hover {
                         background-color: $primary-color;
                         color: $white-color;
@@ -548,7 +551,7 @@ ul {
                 }
                 .edit-close {
                     position: absolute;
-                    right: 1rem;
+                    right: .5rem;
                     top: 50%;
                     @include transform(translateY(-50%));
                     z-index: 1;
