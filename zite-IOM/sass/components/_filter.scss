@@ -1,39 +1,51 @@
 .filter {
-  @include display-flex(flex);
-  @include justify-content-end;
-  @include align-items-center;
-}
-.filter-content {
-  flex-grow: 1;
-  display: none;
-  .filter-row {
     @include display-flex(flex);
     @include justify-content-end;
     @include align-items-center;
-  }
-  .form-group {
-    margin: 0 10px 0 0;
-    max-width: 160px;
-    input {
-      &.form-control {
-        height: calc(1.5em + 0.75rem + 2px);
-        @include input-placeholder {
-          color: $border-color;
-          font-size: 0.775rem;
-          text-transform: capitalize;
+}
+
+.filter-content {
+    flex-grow: 1;
+    display: none;
+    .filter-row {
+        @include display-flex(flex);
+        @include justify-content-end;
+        @include align-items-center;
+        &.is-wrap {
+            @include flex-wrap(wrap);
         }
-      }
     }
-  }
-  .custom-select {
-    p {
-      display: block;
-      min-width: 160px;
-      &.selected-item {
-        border: 1px solid $border-color;
-        height: 2.3rem;
-        line-height: 2.3rem;
-      }
+    .form-group {
+        margin: 0 10px 0 0;
+        max-width: 160px;
+        input {
+            &.form-control {
+                height: calc(1.5em + 0.75rem + 2px);
+                @include input-placeholder {
+                    color: $border-color;
+                    font-size: 0.775rem;
+                    text-transform: capitalize;
+                }
+            }
+        }
     }
-  }
+    .custom-select {
+        p {
+            display: block;
+            min-width: 160px;
+            &.selected-item {
+                border: 1px solid $border-color;
+                height: 2.3rem;
+                line-height: 2.3rem;
+            }
+        }
+    }
+    &.project-summary-filter {
+        background-color: $white-color;
+        @include box-shadow(0 0 50px rgba($body-color, .5));
+        padding: 2rem;
+        .form-group {
+            min-width: 180px;
+        }
+    }
 }

@@ -9865,6 +9865,10 @@ header.site-header.sticky {
   -ms-flex-align: center;
   align-items: center;
 }
+.filter-content .filter-row.is-wrap {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
 .filter-content .form-group {
   margin: 0 10px 0 0;
   max-width: 160px;
@@ -9905,6 +9909,15 @@ header.site-header.sticky {
   border: 1px solid #e6e6e6;
   height: 2.3rem;
   line-height: 2.3rem;
+}
+.filter-content.project-summary-filter {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 50px rgba(117, 117, 117, 0.5);
+  box-shadow: 0 0 50px rgba(117, 117, 117, 0.5);
+  padding: 2rem;
+}
+.filter-content.project-summary-filter .form-group {
+  min-width: 180px;
 }
 
 /* map
@@ -11168,6 +11181,55 @@ header.site-header.sticky {
 }
 .stageform-list .icons span:not(:last-child) {
   margin-right: 0.6125rem;
+}
+
+.custom-dropdown.is-light a.is-light.is-dropdown-icon::after {
+  content: "arrow_drop_down";
+  font-family: "Material Icons";
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+}
+.custom-dropdown.is-light a.is-light span.count {
+  background-color: #40B449;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  border-radius: 100%;
+  padding: 0 5px;
+  color: #ffffff;
+  margin-left: 4px;
+  font-size: 0.775rem;
+}
+
+span.count {
+  background-color: #40B449;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  border-radius: 100%;
+  padding: 0 5px;
+  color: #ffffff;
+  margin-left: 4px;
+  font-size: 0.775rem;
+}
+
+.select-remove {
+  position: absolute;
+  right: 1.2rem;
+  top: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.select-list .custom-checkbox {
+  margin: 0;
 }
 
 .error {

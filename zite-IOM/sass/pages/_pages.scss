@@ -3,18 +3,19 @@
 @import 'manage-user';
 @import 'manage-region';
 @import 'data-structure';
+@import 'project-summary';
 @import 'error';
 @import 'sections/section';
 .page-header {
-  margin-bottom: 1rem;
-  h1 {
-    font-size: 1.3rem;
-    text-transform: capitalize;
-    @media #{$breakpoint-desktop} {
-      font-size: 1rem;
+    margin-bottom: 1rem;
+    h1 {
+        font-size: 1.3rem;
+        text-transform: capitalize;
+        @media #{$breakpoint-desktop} {
+            font-size: 1rem;
+        }
     }
-  }
-  &.is-center {
-    text-align: center;
-  }
+    &.is-center {
+        text-align: center;
+    }
 }

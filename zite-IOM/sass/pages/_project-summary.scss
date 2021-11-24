@@ -1,0 +1,54 @@
+.custom-dropdown {
+    &.is-light {
+        a {
+            &.is-light {
+                &.is-dropdown-icon {
+                    &::after {
+                        content: 'arrow_drop_down';
+                        font-family: "Material Icons";
+                        position: absolute;
+                        right: 5px;
+                        top: 50%;
+                        @include transform (translateY(-50%));
+                        font-size: 1.2rem;
+                    }
+                }
+                span {
+                    &.count {
+                        background-color: $primary-color;
+                        @include radius(100%);
+                        padding: 0 5px;
+                        color: $white-color;
+                        margin-left: 4px;
+                        font-size: .775rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+span {
+    &.count {
+        background-color: $primary-color;
+        @include radius(100%);
+        padding: 0 5px;
+        color: $white-color;
+        margin-left: 4px;
+        font-size: .775rem;
+    }
+}
+
+.select-remove {
+    position: absolute;
+    right: 1.2rem;
+    top: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.select-list {
+    .custom-checkbox {
+        margin: 0;
+    }
+}
