@@ -4454,6 +4454,9 @@ figure {
 [class*=common-button].is-sm.is-clear {
   text-transform: uppercase;
 }
+[class*=common-button].is-sm.is-primary {
+  color: #40B449;
+}
 [class*=common-button].is-sm.is-bg.is-light {
   min-width: initial;
   min-height: initial;
@@ -9869,6 +9872,11 @@ header.site-header.sticky {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+.filter-content .filter-row.is-start {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
 .filter-content .form-group {
   margin: 0 10px 0 0;
   max-width: 160px;
@@ -9918,6 +9926,7 @@ header.site-header.sticky {
 }
 .filter-content.project-summary-filter .form-group {
   min-width: 180px;
+  margin-bottom: 0.5rem;
 }
 
 /* map

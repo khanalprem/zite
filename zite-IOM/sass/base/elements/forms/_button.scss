@@ -177,6 +177,9 @@
         &.is-clear {
             text-transform: uppercase;
         }
+        &.is-primary {
+            color: $primary-color;
+        }
         &.is-bg {
             &.is-light {
                 min-width: initial;
