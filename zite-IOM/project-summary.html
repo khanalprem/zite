@@ -351,18 +351,25 @@
 
 
                         </div>
-                        <div class="inline-row is-between mt-15">
+                        <div class="inline-row is-between mt-15 is-relative">
                             <p>Contains high level overview of the project in form of numbers, graphs and map.</p>
                             <div class="filter">
 
-                                <div class="custom-dropdown is-right is-light is-icon ">
+                                <div class="custom-dropdown is-right is-light is-icon mr-15 ">
                                     <a href="#" class="is-light is-dropdown-icon"><i class="material-icons">filter_list</i><span>Filter</span><span class="count">2</span></a>
 
+                                </div>
+                                <div class="custom-dropdown is-right is-light is-icon ">
+                                    <a href="#" class="is-light is-dropdown-icon"><i class="material-icons">grid_view</i><span>Group</span></a>
                                 </div>
                             </div>
                         </div>
                         <div class="filter-content project-summary-filter" style="display: block;">
-                            <div class="filter-row is-wrap is-start">
+                            <span class="arrow-up" style="right:150px"></span>
+                            <div class="filter-header mb-15 ">
+                                <h6>Manage Filter</h6>
+                            </div>
+                            <div class="filter-row is-wrap is-start is-overflow">
                                 <div class="form-group">
                                     <div class="custom-select">
                                         <p class="selected-item">
@@ -503,6 +510,105 @@
                                         </ul>
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <div class="custom-select">
+                                        <p class="selected-item">
+                                            sub group
+                                        </p>
+                                        <ul class="select-list left-dropdown">
+                                            <li>
+                                                <span>Kathmandu</span>
+                                            </li>
+                                            <li>
+                                                <span>Pokhara</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-select">
+                                        <p class="selected-item">
+                                            sub group
+                                        </p>
+                                        <ul class="select-list left-dropdown">
+                                            <li>
+                                                <span>Kathmandu</span>
+                                            </li>
+                                            <li>
+                                                <span>Pokhara</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <a href="#" class="circle-icon is-bg mr-0"><i class="material-icons">settings</i></a>
+                            </div>
+                            <div class="is-flex is-end is-align-center mt-15">
+                                <div class="common-button is-clear is-sm is-primary">
+                                    <span>Clear</span>
+                                </div>
+                                <div class="common-button is-bg is-light is-sm">
+                                    <span>apply</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-content project-summary-filter" style="display: none;">
+                            <span class="arrow-up"></span>
+                            <div class="filter-header mb-15 ">
+                                <h6>Manage Group</h6>
+                            </div>
+                            <div class="filter-row is-wrap is-start is-overflow">
+                                <div class="form-group">
+                                    <label>Metrics</label>
+                                    <div class="custom-select">
+                                        <p class="selected-item">
+                                            <span>Project</span> <span class="count">2</span>
+                                            <i class="material-icons select-remove">close</i>
+
+
+                                        </p>
+                                        <ul class="select-list left-dropdown">
+                                            <li>
+                                                <div class="custom-checkbox">
+                                                    <input type="checkbox" id="check">
+                                                    <label for="check">pokhara</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="custom-checkbox">
+                                                    <input type="checkbox" id="check">
+                                                    <label for="check">pokhara</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="custom-checkbox">
+                                                    <input type="checkbox" id="check">
+                                                    <label for="check">pokhara</label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Metrics</label>
+                                    <div class="custom-select">
+                                        <p class="selected-item">
+                                            Region
+                                        </p>
+                                        <ul class="select-list left-dropdown">
+                                            <li>
+                                                <span>Kathmandu</span>
+                                            </li>
+                                            <li>
+                                                <span>Pokhara</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+
+                                <a href="#" class="circle-icon is-bg mr-0"><i class="material-icons">add_circle_outline</i></a>
                             </div>
                             <div class="is-flex is-end is-align-center mt-15">
                                 <div class="common-button is-clear is-sm is-primary">

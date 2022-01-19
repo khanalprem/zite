@@ -47,9 +47,27 @@
         background-color: $white-color;
         @include box-shadow(0 0 50px rgba($body-color, .5));
         padding: 2rem;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 5;
+        top: 110%;
         .form-group {
             min-width: 180px;
             margin-bottom: .5rem;
+        }
+        .arrow-up {
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 10px 10px 10px;
+            border-color: transparent transparent #ffffff transparent;
+            position: absolute;
+            top: -10px;
+            -webkit-box-shadow: 0 10px 40px rgb(51 51 51 / 20%);
+            box-shadow: 0 10px 40px rgb(51 51 51 / 20%);
+            right: 30px;
         }
     }
 }
