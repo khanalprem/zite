@@ -182,6 +182,17 @@ ul {
             &.is-active {
                 background-color: $primary-light;
             }
+            &.is-selected {
+                &::after {
+                  content: 'check';
+                  position: absolute;
+                  top: 50%;
+                  font-family: 'Material Icons';
+                  right: 1rem;
+                  color: $primary-color;
+                  
+                }
+              }
             &.is-between {
                 @include justify-content-between;
             }

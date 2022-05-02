@@ -95,6 +95,7 @@
       cursor: pointer;
       @include transition(all 0.3s linear);
       border-bottom: 1px solid $border-color;
+      position: relative;
 
       label,
       span {
@@ -111,6 +112,20 @@
 
       img {
         max-width: 14px;
+      }
+      &.is-selected {
+        &::after {
+          content: 'check';
+          position: absolute;
+          top: 50%;
+          font-family: 'Material Icons';
+          right: 1rem;
+          z-index: 2;
+          display: block;
+          color: $primary-color;
+          @include transform(translateY(-50%));
+          
+        }
       }
 
       &:hover {

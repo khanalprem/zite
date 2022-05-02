@@ -55,7 +55,13 @@
 .attached {
   position: relative;
   width: 100%;
-
+  svg{
+    max-height: 16px;
+    fill:$body-color
+  }
+  &.width-auto{
+    width: initial;
+  }
   h6 {
     text-transform: capitalize;
     margin-left: 0.5rem;

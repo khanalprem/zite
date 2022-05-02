@@ -149,6 +149,9 @@
         @include flex-wrap(wrap);
         @include justify-content-start;
     }
+    &.no-flex{
+        display:block;
+    }
 }
 
 .assign-new {

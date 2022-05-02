@@ -1,0 +1,216 @@
+.submission-data-list{
+    li{
+        padding:.25rem 0;
+    }
+}
+.min-200{
+    max-width: 200px;
+    width: 100%;
+}
+.is-primary-color,a.is-primary-color{
+    color:$primary-color;
+}
+.showhide-btn{
+    .expand_less{
+        display: none;
+    }
+}
+.is-gap-50{
+    gap:50px;
+}
+.is-gap-15{
+ gap:15px;
+}
+.is-gap-10{
+    gap:10px;
+}
+.is-gap-25{
+    gap:25px;
+}
+.is-gap-30{
+    gap:30px;
+}
+.is-gap-100{
+    gap:100px;
+}
+.is-heading-color{
+    color:$heading-color;
+}
+.is-gap-5{
+    gap:5px;
+}
+.is-border{
+    border:1px solid $border-color;
+}
+.is-radius-5{
+    border-radius: 5px;
+}
+.max-380{
+    max-width: 380px;
+    width: 100%;
+}
+.max-350{
+    max-width: 350px;
+    width: 100%;
+}
+.max-320{
+    max-width: 320px;
+    width: 100%;
+}
+.pl-20{
+    padding-left: 20px;
+}
+.max-290{
+    max-width: 290px;
+    width: 100%;
+}
+.submission-acc{
+    .acc-list{
+        margin-bottom: 2rem;
+        .card-header{
+            &::after{
+                position: absolute;
+                top:10px;
+                right: 10px;
+                @include flex(0 0 24px);
+                max-width: 224px;
+                content: 'expand_more';
+                width: 24px;
+                height: 24px;
+                border: 1px solid $border-color;
+                margin-left: 0.6125rem;
+                font-size: 1rem;
+                font-size: 1.4rem;
+                font-family: 'Material Icons';
+                color: $body-color;
+                z-index: 99;
+                line-height: 1;
+                @include display-flex(flex);
+                @include justify-content-center;
+                @include align-items-center;
+                @include flex-direction-column(column);
+                @include radius(100%);
+            }
+        }
+        .zite-body{
+            display: none;
+        }
+        &.is-active{
+            .card-header{
+                &::after{
+                    content: 'expand_less';
+                    background-color: $primary-light;
+                    border-color: $primary-color;
+                }
+            }
+            .zite-body{
+                display: block;
+            }
+        }
+    }
+}
+.is-circle{
+    width:14px;
+    height: 14px;
+    border-radius: 100%;
+    @include flex(0 0 14px);
+    max-width: 14px;
+}
+.attached{
+    &.width-auto{
+        width:24px;
+        height: 24px;
+        @include flex-direction-column(column);
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        &:hover{
+            background-color: $primary-light;
+            svg{
+                fill:$primary-color
+            }
+        }
+    }
+}
+
+.upload-file{
+    background-color: $primary-light;
+    border-radius: 5px;
+    padding: .6125rem;
+}
+.tags{
+    background-color: $white-color;
+    padding:.6125rem;
+    border:1px solid $border-color;
+    border-radius: 5px;
+    li{
+        
+        @include radius(30px);
+        background-color: $primary-light;
+        color:$primary-color;
+        padding:.25rem .6125rem;
+        i{
+            font-size: 1rem;
+            cursor: pointer;
+        }
+    }
+}
+
+.review-form{
+    
+    .reveiw-form_header{
+        position: relative;
+        &::before{
+            display: inline-flex;
+            z-index: 1;
+            content:'add_circle';
+            font-family: "Material Icons";
+            color:$primary-color;
+            font-size: 1.2rem;
+            margin-right: .5rem;
+            margin-top:-.25rem;
+        }
+        &.is-active{
+            &::before{
+                content:'remove_circle_outline';
+            }
+        }
+    }
+    .review-form_body{
+        display: none;
+    }
+    &.is-active{
+        background-color: $bg-color;
+        .review-form_body{
+            display: block;
+        }
+    }
+    .review-form_figure{
+        figure{
+            @include flex(0 0 150px);
+            max-width: 150px;
+            position: relative;
+            min-height: 140px;
+            border-radius: 5px;
+            img{
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+                border-radius: 5px;
+            }
+            figcaption{
+                position: absolute;
+                bottom:0;
+                left:0;
+                right: 0;
+                padding:.25rem .5rem;
+                background-color: rgba(0,0,0,.3);
+                color:$white-color
+            }
+        }
+    }
+}

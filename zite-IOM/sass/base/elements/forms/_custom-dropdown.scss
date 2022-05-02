@@ -38,6 +38,18 @@
         color: $primary-color;
         margin-right: 0.5rem;
       }
+      &.is-after-icon{
+        &::after {
+        content: 'arrow_drop_down';
+        font-family: 'Material Icons';
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+        z-index: 2;
+        right: .5rem;
+        font-size: 1.2rem;
+    }
+      }
 
       &:hover {
         background-color: $primary-color;
@@ -97,6 +109,7 @@
 
       li {
         margin: 0;
+        position: relative;
 
         a {
           padding: 0.5rem 0.6125rem;
@@ -126,6 +139,7 @@
             background-color: $primary-light;
           }
         }
+        
 
         span {
           // padding:.5rem .6125rem;

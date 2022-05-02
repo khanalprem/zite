@@ -24,6 +24,12 @@
 .is-grow {
     @include flex-grow(1);
 }
+.is-bg-white{
+    background-color: $white-color;
+}
+.fs-md{
+    font-size:12px;
+}
 
 .is-truncate {
     @include trim();
