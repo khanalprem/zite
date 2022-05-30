@@ -70,7 +70,7 @@
         .card-header{
             &::after{
                 position: absolute;
-                top:10px;
+                top:1.5rem;
                 right: 10px;
                 @include flex(0 0 24px);
                 max-width: 224px;
@@ -94,6 +94,11 @@
         }
         .zite-body{
             display: none;
+            ul{
+                li{
+                    // padding:.25rem 0;
+                }
+            }
         }
         &.is-active{
             .card-header{
@@ -157,32 +162,52 @@
 }
 
 .review-form{
-    
-    .reveiw-form_header{
-        position: relative;
-        &::before{
-            display: inline-flex;
-            z-index: 1;
-            content:'add_circle';
-            font-family: "Material Icons";
-            color:$primary-color;
-            font-size: 1.2rem;
-            margin-right: .5rem;
-            margin-top:-.25rem;
-        }
-        &.is-active{
-            &::before{
-                content:'remove_circle_outline';
+    padding:1rem 0;
+    li{
+        padding:.25rem 1rem .25rem 2.5rem;
+        ul{
+            li{
+                padding-left:1.5rem;
             }
         }
     }
+    
+    .reveiw-form_header{
+        position: relative;
+        padding:.35rem 0;
+        &.review-form_icon{
+            cursor: pointer;
+            &::before{
+                position: absolute;
+                top:0px;
+                left:-1.8rem;
+                z-index: 1;
+                content:'add_circle';
+                font-family: "Material Icons";
+                color:$primary-color;
+                font-size: 1.2rem;
+            }
+        }
+        
+    }
     .review-form_body{
         display: none;
+        padding:.25rem 0;
     }
-    &.is-active{
-        background-color: $bg-color;
-        .review-form_body{
-            display: block;
+    li{
+        &.is-active{
+            background-color: $bg-color;
+            .reveiw-form_header{
+                &.review-form_icon{
+                    &::before{
+                        content:'remove_circle_outline';
+                    }
+                }
+                
+            }
+            .review-form_body{
+                display: block;
+            }
         }
     }
     .review-form_figure{

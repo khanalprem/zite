@@ -11541,7 +11541,7 @@ span.count {
 }
 .submission-acc .acc-list .card-header::after {
   position: absolute;
-  top: 10px;
+  top: 1.5rem;
   right: 10px;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 24px;
@@ -11642,29 +11642,43 @@ span.count {
   cursor: pointer;
 }
 
+.review-form {
+  padding: 1rem 0;
+}
+.review-form li {
+  padding: 0.25rem 1rem 0.25rem 2.5rem;
+}
+.review-form li ul li {
+  padding-left: 1.5rem;
+}
 .review-form .reveiw-form_header {
   position: relative;
+  padding: 0.35rem 0;
 }
-.review-form .reveiw-form_header::before {
-  display: inline-flex;
+.review-form .reveiw-form_header.review-form_icon {
+  cursor: pointer;
+}
+.review-form .reveiw-form_header.review-form_icon::before {
+  position: absolute;
+  top: 0px;
+  left: -1.8rem;
   z-index: 1;
   content: "add_circle";
   font-family: "Material Icons";
   color: #40B449;
   font-size: 1.2rem;
-  margin-right: 0.5rem;
-  margin-top: -0.25rem;
-}
-.review-form .reveiw-form_header.is-active::before {
-  content: "remove_circle_outline";
 }
 .review-form .review-form_body {
   display: none;
+  padding: 0.25rem 0;
 }
-.review-form.is-active {
+.review-form li.is-active {
   background-color: #f1f4f9;
 }
-.review-form.is-active .review-form_body {
+.review-form li.is-active .reveiw-form_header.review-form_icon::before {
+  content: "remove_circle_outline";
+}
+.review-form li.is-active .review-form_body {
   display: block;
 }
 .review-form .review-form_figure figure {
