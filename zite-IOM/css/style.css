@@ -11504,7 +11504,7 @@ span.count {
   gap: 5px;
 }
 
-.is-border {
+.is-outline {
   border: 1px solid #e6e6e6;
 }
 
@@ -11655,10 +11655,20 @@ span.count {
   position: relative;
   padding: 0.35rem 0;
 }
-.review-form .reveiw-form_header.review-form_icon {
+.review-form .review-form_body {
+  display: none;
+  padding: 0.25rem 0;
+}
+.review-form li.is-active {
+  background-color: #f1f4f9;
+}
+.review-form li.is-active .review-form_body {
+  display: block;
+}
+.review-form li .is-plus {
   cursor: pointer;
 }
-.review-form .reveiw-form_header.review-form_icon::before {
+.review-form li .is-plus::before {
   position: absolute;
   top: 0px;
   left: -1.8rem;
@@ -11668,18 +11678,18 @@ span.count {
   color: #40B449;
   font-size: 1.2rem;
 }
-.review-form .review-form_body {
-  display: none;
-  padding: 0.25rem 0;
+.review-form li .is-minus {
+  cursor: pointer;
 }
-.review-form li.is-active {
-  background-color: #f1f4f9;
-}
-.review-form li.is-active .reveiw-form_header.review-form_icon::before {
+.review-form li .is-minus::before {
+  position: absolute;
+  top: 0px;
+  left: -1.8rem;
+  z-index: 1;
   content: "remove_circle_outline";
-}
-.review-form li.is-active .review-form_body {
-  display: block;
+  font-family: "Material Icons";
+  color: #40B449;
+  font-size: 1.2rem;
 }
 .review-form .review-form_figure figure {
   -webkit-box-flex: 0;

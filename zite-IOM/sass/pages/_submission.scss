@@ -39,7 +39,7 @@
 .is-gap-5{
     gap:5px;
 }
-.is-border{
+.is-outline{
     border:1px solid $border-color;
 }
 .is-radius-5{
@@ -175,7 +175,22 @@
     .reveiw-form_header{
         position: relative;
         padding:.35rem 0;
-        &.review-form_icon{
+        
+        
+    }
+    .review-form_body{
+        display: none;
+        padding:.25rem 0;
+    }
+    li{
+        &.is-active{
+            background-color: $bg-color;
+          
+            .review-form_body{
+                display: block;
+            }
+        }
+        .is-plus{
             cursor: pointer;
             &::before{
                 position: absolute;
@@ -188,25 +203,17 @@
                 font-size: 1.2rem;
             }
         }
-        
-    }
-    .review-form_body{
-        display: none;
-        padding:.25rem 0;
-    }
-    li{
-        &.is-active{
-            background-color: $bg-color;
-            .reveiw-form_header{
-                &.review-form_icon{
-                    &::before{
-                        content:'remove_circle_outline';
-                    }
-                }
-                
-            }
-            .review-form_body{
-                display: block;
+        .is-minus{
+            cursor: pointer;
+            &::before{
+                position: absolute;
+                top:0px;
+                left:-1.8rem;
+                z-index: 1;
+                content:'remove_circle_outline';
+                font-family: "Material Icons";
+                color:$primary-color;
+                font-size: 1.2rem;
             }
         }
     }
