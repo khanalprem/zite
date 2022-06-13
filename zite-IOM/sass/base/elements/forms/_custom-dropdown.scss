@@ -86,13 +86,14 @@
       display: initial;
       position: absolute;
       top: 110%;
-      min-width: 150px;
+      min-width: 180px;
       background-color: var(--clr-white);
       @include radius(4px);
       z-index: 1012;
       display: none;
       margin-top: -5px;
-      @include box-shadow(0 10px 40px rgba(var(--clr-body), 0.2));
+      @include box-shadow(0 10px 40px rgba(0, 0, 0, 0.2));
+      @include radius(5px);
 
       &::before {
         content: '';
@@ -112,7 +113,7 @@
         position: relative;
 
         a {
-          padding: 0.5rem 0.6125rem;
+          padding: 0.5rem 1.125rem;
           color: var(--clr-body);
           @include transition(all 0.4s ease-in-out);
           @include display-flex(flex);
@@ -123,7 +124,7 @@
           i,
           svg {
             margin-right: 0.6125rem;
-            font-size: 1rem;
+            font-size: 1.125rem;
             color: var(--clr-body);
 
             img {

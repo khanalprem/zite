@@ -7,13 +7,15 @@
     label {
         margin: 0;
         font-weight: 500;
-        font-size: 0.775rem;
+        font-size: var(--fs-md);
         text-transform: capitalize;
     }
     input {
         position: absolute; // take it out of document flow
         opacity: 0; // hide it
         z-index: 9;
+        width: 18px;
+        height: 18px;
         &+label {
             position: relative;
             cursor: pointer;
@@ -25,11 +27,13 @@
             margin-right: 10px;
             display: inline-block;
             vertical-align: text-top;
-            width: 16px;
-            height: 16px;
+            width: 18px;
+            height: 18px;
+            @include flex(0 0 18px);
+            max-width: 18px;
             background: var(--clr-white);
-            border: 2px solid $border-dark;
-            @include radius(2px);
+            border: 2px solid var(--clr-body-400);
+            @include radius(4px);
         }
         // Box hover
         // &:hover + label:before {
@@ -56,16 +60,21 @@
         }
         // Checkmark. Could be replaced with an image
         &:checked+label:after {
-            content: 'check';
+            content: '';
             position: absolute;
-            left: 1.5px;
-            top: 40%;
-            @include transform(translateY(-40%));
-            line-height: 1;
-            font-family: 'Material Icons';
-            color: var(--clr-white);
-            text-transform: none;
-            font-size: 0.8rem;
+            left: 4px;
+            top: 44%;
+            background:var(--clr-white);
+            width: 2px;
+            height: 2px;
+            box-shadow: 
+                2px 0 0 var(--clr-white),
+                4px 0 0 var(--clr-white),
+                4px -2px 0 var(--clr-white),
+                4px -4px 0 var(--clr-white),
+                4px -6px 0 var(--clr-white),
+                4px -8px 0 var(--clr-white);
+            transform: rotate(45deg);
             &:checked+label:before {
                 border-color: var(--clr-primary-500);
                 box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
@@ -92,7 +101,7 @@
     label {
         margin: 0;
         font-weight: 500;
-        font-size: 0.775rem;
+        font-size: var(--fs-md);
     }
     input {
         position: absolute; // take it out of document flow
@@ -113,7 +122,7 @@
             height: 18px;
             @include radius(50%);
             background: var(--clr-white);
-            border: 1.5px solid $border-dark;
+            border: 1.5px solid var(--clr-body-400);
         }
         // Box hover
         // &:hover + label:before {

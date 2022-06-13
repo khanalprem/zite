@@ -36,7 +36,7 @@ ul {
     &.list {
         @include radius(5px);
         li {
-            padding: 0.5rem 0.6125rem;
+            padding: 0.775rem 1rem;
             color: var(--clr-body);
             @include transition(all 0.4s ease-in-out);
             @include display-flex(flex);
@@ -108,7 +108,7 @@ ul {
                 time {
                     color: var(--clr-body-600);
                     display: block;
-                    margin-top: 0.15rem;
+                    margin-top: 0.5rem;
                     font-size: var(--fs-md);
                 }
                 a {

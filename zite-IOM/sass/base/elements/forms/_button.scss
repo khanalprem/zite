@@ -4,13 +4,11 @@
     font-weight: 600;
     text-decoration: none;
     text-transform: capitalize;
-    padding: 0.5rem 1.5rem;
+    padding: .875rem 2rem;
     position: relative;
     @include display-flex(flex);
     @include justify-content-center;
     @include align-items-center;
-    min-width: 160px;
-    min-height: 40px;
     border: none;
     outline: none;
     line-height: inherit;
@@ -25,25 +23,61 @@
     cursor: pointer;
     @include transition(all 0.3s ease-in-out);
     position: relative;
-    &:focus {
-        border-color: var(--clr-primary-500);
+    @media #{$breakpoint-ls} {
+        padding: 0.5rem 1.5rem;
     }
+    &:focus {
+        
+        outline: none;
+    }
+    &:disabled
+    &.is-disable{
+        cursor: not-allowed;
+            box-shadow: none;
+    }
+    &.is-icon {
+        @include justify-content-between;
+        gap:0.5rem;
+    }
+    &.is-sm {
+        font-size: var(--fs-md);
+        padding: 0.5rem 1.125rem;
+        @include radius(5px);
+        &.is-clear {
+            text-transform: uppercase;
+        }
+        &.is-icon{
+            @include justify-content-start;
+            
+        }
+       
+    }
+    
+    
     &.is-bg {
         color: var(--clr-white);
         background-color: var(--clr-primary-500);
-        border-color: var(--clr-primary-500);
-        @include box-shadow(0 10px 40px rgba(var(--clr-primary-500), 0.25));
+        
+        &.is-sm{
+            color:var(--clr-body);
+            background-color: var(--clr-primary-50);
+            i{
+                color:var(--clr-primary-500)
+            }
+            &:hover{
+                i{
+                    color:var(--clr-white);
+                }
+                color: var(--clr-white);
+                background-color: var(--clr-primary-500); 
+            }
+        }
         &:disabled,
         &.is-disable {
-            color: var(--clr-body);
-            background-color: transparent;
-            border: 1px solid var(--clr-body-300);
-            cursor: not-allowed;
-            box-shadow: none;
+            color: var(--clr-body-400);
+            background-color: var(--clr-body-400);
             &:hover {
-                background-color: transparent;
-                color: var(--clr-body);
-                border-color: var(--clr-body-300);
+                background-color: var(--clr-body-400);
             }
         }
         &.is-light {
@@ -51,19 +85,13 @@
             color: var(--clr-body);
             @include radius(5px);
             box-shadow: none;
-            min-width: 124px;
             i {
                 color: var(--clr-primary-500);
             }
         }
+        
         &:hover {
-            background-color: var(--clr-primary-500);
-            border-color: var(--clr-primary-500);
-            color: var(--clr-white);
-            @include box-shadow(0 30px 40px rgba(var(--clr-primary-800), 0.25));
-            i {
-                color: var(--clr-white);
-            }
+            @include box-shadow(0 30px 40px var(--clr-primary-100));
         }
     }
     &.is-auto {
@@ -76,21 +104,14 @@
     &.is-clear {
         background-color: transparent;
         border-width: 0;
-        min-width: auto;
-        @include display-flex(flex);
-        @include justify-content-start;
-        @include align-items-center;
-        color: var(--clr-body);
-        font-size: 0.9375rem;
-        padding: 0;
-        min-height: initial;
-        min-width: initial;
-        svg {
-            margin-left: 0.5rem;
-            @include transition(margin 0.5s ease-in-out);
+        color: var(--clr-primary-500);
+        padding: 0.5rem .1.125rem;
+        
+        &.is-icon{
+            @include justify-content-start; 
         }
         &:hover {
-            color: $secondary-color;
+            background-color: var(--clr-primary-50);
             svg {
                 margin-left: 0.6125rem;
             }
@@ -98,38 +119,30 @@
     }
     &.is-border {
         background-color: transparent;
-        color: $secondary-color;
+        color: var(--clr-primary-500);
         border: 1px solid;
-        border-color: var(--clr-body-300);
-        &.is-icon {
-            @include display-flex(flex);
-            @include justify-content-start;
-            @include align-items-center;
-            color: var(--clr-body);
-            font-size: 0.9375rem;
-            i {
-                margin-right: 0.5rem;
-            }
-        }
+        border-color: var(--clr-primary-500);
+       
         &.is-danger {
             border-color: $secondary-color;
             color: $secondary-color;
         }
         &:hover {
-            border-color: $secondary-color;
-            color: $secondary-color;
+            color: var(--clr-white);
+            background-color: var(--clr-primary-500);
+            @include box-shadow(0 30px 40px rgba(var(--clr-primary-500), 0.25));
         }
         &:disabled,
         &.is-disable {
-            color: var(--clr-body);
+            color: var(--clr-body-400);
             background-color: transparent;
-            border: 1px solid var(--clr-body-300);
+            border: 1px solid var(--clr-body-400);
             cursor: not-allowed;
             box-shadow: none;
             &:hover {
                 background-color: transparent;
-                color: var(--clr-body);
-                border-color: var(--clr-body-300);
+                color: var(--clr-body-400);
+                border-color: var(--clr-body-400);
             }
         }
     }
@@ -148,56 +161,13 @@
             }
         }
     }
-    &.is-icon {
-        @include justify-content-between;
-        color: var(--clr-white);
-        i {
-            margin-right: 0.5rem;
-            font-size: 0.9375rem;
-        }
-    }
-    &:disabled,
-    &.is-disable {
-        color: var(--clr-body);
-        background-color: transparent;
-        border: 1px solid var(--clr-body-300);
-        cursor: not-allowed;
-        box-shadow: none;
-        &:hover {
-            background-color: transparent;
-            color: var(--clr-body);
-            border-color: var(--clr-body-300);
-        }
-    }
-    &.is-sm {
-        min-width: initial;
-        min-height: initial;
-        font-size: .775rem;
-        padding: 0.35rem .75rem;
-        &.is-clear {
-            text-transform: uppercase;
-        }
-        &.is-primary {
-            color: var(--clr-primary-500);
-        }
-        &.is-bg {
-            &.is-light {
-                min-width: initial;
-                min-height: initial;
-                font-size: .775rem;
-                padding: 0.35rem .75rem;
-            }
-        }
-    }
+    
+    
+    
     &.is-radius-5 {
         @include radius(5px);
     }
-    @media #{$breakpoint-md-desktop} {
-        padding: 0.25rem 1rem;
-        min-width: inherit;
-        min-height: initial;
-        font-size: 0.875rem;
-    }
+    
 }
 
 button.load-more-button,
@@ -246,20 +216,25 @@ a.load-more-button {
 }
 
 [class*='circle-icon'] {
-    width: 34px;
-    height: 34px;
+    position: relative;
+    width: 40px;
+    height: 40px;
     @include display-flex(flex);
     @include justify-content-center;
     @include align-items-center;
     @include flex-direction-column(column);
     color: var(--clr-body);
     @include radius(100%);
-    min-height: 34px;
+    min-height: 40px;
     cursor: pointer;
-    @include transition(all 0.4s ease-in-out);
-    i {
-        font-size: 1.2rem;
+    @include transition(all 0.2s ease-in-out);
+    &:hover{
+        background-color: var(--clr-primary-50);
     }
+    i{
+        margin:0;
+    }
+   
     &.is-bg {
         background-color: var(--clr-primary-50);
         color: var(--clr-primary-800);
@@ -269,8 +244,23 @@ a.load-more-button {
         }
     }
     &.is-border {
-        border: 1px solid var(--clr-body-300);
+        border: 1px solid var(--clr-body-400);
+        &:hover {
+            background-color: var(--clr-primary-50);
+            color: var(--clr-primary-500);
+            border-color: var(--clr-primary-500);
+        }
     }
+    &:disabled,
+        &.is-disable {
+            color: var(--clr-white);
+            background-color: var(--clr-body-400);
+            border: 1px solid var(--clr-body-400);
+            cursor: not-allowed;
+            box-shadow: none;
+            
+        }
+
     &:not(:last-child) {
         margin-right: 0.6125rem;
     }

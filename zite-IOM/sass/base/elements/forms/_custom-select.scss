@@ -23,11 +23,9 @@
 
     &.selected-item {
       border: 1px solid var(--clr-body-300);
-      height: 2.5rem;
-      line-height: 2.5rem;
+      height: 2.6rem;
+      line-height: 2.6rem;
       padding: 0 1.5rem 0 1rem;
-      font-size: 0.775rem;
-      font-weight: 500;
       @include radius(5px);
       position: relative;
       cursor: pointer;
@@ -67,8 +65,9 @@
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     background-color: var(--clr-white);
-    @include box-shadow(0 5px 15px rgba(0, 0, 0, 0.15));
+    @include box-shadow(0 10px 40px rgba(0, 0, 0, 0.2));
     max-height: 220px;
+    @include radius(5px);
     display: none;
 
     &::-webkit-scrollbar {
@@ -88,7 +87,7 @@
     }
 
     li {
-      padding: 0.35rem 0.6125rem;
+      padding: 0.575rem 1.125rem;
       @include display-flex(flex);
       @include justify-content-start;
       @include align-items-center;
@@ -96,14 +95,11 @@
       @include transition(all 0.3s linear);
       border-bottom: 1px solid var(--clr-body-300);
       position: relative;
-
-      label,
-      span {
-        font-size: 0.775rem;
-      }
+      color:var(--clr-body);
+     
 
       i {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         max-width: 18px;
         @include flex(0 0 24px);
         max-width: 24px;

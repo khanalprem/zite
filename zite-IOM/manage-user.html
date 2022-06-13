@@ -6,6 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <meta name="color-scheme" content="dark light" />
 
     <!-- SOCIAL MEDIA META -->
     <meta
@@ -52,7 +53,7 @@
 
     <!-- stylesheet start -->
     <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
       rel="stylesheet"
     />
     <link
@@ -63,6 +64,10 @@
   </head>
 
   <body class="home-1">
+    <!-- <div class="preloader">
+      <div class="pin"></div>
+      <div class="pulse"></div>
+    </div> -->
     <header class="site-header">
       <div class="container-fluid">
         <div class="header-in">
@@ -447,7 +452,6 @@
                   </li>
                 </ul>
               </nav>
-              <!-- <button class="common-button is-bg" popup-link="add-innovation">Self Assessment Form</button> -->
             </div>
             <div class="toggle-button">
               <span></span>
@@ -457,16 +461,19 @@
             </div>
           </div>
           <div class="header-right">
-            <ul>
+            <ul class="is-gap-10">
               <li class="custom-dropdown notifications is-right">
-                <a href="#"><i class="material-icons">notifications</i></a>
+                <a href="#" class="circle-icon"
+                  ><i class="material-icons-outlined">notifications</i></a
+                >
+                <sup class="sup">22</sup>
                 <ul
                   class="list is-start is-border custom-dropdown-menu is-overflow"
                 >
                   <li class="list-header">
                     <h5>notifications</h5>
                     <a class="circle-icon is-bg" href="#">
-                      <i class="material-icons">email</i>
+                      <i class="material-icons-outlined">email</i>
                     </a>
                   </li>
                   <li>
@@ -525,10 +532,10 @@
                   </li>
                   <li class="list-footer">
                     <a class="circle-icon" href="#">
-                      <i class="material-icons">volume_up</i>
+                      <i class="material-icons-outlined">volume_up</i>
                     </a>
                     <a class="circle-icon" href="#">
-                      <i class="material-icons">settings</i>
+                      <i class="material-icons-outlined">settings</i>
                     </a>
                   </li>
                 </ul>
@@ -541,11 +548,11 @@
                 <ul class="custom-dropdown-menu right">
                   <li>
                     <a href="#">
-                      <i class="material-icons">perm_identity</i
+                      <i class="material-icons-outlined">perm_identity</i
                       ><span>Profile</span>
                     </a>
                     <a href="#">
-                      <i class="material-icons">power_settings_new</i
+                      <i class="material-icons-outlined">power_settings_new</i
                       ><span>Profile</span>
                     </a>
                   </li>
@@ -579,14 +586,15 @@
                   <div class="card-header is-start">
                     <h6>users</h6>
                     <div class="selected-counter">
-                      3 <span>selected</span><i class="material-icons">close</i>
+                      3 <span>selected</span
+                      ><i class="material-icons-outlined">close</i>
                     </div>
                   </div>
                   <div class="zite-body">
                     <div class="search-bar is-full mb-15">
                       <div class="search-wrap">
                         <span class="span-group">
-                          <i class="material-icons">search</i>
+                          <i class="material-icons-outlined">search</i>
                         </span>
                         <input class="form-control" placeholder="Search" />
                       </div>
@@ -726,14 +734,15 @@
                   <div class="card-header is-start">
                     <h6>assign to</h6>
                     <div class="selected-counter">
-                      2 <span>selected</span><i class="material-icons">close</i>
+                      2 <span>selected</span
+                      ><i class="material-icons-outlined">close</i>
                     </div>
                   </div>
                   <div class="zite-body">
                     <div class="search-bar is-full mb-15">
                       <div class="search-wrap">
                         <span class="span-group">
-                          <i class="material-icons">search</i>
+                          <i class="material-icons-outlined">search</i>
                         </span>
                         <input class="form-control" placeholder="Search" />
                       </div>
@@ -818,7 +827,8 @@
             </div>
             <div class="buttons is-center mt-30">
               <button class="common-button is-bg is-icon">
-                <span>assign</span><i class="material-icons">arrow_forward</i>
+                <span>assign</span
+                ><i class="material-icons-outlined">arrow_forward</i>
               </button>
             </div>
           </div>

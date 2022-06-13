@@ -39,25 +39,18 @@ header {
                                     position: absolute;
                                     top: 5px;
                                     right: 0;
-                                    @include radius(50%);
-                                    background-color: $secondary-color;
-                                    padding: 2px 5px;
-                                    @include display-flex(flex);
-                                    @include justify-content-center;
-                                    @include align-items-center;
-                                    @include flex-direction-column(column);
+                                    background-color: var(--clr-red);
+                                    padding: 0.5rem;
                                     color: var(--clr-white);
-                                    font-size: 0.6125rem;
+                                    border-radius: 20px;
                                     i {
                                         margin: 0;
                                     }
+                                    
                                 }
                                 a {
                                     color: var(--clr-body);
-                                    padding-right: 1rem;
-                                    i {
-                                        margin-top: 0.6rem;
-                                    }
+                                    
                                     &::after {
                                         display: none;
                                     }
@@ -68,6 +61,7 @@ header {
                                         min-height: 300px;
                                         max-width: 400px;
                                         li {
+                                            padding: 0.575rem 1.125rem;
                                             a {
                                                 @include align-items-start;
                                                 color: var(--clr-body);
@@ -146,6 +140,9 @@ header {
                                                         }
                                                     }
                                                 }
+                                            }
+                                            &:hover{
+                                                background-color: var(--clr-primary-50);
                                             }
                                         }
                                     }
