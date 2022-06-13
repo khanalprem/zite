@@ -32,7 +32,7 @@
   content: attr(tooltip);
   @include radius(10px);
   /* most of the rest of this is opinion */
-  font-family: $body-fonts;
+  font-family: var(--ff-bd);
   text-align: center;
   font-size: 0.775rem;
   min-width: 10em;
@@ -44,8 +44,8 @@
   padding: 1ch 1.5ch;
   border-radius: 0.3ch;
   box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
-  background: $heading-color;
-  color: $white-color;
+  background: var(--clr-body);
+  color: var(--clr-white);
   z-index: 1000;
   /* absurdity 2 */
 }
@@ -67,7 +67,7 @@
 [tooltip][flow^='up']::before {
   bottom: 100%;
   border-bottom-width: 0;
-  border-top-color: $heading-color;
+  border-top-color: var(--clr-body);
 }
 
 [tooltip]:not([flow])::after,
@@ -87,7 +87,7 @@
 [tooltip][flow^='down']::before {
   top: 100%;
   border-top-width: 0;
-  border-bottom-color: $heading-color;
+  border-bottom-color: var(--clr-body);
 }
 
 [tooltip][flow^='down']::after {
@@ -104,7 +104,7 @@
 [tooltip][flow^='left']::before {
   top: 50%;
   border-right-width: 0;
-  border-left-color: $heading-color;
+  border-left-color: var(--clr-body);
   left: calc(0em - 5px);
   transform: translate(-0.5em, -50%);
 }
@@ -119,7 +119,7 @@
 [tooltip][flow^='right']::before {
   top: 50%;
   border-left-width: 0;
-  border-right-color: $heading-color;
+  border-right-color: var(--clr-body);
   right: calc(0em - 5px);
   transform: translate(0.5em, -50%);
 }

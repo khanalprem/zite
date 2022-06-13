@@ -146,7 +146,7 @@
         width: 34px;
         height: 30px;
         line-height: 30px;
-        color: $body-color;
+        color: var(--clr-body);
         @include transition(all .5s);
         border-color: $grey-color;
 

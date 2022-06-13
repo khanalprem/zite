@@ -116,7 +116,7 @@
             min-width: initial;
             &.is-bg{
                 background-color: $primary-light;
-                color:$heading-color;
+                color:var(--clr-body);
                 box-shadow: none;
                 i{
                     color:$primary-color;

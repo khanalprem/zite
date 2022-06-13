@@ -3,7 +3,7 @@
 
   .selected-date {
     position: relative;
-    border: 1px solid $border-color;
+    border: 1px solid var(--clr-body-300);
     height: 2rem;
     line-height: 2rem;
     padding: 0 2rem 0 2.2rem;
@@ -11,14 +11,14 @@
     @include radius(5px);
     position: relative;
     cursor: pointer;
-    color: $primary-color;
-    background-color: $white-color;
+    color: var(--clr-primary-500);
+    background-color: var(--clr-white);
 
     &::after {
       content: 'arrow_drop_down';
       font-family: 'Material Icons';
       font-size: 1.5rem;
-      color: $primary-dark;
+      color: var(--clr-primary-800);
       top: 50%;
       position: absolute;
       @include transform(translateY(-50%));
@@ -28,7 +28,7 @@
     i {
       @include transform(translateY(-50%));
       left: 0.6125rem;
-      color: $primary-dark;
+      color: var(--clr-primary-800);
       font-size: 1rem;
     }
 
@@ -53,7 +53,7 @@
   position: absolute;
   top: 100%;
   z-index: 1011;
-  background-color: $white-color;
+  background-color: var(--clr-white);
   @include radius(5px);
   padding: 0.6125rem;
   @include box-shadow(0 5px 15px rgba(0, 0, 0, 0.15));
@@ -87,7 +87,7 @@
       &.calendar-sidebar {
         @include flex(0 0 100px);
         max-width: 100px;
-        border-right: 1px solid $border-color;
+        border-right: 1px solid var(--clr-body-300);
 
         li {
           font-size: 0.8125rem;
@@ -97,38 +97,38 @@
           padding: 0.5rem;
           min-height: auto;
           &:hover {
-            background-color: $primary-dark;
+            background-color: var(--clr-primary-800);
           }
         }
       }
     }
 
     .react-calendar {
-      font-family: $body-fonts;
+      font-family: var(--ff-bd);
       border: transparent;
-      // border-left: 1px solid $border-color;
+      // border-left: 1px solid var(--clr-body-300);
 
       button {
         &.react-calendar__tile--active:enabled:hover,
         &.react-calendar__tile--active:enabled:focus,
         &.react-calendar__tile--active {
-          background-color: $primary-dark;
+          background-color: var(--clr-primary-800);
         }
 
         &:hover {
-          background-color: $primary-color;
-          color: $white-color;
+          background-color: var(--clr-primary-500);
+          color: var(--clr-white);
         }
       }
 
       .react-calendar__month-view__weekdays {
-        color: $primary-color;
+        color: var(--clr-primary-500);
       }
 
       .react-calendar__navigation {
         button {
           font-size: 1rem;
-          font-family: $body-fonts;
+          font-family: var(--ff-bd);
           font-weight: 600;
 
           &.react-calendar__navigation__arrow {
@@ -141,7 +141,7 @@
               right: 0;
               font-family: 'Material Icons';
               font-size: 1rem;
-              color: $primary-dark;
+              color: var(--clr-primary-800);
             }
 
             &.react-calendar__navigation__prev2-button {
@@ -166,7 +166,7 @@
             }
             &:hover {
               &::after {
-                color: $white-color;
+                color: var(--clr-white);
               }
             }
           }
@@ -176,7 +176,7 @@
   }
 
   .buttons {
-    border-top: 1px solid $border-color;
+    border-top: 1px solid var(--clr-body-300);
     padding-top: 0.6125rem;
   }
 }

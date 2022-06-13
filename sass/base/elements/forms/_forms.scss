@@ -129,7 +129,7 @@
             p{
                 margin:0;
                 font-size: .775rem;
-                color:$body-color;
+                color:var(--clr-body);
                 a{
                     color:$primary-color;
                     font-weight: 600;

@@ -23,7 +23,7 @@
             padding-right: 2rem;
             display: inline-block;
             font-weight: 600;
-            color: $heading-color;
+            color: var(--clr-body);
         }
 
 
@@ -70,7 +70,7 @@
             @include radius(4px);
             z-index: 1012;
             display: none;
-            @include box-shadow(0 10px 40px rgba($heading-color, .2));
+            @include box-shadow(0 10px 40px rgba(var(--clr-body), .2));
 
             &::before {
                 content: "";
@@ -82,7 +82,7 @@
                 position: absolute;
                 left: 30px;
                 top: -10px;
-                @include box-shadow(0 10px 40px rgba($heading-color, .2));
+                @include box-shadow(0 10px 40px rgba(var(--clr-body), .2));
             }
 
             li {
@@ -90,7 +90,7 @@
 
                 a {
                     padding: .5rem .6125rem;
-                    color: $heading-color;
+                    color: var(--clr-body);
                     @include transition(all .4s ease-in-out);
                     @include display-flex(flex);
                     @include justify-content-start;
@@ -101,7 +101,7 @@
                     svg {
                         margin-right: .6125rem;
                         font-size: 1rem;
-                        color: $body-color;
+                        color: var(--clr-body);
 
                         img {
                             max-width: 16px;
@@ -119,7 +119,7 @@
 
                 span {
                     // padding:.5rem .6125rem;
-                    color: $heading-color;
+                    color: var(--clr-body);
                     @include transition(all .4s ease-in-out);
                     @include display-flex(flex);
                     @include justify-content-start;
@@ -130,7 +130,7 @@
                     svg {
                         margin-right: .6125rem;
                         font-size: 1rem;
-                        color: $body-color;
+                        color: var(--clr-body);
 
                         img {
                             max-width: 16px;
@@ -169,7 +169,7 @@
                         font-size: .875rem;
                         padding: .35rem .6125rem;
                         text-transform: capitalize;
-                        color: $heading-color
+                        color: var(--clr-body)
                     }
                 }
             }

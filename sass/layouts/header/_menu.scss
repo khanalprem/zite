@@ -9,7 +9,7 @@
         li{
             position: relative;
             a{
-                color:$body-color;
+                color:var(--clr-body);
                 padding:0 1rem;
                 font-size: .9375rem;
                 font-weight: 600;
@@ -21,7 +21,7 @@
                 i,svg{
                     margin-right: .6125rem;
                     fill{
-                        color:$body-color;
+                        color:var(--clr-body);
                     }
                 }
                 &.active,&:hover{
@@ -341,7 +341,7 @@
             li{
                 display: block;
                 a{
-                    color:$heading-color;
+                    color:var(--clr-body);
                     padding:.5rem .6125rem;
                     display: block;
                 }

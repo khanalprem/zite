@@ -5,7 +5,7 @@
     @include justify-content-between;
     padding:.6125rem 1rem;
     h6{
-        color:$heading-color;
+        color:var(--clr-body);
         font-weight: 600;
         font-size: .7125rem;
         flex-grow: 1;

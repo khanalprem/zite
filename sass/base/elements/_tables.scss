@@ -1,7 +1,7 @@
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: $body-color;
+  color: var(--clr-body);
   @include radius(5px);
   table-layout: fixed;
   overflow: hidden;
@@ -40,7 +40,7 @@
   vertical-align: bottom;
   border-bottom: 2px solid $border-color;
   background-color: $bg-color;
-  color: $body-color;
+  color: var(--clr-body);
   font-weight: 400;
   text-transform: capitalize;
 }
@@ -149,7 +149,7 @@
     }
 
     td {
-      color: $heading-color;
+      color: var(--clr-body);
 
       .site-progress {
         @include display-flex(flex);
@@ -213,7 +213,7 @@
       span {
         &.form-guide {
           i {
-            color: $body-color;
+            color: var(--clr-body);
             font-size: 1rem;
           }
         }
@@ -221,7 +221,7 @@
 
       b {
         font-weight: 500;
-        color: $heading-color;
+        color: var(--clr-body);
 
         &.counter {
           margin-left: .6125rem;
@@ -302,7 +302,7 @@
           }
 
           h6 {
-            color: $heading-color;
+            color: var(--clr-body);
             position: relative;
             @include display-flex(flex);
             @include justify-content-start;
@@ -329,14 +329,14 @@
 
       .custom-checkbox {
         label {
-          color: $heading-color;
+          color: var(--clr-body);
           font-weight: 600;
           font-size: .875rem;
         }
 
         .check-content {
           b {
-            color: $heading-color;
+            color: var(--clr-body);
             font-weight: 600;
             font-size: .875rem;
           }
@@ -382,7 +382,7 @@
       }
 
       span {
-        color: $body-light;
+        color: var(--clr-body-500);
 
         &:not(:last-child) {
           margin-right: .6125rem;
@@ -413,7 +413,7 @@
     @include display-flex(flex);
     @include justify-content-center;
     @include align-items-center;
-    color: $body-color;
+    color: var(--clr-body);
     @include radius(20px);
     cursor: pointer;
     @include transition(all .4s ease-in-out);
@@ -486,12 +486,12 @@
     @include justify-content-center;
     @include align-items-center;
     font-size: .875rem;
-    color: $body-color;
+    color: var(--clr-body);
 
     b {
       font-weight: 600;
       margin-right: .35rem;
-      color: $heading-color;
+      color: var(--clr-body);
     }
 
     &:not(:last-child) {

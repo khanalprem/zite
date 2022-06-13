@@ -4,35 +4,89 @@ h3,
 h4,
 h5,
 h6 {
-  @include clear;
-  font-family: $heading-fonts;
-  color: $heading-color;
-  font-weight: 600;
+  font-family: var(--ff-hd);
   margin: 0;
   position: relative;
-  line-height: 1.5;
   background: none;
+  color:var(--clr-body);
 }
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: var(--clr-body);
+}
+
 h1 {
-  font-size: $font-size-h1;
+  font-size: var(--fs-h1);
+  letter-spacing: 0;
+  line-height: 1.16;
+  font-weight: 600;
 }
 
 h2 {
-  font-size: $font-size-h2;
+  font-size: var(--fs-h2);
+  line-height: 1.25;
+  font-weight: 400;
 }
 
 h3 {
-  font-size: $font-size-h3;
+  font-size: var(--fs-h3);
+  line-height: 1.38;
+  font-weight: 600;
 }
 
 h4 {
-  font-size: $font-size-h4;
+  font-size: var(--fs-h4);
+  line-height: 1.22;
+  font-weight: 600;
 }
 
 h5 {
-  font-size: $font-size-h5;
+  font-size: var(--fs-h5);
+  line-height: 1.18;
+  font-weight: 600;
 }
 
 h6 {
-  font-size: $font-size-h6;
+  font-size: var(--fs-h6);
+  line-height: 1.33;
+  font-weight: 600;
+}
+
+.font-size-h6 {
+  font-size: var(--fs-h6);
+  line-height: 1.27;
+  font-weight: 600;
+}
+.fs-lg{
+  font-size: var(--fs-lg);
+  line-height: 1.2;
+}
+
+.fs-body {
+  font-size: var(--fs-body);
+  line-height: 1.46;
+}
+.fs-btn {
+  font-size: var(--fs-btn);
+  font-weight: 600;
+  line-height: 1.46;
+}
+
+.fs-btn-md {
+  font-size: var(--fs-md);
+  font-weight: normal;
+}
+.fs-md {
+  font-size: var(--fs-md);
+  line-height: 1.43;
+}
+.fs-sm {
+  font-size: var(--fs-sm);
+  line-height: 1.33;
+  font-weight: 400;
 }

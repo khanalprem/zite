@@ -1,12 +1,12 @@
 abbr,
 acronym {
-  border-bottom: 1px dotted $border-color;
+  border-bottom: 1px dotted var(--clr-body-300);
   cursor: help;
 }
 
 mark,
 ins {
-  background: $primary-color;
+  background: var(--clr-primary-500);
   text-decoration: none;
 }
 

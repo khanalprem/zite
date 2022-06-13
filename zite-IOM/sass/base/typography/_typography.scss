@@ -4,7 +4,7 @@ input,
 select,
 optgroup,
 textarea {
-  font-size: 0.8125rem;
+  font-size: var(--fs-body);
   line-height: 1.5;
   font-weight: 400;
   background-size: cover;
@@ -12,20 +12,20 @@ textarea {
   background-position: center top;
   -webkit-font-smoothing: antialiased;
 
-  @media #{$breakpoint-md-desktop} {
-    font-size: 0.775rem;
-  }
 }
 
 body {
-  font-family: $body-fonts;
-  background-color: $bg-color;
+  font-family: var(--ff-bd);
+  background-color: var(--clr-body-100);
   position: relative;
-  color: $body-color;
+  color: var(--clr-body-600);
 }
 
 .site-content {
-  padding: 0 2rem;
+  padding: 0 2.5rem;
+  @media #{$breakpoint-ls}{
+    padding:0 1.5rem;
+  }
   margin: 2rem 0;
 }
 

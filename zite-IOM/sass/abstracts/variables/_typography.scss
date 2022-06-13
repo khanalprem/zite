@@ -1,17 +1,32 @@
 // stylelint-disable value-keyword-case
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
 // stylelint-enable value-keyword-case
-$body-fonts:'Poppins', sans-serif;
-$heading-fonts:'Poppins', sans-serif;
 
-$font-size-h1:                 1.375rem; //22px
-$font-size-h2:                 1.25rem !default; //20px
-$font-size-h3:                 1.125rem; //18px
-$font-size-h4:                 1.125rem !default;//18px
-$font-size-h5:                 .9375rem !default; //15px
-$font-size-h6:                 0.8125rem !default; //13px;
-$font-paragraph:               14px !default;
-$font-size-navbar:             16px !default;
-$font-size-small:              12px !default;
+
+
+// var(--fs-h1):                 1.375rem; //22px
+// var(--fs-h2):                 1.25rem !default; //20px
+// var(--fs-h3):                 1.125rem; //18px
+// var(--fs-h4):                 1.125rem !default;//18px
+// var(--fs-h5):                 .9375rem !default; //15px
+// var(--fs-h6):                 0.8125rem !default; //13px;
+// var(--fs-body):               14px !default;
+// var(--fs-body):             16px !default;
+// var(--fs-sm):              12px !default;
+
+:root {
+    --ff-bd: 'Poppins', sans-serif;
+    --ff-hd: 'Poppins', sans-serif;
+    --fs-sm: clamp(0.73rem, calc(0.72rem + 0.03vw), 0.75rem);
+    --fs-md: clamp(0.84rem, calc(0.8rem + 0.00vw), 0.88rem);
+    --fs-body: clamp(0.88rem, calc(0.86rem + 0.09vw), 0.94rem);
+    --fs-btn: clamp(0.88rem, calc(0.86rem + 0.09vw), 0.94rem);
+    --fs-lg: clamp(0.88rem, calc(0.84rem + 0.19vw), 1.00rem);
+    --fs-h6: clamp(1.05rem, calc(1.01rem + 0.18vw), 1.125rem);
+    --fs-h5: clamp(1.24rem, calc(1.18rem + 0.30vw), 1.375rem);
+    --fs-h4: clamp(1.41rem, calc(1.3rem + 0.47vw), 1.75rem);
+    --fs-h3: clamp(1.78rem, calc(1.65rem + 0.70vw), 2.25rem);
+    --fs-h2: clamp(2.18rem, calc(1.97rem + 1.01vw), 2.86rem);
+    --fs-h1: clamp(2.61rem, calc(2.33rem + 1.43vw), 3.58rem);
+  }

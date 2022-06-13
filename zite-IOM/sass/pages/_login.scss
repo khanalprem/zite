@@ -11,11 +11,11 @@
   .zite-row {
     @include align-items-stretch;
     .zite-md-7 {
-      background-color: $white-color;
+      background-color: var(--clr-white);
       @include box-shadow(0 0 50px rgba(0, 0, 0, 0.1));
     }
     .zite-md-5 {
-      background-color: $primary-light;
+      background-color: var(--clr-primary-50);
       @include box-shadow(0 0 50px rgba(0, 0, 0, 0.1));
     }
   }
@@ -39,7 +39,7 @@
       }
       p {
         font-size: 0.875rem;
-        color: $heading-color;
+        color: var(--clr-body);
         line-height: 1.5;
       }
     }
@@ -73,7 +73,7 @@
         text-transform: initial;
       }
       b {
-        color: $red-color;
+        color: var(--clr-red);
       }
       // &.login-footer{
 
@@ -90,7 +90,7 @@
         text-transform: initial;
       }
       &.is-clear {
-        color: $primary-color;
+        color: var(--clr-primary-500);
         text-transform: uppercase;
         font-weight: 600;
         @include justify-content-center;
@@ -155,7 +155,7 @@
           }
           a {
             text-decoration: underline;
-            color: $heading-color;
+            color: var(--clr-body);
             font-weight: 500;
           }
         }

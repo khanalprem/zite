@@ -1,9 +1,9 @@
 // a {
-//     color: $primary-color;
+//     color: var(--clr-primary-500);
 //     text-decoration:none;
 
 // 	&:visited {
-// 		color: $primary-dark;
+// 		color: var(--clr-primary-800);
 // 	}
 
 // 	&:hover,

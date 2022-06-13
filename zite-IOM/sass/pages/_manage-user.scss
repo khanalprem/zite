@@ -1,5 +1,5 @@
 .manage-user {
-  background-color: $white-color;
+  background-color: var(--clr-white);
   padding: 1.5rem;
 
   .zite-card {
@@ -16,7 +16,7 @@
   }
 
   .workflow-popup-wrapper {
-    background-color: $bg-color;
+    background-color: var(--clr-body-100);
     padding: 1rem;
 
     .zite-card {
@@ -28,15 +28,15 @@
 
       .zite-body {
         min-height: 220px;
-        background-color: $white-color;
+        background-color: var(--clr-white);
         @include radius(5px);
 
         &.is-border {
-          border: 1px solid $border-color;
+          border: 1px solid var(--clr-body-300);
         }
 
         &.is-bg {
-          background-color: $bg-color;
+          background-color: var(--clr-body-100);
         }
       }
     }
@@ -51,7 +51,7 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: rgba($bg-color, 0.7);
+        background-color: rgba(var(--clr-body-100), 0.7);
       }
     }
 

@@ -61,7 +61,7 @@ header {
                                 }
 
                                 a {
-                                    color: $body-color;
+                                    color: var(--clr-body);
                                     padding-right: 1rem;
 
                                     i {
@@ -84,7 +84,7 @@ header {
                                         li {
                                             a {
                                                 @include align-items-start;
-                                                color: $body-color;
+                                                color: var(--clr-body);
                                                 display: initial;
                                                 padding: 0;
 
@@ -103,12 +103,12 @@ header {
                                                     margin: 0;
 
                                                     a {
-                                                        color: $heading-color;
+                                                        color: var(--clr-body);
                                                     }
 
                                                     b {
                                                         a {
-                                                            color: $heading-color;
+                                                            color: var(--clr-body);
                                                         }
                                                     }
                                                 }
@@ -188,7 +188,7 @@ header {
                                         width: 40px;
                                         height: 40px;
                                         @include radius(100%);
-                                        @include box-shadow(0 10px 20px rgba($heading-color, .2));
+                                        @include box-shadow(0 10px 20px rgba(var(--clr-body), .2));
                                         margin-right: .5rem;
 
                                     }

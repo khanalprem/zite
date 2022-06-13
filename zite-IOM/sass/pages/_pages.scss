@@ -9,13 +9,10 @@
 @import 'submission';
 .page-header {
     margin-bottom: 1rem;
-    h1 {
-        font-size: 1.3rem;
+    h5{
         text-transform: capitalize;
-        @media #{$breakpoint-desktop} {
-            font-size: 1rem;
-        }
     }
+    
     &.is-center {
         text-align: center;
     }

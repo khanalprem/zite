@@ -22,7 +22,7 @@
     width: 100%;
 
     &.selected-item {
-      border: 1px solid $border-color;
+      border: 1px solid var(--clr-body-300);
       height: 2.5rem;
       line-height: 2.5rem;
       padding: 0 1.5rem 0 1rem;
@@ -31,8 +31,8 @@
       @include radius(5px);
       position: relative;
       cursor: pointer;
-      color: $heading-color;
-      background-color: $white-color;
+      color: var(--clr-body);
+      background-color: var(--clr-white);
       @include line-clamp(1);
       @include display-flex(flex);
       @include justify-content-start;
@@ -51,7 +51,7 @@
         right: 0.5rem;
         top: 0;
         font-size: 1.3rem;
-        color: $body-color;
+        color: var(--clr-body);
         z-index: 99;
       }
     }
@@ -66,19 +66,19 @@
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    background-color: $white-color;
+    background-color: var(--clr-white);
     @include box-shadow(0 5px 15px rgba(0, 0, 0, 0.15));
     max-height: 220px;
     display: none;
 
     &::-webkit-scrollbar {
       width: 4px;
-      background: $border-color;
+      background: var(--clr-body-300);
       @include radius(4px);
     }
 
     &::-webkit-scrollbar-track {
-      background-color: $border-color;
+      background-color: var(--clr-body-300);
       @include radius(4px);
     }
 
@@ -94,7 +94,7 @@
       @include align-items-center;
       cursor: pointer;
       @include transition(all 0.3s linear);
-      border-bottom: 1px solid $border-color;
+      border-bottom: 1px solid var(--clr-body-300);
       position: relative;
 
       label,
@@ -122,14 +122,14 @@
           right: 1rem;
           z-index: 2;
           display: block;
-          color: $primary-color;
+          color: var(--clr-primary-500);
           @include transform(translateY(-50%));
           
         }
       }
 
       &:hover {
-        background-color: $primary-light;
+        background-color: var(--clr-primary-50);
       }
     }
 
@@ -145,8 +145,8 @@
   &.is-bg {
     p {
       &.selected-item {
-        border-color: $primary-light;
-        background-color: $primary-light;
+        border-color: var(--clr-primary-50);
+        background-color: var(--clr-primary-50);
       }
     }
   }
@@ -154,15 +154,15 @@
   &.show-dropdown {
     p {
       &.selected-item {
-        border-color: $primary-color;
-        color: $primary-color;
+        border-color: var(--clr-primary-500);
+        color: var(--clr-primary-500);
 
         &::after {
           content: 'arrow_drop_up';
           font-family: 'Material Icons';
           float: right;
           font-size: 1.3rem;
-          color: $primary-color;
+          color: var(--clr-primary-500);
         }
       }
     }

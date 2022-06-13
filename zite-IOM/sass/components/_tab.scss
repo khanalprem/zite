@@ -20,19 +20,19 @@
       display: block;
       text-transform: uppercase;
       padding: 0.5rem;
-      color: $body-color;
+      color: var(--clr-body);
       font-weight: 600;
       position: relative;
       @include transition(all 0.5s linear);
       border: 1px solid transparent;
-      color: $body-light;
+      color: var(--clr-body-500);
       cursor: pointer;
       span {
         &.counter {
           padding: 0 6px;
           @include radius(50%);
-          background-color: $primary-color;
-          color: $white-color;
+          background-color: var(--clr-primary-500);
+          color: var(--clr-white);
           font-weight: 500;
           margin-left: 0.5rem;
         }
@@ -51,12 +51,12 @@
   &.is-bg {
     li {
       a {
-        background-color: $white-color;
+        background-color: var(--clr-white);
         @include radius(5px);
         &.current,
         &:hover {
-          color: $white-color;
-          background-color: $primary-color;
+          color: var(--clr-white);
+          background-color: var(--clr-primary-500);
         }
       }
     }
@@ -70,8 +70,8 @@
           width: 0;
           left: 0;
           bottom: 0;
-          height: 2px;
-          background-color: $primary-color;
+          height: 3px;
+          background-color: var(--clr-primary-500);
           @include transition(width 0.3s linear);
           opacity: 0;
           visibility: hidden;
@@ -79,7 +79,7 @@
       }
       &.current {
         a {
-          color: $heading-color;
+          color: var(--clr-body);
           &::after {
             width: 100%;
             opacity: 1;
@@ -89,7 +89,7 @@
       }
       &:hover {
         a {
-          color: $heading-color;
+          color: var(--clr-body);
         }
       }
     }
@@ -98,7 +98,7 @@
     @include radius(5px);
     li {
       @include transition(all 0.5s ease-in-out);
-      border: 1px solid $border-color;
+      border: 1px solid var(--clr-body-300);
       text-align: center;
       &:not(:last-child) {
         margin-right: 0;
@@ -111,9 +111,9 @@
       }
       &:hover,
       &.active {
-        background-color: $primary-light;
-        border-color: $primary-color;
-        color: $primary-color;
+        background-color: var(--clr-primary-50);
+        border-color: var(--clr-primary-500);
+        color: var(--clr-primary-500);
       }
     }
     &.is-3 {

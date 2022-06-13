@@ -39,14 +39,14 @@ ul {
 
         li {
             padding: .5rem .6125rem;
-            color: $heading-color;
+            color: var(--clr-body);
 
             @include transition(all .4s ease-in-out);
             @include display-flex(flex);
             @include justify-content-start;
 
             a {
-                color: $heading-color;
+                color: var(--clr-body);
             }
 
             figure {
@@ -81,7 +81,7 @@ ul {
 
                 &.drag-icon {
                     display: inline-flex;
-                    color: $body-color;
+                    color: var(--clr-body);
                     margin-right: .6125rem;
                 }
             }
@@ -106,12 +106,12 @@ ul {
                 p {
                     a {
                         font-weight: 600;
-                        color: $heading-color;
+                        color: var(--clr-body);
                     }
                 }
 
                 time {
-                    color: $body-color;
+                    color: var(--clr-body-600);
                     display: block;
                     margin-top: .15rem;
                     font-size: .775rem;
@@ -219,7 +219,7 @@ ul {
                     content: 'chevron_right';
                     font-size: 1.4rem;
                     font-family: 'Material Icons';
-                    color: $body-color;
+                    color: var(--clr-body);
                     z-index: 99;
                     line-height: 1;
                     position: absolute;
@@ -238,7 +238,7 @@ ul {
 
                 a {
                     margin-left: 2rem;
-                    color: $heading-color;
+                    color: var(--clr-body);
                 }
 
                 &::before {
@@ -255,12 +255,12 @@ ul {
 
                 &.active {
                     a {
-                        color: $body-color;
+                        color: var(--clr-body);
                     }
 
                     &::before {
                         content: 'remove_circle_outline';
-                        color: $body-color;
+                        color: var(--clr-body);
 
                     }
                 }
@@ -289,7 +289,7 @@ ul {
             @include display-flex(flex);
             @include justify-content-start;
             @include align-items-center;
-            color: $heading-color;
+            color: var(--clr-body);
             padding: .25rem 0;
 
             @media #{$breakpoint-desktop} {
@@ -425,7 +425,7 @@ ul {
                 font-weight: 600;
                 display: inline-block;
                 font-size: .8rem;
-                color: $heading-color;
+                color: var(--clr-body);
 
                 &::before {
                     content: '';
@@ -703,7 +703,7 @@ ul {
                 @include align-items-start;
 
                 .site-info-item {
-                    color: $heading-color;
+                    color: var(--clr-body);
                     margin-bottom: 10px;
 
                     h5 {
@@ -720,7 +720,7 @@ ul {
                     }
 
                     h6 {
-                        color: $body-color;
+                        color: var(--clr-body);
                         margin-bottom: 5px;
                         text-transform: capitalize;
                     }

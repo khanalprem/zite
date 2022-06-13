@@ -79,7 +79,7 @@ input[type="time"].form-control {
         text-transform: uppercase;
         margin-bottom: .5rem;
         display: block;
-        color: $body-color;
+        color: var(--clr-body);
         font-size: .875rem;
         @include display-flex(flex);
         @include justify-content-start;
@@ -181,7 +181,7 @@ textarea {
             top: 50%;
             @include transform(translateY(-50%));
             font-size: 1.5rem;
-            color: $heading-color;
+            color: var(--clr-body);
             z-index: 99;
             pointer-events: none;
         }
@@ -209,7 +209,7 @@ textarea {
         span {
             &.span-group {
                 padding: 0 1rem;
-                background-color: $heading-color;
+                background-color: var(--clr-body);
                 color: $white-color;
             }
         }

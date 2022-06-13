@@ -9,7 +9,7 @@
         li{
             position: relative;
             a{
-                color:$body-color;
+                color:var(--clr-body);
                 padding:0 .6125rem;
                 font-size: .875rem;
                 font-weight: 600;
@@ -20,7 +20,7 @@
                 @include align-items-center;
                 i,svg{
                     margin-right: .6125rem;
-                    fill:$body-color;
+                    fill:var(--clr-body);
                 }
                 @media #{$breakpoint-md-desktop}{
                     font-size: .8125rem;
@@ -351,7 +351,7 @@
             li{
                 display: block;
                 a{
-                    color:$heading-color;
+                    color:var(--clr-body);
                     padding:.5rem .6125rem;
                     display: block;
                 }

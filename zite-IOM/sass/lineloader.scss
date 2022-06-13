@@ -1,7 +1,7 @@
 .loader__element {
     height: 2px;
     width: 100%;
-    background: rgba($primary-color, 0.4);
+    background: rgba(var(--clr-primary-500), 0.4);
     // position: fixed;
     // top: 20px
 }
@@ -9,7 +9,7 @@
 .loader__element:before {
     content: '';
     display: block;
-    background-color: $primary-color;
+    background-color: var(--clr-primary-500);
     height: 2px;
     width: 0;
     animation: getWidth 400ms ease-in infinite;

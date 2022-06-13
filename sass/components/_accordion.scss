@@ -16,7 +16,7 @@
             &::before {
                 font-size: 1.4rem;
                 font-family: 'Material Icons';
-                color: $body-color;
+                color: var(--clr-body);
                 z-index: 99;
                 line-height: 1;
                 @include display-flex(flex);
@@ -72,7 +72,7 @@
                             @include justify-content-between;
                             @include align-items-center;
                             font-weight: 500;
-                            color: $body-color;
+                            color: var(--clr-body);
                             padding: .35rem .6125rem;
 
                             &:hover {
@@ -106,7 +106,7 @@
 
                             span {
                                 &.counter {
-                                    color: $body-color;
+                                    color: var(--clr-body);
                                 }
                             }
                         }
@@ -270,7 +270,7 @@
                 display: inline-flex;
 
                 i {
-                    color: $body-color;
+                    color: var(--clr-body);
                     font-size: 1rem;
                 }
             }
@@ -311,7 +311,7 @@
                 .org {
                     .org-text {
                         h5 {
-                            color: $heading-color;
+                            color: var(--clr-body);
                         }
                     }
                 }

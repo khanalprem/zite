@@ -20,7 +20,7 @@ body {
     font-family: $body-fonts;
     background-color:$bg-color;
     position: relative;
-    color:$body-color;
+    color:var(--clr-body);
     
         
 }

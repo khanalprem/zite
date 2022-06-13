@@ -7,9 +7,8 @@
         li {
             position: relative;
             a {
-                color: $body-color;
+                color: var(--clr-body-600);
                 padding: 0 0.6125rem;
-                font-size: 0.875rem;
                 font-weight: 600;
                 @include transition(all 0.3s ease-in-out);
                 text-transform: capitalize;
@@ -19,7 +18,7 @@
                 i,
                 svg {
                     margin-right: 0.6125rem;
-                    fill: $body-color;
+                    fill: var(--clr-body-600);
                 }
                 @media #{$breakpoint-md-desktop} {
                     font-size: 0.8125rem;
@@ -30,10 +29,10 @@
                 }
                 &.active,
                 &:hover {
-                    color: $primary-color;
+                    color: var(--clr-primary-500);
                     svg,
                     i {
-                        fill: $primary-color;
+                        fill: var(--clr-primary-500);
                     }
                 }
             }
@@ -58,7 +57,7 @@
                 }
                 ul {
                     &.sub-menu {
-                        background-color: $white-color;
+                        background-color: var(--clr-white);
                         text-align: left;
                         visibility: hidden;
                         opacity: 0;
@@ -81,12 +80,12 @@
                             a {
                                 display: block;
                                 padding: 0.5rem 0.6125rem;
-                                border: 1px solid $border-color;
+                                border: 1px solid var(--clr-body-300);
                                 &::after {
                                     display: none;
                                 }
                                 &:hover {
-                                    background-color: $primary-light;
+                                    background-color: var(--clr-primary-50);
                                 }
                             }
                             &.menu-item-has-children {
@@ -179,7 +178,7 @@
                     max-width: 1366px;
                     width: 100%;
                     left: 0;
-                    background-color: $white-color;
+                    background-color: var(--clr-white);
                     text-align: left;
                     visibility: hidden;
                     opacity: 0;
@@ -219,7 +218,7 @@
                                     }
                                     &:not(:last-child) {
                                         a {
-                                            border-bottom: 1px solid $border-color;
+                                            border-bottom: 1px solid var(--clr-body-300);
                                         }
                                     }
                                 }
@@ -247,10 +246,10 @@
             &.active,
             &:hover {
                 a {
-                    color: $primary-color;
+                    color: var(--clr-primary-500);
                     svg,
                     i {
-                        fill: $primary-color;
+                        fill: var(--clr-primary-500);
                     }
                 }
             }
@@ -275,7 +274,7 @@
         height: 4px;
         border-radius: 4px;
         width: 100%;
-        background-color: $primary-color;
+        background-color: var(--clr-primary-500);
         top: 0;
         transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
         z-index: 1101;
@@ -302,11 +301,11 @@
             }
             &:nth-child(2) {
                 transform: rotate(45deg);
-                background-color: $primary-color;
+                background-color: var(--clr-primary-500);
             }
             &:nth-child(3) {
                 transform: rotate(-45deg);
-                background-color: $primary-color;
+                background-color: var(--clr-primary-500);
             }
         }
     }
@@ -341,7 +340,7 @@
             li {
                 display: block;
                 a {
-                    color: $heading-color;
+                    color: var(--clr-body);
                     padding: 0.5rem 0.6125rem;
                     display: block;
                 }
@@ -350,121 +349,3 @@
     }
 }
 
-body {
-    &.home-3 {
-        .middle-header {
-            padding: 1rem 0;
-            button {
-                min-width: 164px;
-                min-height: initial;
-            }
-            .address-header {
-                @include display-flex(flex);
-                @include justify-content-center;
-                @include align-items-center;
-                li {
-                    @include display-flex(flex);
-                    @include justify-content-end;
-                    @include align-items-center;
-                    @include flex-wrap(nowrap);
-                    span {
-                        &.address-icon {
-                            width: 50px;
-                            height: 50px;
-                            @include display-flex(flex);
-                            @include justify-content-center;
-                            @include align-items-center;
-                            @include flex-direction-column(column);
-                            background-color: $secondary-light;
-                            @include radius(100%);
-                            svg {
-                                color: $secondary-color;
-                            }
-                        }
-                    }
-                    .info-text {
-                        margin-left: 1rem;
-                        h6 {
-                            font-size: 0.875rem;
-                            font-weight: 700;
-                            margin: 0.125rem 0 0 0;
-                        }
-                        span {
-                            font-size: 0.8125rem;
-                            font-weight: 600;
-                        }
-                    }
-                    &:not(:first-child) {
-                        margin-left: 2rem;
-                    }
-                    @media #{$breakpoint-xl} {
-                        padding: 0;
-                        &:last-child {
-                            display: none;
-                        }
-                        &:not(:first-child) {
-                            margin-right: 1rem;
-                        }
-                    }
-                    @media #{$breakpoint-md} {
-                        &:nth-child(2) {
-                            display: none;
-                        }
-                        &:not(:first-child) {
-                            margin-right: 0.6125rem;
-                        }
-                        i {
-                            color: $secondary-color;
-                            font-size: 1rem;
-                        }
-                        .info-text {
-                            margin-left: 0.6125rem;
-                            h6 {
-                                font-size: 0.6125rem;
-                                line-height: 1;
-                                margin: 0;
-                            }
-                            span {
-                                font-size: 0.6125rem;
-                            }
-                        }
-                    }
-                    @media #{$breakpoint-xxs} {
-                        .info-text {
-                            span {
-                                display: none;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .bottom-header {
-            @include display-flex(flex);
-            @include justify-content-start;
-            @include align-items-center;
-            border-top: 1px solid $border-color;
-            position: relative;
-            .main-navigation-wrap {
-                @include display-flex(flex);
-                @include justify-content-start;
-                @include align-items-center;
-            }
-            .main-navigation {
-                ul {
-                    li {
-                        a {
-                            padding: 1.5rem 1rem;
-                        }
-                        &.menu-item-has-children,
-                        &.has-mega-menu {
-                            a {
-                                padding-right: 1.5rem;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}

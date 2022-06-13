@@ -20,7 +20,7 @@ body {
     font-size: .875rem;
     font-weight: 400;
     line-height: 1.5;
-    color: $body-color;
+    color: var(--clr-body);
     text-align: left;
     background-color: $white-color;
 }
@@ -87,7 +87,7 @@ sup {
     top: -0.5em;
 }
 a {
-    color: $body-color;
+    color: var(--clr-body);
     text-decoration: none;
     background-color: transparent;
 }

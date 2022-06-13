@@ -27,7 +27,7 @@
                 }
 
                 @include input-placeholder {
-                    color: $heading-color;
+                    color: var(--clr-body);
                 }
             }
         }
@@ -74,7 +74,7 @@
     a {
         &.toggle-icon {
             margin-left: 1rem;
-            color: $body-color;
+            color: var(--clr-body);
 
             svg {
                 font-size: 1.5rem;

@@ -23,7 +23,7 @@
 
                 i {
                     font-size: 1rem;
-                    color: $body-light;
+                    color: var(--clr-body-500);
                 }
 
                 @media #{$breakpoint-md-desktop} {
@@ -59,7 +59,7 @@
 
                         i {
                             font-size: 1rem;
-                            color: $body-light;
+                            color: var(--clr-body-500);
                         }
                     }
 
@@ -84,7 +84,7 @@
                     cursor: pointer;
                     a{
                         display: block;
-                        color:$heading-color;
+                        color:var(--clr-body);
                     }
                 }
                 &.active{

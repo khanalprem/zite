@@ -1,7 +1,7 @@
 .breadcrumb {
-    padding: 0.25rem 1rem;
-    background-color: $white-color;
-    border-bottom: 1px solid $border-color;
+    padding:.6125rem 1.5rem;
+    background-color: var(--clr-white);
+    border-bottom: 1px solid var(--clr-body-300);
     ol {
         @include display-flex(flex);
         @include justify-content-start;
@@ -12,21 +12,25 @@
             text-transform: capitalize;
             @include display-flex(flex);
             @include align-items-center;
+            color: var(--clr-body);
             a {
-                color: $body-color;
+                color: var(--clr-body-600);
                 font-weight: 400;
+                font-size: var(--fs-md);
                 &:hover {
-                    color: $primary-dark;
+                    color: var(--clr-primary-800);
                 }
             }
             &:not(:last-child) {
                 &::after {
+                    color: var(--clr-body-600);
                     content: 'chevron_right';
                     font-family: 'Material Icons';
                     display: inline-flex;
                     margin: 0 0.6125rem;
                     text-transform: initial;
                     font-size: 1.2rem;
+                    font-weight: 400;
                 }
             }
         }

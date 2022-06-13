@@ -24,18 +24,18 @@
       padding-right: 2rem;
       display: inline-block;
       font-weight: 600;
-      color: $heading-color;
+      color: var(--clr-body);
     }
 
     &.is-light {
-      background-color: $primary-light;
+      background-color: var(--clr-primary-50);
       @include display-flex(flex);
       @include justify-content-start;
       @include align-items-center;
 
       i {
         font-size: 1rem;
-        color: $primary-color;
+        color: var(--clr-primary-500);
         margin-right: 0.5rem;
       }
       &.is-after-icon{
@@ -52,11 +52,11 @@
       }
 
       &:hover {
-        background-color: $primary-color;
-        color: $white-color;
+        background-color: var(--clr-primary-500);
+        color: var(--clr-white);
 
         i {
-          color: $white-color;
+          color: var(--clr-white);
         }
       }
     }
@@ -87,12 +87,12 @@
       position: absolute;
       top: 110%;
       min-width: 150px;
-      background-color: $white-color;
+      background-color: var(--clr-white);
       @include radius(4px);
       z-index: 1012;
       display: none;
       margin-top: -5px;
-      @include box-shadow(0 10px 40px rgba($heading-color, 0.2));
+      @include box-shadow(0 10px 40px rgba(var(--clr-body), 0.2));
 
       &::before {
         content: '';
@@ -100,11 +100,11 @@
         height: 0;
         border-style: solid;
         border-width: 0 10px 10px 10px;
-        border-color: transparent transparent $white-color transparent;
+        border-color: transparent transparent var(--clr-white) transparent;
         position: absolute;
         left: 30px;
         top: -10px;
-        @include box-shadow(0 10px 40px rgba($heading-color, 0.2));
+        @include box-shadow(0 10px 40px rgba(var(--clr-body), 0.2));
       }
 
       li {
@@ -113,7 +113,7 @@
 
         a {
           padding: 0.5rem 0.6125rem;
-          color: $heading-color;
+          color: var(--clr-body);
           @include transition(all 0.4s ease-in-out);
           @include display-flex(flex);
           @include justify-content-start;
@@ -124,7 +124,7 @@
           svg {
             margin-right: 0.6125rem;
             font-size: 1rem;
-            color: $body-color;
+            color: var(--clr-body);
 
             img {
               max-width: 16px;
@@ -136,14 +136,14 @@
           }
 
           &:hover {
-            background-color: $primary-light;
+            background-color: var(--clr-primary-50);
           }
         }
         
 
         span {
           // padding:.5rem .6125rem;
-          color: $heading-color;
+          color: var(--clr-body);
           @include transition(all 0.4s ease-in-out);
           @include display-flex(flex);
           @include justify-content-start;
@@ -154,7 +154,7 @@
           svg {
             margin-right: 0.6125rem;
             font-size: 1rem;
-            color: $body-color;
+            color: var(--clr-body);
 
             img {
               max-width: 16px;
@@ -166,12 +166,12 @@
           }
 
           &:hover {
-            background-color: $primary-light;
+            background-color: var(--clr-primary-50);
           }
         }
 
         &:not(:last-child) {
-          border-bottom: 1px solid $border-color;
+          border-bottom: 1px solid var(--clr-body-300);
         }
       }
     }
@@ -193,7 +193,7 @@
             font-size: 0.875rem;
             padding: 0.35rem 0.6125rem;
             text-transform: capitalize;
-            color: $heading-color;
+            color: var(--clr-body);
           }
         }
       }

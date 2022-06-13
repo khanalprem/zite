@@ -25,7 +25,7 @@
             &.form-control {
                 height: calc(1.5em + 0.75rem + 2px);
                 @include input-placeholder {
-                    color: $border-color;
+                    color: var(--clr-body-300);
                     font-size: 0.775rem;
                     text-transform: capitalize;
                 }
@@ -37,15 +37,15 @@
             display: block;
             min-width: 160px;
             &.selected-item {
-                border: 1px solid $border-color;
+                border: 1px solid var(--clr-body-300);
                 height: 2.3rem;
                 line-height: 2.3rem;
             }
         }
     }
     &.project-summary-filter {
-        background-color: $white-color;
-        @include box-shadow(0 0 50px rgba($body-color, .5));
+        background-color: var(--clr-white);
+        @include box-shadow(0 0 50px rgba(var(--clr-body), .5));
         padding: 2rem;
         position: absolute;
         left: 0;

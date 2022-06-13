@@ -37,13 +37,13 @@ ul {
         @include radius(5px);
         li {
             padding: 0.5rem 0.6125rem;
-            color: $heading-color;
+            color: var(--clr-body);
             @include transition(all 0.4s ease-in-out);
             @include display-flex(flex);
             @include justify-content-start;
             position: relative;
             a {
-                color: $heading-color;
+                color: var(--clr-body);
                 font-weight: 500;
             }
             .project {
@@ -59,29 +59,29 @@ ul {
                     width: 40px;
                     height: 40px;
                     @include radius(100%);
-                    border: 1px solid $border-color;
+                    border: 1px solid var(--clr-body-300);
                 }
             }
             span {
                 &.counter {
                     padding: 0 8px;
                     @include radius(50%);
-                    background-color: $primary-light;
-                    color: $primary-color;
+                    background-color: var(--clr-primary-50);
+                    color: var(--clr-primary-500);
                     font-weight: 500;
                     margin-left: 0.5rem;
-                    border: 1px solid $white-color;
+                    border: 1px solid var(--clr-white);
                     display: inline-flex;
                     @include align-items-center;
                     height: 24px;
                     &:hover {
-                        background-color: $primary-color;
-                        color: $white-color;
+                        background-color: var(--clr-primary-500);
+                        color: var(--clr-white);
                     }
                 }
                 &.drag-icon {
                     display: inline-flex;
-                    color: $body-color;
+                    color: var(--clr-body);
                     margin-right: 0.6125rem;
                 }
             }
@@ -102,23 +102,20 @@ ul {
                 p {
                     a {
                         font-weight: 600;
-                        // color: $heading-color;
+                        // color: var(--clr-body);
                     }
                 }
                 time {
-                    color: $body-color;
+                    color: var(--clr-body-600);
                     display: block;
                     margin-top: 0.15rem;
-                    font-size: 0.775rem;
+                    font-size: var(--fs-md);
                 }
                 a {
                     &.phone-number {
-                        font-weight: 600;
-                        color: $primary-color;
-                        font-size: 0.775rem;
-                        @media #{$breakpoint-md-desktop} {
-                            font-size: 0.775rem;
-                        }
+                        color: var(--clr-primary-500);
+                        font-size: var(--fs-md)
+                       
                     }
                 }
                 h6 {
@@ -131,7 +128,7 @@ ul {
                 }
             }
             &:not(:last-child) {
-                border-bottom: 1px solid $border-color;
+                border-bottom: 1px solid var(--clr-body-300);
             }
             .list-content-wrapper {
                 @include display-flex(flex);
@@ -169,7 +166,7 @@ ul {
                 }
                 i {
                     font-size: 1rem;
-                    color: $primary-color;
+                    color: var(--clr-primary-500);
                 }
             }
             &.list-footer {
@@ -180,7 +177,7 @@ ul {
                 }
             }
             &.is-active {
-                background-color: $primary-light;
+                background-color: var(--clr-primary-50);
             }
             &.is-selected {
                 &::after {
@@ -189,7 +186,7 @@ ul {
                   top: 50%;
                   font-family: 'Material Icons';
                   right: 1rem;
-                  color: $primary-color;
+                  color: var(--clr-primary-500);
                   
                 }
               }
@@ -199,7 +196,7 @@ ul {
             &.is-around {
                 @include justify-content-around;
             }
-            &.review-card {
+            .review-card {
                 width: 100%;
                 @include transition(all 0.5s ease-in-out);
                 display: block;
@@ -212,13 +209,13 @@ ul {
                     right: 0;
                     top: 0;
                     .circle-icon {
-                        background-color: $white-color;
+                        background-color: var(--clr-white);
                         width: 24px;
                         height: 24px;
                         min-height: 24px;
                         i {
                             font-size: 1.1rem;
-                            color: $body-color;
+                            color: var(--clr-body);
                         }
                     }
                     ul {
@@ -231,12 +228,12 @@ ul {
                 .is-review-breadcrumb {
                     .rvw-breadcrumb-item {
                         @include display-flex(flex);
-                        color: $body-color;
+                        color:var(--clr-body-600);
                         a {
                             text-transform: uppercase;
-                            font-size: 0.8125rem;
-                            color: $body-color;
                             max-width: 130px;
+                            font-weight: 500;
+                            color:var(--clr-body-600);
                         }
                         &:not(:last-child) {
                             &::after {
@@ -269,7 +266,7 @@ ul {
                         margin-bottom: 0.5rem !important;
                     }
                     .case-id {
-                        color: $primary-color;
+                        color: var(--clr-primary-500);
                         font-weight: 100;
                     }
                 }
@@ -281,17 +278,17 @@ ul {
                         }
                         span {
                             font-weight: 500;
-                            color: $body-color;
+                            color: var(--clr-body);
                         }
                     }
                     .review-submission-by {
                         b {
                             font-weight: 500;
                             margin-right: 0.5rem;
-                            color: $body-color;
+                            color: var(--clr-body);
                         }
                         span {
-                            color: $heading-color;
+                            color: var(--clr-body);
                             max-width: 140px;
                             font-weight: 500;
                         }
@@ -307,7 +304,7 @@ ul {
                     }
                 }
                 &:hover {
-                    background-color: $primary-light;
+                    background-color: var(--clr-primary-50);
                 }
             }
             &.cfp-review-card {
@@ -320,19 +317,19 @@ ul {
                         b {
                             font-weight: 500;
                             margin-right: 0.5rem;
-                            color: $body-color;
+                            color: var(--clr-body);
                         }
                         span {
-                            color: $heading-color;
+                            color: var(--clr-body);
                             max-width: 140px;
                             font-weight: 500;
                         }
                     }
                     time {
-                        color: $body-color;
+                        color: var(--clr-body-600);
                         display: block;
                         margin-top: 0.15rem;
-                        font-size: 0.775rem;
+                        font-size: var(--fs-md);
                         max-width: 100px;
                     }
                 }
@@ -342,13 +339,13 @@ ul {
                 }
                 .custom-dropdown {
                     .circle-icon {
-                        background-color: $white-color;
+                        background-color: var(--clr-white);
                         width: 24px;
                         height: 24px;
                         min-height: 24px;
                         i {
                             font-size: 1.1rem;
-                            color: $body-color;
+                            color: var(--clr-body);
                         }
                     }
                     ul {
@@ -361,11 +358,11 @@ ul {
                 .is-review-breadcrumb {
                     .rvw-breadcrumb-item {
                         @include display-flex(flex);
-                        color: $body-color;
+                        color: var(--clr-body);
                         a {
                             text-transform: uppercase;
                             font-size: 0.8125rem;
-                            color: $body-color;
+                            color: var(--clr-body);
                             max-width: 130px;
                             font-weight: 500;
                         }
@@ -408,7 +405,7 @@ ul {
                         padding-right: 1rem;
                     }
                     .case-id {
-                        color: $primary-color;
+                        color: var(--clr-primary-500);
                         font-weight: 600;
                     }
                     .icon-wrapper {
@@ -427,7 +424,7 @@ ul {
                         }
                         span {
                             font-weight: 500;
-                            color: $body-color;
+                            color: var(--clr-body);
                         }
                     }
                     .review-submission-by {
@@ -436,10 +433,10 @@ ul {
                         b {
                             font-weight: 500;
                             margin-right: 0.5rem;
-                            color: $body-color;
+                            color: var(--clr-body);
                         }
                         span {
-                            color: $heading-color;
+                            color: var(--clr-body);
                             max-width: 140px;
                             font-weight: 500;
                         }
@@ -459,12 +456,12 @@ ul {
                     }
                 }
                 &:hover {
-                    background-color: $primary-light;
+                    background-color: var(--clr-primary-50);
                 }
             }
         }
         &.is-border {
-            border: 1px solid $border-color;
+            border: 1px solid var(--clr-body-300);
         }
         &.is-center {
             @include align-items-center;
@@ -481,7 +478,7 @@ ul {
                     content: 'chevron_right';
                     font-size: 1.4rem;
                     font-family: 'Material Icons';
-                    color: $body-color;
+                    color: var(--clr-body);
                     z-index: 99;
                     line-height: 1;
                     position: absolute;
@@ -497,15 +494,15 @@ ul {
                         font-size: 1.3rem;
                     }
                     &.is-active {
-                        background-color: $primary-light;
+                        background-color: var(--clr-primary-50);
                         &::after {
                             content: 'check';
                         }
                         a {
-                            background-color: $primary-light;
-                            color: $primary-color;
+                            background-color: var(--clr-primary-50);
+                            color: var(--clr-primary-500);
                             a {
-                                color: $primary-color;
+                                color: var(--clr-primary-500);
                             }
                         }
                     }
@@ -519,13 +516,13 @@ ul {
                 cursor: pointer;
                 a {
                     margin-left: 2rem;
-                    color: $heading-color;
+                    color: var(--clr-body);
                 }
                 &::before {
                     content: 'add_circle_outline';
                     font-size: 1.4rem;
                     font-family: 'Material Icons';
-                    color: $primary-color;
+                    color: var(--clr-primary-500);
                     z-index: 99;
                     line-height: 1;
                     position: absolute;
@@ -533,20 +530,20 @@ ul {
                     left: 10px;
                 }
                 &.active {
-                    background-color: $primary-light;
+                    background-color: var(--clr-primary-50);
                     a {
-                        color: $body-color;
+                        color: var(--clr-body);
                     }
                     &::before {
                         content: 'remove_circle_outline';
-                        color: $body-color;
+                        color: var(--clr-body);
                     }
                 }
                 &.is-checked {
-                    background-color: $primary-light;
-                    color: $primary-color;
+                    background-color: var(--clr-primary-50);
+                    color: var(--clr-primary-500);
                     a {
-                        color: $primary-color;
+                        color: var(--clr-primary-500);
                     }
                     &::before {
                         content: 'check';
@@ -571,7 +568,7 @@ ul {
                     @include transition(all .5s ease-in-out);
                     i {
                         font-size: 1rem;
-                        color: $body-color;
+                        color: var(--clr-body);
                         cursor: pointer;
                         width: 24px;
                         height: 24px;
@@ -582,7 +579,7 @@ ul {
                         @include transition(all .4s ease-in-out);
                         @include radius(100%);
                         &:hover {
-                            background-color: $white-color;
+                            background-color: var(--clr-white);
                         }
                     }
                 }
@@ -603,13 +600,13 @@ ul {
             @include display-flex(flex);
             @include justify-content-start;
             @include align-items-center;
-            color: $heading-color;
+            color: var(--clr-body);
             padding: 0.25rem 0;
             @media #{$breakpoint-desktop} {
                 font-size: 0.775rem;
             }
             i {
-                color: $primary-color;
+                color: var(--clr-primary-500);
                 margin-right: 0.6125rem;
             }
         }
@@ -631,7 +628,7 @@ ul {
             width: 100%;
             margin: 0;
             label {
-                color: $heading-color;
+                color: var(--clr-body);
                 font-weight: 500;
             }
             .check-content {
@@ -645,7 +642,7 @@ ul {
                 }
                 b {
                     text-transform: capitalize;
-                    color: $heading-color;
+                    color: var(--clr-body);
                     font-weight: 500;
                 }
             }
@@ -653,7 +650,7 @@ ul {
         li {
             &:focus-within,
             &:hover {
-                background-color: $primary-light;
+                background-color: var(--clr-primary-50);
             }
         }
     }
@@ -668,11 +665,11 @@ ul {
         &::-webkit-scrollbar {
             width: 4px;
             height: 8px;
-            background: $border-color;
+            background: var(--clr-body-300);
             @include radius(4px);
         }
         &::-webkit-scrollbar-track {
-            background-color: $border-color;
+            background-color: var(--clr-body-300);
             @include radius(4px);
         }
         &::-webkit-scrollbar-thumb {
@@ -690,7 +687,7 @@ ul.selected-general-form {
         padding: 0.6125rem;
         @include radius(5px);
         margin-top: 10px;
-        background-color: $primary-light;
+        background-color: var(--clr-primary-50);
         position: relative;
         .form-icon {
             @include flex(0 0 50px);
@@ -741,13 +738,13 @@ ul {
             @include justify-content-between;
             @include align-items-start;
             padding: 10px 10px 0;
-            border: 1px solid $border-color;
+            border: 1px solid var(--clr-body-300);
             @include radius(5px);
             @include transition(all 0.5s ease-in-out);
             .inline-row {
                 @include align-items-start;
                 .site-info-item {
-                    color: $heading-color;
+                    color: var(--clr-body);
                     margin-bottom: 10px;
                     h5 {
                         img {
@@ -761,7 +758,7 @@ ul {
                         }
                     }
                     h6 {
-                        color: $body-color;
+                        color: var(--clr-body);
                         margin-bottom: 5px;
                         text-transform: capitalize;
                     }
@@ -774,7 +771,7 @@ ul {
                 margin-bottom: 1rem;
             }
             &:hover {
-                background-color: $primary-light;
+                background-color: var(--clr-primary-50);
             }
         }
     }

@@ -41,7 +41,7 @@
             }
             p{
                 font-size: .875rem;
-                color:$heading-color;
+                color:var(--clr-body);
                 line-height: 1.5;
             }
         }
@@ -159,7 +159,7 @@
                     }
                     a{
                        text-decoration: underline;
-                       color:$heading-color;
+                       color:var(--clr-body);
                        font-weight: 500;
                     }
                 }

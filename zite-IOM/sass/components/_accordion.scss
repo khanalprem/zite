@@ -19,14 +19,14 @@
                     @include transition(all .4s ease-in-out);
                     @include radius(100%);
                     i {
-                        color: $body-color;
+                        color: var(--clr-body);
                         font-size: 1.1rem;
                     }
                     &:hover {
-                        background-color: $white-color;
-                        @include box-shadow(0 1px 3px rgba($body-color, .1));
+                        background-color: var(--clr-white);
+                        @include box-shadow(0 1px 3px rgba(var(--clr-body), .1));
                         i {
-                            color: $primary-color;
+                            color: var(--clr-primary-500);
                         }
                     }
                 }
@@ -38,7 +38,7 @@
             &::before {
                 font-size: 1.4rem;
                 font-family: 'Material Icons';
-                color: $body-color;
+                color: var(--clr-body);
                 z-index: 99;
                 line-height: 1;
                 @include display-flex(flex);
@@ -64,11 +64,11 @@
             max-height: 500px;
             &::-webkit-scrollbar {
                 width: 4px;
-                background: $border-color;
+                background: var(--clr-body-300);
                 @include radius(4px);
             }
             &::-webkit-scrollbar-track {
-                background-color: $border-color;
+                background-color: var(--clr-body-300);
                 @include radius(4px);
             }
             &::-webkit-scrollbar-thumb {
@@ -90,7 +90,7 @@
                             @include justify-content-between;
                             @include align-items-center;
                             font-weight: 500;
-                            color: $body-color;
+                            color: var(--clr-body);
                             padding: 0.35rem 0.6125rem;
                             &:hover {
                                 background-color: $secondary-light;
@@ -117,7 +117,7 @@
                             }
                             span {
                                 &.counter {
-                                    color: $body-color;
+                                    color: var(--clr-body);
                                 }
                             }
                         }
@@ -125,12 +125,12 @@
                 }
                 &.list {
                     li {
-                        background-color: $white-color;
+                        background-color: var(--clr-white);
                         @include radius(5px);
                         @include transition(all 0.5s ease-in-out);
                         &:hover,
                         &.active {
-                            background-color: $primary-light;
+                            background-color: var(--clr-primary-50);
                             cursor: pointer;
                         }
                     }
@@ -141,9 +141,9 @@
                         &.is-check {
                             li {
                                 &.is-active {
-                                    background-color: $primary-light;
+                                    background-color: var(--clr-primary-50);
                                     a {
-                                        color: $heading-color;
+                                        color: var(--clr-body);
                                     }
                                 }
                             }
@@ -158,7 +158,7 @@
             }
         }
         &.is-bg {
-            background-color: $bg-color;
+            background-color: var(--clr-body-100);
             @include radius(5px);
             .acc-header {
                 padding: 0.6125rem;
@@ -166,8 +166,8 @@
             .acc-body {
                 padding: 0 0.6125rem 0.6125rem 0.6125rem;
                 &.is-bg {
-                    background-color: $white-color;
-                    border: 1px solid $border-color;
+                    background-color: var(--clr-white);
+                    border: 1px solid var(--clr-body-300);
                     @include radius(5px);
                     padding-top: 10px;
                 }
@@ -176,7 +176,7 @@
         &.active {
             .acc-header {
                 h5 {
-                    color: $primary-color;
+                    color: var(--clr-primary-500);
                 }
             }
             .acc-body {
@@ -220,7 +220,7 @@
                     content: 'expand_more';
                     width: 24px;
                     height: 24px;
-                    border: 1px solid $border-color;
+                    border: 1px solid var(--clr-body-300);
                     margin-left: 0.6125rem;
                     font-size: 1rem;
                 }
@@ -229,8 +229,8 @@
                 .acc-header {
                     &::after {
                         content: 'expand_less';
-                        background-color: $primary-light;
-                        border-color: $primary-color;
+                        background-color: var(--clr-primary-50);
+                        border-color: var(--clr-primary-500);
                     }
                 }
             }
@@ -260,7 +260,7 @@
                         height: 28px;
                         width: 100%;
                         @include radius(100%);
-                        border: 1px solid $border-color;
+                        border: 1px solid var(--clr-body-300);
                     }
                 }
                 .org-text {
@@ -277,7 +277,7 @@
             .org-links {
                 display: inline-flex;
                 i {
-                    color: $body-color;
+                    color: var(--clr-body-500);
                     font-size: 1.1rem;
                 }
             }
@@ -300,6 +300,13 @@
                                     font-size: 1rem;
                                 }
                             }
+                            &.is-active,&:hover{
+                                .org-links {
+                                    i {
+                                        color:var(--clr-primary-500);
+                                    }
+                                } 
+                            }
                         }
                     }
                 }
@@ -311,7 +318,7 @@
                 .org {
                     .org-text {
                         h5 {
-                            color: $heading-color;
+                            color: var(--clr-body);
                         }
                     }
                 }
@@ -322,11 +329,11 @@
         margin-bottom: 0;
     }
     &.is-border {
-        border: 1px solid $border-color;
+        border: 1px solid var(--clr-body-300);
         @include radius(4px);
         .acc-list {
             .acc-header {
-                border-bottom: 1px solid $border-color;
+                border-bottom: 1px solid var(--clr-body-300);
                 padding: 0.5rem 0.6125rem;
             }
             .acc-body {
@@ -341,7 +348,7 @@
                 }
             }
             &:not(:last-child) {
-                border-bottom: 1px solid $border-color;
+                border-bottom: 1px solid var(--clr-body-300);
             }
         }
     }

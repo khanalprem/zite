@@ -1,7 +1,7 @@
 .upload {
   position: relative;
   padding: 2rem;
-  border: 1px solid $border-color;
+  border: 1px solid var(--clr-body-300);
   @include radius(16px);
   @include display-flex(flex);
   @include justify-content-center;
@@ -41,10 +41,10 @@
       p {
         margin: 0;
         font-size: 0.775rem;
-        color: $body-color;
+        color: var(--clr-body);
 
         a {
-          color: $primary-color;
+          color: var(--clr-primary-500);
           font-weight: 600;
         }
       }
@@ -57,7 +57,7 @@
   width: 100%;
   svg{
     max-height: 16px;
-    fill:$body-color
+    fill:var(--clr-body)
   }
   &.width-auto{
     width: initial;
@@ -93,10 +93,10 @@
     @include flex-direction-column(column);
     width: 60px;
     height: 60px;
-    border: 1px solid $border-color;
+    border: 1px solid var(--clr-body-300);
     @include radius(50%);
     padding: 5px;
-    background-color: $primary-light;
+    background-color: var(--clr-primary-50);
 
     img {
       max-height: 45px;

@@ -1,7 +1,6 @@
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: $body-color;
   @include radius(5px);
   table-layout: fixed;
   overflow: hidden;
@@ -9,7 +8,7 @@
 
   &.is-border {
     tr {
-      border: 1px solid $border-color;
+      border: 1px solid var(--clr-body-300);
     }
   }
 }
@@ -18,20 +17,20 @@
 .table th {
   padding: 0.5rem 0.75rem;
   vertical-align: top;
-  border-top: 1px solid $border-color;
+  border-top: 1px solid var(--clr-body-300);
 }
 
 .table thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid $border-color;
-  background-color: $bg-color;
-  color: $body-color;
+  border-bottom: 2px solid var(--clr-body-300);
+  background-color: var(--clr-body-100);
+  color: var(--clr-body-600);
   font-weight: 400;
   text-transform: capitalize;
 }
 
 .table tbody + tbody {
-  border-top: 2px solid $border-color;
+  border-top: 2px solid var(--clr-body-300);
 }
 
 .table-sm td,
@@ -41,7 +40,7 @@
 
 .table-bordered td,
 .table-bordered th {
-  border: 1px solid $border-color;
+  border: 1px solid var(--clr-body-300);
 }
 
 @media (max-width: 575.98px) {
@@ -113,13 +112,6 @@
   -webkit-overflow-scrolling: touch;
 
   table {
-    h6 {
-      font-size: 0.8125rem;
-
-      @media #{$breakpoint-desktop} {
-        font-size: 0.775rem;
-      }
-    }
 
     th {
       vertical-align: middle;
@@ -134,8 +126,7 @@
     }
 
     td {
-      color: $heading-color;
-
+      color:var(--clr-body);
       .site-progress {
         @include display-flex(flex);
         @include align-items-center;
@@ -198,7 +189,7 @@
       span {
         &.form-guide {
           i {
-            color: $body-color;
+            color: var(--clr-body);
             font-size: 1rem;
           }
         }
@@ -210,7 +201,7 @@
 
       b {
         font-weight: 500;
-        color: $heading-color;
+        color: var(--clr-body);
 
         &.counter {
           margin-left: 0.6125rem;
@@ -226,7 +217,7 @@
       @include radius(5px);
 
       &.form-header {
-        h5 {
+      p {
           @include display-flex(flex);
           @include justify-content-start;
           @include align-items-center;
@@ -237,8 +228,8 @@
         }
 
         &.active {
-          h5 {
-            color: $primary-color;
+          p {
+            color: var(--clr-primary-500);
 
             i {
               @include transform(rotate(180deg));
@@ -251,8 +242,8 @@
     tr {
       &.row-form-header {
         td {
-          h6 {
-            color: $primary-color;
+          p {
+            color: var(--clr-primary-500);
             position: relative;
             @include display-flex(flex);
             @include justify-content-start;
@@ -289,8 +280,8 @@
             padding-left: 2rem;
           }
 
-          h6 {
-            color: $heading-color;
+          p {
+            color: var(--clr-body);
             position: relative;
             @include display-flex(flex);
             @include justify-content-start;
@@ -307,7 +298,7 @@
         }
         &.is-active {
           td {
-            h6 {
+            p {
               &::before {
                 content: 'arrow_drop_up';
                 font-family: 'Material Icons';
@@ -330,14 +321,14 @@
 
       .custom-checkbox {
         label {
-          color: $heading-color;
+          color: var(--clr-body);
           font-weight: 600;
           font-size: 0.875rem;
         }
 
         .check-content {
           b {
-            color: $heading-color;
+            color: var(--clr-body);
             font-weight: 600;
             font-size: 0.875rem;
           }
@@ -358,7 +349,7 @@
         p {
           height: 2.2rem;
           line-height: 2.2rem;
-          background-color: $white-color;
+          background-color: var(--clr-white);
         }
       }
 
@@ -367,7 +358,7 @@
         cursor: pointer;
 
         &:hover {
-          color: $primary-color;
+          color: var(--clr-primary-500);
         }
       }
     }
@@ -383,7 +374,7 @@
       }
 
       span {
-        color: $body-light;
+        color: var(--clr-body-500);
 
         &:not(:last-child) {
           margin-right: 0.6125rem;
@@ -404,7 +395,7 @@
 
   &.is-sticky {
     overflow-x: unset;
-    background-color: $bg-color;
+    background-color: var(--clr-body-100);
 
     table {
       thead {
@@ -436,14 +427,14 @@
     @include display-flex(flex);
     @include justify-content-center;
     @include align-items-center;
-    // color: $body-color;
+    // color: var(--clr-body);
     @include radius(20px);
     cursor: pointer;
     @include transition(all 0.4s ease-in-out);
     min-width: 28px;
     min-height: 28px;
     margin-right: -4px;
-    border: 1px solid $white-color;
+    border: 1px solid var(--clr-white);
     @include transform(scale(1));
     position: relative;
     flex-wrap: nowrap;
@@ -464,23 +455,23 @@
     }
 
     &.is-blue {
-      background-color: $blue-light;
-      color: $blue-color;
+      background-color: var(--clr-blue-50);
+      color: var(--clr-blue);
     }
 
     &.is-red {
-      background-color: $red-light;
-      color: $red-color;
+      background-color: var(--clr-red-50);
+      color: var(--clr-red);
     }
 
     &.is-green {
-      background-color: $green-light;
-      color: $green-color;
+      background-color: var(--clr-green-50);
+      color: var(--clr-green);
     }
 
     &.is-orange {
-      background-color: $orange-light;
-      color: $orange-color;
+      background-color: var(--clr-orange-50);
+      color: var(--clr-orange);
     }
 
     img {
@@ -516,12 +507,12 @@
     @include justify-content-center;
     @include align-items-center;
     font-size: 0.875rem;
-    color: $body-color;
+    color: var(--clr-body);
 
     b {
       font-weight: 600;
       margin-right: 0.35rem;
-      color: $heading-color;
+      color: var(--clr-body);
     }
 
     &:not(:last-child) {
@@ -531,5 +522,66 @@
         margin: 0 0.5rem;
       }
     }
+  }
+}
+
+
+.table-pagination {
+  .paging-left {
+    .custom-select {
+      max-width: 80px;
+
+      p {
+        &.selected-item {
+          min-width: 80px;
+        }
+      }
+
+      .select-list {
+        top: auto;
+        bottom: 100%;
+        min-width: 80px;
+
+      }
+    }
+
+    span {
+      &.row-text {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .paging-right {
+    flex-grow: 1;
+
+    input {
+      max-width: 50px;
+      height: calc(1em + 0.75rem + 2px);
+    }
+  }
+
+  p {
+    &.row-count {
+      span {
+        &:nth-child(2) {
+          margin: 0 0.5rem;
+        }
+      }
+    }
+
+    &.next-prev {
+      span {
+        cursor: pointer;
+      }
+    }
+
+    &.jumps {
+      span {
+        margin-right: 0.5rem;
+      }
+    }
+
+    
   }
 }

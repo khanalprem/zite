@@ -14,16 +14,16 @@ ul {
         @include align-items-center;
         @include flex-direction-column(column);
         @include box-shadow(0 10px 30px rgba(112, 112, 112, 0.33));
-        background-color: $white-color;
+        background-color: var(--clr-white);
         @include transition(all 0.5s ease-in-out);
         svg {
-          color: $body-color;
+          color: var(--clr-body);
           margin: 0;
         }
         &:hover {
           background-color: $secondary-color;
           svg {
-            color: $white-color;
+            color: var(--clr-white);
           }
         }
       }

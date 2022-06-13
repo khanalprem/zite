@@ -15,10 +15,10 @@
                 }
                 span {
                     &.count {
-                        background-color: $primary-color;
+                        background-color: var(--clr-primary-500);
                         @include radius(100%);
                         padding: 0 5px;
-                        color: $white-color;
+                        color: var(--clr-white);
                         margin-left: 4px;
                         font-size: .775rem;
                     }
@@ -30,10 +30,10 @@
 
 span {
     &.count {
-        background-color: $primary-color;
+        background-color: var(--clr-primary-500);
         @include radius(100%);
         padding: 0 5px;
-        color: $white-color;
+        color: var(--clr-white);
         margin-left: 4px;
         font-size: .775rem;
     }

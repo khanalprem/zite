@@ -22,12 +22,12 @@
             display: block;
             text-transform: uppercase;
             padding:.5rem;
-            color:$body-color;
+            color:var(--clr-body);
             font-weight: 600;
             position: relative;
             @include transition(all .5s linear);
             border:1px solid transparent;
-            color:$body-light;
+            color:var(--clr-body-500);
             cursor: pointer;
             span{
                 &.counter{
@@ -82,7 +82,7 @@
             }
             &.current {
                 a{
-                    color: $heading-color;
+                    color: var(--clr-body);
                     &::after {
                         width: 100%;
                         opacity: 1;
@@ -92,7 +92,7 @@
             }
             &:hover {
                 a{
-                    color: $heading-color;
+                    color: var(--clr-body);
                 }
             }
         }

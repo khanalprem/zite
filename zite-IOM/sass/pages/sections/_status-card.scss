@@ -24,6 +24,7 @@
         }
       }
     }
+    
 
     .submission-progress-summary {
       flex-grow: 1;
@@ -49,31 +50,31 @@
 
       &.is-open {
         &.is-active {
-          background-color: rgba($open-color, 0.15);
+          background-color: var(--clr-blue-50);
         }
       }
 
       &.is-flagged {
         &.is-active {
-          background-color: rgba($flaggedColor, 0.15);
+          background-color: var(--clr-orange-50);
         }
       }
 
       &.is-rejected {
         &.is-active {
-          background-color: rgba($rejectedColor, 0.15);
+          background-color: var(--clr-red-50);
         }
       }
 
       &.is-inprogress {
         &.is-active {
-          background-color: rgba($inProgressColor, 0.15);
+          background-color: var(--clr-green-50);
         }
       }
 
       &.is-approved {
         &.is-active {
-          background-color: rgba($approvedColor, 0.15);
+          background-color: var(--clr-purple-50);
         }
       }
     }

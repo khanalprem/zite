@@ -13,7 +13,7 @@
             @include display-flex(flex);
             @include align-items-center;
             a{
-                color:$body-color;
+                color:var(--clr-body);
                 font-weight: 400;
                 &:hover{
                     color:$primary-dark;

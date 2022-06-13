@@ -27,13 +27,13 @@
             vertical-align: text-top;
             width: 16px;
             height: 16px;
-            background: $white-color;
+            background: var(--clr-white);
             border: 2px solid $border-dark;
             @include radius(2px);
         }
         // Box hover
         // &:hover + label:before {
-        //     background: $blue-color;
+        //     background: var(--clr-blue);
         // }
         // Box focus
         &:focus+label:before {
@@ -41,8 +41,8 @@
         }
         // Box checked
         &:checked+label:before {
-            background: $primary-color;
-            border-color: $primary-color;
+            background: var(--clr-primary-500);
+            border-color: var(--clr-primary-500);
         }
         // Disabled state label.
         &:disabled+label {
@@ -63,15 +63,15 @@
             @include transform(translateY(-40%));
             line-height: 1;
             font-family: 'Material Icons';
-            color: $white-color;
+            color: var(--clr-white);
             text-transform: none;
             font-size: 0.8rem;
             &:checked+label:before {
-                border-color: $primary-color;
+                border-color: var(--clr-primary-500);
                 box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
             }
             &:checked+label {
-                color: $primary-color;
+                color: var(--clr-primary-500);
             }
         }
     }
@@ -112,12 +112,12 @@
             width: 18px;
             height: 18px;
             @include radius(50%);
-            background: $white-color;
+            background: var(--clr-white);
             border: 1.5px solid $border-dark;
         }
         // Box hover
         // &:hover + label:before {
-        //     background: $blue-color;
+        //     background: var(--clr-blue);
         // }
         // Box focus
         &:focus+label:before {
@@ -125,7 +125,7 @@
         }
         // Box checked
         &:checked+label:before {
-            background: $primary-color;
+            background: var(--clr-primary-500);
         }
         // Disabled state label.
         &:disabled+label {
@@ -143,17 +143,17 @@
             position: absolute;
             left: 5px;
             top: 7px;
-            background: $primary-color;
+            background: var(--clr-primary-500);
             width: 8px;
             height: 8px;
             @include radius(50%);
         }
         &:checked+label:before {
-            border-color: $white-color;
+            border-color: var(--clr-white);
             box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
         }
         &:checked+label {
-            color: $primary-color;
+            color: var(--clr-primary-500);
         }
     }
     // &:hover{

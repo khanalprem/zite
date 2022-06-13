@@ -2,7 +2,7 @@
 h1, h2, h3, h4, h5, h6 {
     @include clear;
     font-family: $heading-fonts;
-    color:$heading-color;
+    color:var(--clr-body);
     font-weight: 600;
     margin:0;
     position: relative;

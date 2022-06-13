@@ -1,60 +1,60 @@
 .open-bg {
-  background-color: rgba($open-color, 0.15);
+  background-color: var(--clr-blue-50)
 }
 
 .flagged-bg {
-  background-color: rgba($flaggedColor, 0.15);
+  background-color: var(--clr-orange-50)
 }
 
 .rejected-bg {
-  background-color: rgba($rejectedColor, 0.15);
+  background-color: var(--clr-red-50);
 }
 
 .approved-bg {
-  background-color: rgba($approvedColor, 0.15);
+  background-color: var(--clr-green-50)
 }
 
 .inprogress-bg {
-  background-color: rgba($inProgressColor, 0.15);
+  background-color: var(--clr-green-50);
 }
 
 .open-dark-bg {
-  background-color: $open-color;
+  background-color: var(--clr-blue-50);
 }
 
 .flagged-dark-bg {
-  background-color: $flaggedColor;
+  background-color: var(--clr-orange-50);
 }
 
 .rejected-dark-bg {
-  background-color: $rejectedColor;
+  background-color: var(--clr-red-50);
 }
 
 .approved-dark-bg {
-  background-color: $approvedColor;
+  background-color: var(--clr-green-50);
 }
 
 .inprogress-dark-bg {
-  background-color: $inProgressColor;
+  background-color: var(--clr-primary-200)
 }
 
 .open {
-  color: $open-color !important;
+  color: var(--clr-blue);
 }
 
 .flagged {
-  color: $flaggedColor !important;
+  color: var(--clr-orange)
 }
 
 .rejected {
-  color: $rejectedColor !important;
+  color: var(--clr-blue)
 }
 
 .approved {
-  color: $approvedColor !important;
+  color: var(--clr-green)
 }
 
 .inprogress {
-  color: $inProgressColor !important;
+  color: var(--clr-primary-900)
 }
  

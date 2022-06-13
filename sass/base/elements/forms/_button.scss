@@ -38,20 +38,20 @@
         @include box-shadow(0 10px 40px rgba($primary-color, .25));
 
         &:disabled,&.is-disable {
-            color: $body-color;
+            color: var(--clr-body);
             background-color: transparent;
             border:1px solid $border-color;
             cursor: not-allowed;
             box-shadow: none;
             &:hover{
                 background-color: transparent;
-                color:$body-color;
+                color:var(--clr-body);
                 border-color: $border-color;
             }
         }
         &.is-light{
             background-color: $primary-light;
-            color:$heading-color;
+            color:var(--clr-body);
             @include radius(5px);
             box-shadow: none;
             min-width: 124px;
@@ -87,7 +87,7 @@
         @include display-flex(flex);
         @include justify-content-start;
         @include align-items-center;
-        color: $heading-color;
+        color: var(--clr-body);
         font-size: .9375rem;
         padding: 0;
         min-height: initial;
@@ -117,7 +117,7 @@
             @include display-flex(flex);
             @include justify-content-start;
             @include align-items-center;
-            color: $heading-color;
+            color: var(--clr-body);
             font-size: .9375rem;
 
             i {
@@ -130,14 +130,14 @@
             color: $secondary-color;
         }
         &:disabled,&.is-disable {
-            color: $body-color;
+            color: var(--clr-body);
             background-color: transparent;
             border:1px solid $border-color;
             cursor: not-allowed;
             box-shadow: none;
             &:hover{
                 background-color: transparent;
-                color:$body-color;
+                color:var(--clr-body);
                 border-color: $border-color;
             }
         }
@@ -171,14 +171,14 @@
         }
     }
     &:disabled,&.is-disable {
-        color: $body-color;
+        color: var(--clr-body);
         background-color: transparent;
         border:1px solid $border-color;
         cursor: not-allowed;
         box-shadow: none;
         &:hover{
             background-color: transparent;
-            color:$body-color;
+            color:var(--clr-body);
             border-color: $border-color;
         }
     }
@@ -199,7 +199,7 @@ a.load-more-button {
     background-color: $bg-color;
     font-weight: 600;
     text-transform: capitalize;
-    color: $heading-color;
+    color: var(--clr-body);
     width: 100%;
     padding: .5rem 1rem;
 
@@ -245,7 +245,7 @@ a.load-more-button {
     @include justify-content-center;
     @include align-items-center;
     @include flex-direction-column(column);
-    color: $body-color;
+    color: var(--clr-body);
     @include radius(100%);
     min-height: 34px;
     cursor: pointer;
@@ -311,7 +311,7 @@ a.load-more-button {
     @include justify-content-center;
     @include align-items-center;
     @include flex-direction-column(column);
-    color: $body-color;
+    color: var(--clr-body);
     @include radius(5px);
     cursor: pointer;
     @include transition(all .4s ease-in-out);

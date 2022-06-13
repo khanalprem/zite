@@ -17,7 +17,7 @@ ul{
                 background-color: $white-color;
                 @include transition(all .5s ease-in-out);
                 svg{
-                    color:$body-color;
+                    color:var(--clr-body);
                     margin:0;
                 }
                 &:hover{

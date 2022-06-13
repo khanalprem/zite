@@ -1,6 +1,6 @@
 .zite-header {
   padding: 1.5rem 2rem 0 2rem;
-  background-color: $white-color;
+  background-color: var(--clr-white);
 
   .top-header,
   .bottom-header {
@@ -17,15 +17,26 @@
     flex-grow: 1;
 
     .org-logo {
-      @include flex(0 0 65px);
-      max-width: 65px;
+      @include flex(0 0 50px);
+      max-width: 50px;
       margin: 0;
+      position: relative;
+      min-height: 50px;
+      max-height: 50px;
 
       img {
-        width: 50px;
-        height: 50px;
-        @include radius(100%);
-        border: 1px solid $border-color;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        border-radius: 50%;
+        object-fit: cover;
+        aspect-ratio: 16/9;
+        border: 1px solid var(--clr-body-300);
       }
     }
 
@@ -34,12 +45,10 @@
 
       a {
         text-transform: capitalize;
-        color: $heading-color;
-        font-weight: 600;
         @include transition(all 0.4s ease-in-out);
 
         &:hover {
-          color: $primary-color;
+          color: var(--clr-primary-500);
         }
       }
 
@@ -59,7 +68,7 @@
         font-weight: 700;
 
         a {
-          color: $primary-dark;
+          color: var(--clr-primary-800);
           font-size: 0.8125rem;
           font-weight: 700;
 
@@ -89,21 +98,8 @@
           @include display-flex(flex);
           @include justify-content-start;
           @include align-items-center;
+          color:var(--clr-body-600);
 
-          b {
-            font-size: 1.35rem;
-            font-weight: 600;
-            color: $heading-color;
-            margin-right: 0.6125rem;
-
-            @media #{$breakpoint-desktop} {
-              font-size: 1rem;
-            }
-          }
-
-          &:not(:last-child) {
-            margin-right: 2rem;
-          }
         }
       }
     }
@@ -124,7 +120,7 @@
             a {
               font-weight: 600;
 
-              color: $heading-color;
+              color: var(--clr-body);
             }
           }
         }
@@ -133,7 +129,7 @@
   }
 
   .bottom-header {
-    background-color: $white-color;
+    background-color: var(--clr-white);
     margin-top: 1rem;
 
     .tab-list {
@@ -158,14 +154,14 @@
     a {
       width: 32px;
       height: 32px;
-      border: 1px solid $border-color;
+      border: 1px solid var(--clr-body-300);
       @include display-flex(flex);
       @include justify-content-center;
       @include align-items-center;
       @include flex-direction-column(column);
       @include radius(50%);
-      background-color: $white-color;
-      color: $body-color;
+      background-color: var(--clr-white);
+      color: var(--clr-body);
       cursor: pointer;
 
       &:not(:last-child) {

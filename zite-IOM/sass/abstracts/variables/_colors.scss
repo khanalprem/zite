@@ -1,37 +1,66 @@
-$heading-color: #333333;
-$heading-light-color: #484747;
-$body-color: #757575;
-$body-light: #989898;
-$bg-color: #f1f4f9;
-$primary-color:#40B449;
-$primary-light:#E7F6E9;
-$primary-dark:#1E8E45;
-// $primary-color: $primaryColor;
-// $primary-light: $primaryLight;
-// $primary-dark: $primaryDark;
+:root{
+    /* body color */
+    --clr-white:#ffffff;
+    --clr-body-50:#FAFAFA;
+    --clr-body-100:#F1F4F9;
+    --clr-body-200:#E6E6E6;
+    --clr-body-300:#D7D7D7;
+    --clr-body-400:#BDBDBD;
+    --clr-body-500:#989898;
+    --clr-body-600:#757575;
+    --clr-body-700:#616161;
+    --clr-body-800:#484848;
+    --clr-body:#333333;
+
+    /* primary color */
+    --clr-primary-50:#E7F6E9;
+    --clr-primary-100:#C7E8C8;
+    --clr-primary-200:#5EC065;
+    --clr-primary-300:#7CCB81;
+    --clr-primary-400:#A0CC3A;
+    --clr-primary-500:#40B449;
+    --clr-primary-600:#37A541;
+    --clr-primary-700:#1E8E45;
+    --clr-primary-800:#1E8E45;
+    --clr-primary-900:#006317;
+
+    /* blue color */
+    --clr-blue:#0076FF;
+    --clr-blue-50:#E5F1FF;
+
+    /* red color */
+    --clr-red:#FF0F0F;
+    --clr-red-50:#FCEBE7;
+
+    /* orange color */
+    --clr-orange:#FFB100;
+    --clr-orange-50:#FFF7E5;
+
+    /* Purple color */
+    --clr-purple:#AB47BC;
+    --clr-purple-50:#F6ECF8;
+
+    /* Green color */
+    --clr-green:#40B449;
+    --clr-green-50:#EDF8EB;
+
+}
+
 $secondary-color: #e12454;
 $secondary-dark: #c01541;
 $secondary-dark-light: #faced6;
 $secondary-light: #ffe5e8;
 $grey-color: #f1f4f9;
-$grey-light: #d7d7d7;
-$border-color: #e6e6e6;
+
+
 $border-dark: #c7c7c7;
-$white-color: #ffffff;
-$green-color: #39b54a;
-$green-light: #e5f7e6;
+
 $green-dark: #68973b;
 $green-dark-light: #d0f9d2;
-$blue-color: #0076ff;
-$blue-light: rgba($blue-color, 0.15);
+
 $blue-dark-light: #cccaf9;
-$blue-light-1: #c9ddf5;
-$orange-color: #ffb100;
-$orange-light: rgba($orange-color, 0.15);
-$red-color: #ff0f0f;
-$purple-color: #ab47bc;
-$purple-light: rgba($purple-color, 0.15);
-$red-light: rgba($red-color, 0.15);
+
+
 $shadow-color: #0000000d;
 
 // $open-color: $openColor;
@@ -40,8 +69,8 @@ $shadow-color: #0000000d;
 // $inprogress-color: $inProgressColor;
 // $approved-color: $approvedColor;
 
-$open-color: rgba($blue-color, 0.15);
-$flaggedColor: rgba($blue-color, 0.15);
-$rejectedColor: rgba($blue-color, 0.15);
-$inProgressColor: rgba($blue-color, 0.15);
-$approvedColor: rgba($blue-color, 0.15);
+// $open-color: rgba(var(--clr-blue), 0.15);
+// $flaggedColor: rgba(var(--clr-blue), 0.15);
+// $rejectedColor: rgba(var(--clr-blue), 0.15);
+// $inProgressColor: rgba(var(--clr-blue), 0.15);
+// $approvedColor: rgba(var(--clr-blue), 0.15);

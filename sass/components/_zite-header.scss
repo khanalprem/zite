@@ -27,7 +27,7 @@
             
             a{
                 text-transform: capitalize;
-                color:$heading-color;
+                color:var(--clr-body);
                 font-weight: 600;
                 @include transition(all .4s ease-in-out);
                 &:hover{
@@ -65,7 +65,7 @@
                     b{
                         font-size: 1.35rem;
                         font-weight: 600;
-                        color:$heading-color;
+                        color:var(--clr-body);
                         margin-right: .6125rem;
                         @media #{$breakpoint-md-desktop}{
                             font-size: 1rem;
@@ -94,7 +94,7 @@
                         a{
                             font-weight: 600;
                             
-                            color:$heading-color;
+                            color:var(--clr-body);
                         }
                     }
                 }

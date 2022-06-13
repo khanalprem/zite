@@ -4,7 +4,7 @@
     @include flex-direction-column(column);
     min-width: 0;
     word-wrap: break-word;
-    background-color: $white-color;
+    background-color: var(--clr-white);
     background-clip: border-box;
     @include box-shadow(0 0 40px $shadow-color);
     @include radius(5px);
@@ -31,7 +31,7 @@
         right: 0;
         top: 100%;
         min-width: 600px;
-        background-color: $white-color;
+        background-color: var(--clr-white);
         z-index: 2;
     }
 }
@@ -52,7 +52,7 @@
     }
     &.is-center {
         @include justify-content-center;
-        h5 {
+        h6 {
             @include justify-content-center;
             @include align-items-center;
         }
@@ -70,34 +70,28 @@
     &.pd-0 {
         padding: 0;
     }
-    h5 {
-        font-size: 0.975rem;
+    h6 {
         flex-grow: 1;
-        font-weight: 600;
         margin: 0;
         text-transform: uppercase;
         span {
             text-transform: capitalize;
             font-weight: 500;
         }
-        @media #{$breakpoint-desktop} {
-            font-size: 0.875rem;
-        }
     }
     .selected-counter {
         @include display-flex(flex);
         @include justify-content-start;
         @include align-items-center;
-        border: 1px solid $primary-color;
-        background-color: $primary-light;
-        color: $primary-dark;
-        font-size: 0.775rem;
+        border: 1px solid var(--clr-primary-500);
+        background-color: var(--clr-primary-50);
+        color: var(--clr-primary-500);
+        font-size: var(--fs-md);
         @include radius(24px);
-        padding: 0 0.5rem;
+        padding: .15rem 0.5rem;
         margin-left: 0.6125rem;
-        font-weight: 600;
         i {
-            font-size: 0.875rem;
+            font-size: 1rem;
             line-height: 1;
         }
         span {
@@ -124,11 +118,11 @@
             @include radius(5px);
             min-width: initial;
             &.is-bg {
-                background-color: $primary-light;
-                color: $heading-color;
+                background-color: var(--clr-primary-50);
+                color: var(--clr-body);
                 box-shadow: none;
                 i {
-                    color: $primary-color;
+                    color: var(--clr-primary-500);
                 }
             }
             &.is-small {
@@ -137,7 +131,7 @@
                 padding: 5px;
             }
             &.is-dark {
-                background-color: $primary-color;
+                background-color: var(--clr-primary-500);
                 color: white;
             }
         }
@@ -174,11 +168,11 @@
     &::-webkit-scrollbar {
         width: 4px;
         height: 8px;
-        background: $border-color;
+        background: var(--clr-body-300);
         @include radius(4px);
     }
     &::-webkit-scrollbar-track {
-        background-color: $border-color;
+        background-color: var(--clr-body-300);
         @include radius(4px);
     }
     &::-webkit-scrollbar-thumb {

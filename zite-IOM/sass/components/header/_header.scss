@@ -2,9 +2,12 @@
 @import './zite-header';
 header {
     &.site-header {
-        padding: 0.6125rem 1rem;
-        background-color: $white-color;
-        border-bottom: 1px solid $border-color;
+        padding: 0.6125rem 1.5rem;
+        background-color: var(--clr-white);
+        border-bottom: 1px solid var(--clr-body-300);
+        @media #{$breakpoint-ls} {
+            padding: 0.6125rem 0;
+        }
         .header-in {
             @include display-flex(flex);
             @include justify-content-between;
@@ -43,14 +46,14 @@ header {
                                     @include justify-content-center;
                                     @include align-items-center;
                                     @include flex-direction-column(column);
-                                    color: $white-color;
+                                    color: var(--clr-white);
                                     font-size: 0.6125rem;
                                     i {
                                         margin: 0;
                                     }
                                 }
                                 a {
-                                    color: $body-color;
+                                    color: var(--clr-body);
                                     padding-right: 1rem;
                                     i {
                                         margin-top: 0.6rem;
@@ -67,7 +70,7 @@ header {
                                         li {
                                             a {
                                                 @include align-items-start;
-                                                color: $body-color;
+                                                color: var(--clr-body);
                                                 display: initial;
                                                 padding: 0;
                                             }
@@ -82,11 +85,11 @@ header {
                                                 p {
                                                     margin: 0;
                                                     a {
-                                                        color: $heading-color;
+                                                        color: var(--clr-body);
                                                     }
                                                     b {
                                                         a {
-                                                            color: $heading-color;
+                                                            color: var(--clr-body);
                                                         }
                                                     }
                                                 }
@@ -101,7 +104,7 @@ header {
                                                     min-height: 30px;
                                                     i {
                                                         margin: 0;
-                                                        color: $primary-color;
+                                                        color: var(--clr-primary-500);
                                                     }
                                                 }
                                             }
@@ -131,14 +134,14 @@ header {
                                                         font-size: 0.875rem;
                                                     }
                                                     i {
-                                                        color: $primary-color;
+                                                        color: var(--clr-primary-500);
                                                         margin: 0;
                                                         line-height: 1;
                                                     }
                                                     &:hover {
                                                         background-color: transparent;
                                                         span {
-                                                            color: $primary-color;
+                                                            color: var(--clr-primary-500);
                                                             background-color: transparent;
                                                         }
                                                     }
@@ -155,7 +158,7 @@ header {
                                         width: 40px;
                                         height: 40px;
                                         @include radius(100%);
-                                        @include box-shadow(0 10px 20px rgba($heading-color, 0.2));
+                                        @include box-shadow(0 10px 20px rgba(var(--clr-body), 0.2));
                                         margin-right: 0.5rem;
                                     }
                                 }

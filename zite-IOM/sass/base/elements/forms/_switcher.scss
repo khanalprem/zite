@@ -28,7 +28,7 @@
     background-color: $grey-color;
     @include transition(0.4s ease-in-out);
     @include radius(30px);
-    border: 1px solid $border-color;
+    border: 1px solid var(--clr-body-300);
 
     &::before {
       position: absolute;
@@ -38,9 +38,9 @@
       left: 1px;
       bottom: 0px;
       @include radius(50%);
-      background-color: $white-color;
+      background-color: var(--clr-white);
       @include transition(0.4s ease-in-out);
-      border: 1px solid $border-color;
+      border: 1px solid var(--clr-body-300);
     }
 
     .round {
@@ -53,13 +53,13 @@
   }
 
   input:checked + .slider {
-    background-color: $primary-color;
+    background-color: var(--clr-primary-500);
   }
 
   input:checked + .slider:before {
     -webkit-transform: translateX(12px);
     -ms-transform: translateX(12px);
     transform: translateX(12px);
-    background-color: $white-color;
+    background-color: var(--clr-white);
   }
 }

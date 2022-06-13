@@ -20,7 +20,7 @@
 .info.legend {
     @include radius(4px);
     padding: 0.5rem;
-    background-color: $white-color;
+    background-color: var(--clr-white);
 }
 
 .legend {
@@ -130,12 +130,12 @@
                 width: 34px;
                 height: 30px;
                 line-height: 30px;
-                color: $body-color;
+                color: var(--clr-body);
                 @include transition(all 0.5s);
                 border-color: $grey-color;
                 &:hover {
-                    background-color: $primary-light;
-                    color: $primary-color;
+                    background-color: var(--clr-primary-50);
+                    color: var(--clr-primary-500);
                 }
             }
         }
@@ -143,21 +143,21 @@
             width: 30px;
             height: 30px;
             line-height: 40px;
-            color: $blue-light;
+            color: var(--clr-blue-50);
             @include transition(all 0.5s linear);
-            background-color: $white-color;
+            background-color: var(--clr-white);
             text-align: center;
             border: 0;
             margin-top: 1.2rem !important;
             i {
                 font-size: 1rem;
-                color: $blue-color;
+                color: var(--clr-blue);
             }
             &:hover {
                 cursor: pointer;
-                background-color: $blue-light;
+                background-color: var(--clr-blue-50);
                 i {
-                    color: $blue-color;
+                    color: var(--clr-blue);
                 }
             }
         }
@@ -209,7 +209,7 @@
                 .buttons {
                     .common-button {
                         &.is-clear {
-                            color: $primary-color;
+                            color: var(--clr-primary-500);
                         }
                     }
                 }
@@ -244,26 +244,26 @@
             .acc-list {
                 .acc-header {
                     &::after {
-                        background-color: $white-color;
+                        background-color: var(--clr-white);
                     }
                 }
                 &.active,
                 &:hover {
                     .acc-header {
                         h5 {
-                            color: $heading-color;
+                            color: var(--clr-body);
                         }
                         &::after {
-                            background-color: $primary-light;
-                            color: $primary-color;
-                            border-color: $primary-color;
+                            background-color: var(--clr-primary-50);
+                            color: var(--clr-primary-500);
+                            border-color: var(--clr-primary-500);
                         }
                     }
                 }
                 .list {
                     li {
                         font-weight: 400;
-                        color: $body-color;
+                        color: var(--clr-body);
                         a {
                             font-size: .775rem;
                             font-weight: 400;
@@ -271,13 +271,13 @@
                         .add-remove {
                             i {
                                 font-size: 1.1rem;
-                                color: $body-color;
+                                color: var(--clr-body);
                             }
                         }
                         .custom-dropdown {
                             a {
                                 i {
-                                    color: $body-color;
+                                    color: var(--clr-body);
                                     font-size: 1.2rem;
                                 }
                             }
@@ -315,29 +315,29 @@
                         &.counter {
                             padding: 0 8px;
                             @include radius(50%);
-                            background-color: $primary-light;
-                            color: $primary-color;
+                            background-color: var(--clr-primary-50);
+                            color: var(--clr-primary-500);
                             font-weight: 500;
                             margin-left: 0.5rem;
                             height: 24px;
-                            border: 1px solid $white-color;
+                            border: 1px solid var(--clr-white);
                             display: inline-flex;
                             @include align-items-center;
                             &:hover {
-                                background-color: $primary-color;
-                                color: $white-color;
+                                background-color: var(--clr-primary-500);
+                                color: var(--clr-white);
                             }
                         }
                         &.drag-icon {
                             display: inline-flex;
-                            color: $body-color;
+                            color: var(--clr-body);
                             margin-right: 0.6125rem;
                         }
                     }
                     .acc-list {
                         &.active {
                             .acc-header {
-                                background-color: $primary-light;
+                                background-color: var(--clr-primary-50);
                             }
                         }
                     }
@@ -351,11 +351,11 @@
                             }
                             &.is-disable {
                                 a {
-                                    color: $body-color;
+                                    color: var(--clr-body);
                                 }
                                 .add-remove {
                                     i {
-                                        color: $body-color;
+                                        color: var(--clr-body);
                                     }
                                 }
                             }
@@ -367,7 +367,7 @@
             &:hover {
                 .acc-header {
                     h5 {
-                        color: $heading-color;
+                        color: var(--clr-body);
                     }
                 }
             }
@@ -397,7 +397,7 @@
         margin-right: 1rem;
         i {
             font-size: 1.1rem;
-            color: $primary-color;
+            color: var(--clr-primary-500);
         }
     }
 }
@@ -407,7 +407,7 @@
     top: 1rem;
     right: 2rem;
     .circle-icon {
-        background-color: $white-color;
+        background-color: var(--clr-white);
     }
 }
 
@@ -424,9 +424,9 @@
         display: block;
     }
     &.circle-icon {
-        background-color: $white-color;
+        background-color: var(--clr-white);
         &:hover {
-            background-color: $primary-light;
+            background-color: var(--clr-primary-50);
         }
     }
     &.is-active {
@@ -451,7 +451,7 @@
             i {
                 font-size: 1.1rem;
                 margin-left: .5rem;
-                color: $body-color;
+                color: var(--clr-body);
                 cursor: pointer;
             }
         }
@@ -464,14 +464,14 @@
 .marker-type {
     margin-top: 1rem;
     padding-bottom: 1rem;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid var(--clr-body-300);
     .square-icon {
         &.sm-square {
             &.is-active {
                 i {
                     &.ellips {
-                        background-color: $primary-color;
-                        border-color: $primary-light;
+                        background-color: var(--clr-primary-500);
+                        border-color: var(--clr-primary-50);
                     }
                 }
             }
@@ -482,15 +482,15 @@
             width: 18px;
             height: 18px;
             @include radius(100%);
-            background-color: $body-light;
-            border: 5px solid $border-color;
+            background-color: var(--clr-body-500);
+            border: 5px solid var(--clr-body-300);
         }
     }
 }
 
 .add-remove {
     i {
-        color: $primary-color;
+        color: var(--clr-primary-500);
         font-size: 1.1rem;
     }
 }
@@ -509,7 +509,7 @@
     &.is-drag {
         &.selected-column-list {
             li {
-                background-color: $primary-light;
+                background-color: var(--clr-primary-50);
                 @include align-items-start;
                 .edit-close {
                     opacity: 1;
