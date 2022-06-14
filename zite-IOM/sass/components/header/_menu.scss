@@ -254,9 +254,13 @@
                 }
             }
             &:not(:last-child) {
-                margin-right: 2.2rem;
+                margin-right: 2rem;
+                
                 @media #{$breakpoint-xl-desktop} {
                     margin-right: 1.5rem;
+                }
+                @media #{$breakpoint-xl} {
+                    margin-right: .6125rem;
                 }
             }
         }
@@ -318,7 +322,7 @@
     }
 }
 
-@media #{$breakpoint-ls} {
+@media #{$breakpoint-lg} {
     .toggle-button {
         display: block;
         margin-left: 1rem;

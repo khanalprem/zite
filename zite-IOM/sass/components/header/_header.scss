@@ -166,13 +166,10 @@ header {
             }
         }
         a.logo {
-            @include flex(0 0 180px);
-            max-width: 180px;
+            @include flex(0 0 100px);
+            max-width: 100px;
             img {
                 max-height: 40px;
-            }
-            @media #{$breakpoint-xs} {
-                max-width: 150px;
             }
         }
         &.sticky {
@@ -181,7 +178,7 @@ header {
     }
 }
 
-@media #{$breakpoint-md} {
+@media #{$breakpoint-lg} {
     .Is-toggle {
         .site-header {
             .header-in {

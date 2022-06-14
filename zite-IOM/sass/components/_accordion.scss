@@ -152,6 +152,12 @@
                     ul {
                         li {
                             padding-left: 3.5rem;
+                            
+                        }
+                        &.custom-dropdown-menu{
+                            li{
+                                padding-left: 1.125rem;
+                            }
                         }
                     }
                 }

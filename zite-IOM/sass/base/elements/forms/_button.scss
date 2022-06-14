@@ -89,6 +89,10 @@
                 color: var(--clr-primary-500);
             }
         }
+        &.is-bg-red{
+            background-color: var(--clr-red);
+            
+        }
         
         &:hover {
             @include box-shadow(0 30px 40px var(--clr-primary-100));
@@ -307,6 +311,7 @@ a.load-more-button {
     }
     &.is-red {
         background-color: var(--clr-red-50);
+        color:var(--clr-red)
     }
     &.is-green {
         background-color: var(--clr-primary-50);
@@ -314,9 +319,14 @@ a.load-more-button {
     &.is-orange {
         background-color: var(--clr-orange-50);
     }
+    &.is-md {
+        width: 40px;
+        height: 40px;
+        
+    }
     &.sm-square {
-        width: 30px;
-        height: 30px;
+        width: 32px;
+        height: 32px;
         i {
             font-size: 1.2rem;
         }

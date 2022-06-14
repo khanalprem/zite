@@ -28,7 +28,7 @@
     background-color: $grey-color;
     @include transition(0.4s ease-in-out);
     @include radius(30px);
-    border: 1px solid var(--clr-body-300);
+    border: 1px solid var(--clr-body-400);
 
     &::before {
       position: absolute;
@@ -40,7 +40,7 @@
       @include radius(50%);
       background-color: var(--clr-white);
       @include transition(0.4s ease-in-out);
-      border: 1px solid var(--clr-body-300);
+      border: 1px solid var(--clr-body-400);
     }
 
     .round {

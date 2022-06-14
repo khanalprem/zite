@@ -4,18 +4,9 @@
   a {
     position: relative;
     // padding-right: 2rem;
-    @include transition(all 0.5s ease-in-out);
+    @include transition(all 0.2s ease-in-out);
 
-    // &::after {
-    //     content: 'arrow_drop_down';
-    //     font-family: 'Material Icons';
-    //     position: absolute;
-    //     top: 50%;
-    //     @include transform(translateY(-50%));
-    //     z-index: 2;
-    //     right: 0;
-    //     font-size: 1.2rem;
-    // }
+    
 
     &.is-border,
     &.is-light {
@@ -83,10 +74,9 @@
 
   ul {
     &.custom-dropdown-menu {
-      display: initial;
       position: absolute;
       top: 110%;
-      min-width: 180px;
+      min-width:max-content;
       background-color: var(--clr-white);
       @include radius(4px);
       z-index: 1012;
