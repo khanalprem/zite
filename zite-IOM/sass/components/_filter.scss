@@ -7,7 +7,7 @@
 .filter-content {
     flex-grow: 1;
     display: none;
-    box-shadow: 0 0 50px rgba(0,0,0,.5);
+    
     .filter-row {
         @include display-flex(flex);
         @include justify-content-end;
@@ -45,13 +45,15 @@
     }
     &.project-summary-filter {
         background-color: var(--clr-white);
-        @include box-shadow(0 0 50px rgba(var(--clr-body), .5));
+        box-shadow: 0 0 50px rgba(0,0,0,.2);
         padding: 2rem;
         position: absolute;
         left: 0;
         right: 0;
         z-index: 5;
         top: 110%;
+        border:1px solid var(--clr-body-200);
+        @include radius(5px);
         .form-group {
             min-width: 180px;
             margin-bottom: .5rem;

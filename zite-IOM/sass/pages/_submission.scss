@@ -15,24 +15,7 @@
         display: none;
     }
 }
-.is-gap-50{
-    gap:50px;
-}
-.is-gap-15{
- gap:15px;
-}
-.is-gap-10{
-    gap:10px;
-}
-.is-gap-25{
-    gap:25px;
-}
-.is-gap-30{
-    gap:30px;
-}
-.is-gap-100{
-    gap:100px;
-}
+
 .is-heading-color{
     color:var(--clr-body);
 }
@@ -114,13 +97,13 @@
         }
     }
 }
-.is-circle{
-    width:14px;
-    height: 14px;
-    border-radius: 100%;
-    @include flex(0 0 14px);
-    max-width: 14px;
-}
+// .is-circle{
+//     width:14px;
+//     height: 14px;
+//     border-radius: 100%;
+//     @include flex(0 0 14px);
+//     max-width: 14px;
+// }
 .attached{
     &.width-auto{
         width:24px;

@@ -25,7 +25,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $grey-color;
+    background-color: var(--clr-body-400);
     @include transition(0.4s ease-in-out);
     @include radius(30px);
     border: 1px solid var(--clr-body-400);
@@ -35,12 +35,11 @@
       content: '';
       height: 20px;
       width: 20px;
-      left: 1px;
+      left: 0;
       bottom: 0px;
       @include radius(50%);
       background-color: var(--clr-white);
       @include transition(0.4s ease-in-out);
-      border: 1px solid var(--clr-body-400);
     }
 
     .round {
@@ -57,9 +56,9 @@
   }
 
   input:checked + .slider:before {
-    -webkit-transform: translateX(12px);
-    -ms-transform: translateX(12px);
-    transform: translateX(12px);
+    -webkit-transform: translateX(14px);
+    -ms-transform: translateX(14px);
+    transform: translateX(14px);
     background-color: var(--clr-white);
   }
 }

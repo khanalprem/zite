@@ -242,7 +242,7 @@
             }
         }
     }
-    &.profile-acc {
+    &.profile-acc,&.sidebar-acc {
         margin-bottom: 1rem;
         width: 100%;
         .acc-list {
@@ -258,16 +258,7 @@
                 @include align-items-center;
                 flex-grow: 1;
                 figure {
-                    @include flex(0 0 40px);
-                    max-width: 40px;
                     margin: 0;
-                    img {
-                        max-width: 28px;
-                        height: 28px;
-                        width: 100%;
-                        @include radius(100%);
-                        border: 1px solid var(--clr-body-300);
-                    }
                 }
                 .org-text {
                     h5 {
@@ -292,12 +283,30 @@
                     &.list {
                         li {
                             @include align-items-center;
+                            padding:.5rem .75rem; 
                             .org {
+                                gap:.75rem;
+                                figure{
+                                    height: 32px;
+                                    flex: 0 0 32px;
+                                    max-width: 32px;
+                                    position: relative;
+                                    overflow: hidden;
+                                    @include radius(100%);
+                                    img{
+                                        position: absolute;
+                                        width: 100%;
+                                        background-size: cover;
+                                        object-fit: cover;
+                                        width: 100%;
+                                        height: 100%;
+                                        @include radius(100%);
+                                    }
+                                }
                                 .org-text {
                                     h5 {
                                         font-weight: 400;
                                         text-transform: capitalize;
-                                        font-size: 0.8125rem;
                                     }
                                 }
                             }
