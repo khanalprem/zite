@@ -4691,9 +4691,6 @@ a.load-more-button i {
   cursor: not-allowed;
   box-shadow: none;
 }
-[class*=circle-icon]:not(:last-child) {
-  margin-right: 0.6125rem;
-}
 
 .is-circle {
   display: -webkit-box;
@@ -5730,6 +5727,27 @@ ul.social-list.is-end {
   -o-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+}
+.custom-dropdown a.is-after-icon {
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-right: 1rem;
+}
+.custom-dropdown a.is-after-icon::after {
+  content: "arrow_drop_down";
+  font-family: "Material Icons";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 2;
+  right: 0;
+  font-size: 1.2rem;
 }
 .custom-dropdown a.is-border, .custom-dropdown a.is-light {
   padding: 10px;
@@ -7162,6 +7180,13 @@ ul.social-list.is-end {
   position: relative;
 }
 
+.is-horiz {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 .t-border {
   border-top: 1px solid var(--border-color);
 }
@@ -8525,7 +8550,7 @@ header.site-header .header-in .header-right ul {
   align-items: center;
 }
 header.site-header .header-in .header-right ul li {
-  margin-left: 1rem;
+  margin-left: 1.5rem;
 }
 header.site-header .header-in .header-right ul li.custom-dropdown ul.custom-dropdown-menu {
   display: none;
@@ -8536,7 +8561,7 @@ header.site-header .header-in .header-right ul li.custom-dropdown ul.custom-drop
 header.site-header .header-in .header-right ul li.custom-dropdown.notifications .sup {
   position: absolute;
   top: 5px;
-  right: 0;
+  right: -10px;
   background-color: var(--clr-red);
   padding: 0.5rem;
   color: var(--clr-white);

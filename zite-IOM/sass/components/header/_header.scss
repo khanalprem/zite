@@ -24,7 +24,7 @@ header {
                     @include justify-content-end;
                     @include align-items-center;
                     li {
-                        margin-left: 1rem;
+                        margin-left: 1.5rem;
                         &.custom-dropdown {
                             ul {
                                 &.custom-dropdown-menu {
@@ -38,7 +38,7 @@ header {
                                 .sup {
                                     position: absolute;
                                     top: 5px;
-                                    right: 0;
+                                    right: -10px;
                                     background-color: var(--clr-red);
                                     padding: 0.5rem;
                                     color: var(--clr-white);

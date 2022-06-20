@@ -5,7 +5,21 @@
     position: relative;
     // padding-right: 2rem;
     @include transition(all 0.2s ease-in-out);
-
+    &.is-after-icon{
+      display: inline-flex;
+      @include align-items-center;
+      padding-right: 1rem;
+      &::after {
+        content: 'arrow_drop_down';
+        font-family: 'Material Icons';
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+        z-index: 2;
+        right: 0;
+        font-size: 1.2rem;
+    }
+  }
     
 
     &.is-border,
@@ -30,16 +44,16 @@
         margin-right: 0.5rem;
       }
       &.is-after-icon{
-        &::after {
-        content: 'arrow_drop_down';
-        font-family: 'Material Icons';
-        position: absolute;
-        top: 50%;
-        @include transform(translateY(-50%));
-        z-index: 2;
-        right: .5rem;
-        font-size: 1.2rem;
-    }
+          &::after {
+            content: 'arrow_drop_down';
+            font-family: 'Material Icons';
+            position: absolute;
+            top: 50%;
+            @include transform(translateY(-50%));
+            z-index: 2;
+            right: .5rem;
+            font-size: 1.2rem;
+        }
       }
 
       &:hover {

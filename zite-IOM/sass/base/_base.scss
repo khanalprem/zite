@@ -445,6 +445,9 @@
     z-index: 2;
     position: relative;
   }
+  .is-horiz{
+    @include flex-direction-column(column);
+  }
 
 .t-border {
     border-top: 1px solid var(--border-color);
