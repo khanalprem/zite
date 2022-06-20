@@ -9003,7 +9003,7 @@ header.site-header.sticky {
   padding: 0;
 }
 .acc.is-border .acc-list .acc-body ul li {
-  padding-left: 2.2rem;
+  padding-left: 2.5rem;
 }
 .acc.is-border .acc-list .acc-body ul li a {
   text-transform: capitalize;
@@ -9285,11 +9285,11 @@ header.site-header.sticky {
   z-index: 7;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .popup .popup-container,
 .window-popup .popup-container {
@@ -9326,16 +9326,16 @@ header.site-header.sticky {
   flex-shrink: 0;
   background-color: var(--clr-white);
   position: relative;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  -o-transform: scale(0);
-  transform: scale(0);
-  -webkit-transition: all 0.9s ease-in-out;
-  -moz-transition: all 0.9s ease-in-out;
-  -o-transition: all 0.9s ease-in-out;
-  -ms-transition: all 0.9s ease-in-out;
-  transition: all 0.9s ease-in-out;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .popup .popup-container .popup-body.is-wide,
 .window-popup .popup-container .popup-body.is-wide {
@@ -10430,7 +10430,7 @@ header.site-header.sticky {
   color: var(--clr-body);
 }
 .acc.is-after.acc-metric .acc-list .list li a {
-  font-size: 0.775rem;
+  font-size: var(--fs-md);
   font-weight: 400;
 }
 .acc.is-after.acc-metric .acc-list .list li .add-remove i {
@@ -10451,9 +10451,12 @@ header.site-header.sticky {
 .acc.acc-metric .acc-list .acc {
   border: none;
 }
-.acc.acc-metric .acc-list .acc .acc-header h5 {
-  font-weight: 400;
-  font-size: 0.8rem;
+.acc.acc-metric .acc-list .acc .acc-header {
+  padding-left: 2rem;
+}
+.acc.acc-metric .acc-list .acc .acc-header p {
+  font-size: var(--fs-md);
+  color: var(--clr-body);
 }
 .acc.acc-metric .acc-list .acc .acc-header span.counter {
   padding: 0 8px;
@@ -10486,7 +10489,7 @@ header.site-header.sticky {
 }
 .acc.acc-metric .acc-list .acc .acc-body ul li a {
   font-weight: 400;
-  font-size: 0.775rem;
+  font-size: var(--fs-md);
 }
 .acc.acc-metric .acc-list .acc .acc-body ul li.is-disable a {
   color: var(--clr-body);
@@ -10603,10 +10606,6 @@ header.site-header.sticky {
 
 .sm-font {
   font-size: 0.775rem !important;
-}
-
-.acc .acc {
-  padding-left: 1rem;
 }
 
 .list.is-drag.selected-column-list li {

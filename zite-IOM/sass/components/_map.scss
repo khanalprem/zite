@@ -265,7 +265,7 @@
                         font-weight: 400;
                         color: var(--clr-body);
                         a {
-                            font-size: .775rem;
+                            font-size: var(--fs-md);
                             font-weight: 400;
                         }
                         .add-remove {
@@ -307,9 +307,10 @@
             .acc {
                 border: none;
                 .acc-header {
-                    h5 {
-                        font-weight: 400;
-                        font-size: .8rem;
+                    padding-left: 2rem;
+                    p {
+                        font-size:var(--fs-md);
+                        color:var(--clr-body)
                     }
                     span {
                         &.counter {
@@ -347,7 +348,7 @@
                         li {
                             a {
                                 font-weight: 400;
-                                font-size: .775rem;
+                                font-size: var(--fs-md);
                             }
                             &.is-disable {
                                 a {
@@ -499,11 +500,7 @@
     font-size: .775rem !important;
 }
 
-.acc {
-    .acc {
-        padding-left: 1rem;
-    }
-}
+
 
 .list {
     &.is-drag {
