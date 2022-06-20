@@ -8676,7 +8676,7 @@ header.site-header.sticky {
   border-radius: 100%;
 }
 .acc .acc-list .acc-header .acc-header-content .add-more i {
-  color: var(--clr-body);
+  color: var(--clr-body-600);
   font-size: 1.1rem;
 }
 .acc .acc-list .acc-header .acc-header-content .add-more:hover {
@@ -10078,6 +10078,7 @@ header.site-header.sticky {
 .filter-content {
   flex-grow: 1;
   display: none;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 }
 .filter-content .filter-row {
   display: -webkit-box;
@@ -10101,7 +10102,6 @@ header.site-header.sticky {
 }
 .filter-content .form-group {
   margin: 0 10px 0 0;
-  max-width: 160px;
 }
 .filter-content .form-group input.form-control {
   height: calc(1.5em + 0.75rem + 2px);
@@ -10920,16 +10920,6 @@ header.site-header.sticky {
 .authentication .auth-info .auth-info-footer {
   text-align: center;
 }
-.authentication .auth-info .auth-info-footer h5 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin-bottom: 0.775rem;
-}
-.authentication .auth-info .auth-info-footer p {
-  font-size: 0.875rem;
-  color: var(--clr-body);
-  line-height: 1.5;
-}
 @media only screen and (max-width:1440px) {
   .authentication .auth-info .auth-info-footer h5 {
     font-size: 1.2rem;
@@ -10953,16 +10943,14 @@ header.site-header.sticky {
 }
 .authentication .auth-form .login-header {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 .authentication .auth-form .login-header figure {
   max-width: 300px;
   margin: 0 auto;
 }
-.authentication .auth-form .login-header h3 {
-  margin-top: 0.6125rem;
-  font-size: 1.3rem;
-  font-weight: 600;
+.authentication .auth-form .login-header h4 {
+  margin-top: 0.5rem;
   text-transform: initial;
 }
 .authentication .auth-form .login-header b {

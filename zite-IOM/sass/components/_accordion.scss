@@ -19,7 +19,7 @@
                     @include transition(all .4s ease-in-out);
                     @include radius(100%);
                     i {
-                        color: var(--clr-body);
+                        color: var(--clr-body-600);
                         font-size: 1.1rem;
                     }
                     &:hover {

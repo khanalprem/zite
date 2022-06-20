@@ -32,16 +32,8 @@
     }
     .auth-info-footer {
       text-align: center;
-      h5 {
-        font-size: 1.6rem;
-        font-weight: 600;
-        margin-bottom: 0.775rem;
-      }
-      p {
-        font-size: 0.875rem;
-        color: var(--clr-body);
-        line-height: 1.5;
-      }
+      
+      
     }
     @media #{$breakpoint-desktop} {
       .auth-info-footer {
@@ -61,15 +53,13 @@
     @include radius(5px);
     .login-header {
       text-align: center;
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
       figure {
         max-width: 300px;
         margin: 0 auto;
       }
-      h3 {
-        margin-top: 0.6125rem;
-        font-size: 1.3rem;
-        font-weight: 600;
+      h4{
+        margin-top: 0.5rem;
         text-transform: initial;
       }
       b {
