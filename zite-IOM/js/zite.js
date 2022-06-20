@@ -10,7 +10,9 @@
     'max-height': $mapSidebarH - 290,
     'min-height': $mapSidebarH - 290,
   });
-
+  setTimeout(function () {
+    $('.skeleton').removeClass('skeleton-active');
+  }, 5000);
   function preloader() {
     $('.preloader').delay(5000).fadeOut(5000);
   }

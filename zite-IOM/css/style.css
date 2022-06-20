@@ -4266,6 +4266,33 @@ figure {
   margin-right: 0.5rem;
 }
 
+.skeleton {
+  position: relative;
+  z-index: 1;
+}
+.skeleton-active::after {
+  content: "";
+  animation: skeleton 2s infinite linear;
+  background: linear-gradient(to right, #eff1f3 4%, #e9e9e9 25%, #eff1f3 36%);
+  background-size: 1000px 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+@keyframes skeleton {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
 /* Links
 --------------------------------------------- */
 /* Forms
