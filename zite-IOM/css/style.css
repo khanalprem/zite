@@ -5851,6 +5851,7 @@ ul.social-list.is-end {
   -ms-border-radius: 4px;
   border-radius: 4px;
   z-index: 1012;
+  min-width: 170px;
   display: none;
   margin-top: -5px;
   -webkit-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
@@ -5895,7 +5896,6 @@ ul.social-list.is-end {
   -ms-flex-align: center;
   align-items: center;
   font-weight: 600;
-  flex-wrap: nowrap;
 }
 .custom-dropdown ul.custom-dropdown-menu li a i,
 .custom-dropdown ul.custom-dropdown-menu li a svg {

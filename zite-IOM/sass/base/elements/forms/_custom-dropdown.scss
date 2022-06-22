@@ -94,11 +94,11 @@
       background-color: var(--clr-white);
       @include radius(4px);
       z-index: 1012;
+      min-width: 170px;
       display: none;
       margin-top: -5px;
       @include box-shadow(0 10px 40px rgba(0, 0, 0, 0.2));
       @include radius(5px);
-
 
       &::before {
         content: '';
@@ -125,7 +125,6 @@
           @include justify-content-start;
           @include align-items-center;
           font-weight: 600;
-          flex-wrap: nowrap;
 
           i,
           svg {
