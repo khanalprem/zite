@@ -8465,7 +8465,6 @@ ul.social-list.is-end {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 1rem;
 }
 .zite-header .header-icons .custom-dropdown ul.custom-dropdown-menu li {
   border: 0;
@@ -8476,7 +8475,7 @@ ul.social-list.is-end {
 }
 .zite-header .bottom-header {
   background-color: var(--clr-white);
-  margin-top: 1.5rem;
+  margin-top: 0.6rem;
 }
 .zite-header .bottom-header .tab-list {
   flex-grow: 1;

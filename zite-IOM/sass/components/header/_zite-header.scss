@@ -98,7 +98,6 @@
     @include display-flex(flex);
     @include justify-content-end;
     @include align-items-center;
-    margin-top: 1rem;
 
     .custom-dropdown {
       ul {
@@ -119,7 +118,7 @@
 
   .bottom-header {
     background-color: var(--clr-white);
-    margin-top: 1.5rem;
+    margin-top: .6rem;
 
     .tab-list {
       flex-grow: 1;
