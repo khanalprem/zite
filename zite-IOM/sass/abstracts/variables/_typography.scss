@@ -23,10 +23,10 @@
     --fs-body: clamp(0.84rem, calc(0.8rem + 0.00vw), 0.875rem);
     --fs-btn: clamp(0.84rem, calc(0.8rem + 0.00vw), 0.875rem);
     --fs-lg: clamp(0.88rem, calc(0.86rem + 0.09vw), 0.938rem);
+    --fs-h6: clamp(.985rem, calc(.975rem + 0.18vw), 1rem);
     --fs-h6: clamp(1.05rem, calc(1.01rem + 0.18vw), 1.125rem);
-    --fs-h5: clamp(1.24rem, calc(1.18rem + 0.30vw), 1.375rem);
-    --fs-h4: clamp(1.41rem, calc(1.3rem + 0.47vw), 1.75rem);
+    --fs-h4: clamp(1.3rem, calc(1.2rem + 0.47vw), 1.5rem);
     --fs-h3: clamp(1.78rem, calc(1.65rem + 0.70vw), 2.25rem);
-    --fs-h2: clamp(2.18rem, calc(1.97rem + 1.01vw), 2.86rem);
-    --fs-h1: clamp(2.61rem, calc(2.33rem + 1.43vw), 3.58rem);
+    --fs-h2: clamp(2.18rem, calc(1.97rem + 1.01vw), 3rem);
+    --fs-h1: clamp(2.61rem, calc(2.33rem + 1.43vw), 3.75rem);
   }
