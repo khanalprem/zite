@@ -52,29 +52,19 @@
         }
       }
 
-      h1 {
-        margin-bottom: 0;
-        font-size: 1.2rem;
-        font-weight: 700;
+      h5 {
         text-transform: capitalize;
+        margin-bottom: .5rem;
 
-        @media #{$breakpoint-desktop} {
-          font-size: 1rem;
-        }
+       
       }
 
-      h6 {
+      p {
         margin: 0;
-        font-weight: 700;
 
         a {
           color: var(--clr-primary-800);
-          font-size: 0.8125rem;
-          font-weight: 700;
 
-          @media #{$breakpoint-desktop} {
-            font-size: 0.775rem;
-          }
         }
       }
 

@@ -1,60 +1,120 @@
-.open-bg {
-  background-color: var(--clr-blue-50)
-}
+// .open-bg {
+//   background-color: var(--clr-blue-50)
+// }
 
-.flagged-bg {
-  background-color: var(--clr-orange-50)
-}
+// .flagged-bg {
+//   background-color: var(--clr-orange-50)
+// }
 
-.rejected-bg {
-  background-color: var(--clr-red-50);
-}
+// .rejected-bg {
+//   background-color: var(--clr-red-50);
+// }
 
-.approved-bg {
-  background-color: var(--clr-green-50)
-}
+// .approved-bg {
+//   background-color: var(--clr-green-50)
+// }
 
-.inprogress-bg {
-  background-color: var(--clr-green-50);
-}
+// .inprogress-bg {
+//   background-color: var(--clr-green-50);
+// }
 
-.open-dark-bg {
-  background-color: var(--clr-blue-50);
-}
+// .open-dark-bg {
+//   background-color: var(--clr-blue-50);
+// }
 
-.flagged-dark-bg {
-  background-color: var(--clr-orange-50);
-}
+// .flagged-dark-bg {
+//   background-color: var(--clr-orange-50);
+// }
 
-.rejected-dark-bg {
-  background-color: var(--clr-red-50);
-}
+// .rejected-dark-bg {
+//   background-color: var(--clr-red-50);
+// }
 
-.approved-dark-bg {
-  background-color: var(--clr-green-50);
-}
+// .approved-dark-bg {
+//   background-color: var(--clr-green-50);
+// }
 
-.inprogress-dark-bg {
-  background-color: var(--clr-primary-200)
-}
+// .inprogress-dark-bg {
+//   background-color: var(--clr-primary-200)
+// }
 
-.open {
-  color: var(--clr-blue);
-}
+// .open {
+//   color: var(--clr-blue);
+// }
 
-.flagged {
-  color: var(--clr-orange)
-}
+// .flagged {
+//   color: var(--clr-orange)
+// }
 
-.rejected {
-  color: var(--clr-blue)
-}
+// .rejected {
+//   color: var(--clr-blue)
+// }
 
-.approved {
-  color: var(--clr-green)
-}
+// .approved {
+//   color: var(--clr-green)
+// }
 
-.inprogress {
-  color: var(--clr-primary-900)
-}
+// .inprogress {
+//   color: var(--clr-primary-900)
+// }
  
+
+// .open-bg {
+//   background-color: rgba($open-color, 0.15);
+// }
+
+// .flagged-bg {
+//   background-color: rgba($flaggedColor, 0.15);
+// }
+
+// .rejected-bg {
+//   background-color: rgba($rejectedColor, 0.15);
+// }
+
+// .approved-bg {
+//   background-color: rgba($approvedColor, 0.15);
+// }
+
+// .inprogress-bg {
+//   background-color: rgba($inProgressColor, 0.15);
+// }
+
+// .open-dark-bg {
+//   background-color: $open-color;
+// }
+
+// .flagged-dark-bg {
+//   background-color: $flaggedColor;
+// }
+
+// .rejected-dark-bg {
+//   background-color: $rejectedColor;
+// }
+
+// .approved-dark-bg {
+//   background-color: $approvedColor;
+// }
+
+// .inprogress-dark-bg {
+//   background-color: $inProgressColor;
+// }
+
+// .open {
+//   color: $open-color !important;
+// }
+
+// .flagged {
+//   color: $flaggedColor !important;
+// }
+
+// .rejected {
+//   color: $rejectedColor !important;
+// }
+
+// .approved {
+//   color: $approvedColor !important;
+// }
+
+// .inprogress {
+//   color: $inProgressColor !important;
+// }

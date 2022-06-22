@@ -90,7 +90,7 @@
     &.custom-dropdown-menu {
       position: absolute;
       top: 110%;
-      min-width:max-content;
+      max-width:max-content;
       background-color: var(--clr-white);
       @include radius(4px);
       z-index: 1012;

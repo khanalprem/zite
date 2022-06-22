@@ -1,9 +1,12 @@
 .custom-checkbox {
     @include display-flex(flex);
     @include justify-content-start;
-    @include align-items-start;
+    @include align-items-center;
     position: relative;
     margin-bottom: 0.6125rem;
+    &.is-start{
+        @include align-items-start;
+    }
     label {
         margin: 0;
         font-weight: 500;
