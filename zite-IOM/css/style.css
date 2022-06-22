@@ -3998,7 +3998,7 @@ figure {
   margin-right: 0.5rem;
   font-size: 1.4rem;
 }
-.zite-table table tr.row-form-header.is-active td h6::before {
+.zite-table table tr.row-form-header.is-active td p::before {
   content: "arrow_drop_up";
   font-family: "Material Icons";
   display: inline-block;

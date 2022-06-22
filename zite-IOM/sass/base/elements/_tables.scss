@@ -261,7 +261,7 @@
 
         &.is-active {
           td {
-            h6 {
+            p {
               &::before {
                 content: 'arrow_drop_up';
                 font-family: 'Material Icons';
