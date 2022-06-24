@@ -89,7 +89,8 @@
   ul {
     &.custom-dropdown-menu {
       position: absolute;
-      top: 110%;
+      padding:.5rem 0;
+      top: 130%;
       max-width:100%;
       background-color: var(--clr-white);
       @include radius(4px);
@@ -97,7 +98,7 @@
       min-width: 170px;
       display: none;
       margin-top: -5px;
-      @include box-shadow(0 10px 40px rgba(0, 0, 0, 0.2));
+      box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
       @include radius(5px);
 
       &::before {
@@ -120,11 +121,9 @@
         a {
           padding: 0.5rem 1.125rem;
           color: var(--clr-body);
-          @include transition(all 0.4s ease-in-out);
           @include display-flex(flex);
           @include justify-content-start;
           @include align-items-center;
-          font-weight: 600;
 
           i,
           svg {
@@ -150,11 +149,9 @@
         span {
           // padding:.5rem .6125rem;
           color: var(--clr-body);
-          @include transition(all 0.4s ease-in-out);
           @include display-flex(flex);
           @include justify-content-start;
           @include align-items-center;
-          font-weight: 600;
 
           i,
           svg {

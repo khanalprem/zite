@@ -1,11 +1,12 @@
 .data-structure-form {
+  padding:.75rem;
   .form-list {
     background-color: var(--clr-body-100);
     @include radius(5px);
+    padding:.75rem;
 
     .form-header {
       @include radius(5px);
-      padding: 0.6125rem;
       @include transition(all 0.5s ease-in-out);
 
       &.active {
@@ -26,6 +27,9 @@
         i {
           font-size: 1rem;
           color: var(--clr-body-500);
+          &:hover{
+            color:var(--clr-primary-500);
+          }
         }
 
         @media #{$breakpoint-md-desktop} {
@@ -39,14 +43,12 @@
     }
 
     .form-list-body {
-      padding: 0.6125rem;
-
+      margin-top:.75rem;
       ul {
         @include radius(5px);
         background-color: var(--clr-white);
 
         li {
-          @include radius(5px);
           @include transition(all 0.5s ease-in-out);
 
           a {
@@ -62,6 +64,9 @@
             i {
               font-size: 1rem;
               color: var(--clr-body-500);
+              &:hover{
+                color:var(--clr-primary-500);
+              }
             }
           }
 
@@ -80,7 +85,7 @@
       background-color: transparent;
       .form-header {
         background-color: var(--clr-body-100);
-        h5 {
+        p {
           cursor: pointer;
           a {
             display: block;

@@ -150,24 +150,27 @@
 }
 
 .is-overflow {
-    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     // max-height: calc(100vh - 250px);
     // height: 100vh;
     height: 100%;
+    overflow: hidden;
     &::-webkit-scrollbar {
         width: 4px;
         height: 8px;
-        background: var(--clr-body-300);
+        background: transparent;
         @include radius(4px);
     }
     &::-webkit-scrollbar-track {
-        background-color: var(--clr-body-300);
+        background-color: transparent;
         @include radius(4px);
     }
     &::-webkit-scrollbar-thumb {
         @include radius(4px);
         background: $border-dark;
+    }
+    &:hover{
+        overflow-y: scroll;
     }
 }

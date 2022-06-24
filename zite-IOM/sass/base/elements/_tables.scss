@@ -5,43 +5,24 @@
   table-layout: fixed;
   overflow: hidden;
   border-collapse: collapse;
-
-  &.is-border {
-    tr {
-      border: 1px solid var(--clr-body-300);
-    }
-  }
 }
 
-.table td,
-.table th {
-  padding: 0.5rem 0.75rem;
-  vertical-align: top;
-  border-top: 1px solid var(--clr-body-300);
-}
+
 
 .table thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid var(--clr-body-300);
   background-color: var(--clr-body-100);
   color: var(--clr-body-600);
   font-weight: 400;
   text-transform: capitalize;
 }
 
-.table tbody + tbody {
-  border-top: 2px solid var(--clr-body-300);
-}
 
 .table-sm td,
 .table-sm th {
   padding: 0.3rem;
 }
 
-.table-bordered td,
-.table-bordered th {
-  border: 1px solid var(--clr-body-300);
-}
 
 @media (max-width: 575.98px) {
   .table-responsive-sm {
@@ -101,21 +82,51 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.table-responsive > .table-bordered {
-  border: 0;
-}
 
 .zite-table {
   display: block;
   width: 100%;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  
+  @include radius(5px);
+  &.is-overflow{
+    &:hover{
+      overflow-x:auto;
+    }
+  }
 
   table {
-
-    th {
+    border:1px solid var(--clr-body-300);
+    border-collapse: separate;
+    border-spacing: 0;
+    
+    th,td{
       vertical-align: middle;
-
+      padding: 0.25rem 0.75rem;
+      border-bottom: 1px solid var(--clr-body-300);
+    }
+    th{
+      white-space: nowrap;
+      font-size:var(--fs-md);
+      vertical-align: top;
+      padding:.5rem .75rem;
+      
+    }
+    tr{
+      
+      border-collapse: collapse;
+    }
+    tbody{
+      tr{
+        
+        &:hover{
+          background-color: var(--clr-primary-50);
+        }
+      }
+    }
+    
+    th {
       &.serial-no {
         width: 50px;
       }
@@ -167,15 +178,15 @@
         @extend .site-progress;
 
         .org-text {
-          h6 {
+          p {
             @include trim(1);
           }
         }
       }
 
       figure {
-        @include flex(0 0 40px);
-        max-width: 40px;
+        @include flex(0 0 36px);
+        max-width: 36px;
         margin: 0;
 
         img {
@@ -189,7 +200,7 @@
       span {
         &.form-guide {
           i {
-            color: var(--clr-body);
+            color: var(--clr-primary-500);
             font-size: 1rem;
           }
         }
@@ -362,6 +373,7 @@
         }
       }
     }
+    
 
     .icons {
       @include display-flex(flex);
@@ -371,6 +383,11 @@
       i {
         font-size: 1rem;
         cursor: pointer;
+        color: var(--clr-body-500);
+        line-height: 1;
+        &:hover{
+          color:var(--clr-primary-500);
+        }
       }
 
       span {
@@ -435,15 +452,12 @@
     min-height: 28px;
     margin-right: -4px;
     border: 1px solid var(--clr-white);
-    @include transform(scale(1));
     position: relative;
     flex-wrap: nowrap;
     word-break: keep-all;
     font-weight: 500;
 
-    &:hover {
-      @include transform(scale(1.2));
-    }
+   
 
     &.is-pd {
       padding: 0.5px 10px;
@@ -457,21 +471,37 @@
     &.is-blue {
       background-color: var(--clr-blue-50);
       color: var(--clr-blue);
+      &:hover{
+        background-color: var(--clr-blue);
+        color:var(--clr-white);
+      }
     }
 
     &.is-red {
       background-color: var(--clr-red-50);
       color: var(--clr-red);
+      &:hover{
+        background-color: var(--clr-red);
+        color:var(--clr-white);
+      }
     }
 
     &.is-green {
       background-color: var(--clr-green-50);
       color: var(--clr-green);
+      &:hover{
+        background-color: var(--clr-green);
+        color:var(--clr-white);
+      }
     }
 
     &.is-orange {
       background-color: var(--clr-orange-50);
       color: var(--clr-orange);
+      &:hover{
+        background-color: var(--clr-orange);
+        color:var(--clr-white);
+      }
     }
 
     img {

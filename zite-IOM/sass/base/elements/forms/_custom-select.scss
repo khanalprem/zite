@@ -56,17 +56,19 @@
   }
 
   .select-list {
+    padding:.5rem 0;
     max-width:100%;
     width: 100%;
     position: absolute;
-    top: 100%;
+    top: 120%;
     z-index: 1012;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     background-color: var(--clr-white);
-    @include box-shadow(0 10px 40px rgba(0, 0, 0, 0.2));
+    box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
     max-height: 220px;
+    border: 1px solid var(--clr-body-300);
     @include radius(5px);
     display: none;
 
@@ -92,10 +94,12 @@
       @include justify-content-start;
       @include align-items-center;
       cursor: pointer;
-      @include transition(all 0.3s linear);
-      border-bottom: 1px solid var(--clr-body-300);
       position: relative;
       color:var(--clr-body);
+      flex: auto;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
      
 
       i {

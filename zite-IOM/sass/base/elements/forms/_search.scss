@@ -8,12 +8,14 @@
     @include justify-content-between;
     border: 1px solid var(--clr-body-300);
     @include radius(5px);
-    @include align-items-stretch;
     background-color: var(--clr-body-100);
     flex-grow: 1;
     max-width: 240px;
     &.nobg {
       background-color: initial;
+    }
+    &:focus-within{
+      border-color: var(--clr-primary-500);
     }
 
     input {
@@ -27,6 +29,7 @@
 
         &:focus {
           background-color: var(--clr-body-100);
+          
         }
 
         @include input-placeholder {
@@ -52,7 +55,7 @@
       @include flex-direction-column(column);
       cursor: pointer;
       background-color: var(--clr-primary-500);
-      margin:-1px 0 -1px -1px;
+      margin:-1.2px 0 -1.2px -1.2px;
       border-radius: 5px 0 0 5px;
 
       i {

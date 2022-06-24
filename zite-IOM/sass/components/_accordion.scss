@@ -61,7 +61,7 @@
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
             -ms-overflow-style: -ms-autohiding-scrollbar;
-            max-height: 500px;
+            // max-height: 500px;
             &::-webkit-scrollbar {
                 width: 4px;
                 background: var(--clr-body-300);
@@ -181,7 +181,7 @@
         }
         &.active {
             .acc-header {
-                h5 {
+                p {
                     color: var(--clr-primary-500);
                 }
             }
@@ -230,6 +230,12 @@
                     margin-left: 0.6125rem;
                     font-size: 1rem;
                 }
+                &:hover{
+                    &::after {
+                        background-color: var(--clr-primary-50);
+                    }
+                    
+                }
             }
             &.active {
                 .acc-header {
@@ -237,13 +243,14 @@
                         content: 'expand_less';
                         background-color: var(--clr-primary-50);
                         border-color: var(--clr-primary-500);
+                        color:var(--clr-primary-500)
                     }
                 }
             }
         }
     }
     &.profile-acc,&.sidebar-acc {
-        margin-bottom: 1rem;
+        // margin-bottom: 1rem;
         width: 100%;
         .acc-list {
             .org-details {
@@ -260,22 +267,18 @@
                 figure {
                     margin: 0;
                 }
-                .org-text {
-                    h5 {
-                        text-transform: uppercase;
-                        font-weight: 600;
-                        font-size: 0.8125rem;
-                        @media #{$breakpoint-md-desktop} {
-                            font-size: 0.775rem;
-                        }
-                    }
-                }
+                
             }
             .org-links {
                 display: inline-flex;
                 i {
                     color: var(--clr-body-500);
                     font-size: 1.1rem;
+                }
+                &:hover{
+                    i{
+                        color:var(--clr-primary-500)
+                    }
                 }
             }
             .acc-body {
@@ -327,12 +330,12 @@
                 }
             }
             &:not(:last-child) {
-                margin-bottom: 0.6125rem;
+                margin-bottom: 0.5rem;
             }
             &.active {
                 .org {
                     .org-text {
-                        h5 {
+                        p {
                             color: var(--clr-body);
                         }
                     }

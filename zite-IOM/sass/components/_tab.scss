@@ -37,15 +37,10 @@
           margin-left: 0.5rem;
         }
       }
-      @media #{$breakpoint-desktop} {
-        font-size: 0.775rem;
-      }
+      
     }
     &:not(:last-child) {
-      margin-right: 0.6125rem;
-      @media #{$breakpoint-desktop} {
-        margin-right: 0.5rem;
-      }
+      margin-right: 0.5rem;
     }
   }
   &.is-bg {

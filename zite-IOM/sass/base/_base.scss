@@ -490,6 +490,33 @@
 .clr-primary-800{
   color:var(--clr-primary-800)
 }
+.is-pointer{
+  cursor: pointer;
+}
+
+.user-avatar{
+  border:2px solid var(--clr-body-300);
+  @include radius(100%);
+  display: inline-flex;
+  position: relative;
+  max-width: 32px;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  @include flex-direction-column(column);
+  @include justify-content-center;
+  @include align-items-center;
+  img{
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    border-radius: 100%;
+
+  }
+  &:hover{
+    border-color: var(--clr-primary-500)
+}
+}
 
 
 
@@ -593,7 +620,6 @@
   }
   .flat-checkbox {
       position: relative;
-      @include transition(all 0.5s ease-in-out);
       text-align: center;
       input {
           position: absolute;
@@ -610,11 +636,11 @@
               position: relative;
               cursor: pointer;
               margin: 0;
-              padding: .6125rem 1.125rem;
+              padding: .5rem 1rem;
               width: 100%;
               text-transform: capitalize;
               display: inline-block;
-              font-size: 0.8rem;
+              color:var(--clr-body);
               &::before {
                   content: '';
                   position: absolute;
@@ -631,7 +657,6 @@
           }
           &:checked+label {
               background: var(--clr-primary-50);
-              color: var(--clr-primary-500);
               &::before {
                   border-color: var(--clr-primary-500);
               }

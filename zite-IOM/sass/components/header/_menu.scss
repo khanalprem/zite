@@ -8,25 +8,20 @@
             position: relative;
             a {
                 color: var(--clr-body-600);
-                padding: 0 0.6125rem;
+                // padding: 0 0.6125rem;
                 font-weight: 600;
-                @include transition(all 0.3s ease-in-out);
                 text-transform: capitalize;
                 @include display-flex(flex);
                 @include justify-content-start;
                 @include align-items-center;
+                
                 i,
                 svg {
-                    margin-right: 0.6125rem;
+                    margin-right: 0.35rem;
                     fill: var(--clr-body-600);
+                    max-height: 18px;
                 }
-                @media #{$breakpoint-md-desktop} {
-                    font-size: 0.8125rem;
-                    i,
-                    svg {
-                        max-width: 18px;
-                    }
-                }
+                
                 &.active,
                 &:hover {
                     color: var(--clr-primary-500);
@@ -254,14 +249,8 @@
                 }
             }
             &:not(:last-child) {
-                margin-right: 2rem;
+                margin-right: 1.5rem;
                 
-                @media #{$breakpoint-xl-desktop} {
-                    margin-right: 1.5rem;
-                }
-                @media #{$breakpoint-xl} {
-                    margin-right: .6125rem;
-                }
             }
         }
     }

@@ -1,5 +1,5 @@
 .breadcrumb {
-    padding:.6125rem 1.5rem;
+    padding:.5rem 1.5rem;
     background-color: var(--clr-white);
     border-bottom: 1px solid var(--clr-body-300);
     ol {
@@ -13,12 +13,14 @@
             @include display-flex(flex);
             @include align-items-center;
             color: var(--clr-body);
+            font-size: var(--fs-md);
             a {
                 color: var(--clr-body-600);
                 font-weight: 400;
-                font-size: var(--fs-md);
+                
                 &:hover {
-                    color: var(--clr-primary-800);
+                    color: var(--clr-primary-500);
+                    text-decoration: underline;
                 }
             }
             &:not(:last-child) {
@@ -31,6 +33,7 @@
                     text-transform: initial;
                     font-size: 1.2rem;
                     font-weight: 400;
+                    line-height: 1;
                 }
             }
         }

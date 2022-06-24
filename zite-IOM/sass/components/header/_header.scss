@@ -2,12 +2,10 @@
 @import './zite-header';
 header {
     &.site-header {
-        padding: 0.6125rem 1.5rem;
+        padding: 0.5rem 1.5rem;
         background-color: var(--clr-white);
         border-bottom: 1px solid var(--clr-body-300);
-        @media #{$breakpoint-ls} {
-            padding: 0.6125rem 0;
-        }
+        
         .header-in {
             @include display-flex(flex);
             @include justify-content-between;
@@ -24,7 +22,7 @@ header {
                     @include justify-content-end;
                     @include align-items-center;
                     li {
-                        margin-left: 1.5rem;
+                        margin-left: 1rem;
                         &.custom-dropdown {
                             ul {
                                 &.custom-dropdown-menu {
@@ -57,6 +55,7 @@ header {
                                 }
                                 ul {
                                     &.custom-dropdown-menu {
+                                        padding:0;
                                         min-width: 400px;
                                         min-height: 300px;
                                         max-width: 400px;
@@ -88,7 +87,12 @@ header {
                                                     }
                                                 }
                                             }
+                                            &:hover{
+                                                background-color: var(--clr-primary-50);
+                                            }
+                                          
                                             &.list-header {
+                                                @include align-items-center;
                                                 a {
                                                     @include align-items-center;
                                                     @include justify-content-center;
@@ -96,22 +100,43 @@ header {
                                                     width: 30px;
                                                     height: 30px;
                                                     min-height: 30px;
+                                                    
                                                     i {
                                                         margin: 0;
-                                                        color: var(--clr-primary-500);
+                                                        color:var(--clr-body-600);
                                                     }
+                                                    &:hover{
+                                                        i{
+                                                            color:var(--clr-primary-500)
+                                                        }
+                                                    }
+                                                   
+                                                }
+                                                &:hover{
+                                                    background-color: transparent
                                                 }
                                             }
                                             &.list-footer {
                                                 @include align-items-center;
                                                 @include justify-content-between;
                                                 @include display-flex(flex);
+                                                border-top:1px solid var(--clr-body-300);
                                                 a.circle-icon {
                                                     @include align-items-center;
                                                     @include justify-content-center;
                                                     @include display-flex(flex);
+                                                    width: 30px;
+                                                    height: 30px;
+                                                    min-height: 30px;
+                                                    
                                                     i {
                                                         margin: 0;
+                                                        color:var(--clr-body-600);
+                                                    }
+                                                    &:hover{
+                                                        i{
+                                                            color:var(--clr-primary-500)
+                                                        }
                                                     }
                                                 }
                                                 a.common-button {
@@ -119,6 +144,7 @@ header {
                                                     height: unset;
                                                     min-height: unset;
                                                     padding: 0;
+                                                    @include display-flex(flex);
                                                     @include align-items-center;
                                                     span {
                                                         display: unset;
@@ -140,36 +166,26 @@ header {
                                                         }
                                                     }
                                                 }
+                                                &:hover{
+                                                    background-color: transparent
+                                                }
                                             }
-                                            &:hover{
-                                                background-color: var(--clr-primary-50);
-                                            }
+                                            
                                         }
                                     }
                                 }
                             }
-                            &.profile {
-                                a {
-                                    img {
-                                        max-width: 40px;
-                                        width: 40px;
-                                        height: 40px;
-                                        @include radius(100%);
-                                        @include box-shadow(0 10px 20px rgba(var(--clr-body), 0.2));
-                                        margin-right: 0.5rem;
-                                    }
-                                }
-                            }
+                            
                         }
                     }
                 }
             }
         }
         a.logo {
-            @include flex(0 0 100px);
-            max-width: 100px;
+            @include flex(0 0 80px);
+            max-width: 80px;
             img {
-                max-height: 40px;
+                max-height: 36px;
             }
         }
         &.sticky {
