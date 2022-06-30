@@ -120,13 +120,10 @@ textarea {
 
 .custom-input-group {
     @include display-flex(flex);
-    @include justify-content-between;
     border: 1px solid var(--clr-body-300);
     @include radius(5px);
-    @include align-items-center;
     background-color: var(--clr-white);
     position: relative;
-    height: calc(1.6em + 0.75rem + 2px);
     overflow: hidden;
     input {
         flex-grow: 1;
@@ -148,6 +145,7 @@ textarea {
             @include align-items-center;
             @include flex-direction-column(column);
             cursor: pointer;
+            color:var(--clr-primary-500);
             i {
                 font-size: 1.1rem;
             }

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_3146" data-name="Rectangle 3146" width="24" height="24" transform="translate(1037 294)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_47" data-name="Mask Group 47" transform="translate(-1037 -294)" clip-path="url(#clip-path)">
+    <g id="Google_Drive_icon__2020_" data-name="Google_Drive_icon_(2020)" transform="translate(1038 296)">
+      <path id="Path_11618" data-name="Path 11618" d="M1.612,56.383l.94,1.624a2.218,2.218,0,0,0,.806.806L6.717,53H0a2.213,2.213,0,0,0,.293,1.1Z" transform="translate(0 -40.055)" fill="#0066da"/>
+      <path id="Path_11619" data-name="Path 11619" d="M10.662,7.013,7.3,1.2a2.218,2.218,0,0,0-.806.806L.293,12.753A2.213,2.213,0,0,0,0,13.852H6.717Z" transform="translate(0 -0.907)" fill="#00ac47"/>
+      <path id="Path_11620" data-name="Path 11620" d="M63.157,58.813a2.218,2.218,0,0,0,.806-.806l.391-.672L66.222,54.1a2.213,2.213,0,0,0,.293-1.1H59.8l1.429,2.809Z" transform="translate(-45.192 -40.055)" fill="#ea4335"/>
+      <path id="Path_11621" data-name="Path 11621" d="M33.258,6.106,36.617.293A2.147,2.147,0,0,0,35.518,0H31a2.274,2.274,0,0,0-1.1.293Z" transform="translate(-22.597 0)" fill="#00832d"/>
+      <path id="Path_11622" data-name="Path 11622" d="M25,53H17.108L13.75,58.813a2.147,2.147,0,0,0,1.1.293H27.257a2.274,2.274,0,0,0,1.1-.293Z" transform="translate(-10.392 -40.055)" fill="#2684fc"/>
+      <path id="Path_11623" data-name="Path 11623" d="M50.916,7.38l-3.1-5.374a2.218,2.218,0,0,0-.806-.806L43.65,7.013l3.945,6.839h6.7a2.213,2.213,0,0,0-.293-1.1Z" transform="translate(-32.988 -0.907)" fill="#ffba00"/>
+    </g>
+  </g>
+</svg>

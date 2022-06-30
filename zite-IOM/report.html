@@ -474,394 +474,567 @@
 
     <div id="content" class="site-content">
       <main id="main" class="site-main">
-        <div class="container">
+        <div class="container-fluid">
           <div class="manage-user">
             <div class="zite-card">
               <div class="card-header is-between">
                 <div class="card-header-content">
-                  <h5>Project summary</h5>
-                  <span class="mr-15">Report Type</span><b>Project</b>
-                </div>
-                <div class="buttons is-end">
-                  <a class="circle-icon is-bg" href="#">
-                    <i class="material-icons-outlined">import_export</i>
-                  </a>
-                  <div class="custom-dropdown is-right is-light">
-                    <a href="#" class="is-light is-dropdown-icon"
-                      ><i class="material-icons-outlined">sync</i
-                      ><span>Sync</span></a
+                  <div class="is-flex is-start is-align-center is-gap-10">
+                    <h5>Project summary</h5>
+                    <a href="#" class="circle-icon is-sm clr-primary-500"
+                      ><i class="material-icons-outlined">info</i></a
                     >
-                    <ul class="custom-dropdown-menu">
+                  </div>
+                  <div class="is-flex is-start is-align-center is-gap-10 mt-10">
+                    <span class="fs-md">Report Type</span>
+                    <p>Project</p>
+                  </div>
+                </div>
+                <div class="popup is-open" id="summary-modal">
+                  <div class="popup-container sm-popup">
+                    <div class="popup-body">
+                      <span class="close-icon"
+                        ><i class="material-icons-outlined">close</i></span
+                      >
+                      <div class="popup-header">
+                        <div class="">
+                          <h5>Project Summary</h5>
+                          <div
+                            class="is-flex is-start is-align-center is-gap-10 mt-10"
+                          >
+                            <span class="fs-md">Report Type</span>
+                            <p>Project</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="popup-content">
+                        Contains high level overview of the project in form of
+                        numbers, graphs and map. Contains high level overview of
+                        the project in form of numbers, graphs and map.
+                        <ul class="mt-15">
+                          <li class="grid grid-cols_2 grid-cols_2--1fr mb-05">
+                            <span class="fs-md">Last Update</span>
+                            <p>8 Jan. 2018</p>
+                          </li>
+                          <li class="grid grid-cols_2 grid-cols_2--1fr mb-05">
+                            <span class="fs-md">Created by</span>
+                            <p>Mike Manner</p>
+                          </li>
+                          <li class="grid grid-cols_2 grid-cols_2--1fr mb-05">
+                            <span class="fs-md">shared with</span>
+                            <div>
+                              <p>Mike Manner</p>
+                              <p>Man muiler</p>
+                              <p>Kate bush</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="is-flex is-align-center is-end is-gap-10">
+                  <a class="circle-icon" href="#">
+                    <i class="material-icons-outlined clr-primary-500"
+                      >person_add</i
+                    >
+                  </a>
+
+                  <div class="custom-dropdown is-right">
+                    <a href="#" class="circle-icon is-bg"
+                      ><i class="material-icons-outlined">sync</i></a
+                    >
+                    <ul class="custom-dropdown-menu max-content">
                       <li>
                         <a href="#" popup-link="sheet-modal"
-                          ><span>Google sheet</span></a
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                          >
+                            <g
+                              id="Mask_Group_47"
+                              data-name="Mask Group 47"
+                              transform="translate(-1037 -294)"
+                              clip-path="url(#clip-path)"
+                            >
+                              <g
+                                id="Google_Drive_icon__2020_"
+                                data-name="Google_Drive_icon_(2020)"
+                                transform="translate(1038 296)"
+                              >
+                                <path
+                                  id="Path_11618"
+                                  data-name="Path 11618"
+                                  d="M1.612,56.383l.94,1.624a2.218,2.218,0,0,0,.806.806L6.717,53H0a2.213,2.213,0,0,0,.293,1.1Z"
+                                  transform="translate(0 -40.055)"
+                                  fill="#0066da"
+                                />
+                                <path
+                                  id="Path_11619"
+                                  data-name="Path 11619"
+                                  d="M10.662,7.013,7.3,1.2a2.218,2.218,0,0,0-.806.806L.293,12.753A2.213,2.213,0,0,0,0,13.852H6.717Z"
+                                  transform="translate(0 -0.907)"
+                                  fill="#00ac47"
+                                />
+                                <path
+                                  id="Path_11620"
+                                  data-name="Path 11620"
+                                  d="M63.157,58.813a2.218,2.218,0,0,0,.806-.806l.391-.672L66.222,54.1a2.213,2.213,0,0,0,.293-1.1H59.8l1.429,2.809Z"
+                                  transform="translate(-45.192 -40.055)"
+                                  fill="#ea4335"
+                                />
+                                <path
+                                  id="Path_11621"
+                                  data-name="Path 11621"
+                                  d="M33.258,6.106,36.617.293A2.147,2.147,0,0,0,35.518,0H31a2.274,2.274,0,0,0-1.1.293Z"
+                                  transform="translate(-22.597 0)"
+                                  fill="#00832d"
+                                />
+                                <path
+                                  id="Path_11622"
+                                  data-name="Path 11622"
+                                  d="M25,53H17.108L13.75,58.813a2.147,2.147,0,0,0,1.1.293H27.257a2.274,2.274,0,0,0,1.1-.293Z"
+                                  transform="translate(-10.392 -40.055)"
+                                  fill="#2684fc"
+                                />
+                                <path
+                                  id="Path_11623"
+                                  data-name="Path 11623"
+                                  d="M50.916,7.38l-3.1-5.374a2.218,2.218,0,0,0-.806-.806L43.65,7.013l3.945,6.839h6.7a2.213,2.213,0,0,0-.293-1.1Z"
+                                  transform="translate(-32.988 -0.907)"
+                                  fill="#ffba00"
+                                />
+                              </g>
+                            </g>
+                          </svg>
+                          <span>Google Drive</span></a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" popup-link="sheet-modal"
+                          ><i class="material-icons clr-primary-500"
+                            >import_export</i
+                          ><span>Custom integration</span></a
                         >
                       </li>
                     </ul>
                   </div>
-                  <div class="custom-dropdown is-right is-light is-icon">
-                    <a href="#" class="is-light is-dropdown-icon"
-                      ><i class="material-icons-outlined">get_app</i
-                      ><span>Export</span></a
-                    >
-                    <ul class="custom-dropdown-menu">
-                      <li>
-                        <a href="#"><span>Microsoft Excel (.xlxs)</span></a>
-                      </li>
-                      <li>
-                        <a href="#"><span>PDF Document (.pdf)</span></a>
-                      </li>
-                      <li>
-                        <a href="#"
-                          ><span
-                            >Keywhole Markup Zipped Document (.KMZ)</span
-                          ></a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="custom-dropdown is-option is-right">
-                    <a href="#" class="circle-icon is-bg mr-0"
-                      ><i class="material-icons-outlined">more_vert</i></a
-                    >
-                    <ul class="custom-dropdown-menu">
-                      <li>
-                        <a href="#"
-                          ><i class="material-icons-outlined">edit</i
-                          ><span>edit</span></a
-                        >
-                      </li>
-                    </ul>
-                  </div>
+                  <a href="#" class="circle-icon is-bg"
+                    ><i class="material-icons-outlined">get_app</i></a
+                  >
                 </div>
               </div>
-              <div class="inline-row is-between mt-15 is-relative">
-                <p>
-                  Contains high level overview of the project in form of
-                  numbers, graphs and map.
-                </p>
-                <div class="filter">
-                  <div class="custom-dropdown is-right is-light is-icon mr-15">
-                    <a
-                      href="#"
-                      class="common-button is-sm is-filter-btn is-icon is-dropdown-icon"
-                      ><i class="material-icons-outlined">filter_list</i
-                      ><span>Filter</span><span class="count">2</span></a
-                    >
-                  </div>
-                  <div class="custom-dropdown is-right is-light is-icon">
-                    <a href="#" class="is-light is-dropdown-icon"
-                      ><i class="material-icons-outlined">grid_view</i
-                      ><span>Group</span></a
-                    >
-                  </div>
+              <div class="inline-row is-end mt-15 is-relative">
+                <div class="filter is-end">
+                  <a
+                    href="#"
+                    class="common-button is-sm is-filter-btn is-icon is-after-icon"
+                    ><i class="material-icons-outlined">tune</i
+                    ><span>Filter</span><span class="count">2</span></a
+                  >
                 </div>
               </div>
               <div
                 class="filter-content project-summary-filter"
                 style="display: block"
               >
-                <span class="arrow-up" style="right: 150px"></span>
-                <div class="filter-header mb-15">
-                  <h6>Manage Filter</h6>
-                </div>
-                <div class="filter-row is-wrap is-start is-overflow">
-                  <div class="form-group">
-                    <div class="custom-select">
-                      <p class="selected-item">
-                        <span>Project</span> <span class="count">2</span>
-                        <i class="material-icons-outlined select-remove"
-                          >close</i
-                        >
-                      </p>
-                      <ul class="select-list left-dropdown">
-                        <li>
-                          <div class="custom-checkbox">
-                            <input type="checkbox" id="check" />
-                            <label for="check">pokhara</label>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="custom-checkbox">
-                            <input type="checkbox" id="check" />
-                            <label for="check">pokhara</label>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="custom-checkbox">
-                            <input type="checkbox" id="check" />
-                            <label for="check">pokhara</label>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="custom-select">
-                      <p class="selected-item">Region</p>
-                      <ul class="select-list left-dropdown">
-                        <li>
-                          <span>Kathmandu</span>
-                        </li>
-                        <li>
-                          <span>Pokhara</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="custom-select">
-                      <p class="selected-item">User roles</p>
-                      <ul class="select-list left-dropdown">
-                        <li>
-                          <span>Kathmandu</span>
-                        </li>
-                        <li>
-                          <span>Pokhara</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="custom-input-group custom-date">
-                      <span class="span-group">
-                        <i class="material-icons-outlined">date_range</i>
-                      </span>
-                      <input
-                        class="form-control"
-                        placeholder="Project Period"
-                      />
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="custom-select">
-                      <p class="selected-item">Site Informations</p>
-                      <ul class="select-list left-dropdown">
-                        <li>
-                          <span>Kathmandu</span>
-                        </li>
-                        <li>
-                          <span>Pokhara</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="custom-select">
-                      <p class="selected-item">sub group</p>
-                      <ul class="select-list left-dropdown">
-                        <li>
-                          <span>Kathmandu</span>
-                        </li>
-                        <li>
-                          <span>Pokhara</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="custom-input-group custom-date">
-                      <span class="span-group">
-                        <i class="material-icons-outlined">date_range</i>
-                      </span>
-                      <input
-                        class="form-control"
-                        placeholder="Project Period"
-                      />
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="custom-select">
-                      <p class="selected-item">Site Informations</p>
-                      <ul class="select-list left-dropdown">
-                        <li>
-                          <span>Kathmandu</span>
-                        </li>
-                        <li>
-                          <span>Pokhara</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="custom-select">
-                      <p class="selected-item">sub group</p>
-                      <ul class="select-list left-dropdown">
-                        <li>
-                          <span>Kathmandu</span>
-                        </li>
-                        <li>
-                          <span>Pokhara</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="custom-select">
-                      <p class="selected-item">sub group</p>
-                      <ul class="select-list left-dropdown">
-                        <li>
-                          <span>Kathmandu</span>
-                        </li>
-                        <li>
-                          <span>Pokhara</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="custom-select">
-                      <p class="selected-item">sub group</p>
-                      <ul class="select-list left-dropdown">
-                        <li>
-                          <span>Kathmandu</span>
-                        </li>
-                        <li>
-                          <span>Pokhara</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <a href="#" class="circle-icon is-bg mr-0"
-                    ><i class="material-icons-outlined">settings</i></a
+                <span class="arrow-up" style=""></span>
+                <div class="filter-card">
+                  <div
+                    class="filter-header mb-15 is-flex is-between is-align-center is-gap-10"
                   >
-                </div>
-                <div class="is-flex is-end is-align-center mt-15">
-                  <div class="common-button is-clear is-sm is-primary">
-                    <span>Clear</span>
+                    <h6 class="is-flex is-start is-align-center is-gap-05">
+                      <span>Manage Filter</span
+                      ><i
+                        class="circle-icon is-sm material-icons-outlined clr-primary-500"
+                        >close</i
+                      >
+                    </h6>
+                    <i
+                      class="circle-icon is-sm material-icons-outlined clr-primary-500"
+                      >close</i
+                    >
                   </div>
-                  <div class="common-button is-bg is-light is-sm">
-                    <span>apply</span>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="filter-content project-summary-filter"
-                style="display: none"
-              >
-                <span class="arrow-up"></span>
-                <div class="filter-header mb-15">
-                  <h6>Manage Group</h6>
-                </div>
-                <div class="filter-row is-wrap is-start is-overflow">
-                  <div class="form-group">
-                    <label>Metrics</label>
-                    <div class="custom-select">
-                      <p class="selected-item">
-                        <span>Project</span> <span class="count">2</span>
-                        <i class="material-icons-outlined select-remove"
-                          >close</i
-                        >
-                      </p>
-                      <ul class="select-list left-dropdown">
-                        <li>
-                          <div class="custom-checkbox">
-                            <input type="checkbox" id="check" />
-                            <label for="check">pokhara</label>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="custom-checkbox">
-                            <input type="checkbox" id="check" />
-                            <label for="check">pokhara</label>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="custom-checkbox">
-                            <input type="checkbox" id="check" />
-                            <label for="check">pokhara</label>
-                          </div>
-                        </li>
-                      </ul>
+                  <div class="filter-row is-wrap is-start is-gap-10">
+                    <div class="form-group">
+                      <div class="custom-select">
+                        <p class="selected-item">
+                          <span>Project</span> <span class="count">2</span>
+                          <i class="material-icons-outlined select-remove"
+                            >close</i
+                          >
+                        </p>
+                        <ul class="select-list left-dropdown">
+                          <li>
+                            <div class="custom-checkbox">
+                              <input type="checkbox" id="check" />
+                              <label for="check">pokhara</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="custom-checkbox">
+                              <input type="checkbox" id="check" />
+                              <label for="check">pokhara</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="custom-checkbox">
+                              <input type="checkbox" id="check" />
+                              <label for="check">pokhara</label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                  <div class="form-group">
-                    <label>Metrics</label>
-                    <div class="custom-select">
-                      <p class="selected-item">Region</p>
-                      <ul class="select-list left-dropdown">
-                        <li>
-                          <span>Kathmandu</span>
-                        </li>
-                        <li>
-                          <span>Pokhara</span>
-                        </li>
-                      </ul>
+                    <div class="form-group">
+                      <div class="custom-select">
+                        <p class="selected-item">Region</p>
+                        <ul class="select-list left-dropdown">
+                          <li>
+                            <span>Kathmandu</span>
+                          </li>
+                          <li>
+                            <span>Pokhara</span>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                  </div>
+                    <div class="form-group">
+                      <div class="custom-select">
+                        <p class="selected-item">User roles</p>
+                        <ul class="select-list left-dropdown">
+                          <li>
+                            <span>Kathmandu</span>
+                          </li>
+                          <li>
+                            <span>Pokhara</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="custom-input-group custom-date">
+                        <span class="span-group">
+                          <i class="material-icons-outlined">date_range</i>
+                        </span>
+                        <input
+                          class="form-control"
+                          placeholder="Project Period"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="custom-select">
+                        <p class="selected-item">Site Informations</p>
+                        <ul class="select-list left-dropdown">
+                          <li>
+                            <span>Kathmandu</span>
+                          </li>
+                          <li>
+                            <span>Pokhara</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="custom-select">
+                        <p class="selected-item">sub group</p>
+                        <ul class="select-list left-dropdown">
+                          <li>
+                            <span>Kathmandu</span>
+                          </li>
+                          <li>
+                            <span>Pokhara</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="custom-input-group custom-date">
+                        <span class="span-group">
+                          <i class="material-icons-outlined">date_range</i>
+                        </span>
+                        <input
+                          class="form-control"
+                          placeholder="Project Period"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="custom-select">
+                        <p class="selected-item">Site Informations</p>
+                        <ul class="select-list left-dropdown">
+                          <li>
+                            <span>Kathmandu</span>
+                          </li>
+                          <li>
+                            <span>Pokhara</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="custom-select">
+                        <p class="selected-item">sub group</p>
+                        <ul class="select-list left-dropdown">
+                          <li>
+                            <span>Kathmandu</span>
+                          </li>
+                          <li>
+                            <span>Pokhara</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="custom-select">
+                        <p class="selected-item">sub group</p>
+                        <ul class="select-list left-dropdown">
+                          <li>
+                            <span>Kathmandu</span>
+                          </li>
+                          <li>
+                            <span>Pokhara</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="custom-select">
+                        <p class="selected-item">sub group</p>
+                        <ul class="select-list left-dropdown">
+                          <li>
+                            <span>Kathmandu</span>
+                          </li>
+                          <li>
+                            <span>Pokhara</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
 
-                  <a href="#" class="circle-icon is-bg mr-0"
-                    ><i class="material-icons-outlined"
-                      >add_circle_outline</i
-                    ></a
-                  >
-                </div>
-                <div class="is-flex is-end is-align-center mt-15">
-                  <div class="common-button is-clear is-sm is-primary">
-                    <span>Clear</span>
+                    <a href="#" class="common-button is-clear is-icon is-gap-10"
+                      ><i class="material-icons-outlined">add_circle</i> Add
+                      filters<span></span
+                    ></a>
                   </div>
-                  <div class="common-button is-bg is-light is-sm">
-                    <span>apply</span>
+                  <hr />
+                  <div
+                    class="filter-header mb-15 is-flex is-between is-align-center is-gap-10"
+                  >
+                    <h6 class="is-flex is-start is-align-center is-gap-05">
+                      <span>Group by</span
+                      ><i
+                        class="circle-icon is-sm material-icons-outlined clr-primary-500"
+                        >close</i
+                      >
+                    </h6>
+                  </div>
+                  <div class="filter-row is-wrap is-start is-gap-10">
+                    <div class="form-group">
+                      <label>First Level</label>
+                      <div class="custom-select">
+                        <p class="selected-item">
+                          <span>choose</span> <span class="count">2</span>
+                          <i class="material-icons-outlined select-remove"
+                            >close</i
+                          >
+                        </p>
+                        <ul class="select-list left-dropdown">
+                          <li>
+                            <div class="custom-checkbox">
+                              <input type="checkbox" id="check" />
+                              <label for="check">pokhara</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="custom-checkbox">
+                              <input type="checkbox" id="check" />
+                              <label for="check">pokhara</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="custom-checkbox">
+                              <input type="checkbox" id="check" />
+                              <label for="check">pokhara</label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Second Level</label>
+                      <div class="custom-select is-disable">
+                        <p class="selected-item">Choose</p>
+                        <ul class="select-list left-dropdown">
+                          <li>
+                            <span>Kathmandu</span>
+                          </li>
+                          <li>
+                            <span>Pokhara</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="is-flex is-end is-align-center mt-15">
+                    <div class="common-button is-clear is-sm is-primary">
+                      <span>Clear</span>
+                    </div>
+                    <div class="common-button is-bg is-light is-sm">
+                      <span>apply</span>
+                    </div>
+                  </div>
+                  <div class="is-flex is-end is-align-center mt-15 is-gap-15">
+                    <div class="common-button is-clear is-sm is-link">
+                      <span>use default</span>
+                    </div>
+                    <div class="common-button is-clear is-sm is-link">
+                      <span>save as default</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="zite-body">
-              <div class="zite-table mt-30 project-summary-table">
+              <ul class="tab-list is-border">
+                <li class="current"><a href="#">report</a></li>
+                <li class=""><a href="#">EXPORT HISTORY</a></li>
+              </ul>
+              <div class="zite-table mt-10 project-summary-table">
                 <table class="table is-border table-responsive-xl">
                   <thead>
                     <tr>
-                      <th style="width: 100px">UID</th>
-                      <th style="width: 150px">Identifier</th>
-                      <th style="width: 200px">Name</th>
-                      <th style="width: 200px">Submitted by</th>
-                      <th style="width: 100px">status</th>
+                      <th style="width: 100px">
+                        <div
+                          class="is-flex is-start is-align-center is-gap-10 table-sort"
+                        >
+                          <span>UID</span>
+                          <i class="material-icons">arrow_drop_up</i>
+                        </div>
+                      </th>
+                      <th style="width: 150px">
+                        <div
+                          class="is-flex is-start is-align-center is-gap-10 table-sort"
+                        >
+                          <span>Identifier</span>
+                          <i class="material-icons">arrow_drop_up</i>
+                        </div>
+                      </th>
+                      <th style="width: 200px">
+                        <div
+                          class="is-flex is-start is-align-center is-gap-10 table-sort"
+                        >
+                          <span>Name</span>
+                          <i class="material-icons">arrow_drop_up</i>
+                        </div>
+                      </th>
+                      <th style="width: 200px">
+                        <div
+                          class="is-flex is-start is-align-center is-gap-10 table-sort"
+                        >
+                          <span>submitted by</span>
+                          <i class="material-icons">arrow_drop_up</i>
+                        </div>
+                      </th>
+                      <th style="width: 100px">
+                        <div
+                          class="is-flex is-start is-align-center is-gap-10 table-sort"
+                        >
+                          <span>status</span>
+                          <i class="material-icons">arrow_drop_up</i>
+                        </div>
+                      </th>
 
-                      <th style="width: 150px">submitted on</th>
-                      <th style="width: 100px">record</th>
-                      <th style="width: 150px">choose</th>
-                      <th style="width: 150px">enter the</th>
-                      <th style="width: 150px">select the</th>
-                      <th style="width: 150px">enter the</th>
-                      <th style="width: 150px">select the</th>
-                      <th style="width: 150px">enter the</th>
-                      <th style="width: 150px">select the</th>
-                      <th style="width: 150px">enter the</th>
+                      <th style="width: 150px">
+                        <div
+                          class="is-flex is-start is-align-center is-gap-10 table-sort"
+                        >
+                          <span>submitted on</span>
+                          <i class="material-icons">arrow_drop_up</i>
+                        </div>
+                      </th>
+                      <th style="width: 100px">
+                        <div
+                          class="is-flex is-start is-align-center is-gap-10 table-sort"
+                        >
+                          <span>Record</span>
+                          <i class="material-icons">arrow_drop_up</i>
+                        </div>
+                      </th>
+                      <th style="width: 150px">
+                        <div
+                          class="is-flex is-start is-align-center is-gap-10 table-sort"
+                        >
+                          <span>choose</span>
+                          <i class="material-icons">arrow_drop_up</i>
+                        </div>
+                      </th>
+                      <th style="width: 150px">
+                        <div
+                          class="is-flex is-start is-align-center is-gap-10 table-sort"
+                        >
+                          <span>enter by</span>
+                          <i class="material-icons">arrow_drop_up</i>
+                        </div>
+                      </th>
+                      <th style="width: 150px">
+                        <div
+                          class="is-flex is-start is-align-center is-gap-10 table-sort"
+                        >
+                          <span>enter by</span>
+                          <i class="material-icons">arrow_drop_up</i>
+                        </div>
+                      </th>
+                      <th style="width: 150px">
+                        <div
+                          class="is-flex is-start is-align-center is-gap-10 table-sort"
+                        >
+                          <span>enter by</span>
+                          <i class="material-icons">arrow_drop_up</i>
+                        </div>
+                      </th>
+                      <th style="width: 150px">
+                        <div
+                          class="is-flex is-start is-align-center is-gap-10 table-sort"
+                        >
+                          <span>enter by</span>
+                          <i class="material-icons">arrow_drop_up</i>
+                        </div>
+                      </th>
+                      <th style="width: 150px">
+                        <div
+                          class="is-flex is-start is-align-center is-gap-10 table-sort"
+                        >
+                          <span>enter by</span>
+                          <i class="material-icons">arrow_drop_up</i>
+                        </div>
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>244980</td>
-                      <td>
-                        <span class="">R-28-18-8-9-003</span>
-                      </td>
-                      <td>
-                        <h6 class="">Narahari Nepal</h6>
-                      </td>
-
-                      <td>promisha@buildchan…</td>
-                      <td>Approved</td>
-                      <td>
-                        <time>2019-09-18</time>
-                      </td>
-                      <td><time>2019-09-18</time></td>
-                      <td>Call1</td>
-                      <td>Bsihnu</td>
-                      <td>Strong back</td>
-                      <td>type4</td>
-                      <td>Call1</td>
-                      <td>Bsihnu</td>
-                      <td>Strong back</td>
-                      <td>type4</td>
+                    <tr class="row-group-header">
+                      <th colspan="13">
+                        <h6>Week 1</h6>
+                      </th>
                     </tr>
                     <tr>
+                      <td colspan="13">
+                        <p class="fw-600 clr-body is-capitalize">
+                          Narahari Nepal
+                        </p>
+                      </td>
+                    </tr>
+                    <tr class="row-group">
                       <td>244980</td>
                       <td>
                         <span class="">R-28-18-8-9-003</span>
                       </td>
                       <td>
-                        <h6 class="">Narahari Nepal</h6>
+                        <p class="is-capitalize">Narahari Nepal</p>
                       </td>
 
                       <td>promisha@buildchan…</td>
@@ -876,40 +1049,92 @@
                       <td>type4</td>
                       <td>Call1</td>
                       <td>Bsihnu</td>
+                    </tr>
+                    <tr class="row-group">
+                      <td>244980</td>
+                      <td>
+                        <span class="">R-28-18-8-9-003</span>
+                      </td>
+                      <td>
+                        <p class="is-capitalize">Narahari Nepal</p>
+                      </td>
+
+                      <td>promisha@buildchan…</td>
+                      <td>Approved</td>
+                      <td>
+                        <time>2019-09-18</time>
+                      </td>
+                      <td><time>2019-09-18</time></td>
+                      <td>Call1</td>
+                      <td>Bsihnu</td>
                       <td>Strong back</td>
                       <td>type4</td>
+                      <td>Call1</td>
+                      <td>Bsihnu</td>
+                    </tr>
+                    <tr class="row-group">
+                      <td>244980</td>
+                      <td>
+                        <span class="">R-28-18-8-9-003</span>
+                      </td>
+                      <td>
+                        <p class="is-capitalize">Narahari Nepal</p>
+                      </td>
+
+                      <td>promisha@buildchan…</td>
+                      <td>Approved</td>
+                      <td>
+                        <time>2019-09-18</time>
+                      </td>
+                      <td><time>2019-09-18</time></td>
+                      <td>Call1</td>
+                      <td>Bsihnu</td>
+                      <td>Strong back</td>
+                      <td>type4</td>
+                      <td>Call1</td>
+                      <td>Bsihnu</td>
+                    </tr>
+                    <tr class="row-group">
+                      <td>244980</td>
+                      <td>
+                        <span class="">R-28-18-8-9-003</span>
+                      </td>
+                      <td>
+                        <p class="is-capitalize">Narahari Nepal</p>
+                      </td>
+
+                      <td>promisha@buildchan…</td>
+                      <td>Approved</td>
+                      <td>
+                        <time>2019-09-18</time>
+                      </td>
+                      <td><time>2019-09-18</time></td>
+                      <td>Call1</td>
+                      <td>Bsihnu</td>
+                      <td>Strong back</td>
+                      <td>type4</td>
+                      <td>Call1</td>
+                      <td>Bsihnu</td>
+                    </tr>
+                    <tr class="row-group-header">
+                      <th colspan="13">
+                        <h6>Week 1</h6>
+                      </th>
                     </tr>
                     <tr>
-                      <td>244980</td>
-                      <td>
-                        <span class="">R-28-18-8-9-003</span>
+                      <td colspan="13">
+                        <p class="fw-600 clr-body is-capitalize">
+                          Narahari Nepal
+                        </p>
                       </td>
-                      <td>
-                        <h6 class="">Narahari Nepal</h6>
-                      </td>
-
-                      <td>promisha@buildchan…</td>
-                      <td>Approved</td>
-                      <td>
-                        <time>2019-09-18</time>
-                      </td>
-                      <td><time>2019-09-18</time></td>
-                      <td>Call1</td>
-                      <td>Bsihnu</td>
-                      <td>Strong back</td>
-                      <td>type4</td>
-                      <td>Call1</td>
-                      <td>Bsihnu</td>
-                      <td>Strong back</td>
-                      <td>type4</td>
                     </tr>
-                    <tr>
+                    <tr class="row-group">
                       <td>244980</td>
                       <td>
                         <span class="">R-28-18-8-9-003</span>
                       </td>
                       <td>
-                        <h6 class="">Narahari Nepal</h6>
+                        <p class="is-capitalize">Narahari Nepal</p>
                       </td>
 
                       <td>promisha@buildchan…</td>
@@ -924,16 +1149,14 @@
                       <td>type4</td>
                       <td>Call1</td>
                       <td>Bsihnu</td>
-                      <td>Strong back</td>
-                      <td>type4</td>
                     </tr>
-                    <tr>
+                    <tr class="row-group">
                       <td>244980</td>
                       <td>
                         <span class="">R-28-18-8-9-003</span>
                       </td>
                       <td>
-                        <h6 class="">Narahari Nepal</h6>
+                        <p class="is-capitalize">Narahari Nepal</p>
                       </td>
 
                       <td>promisha@buildchan…</td>
@@ -948,16 +1171,14 @@
                       <td>type4</td>
                       <td>Call1</td>
                       <td>Bsihnu</td>
-                      <td>Strong back</td>
-                      <td>type4</td>
                     </tr>
-                    <tr>
+                    <tr class="row-group">
                       <td>244980</td>
                       <td>
                         <span class="">R-28-18-8-9-003</span>
                       </td>
                       <td>
-                        <h6 class="">Narahari Nepal</h6>
+                        <p class="is-capitalize">Narahari Nepal</p>
                       </td>
 
                       <td>promisha@buildchan…</td>
@@ -972,16 +1193,14 @@
                       <td>type4</td>
                       <td>Call1</td>
                       <td>Bsihnu</td>
-                      <td>Strong back</td>
-                      <td>type4</td>
                     </tr>
-                    <tr>
+                    <tr class="row-group">
                       <td>244980</td>
                       <td>
                         <span class="">R-28-18-8-9-003</span>
                       </td>
                       <td>
-                        <h6 class="">Narahari Nepal</h6>
+                        <p class="is-capitalize">Narahari Nepal</p>
                       </td>
 
                       <td>promisha@buildchan…</td>
@@ -996,32 +1215,6 @@
                       <td>type4</td>
                       <td>Call1</td>
                       <td>Bsihnu</td>
-                      <td>Strong back</td>
-                      <td>type4</td>
-                    </tr>
-                    <tr>
-                      <td>244980</td>
-                      <td>
-                        <span class="">R-28-18-8-9-003</span>
-                      </td>
-                      <td>
-                        <h6 class="">Narahari Nepal</h6>
-                      </td>
-
-                      <td>promisha@buildchan…</td>
-                      <td>Approved</td>
-                      <td>
-                        <time>2019-09-18</time>
-                      </td>
-                      <td><time>2019-09-18</time></td>
-                      <td>Call1</td>
-                      <td>Bsihnu</td>
-                      <td>Strong back</td>
-                      <td>type4</td>
-                      <td>Call1</td>
-                      <td>Bsihnu</td>
-                      <td>Strong back</td>
-                      <td>type4</td>
                     </tr>
                   </tbody>
                 </table>
@@ -1036,20 +1229,220 @@
               </ul>
             </div>
           </div>
-          <div class="popup open" id="sheet-modal">
-            <div class="popup-container">
+          <div class="popup is-open" id="integratopm-modal">
+            <div class="popup-container sm-popup">
               <div class="popup-body">
                 <span class="close-icon"
                   ><i class="material-icons-outlined">close</i></span
                 >
-                <div class="popup-header no-flex">
-                  <h3>sync to google sheet</h3>
+                <div class="popup-header">
+                  <div class="is-flex is-start is-align-center is-gap-10">
+                    <h5>Custom integration</h5>
+                  </div>
+                </div>
+                <div class="popup-content">
+                  <div class="form-group">
+                    <label for="" class="">api url</label>
+                    <div class="input-in">
+                      <div class="custom-input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="file name"
+                        />
+                        <span class="span-group is-uppercase">copy</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="" class="">api token</label>
+                    <div class="input-in">
+                      <div class="custom-input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="file name"
+                        />
+                        <span class="span-group is-uppercase">copy</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="popup-footer is-flex is-start">
+                  <button class="common-button is-bg is-icon is-gap-10">
+                    <span>Done</span>
+                    <i class="material-icons-outlined">arrow_forward</i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popup is-open" id="sync-modal">
+            <div class="popup-container sm-popup">
+              <div class="popup-body">
+                <span class="close-icon"
+                  ><i class="material-icons-outlined">close</i></span
+                >
+                <div class="popup-header">
+                  <div class="is-flex is-start is-align-center is-gap-10">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <g
+                        id="Mask_Group_47"
+                        data-name="Mask Group 47"
+                        transform="translate(-1037 -294)"
+                        clip-path="url(#clip-path)"
+                      >
+                        <g
+                          id="Google_Drive_icon__2020_"
+                          data-name="Google_Drive_icon_(2020)"
+                          transform="translate(1038 296)"
+                        >
+                          <path
+                            id="Path_11618"
+                            data-name="Path 11618"
+                            d="M1.612,56.383l.94,1.624a2.218,2.218,0,0,0,.806.806L6.717,53H0a2.213,2.213,0,0,0,.293,1.1Z"
+                            transform="translate(0 -40.055)"
+                            fill="#0066da"
+                          ></path>
+                          <path
+                            id="Path_11619"
+                            data-name="Path 11619"
+                            d="M10.662,7.013,7.3,1.2a2.218,2.218,0,0,0-.806.806L.293,12.753A2.213,2.213,0,0,0,0,13.852H6.717Z"
+                            transform="translate(0 -0.907)"
+                            fill="#00ac47"
+                          ></path>
+                          <path
+                            id="Path_11620"
+                            data-name="Path 11620"
+                            d="M63.157,58.813a2.218,2.218,0,0,0,.806-.806l.391-.672L66.222,54.1a2.213,2.213,0,0,0,.293-1.1H59.8l1.429,2.809Z"
+                            transform="translate(-45.192 -40.055)"
+                            fill="#ea4335"
+                          ></path>
+                          <path
+                            id="Path_11621"
+                            data-name="Path 11621"
+                            d="M33.258,6.106,36.617.293A2.147,2.147,0,0,0,35.518,0H31a2.274,2.274,0,0,0-1.1.293Z"
+                            transform="translate(-22.597 0)"
+                            fill="#00832d"
+                          ></path>
+                          <path
+                            id="Path_11622"
+                            data-name="Path 11622"
+                            d="M25,53H17.108L13.75,58.813a2.147,2.147,0,0,0,1.1.293H27.257a2.274,2.274,0,0,0,1.1-.293Z"
+                            transform="translate(-10.392 -40.055)"
+                            fill="#2684fc"
+                          ></path>
+                          <path
+                            id="Path_11623"
+                            data-name="Path 11623"
+                            d="M50.916,7.38l-3.1-5.374a2.218,2.218,0,0,0-.806-.806L43.65,7.013l3.945,6.839h6.7a2.213,2.213,0,0,0-.293-1.1Z"
+                            transform="translate(-32.988 -0.907)"
+                            fill="#ffba00"
+                          ></path>
+                        </g>
+                      </g>
+                    </svg>
+                    <h5>sync to google sheet</h5>
+                  </div>
+                </div>
+                <div class="popup-content">
+                  Please sign in with a Google account and select a destination
+                  Drive folder to create this report in.
+                </div>
+                <div class="popup-footer is-flex is-start">
+                  <button class="common-button is-border is-icon is-gap-10">
+                    <img src="img/google-favicon-logo.svg" alt="" />
+                    <span>SIGN IN WITH GOOGLE</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popup is-open" id="asign-modal">
+            <div class="popup-container sm-popup">
+              <div class="popup-body">
+                <span class="close-icon"
+                  ><i class="material-icons-outlined">close</i></span
+                >
+                <div class="popup-header">
+                  <div class="is-flex is-start is-align-center is-gap-10">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <g
+                        id="Mask_Group_47"
+                        data-name="Mask Group 47"
+                        transform="translate(-1037 -294)"
+                        clip-path="url(#clip-path)"
+                      >
+                        <g
+                          id="Google_Drive_icon__2020_"
+                          data-name="Google_Drive_icon_(2020)"
+                          transform="translate(1038 296)"
+                        >
+                          <path
+                            id="Path_11618"
+                            data-name="Path 11618"
+                            d="M1.612,56.383l.94,1.624a2.218,2.218,0,0,0,.806.806L6.717,53H0a2.213,2.213,0,0,0,.293,1.1Z"
+                            transform="translate(0 -40.055)"
+                            fill="#0066da"
+                          ></path>
+                          <path
+                            id="Path_11619"
+                            data-name="Path 11619"
+                            d="M10.662,7.013,7.3,1.2a2.218,2.218,0,0,0-.806.806L.293,12.753A2.213,2.213,0,0,0,0,13.852H6.717Z"
+                            transform="translate(0 -0.907)"
+                            fill="#00ac47"
+                          ></path>
+                          <path
+                            id="Path_11620"
+                            data-name="Path 11620"
+                            d="M63.157,58.813a2.218,2.218,0,0,0,.806-.806l.391-.672L66.222,54.1a2.213,2.213,0,0,0,.293-1.1H59.8l1.429,2.809Z"
+                            transform="translate(-45.192 -40.055)"
+                            fill="#ea4335"
+                          ></path>
+                          <path
+                            id="Path_11621"
+                            data-name="Path 11621"
+                            d="M33.258,6.106,36.617.293A2.147,2.147,0,0,0,35.518,0H31a2.274,2.274,0,0,0-1.1.293Z"
+                            transform="translate(-22.597 0)"
+                            fill="#00832d"
+                          ></path>
+                          <path
+                            id="Path_11622"
+                            data-name="Path 11622"
+                            d="M25,53H17.108L13.75,58.813a2.147,2.147,0,0,0,1.1.293H27.257a2.274,2.274,0,0,0,1.1-.293Z"
+                            transform="translate(-10.392 -40.055)"
+                            fill="#2684fc"
+                          ></path>
+                          <path
+                            id="Path_11623"
+                            data-name="Path 11623"
+                            d="M50.916,7.38l-3.1-5.374a2.218,2.218,0,0,0-.806-.806L43.65,7.013l3.945,6.839h6.7a2.213,2.213,0,0,0-.293-1.1Z"
+                            transform="translate(-32.988 -0.907)"
+                            fill="#ffba00"
+                          ></path>
+                        </g>
+                      </g>
+                    </svg>
+                    <h5>sync to google sheet</h5>
+                  </div>
                 </div>
                 <div class="popup-content">
                   <form class="form">
                     <div class="form-group choose-form">
                       <label>destination drive</label>
-                      <button class="common-button is-bg is-icon is-light">
+                      <button class="common-button is-bg is-icon is-sm">
                         <i class="material-icons-outlined">add_circle</i
                         ><span>choose destination drive</span>
                       </button>

@@ -8,7 +8,7 @@
     &.is-after-icon{
       display: inline-flex;
       @include align-items-center;
-      padding-right: 1rem;
+      padding-right: 1.5rem;
       &::after {
         content: 'arrow_drop_down';
         font-family: 'Material Icons';
@@ -18,6 +18,7 @@
         z-index: 2;
         right: 0;
         font-size: 1.2rem;
+        text-transform: initial;
     }
   }
     
@@ -100,6 +101,9 @@
       margin-top: -5px;
       box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
       @include radius(5px);
+      &.max-content{
+        min-width: max-content;
+      }
 
       &::before {
         content: '';
@@ -225,8 +229,8 @@
 
         &::before,
         &::after {
-          right: 10px;
-          left: auto;
+          left: 10px;
+          right: auto;
         }
       }
     }

@@ -155,7 +155,7 @@
     // max-height: calc(100vh - 250px);
     // height: 100vh;
     height: 100%;
-    overflow: hidden;
+    overflow: auto;
     &::-webkit-scrollbar {
         width: 4px;
         height: 8px;
@@ -170,7 +170,7 @@
         @include radius(4px);
         background: $border-dark;
     }
-    &:hover{
-        overflow-y: scroll;
-    }
+    // &:hover{
+    //     overflow-y: scroll;
+    // }
 }

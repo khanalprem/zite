@@ -1536,3 +1536,32 @@
     margin-top: 30px;
   }
 }
+
+$minColWidth:300px;
+.grid {
+  display: grid;
+  gap: 2rem;
+
+  &-cols_2 {
+    grid-template-columns: repeat(auto-fit, minmax($minColWidth, 1fr));
+    
+  }
+
+  &-cols_3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &-cols_4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  &-cols_5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+.grid{
+  &-cols_2{
+    &--1fr{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

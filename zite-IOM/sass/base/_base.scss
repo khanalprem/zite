@@ -451,16 +451,17 @@
   }
 
 .t-border {
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--clr-body-300);
 }
 
+
 .b-border {
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--clr-body-300);
 }
 
 .tb-border {
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
+    border-top: 1px solid var(--clr-body-300);
+    border-bottom: 1px solid var(--clr-body-300);
 }
 
 .is-border {
@@ -507,11 +508,20 @@
   @include justify-content-center;
   @include align-items-center;
   img{
-    object-fit: cover;
-    position: absolute;
-    width: 100%;
     border-radius: 100%;
-
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1;
+    
+  }
+  @supports not (aspect-ratio: 1) {
+      position: relative;
+      height: 0;
+      padding-bottom: 100%;
+     img {
+      position: absolute;
+      height: 100%;
+    }
   }
   &:hover{
     border-color: var(--clr-primary-500)

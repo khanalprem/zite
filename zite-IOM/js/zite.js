@@ -19,7 +19,7 @@
   preloader();
 
   function openModal() {
-    $('.common-button, .add-more').on('click', function (e) {
+    $('.common-button, .add-more,.circle-icon').on('click', function (e) {
       e.preventDefault();
       var targetId = $(this).attr('popup-link');
       $('#' + targetId).addClass('is-open');

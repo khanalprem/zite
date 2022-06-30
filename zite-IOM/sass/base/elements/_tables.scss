@@ -101,6 +101,7 @@
     border-collapse: separate;
     border-spacing: 0;
     
+    
     th,td{
       vertical-align: middle;
       padding: 0.25rem 0.75rem;
@@ -111,11 +112,32 @@
       font-size:var(--fs-md);
       vertical-align: top;
       padding:.5rem .75rem;
+      cursor: pointer;
+      .table-sort{
+        i{
+          opacity: 0;
+          visibility: hidden;
+        }
+        &.is-active,&:hover{
+          color:var(--clr-primary-500);
+          i{
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
       
     }
     tr{
       
       border-collapse: collapse;
+    }
+    tr{
+      &.row-group{
+        td{
+          background-color: var(--clr-body-100);
+        }
+      }
     }
     tbody{
       tr{
@@ -176,7 +198,7 @@
 
       .org {
         @extend .site-progress;
-
+        gap:0.6125rem;
         .org-text {
           p {
             @include trim(1);
@@ -185,16 +207,16 @@
       }
 
       figure {
-        @include flex(0 0 36px);
-        max-width: 36px;
+        @include flex(0 0 32px);
+        max-width: 32px;
         margin: 0;
 
-        img {
-          max-width: 28px;
-          height: 28px;
-          width: 100%;
-          @include radius(100%);
-        }
+        // img {
+        //   max-width: 28px;
+        //   height: 28px;
+        //   width: 100%;
+        //   @include radius(100%);
+        // }
       }
 
       span {
@@ -381,7 +403,6 @@
       @include align-items-center;
 
       i {
-        font-size: 1rem;
         cursor: pointer;
         color: var(--clr-body-500);
         line-height: 1;
@@ -389,9 +410,15 @@
           color:var(--clr-primary-500);
         }
       }
+      .common-button {
+        &.is-clear{
+          i{
+            color:var(--clr-primary-500);
+          }
+        }
+      }
 
       span {
-        color: var(--clr-body-500);
 
         &:not(:last-child) {
           margin-right: 0.6125rem;

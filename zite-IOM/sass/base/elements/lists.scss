@@ -44,7 +44,6 @@ ul {
             position: relative;
             a {
                 color: var(--clr-body);
-                font-weight: 500;
             }
             .project {
                 @include flex-grow(1);
@@ -177,10 +176,11 @@ ul {
                 &::after {
                   content: 'check';
                   position: absolute;
-                  top: 50%;
+                  top: 20%;
                   font-family: 'Material Icons';
                   right: 1rem;
                   color: var(--clr-primary-500);
+                  font-size: 1.125rem;
                   
                 }
               }
@@ -581,6 +581,15 @@ ul {
                         opacity: 1;
                         visibility: visible;
                     }
+                }
+            }
+        }
+        ul{
+            &.sub-list{
+                li{
+                    font-weight: 400;
+                    padding-left: 2rem;
+                    border-bottom: 1px solid var(--clr-body-300);
                 }
             }
         }
