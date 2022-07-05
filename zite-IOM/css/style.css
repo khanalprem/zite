@@ -8806,9 +8806,9 @@ header.site-header .header-in .header-right ul li.custom-dropdown.notifications 
 }
 header.site-header a.logo {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 80px;
-  flex: 0 0 80px;
-  max-width: 80px;
+  -ms-flex: 0 0 120px;
+  flex: 0 0 120px;
+  max-width: 120px;
 }
 header.site-header a.logo img {
   max-height: 36px;

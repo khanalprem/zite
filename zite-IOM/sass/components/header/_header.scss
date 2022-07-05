@@ -182,8 +182,8 @@ header {
             }
         }
         a.logo {
-            @include flex(0 0 80px);
-            max-width: 80px;
+            @include flex(0 0 120px);
+            max-width: 120px;
             img {
                 max-height: 36px;
             }
