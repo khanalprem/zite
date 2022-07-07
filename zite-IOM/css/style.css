@@ -6163,9 +6163,22 @@ ul.social-list.is-end {
   position: relative;
   color: var(--clr-body);
   flex: auto;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+}
+.custom-select .select-list li .custom-checkbox label {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.custom-select .select-list li span {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .custom-select .select-list li i {
   font-size: 1.3rem;
@@ -11613,7 +11626,7 @@ header.site-header.sticky {
 .stageform-list .stageform-body ul.list li.row-form-header .thead {
   margin-bottom: 0.5rem;
 }
-.stageform-list .stageform-body ul.list li.row-form-header h6 {
+.stageform-list .stageform-body ul.list li.row-form-header p {
   color: var(--clr-primary-500);
   position: relative;
   display: -webkit-box;
@@ -11626,19 +11639,21 @@ header.site-header.sticky {
   -ms-flex-align: center;
   align-items: center;
 }
-.stageform-list .stageform-body ul.list li.row-form-header h6::before {
+.stageform-list .stageform-body ul.list li.row-form-header p::before {
   content: "arrow_drop_down";
   font-family: "Material Icons";
   display: inline-block;
   margin-right: 0.5rem;
   font-size: 1.4rem;
+  text-transform: initial;
 }
-.stageform-list .stageform-body ul.list li.row-form-header.is-active h6::before {
+.stageform-list .stageform-body ul.list li.row-form-header.is-active p::before {
   content: "arrow_drop_up";
   font-family: "Material Icons";
   display: inline-block;
   margin-right: 0.5rem;
   font-size: 1.4rem;
+  text-transform: initial;
 }
 .stageform-list .stageform-body ul.list.is-border ul.inline-row {
   border-top: 1px solid var(--clr-body-300);

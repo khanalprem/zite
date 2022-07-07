@@ -176,7 +176,7 @@
             .thead {
               margin-bottom: 0.5rem;
             }
-            h6 {
+            p {
               color: var(--clr-primary-500);
               position: relative;
               @include display-flex(flex);
@@ -189,16 +189,18 @@
                 display: inline-block;
                 margin-right: 0.5rem;
                 font-size: 1.4rem;
+                text-transform: initial;
               }
             }
             &.is-active {
-              h6 {
+              p {
                 &::before {
                   content: 'arrow_drop_up';
                   font-family: 'Material Icons';
                   display: inline-block;
                   margin-right: 0.5rem;
                   font-size: 1.4rem;
+                  text-transform: initial;
                 }
               }
             }
