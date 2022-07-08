@@ -94,7 +94,7 @@
         }
         &:disabled,
         &.is-disable {
-            color: var(--clr-body-400);
+            color: var(--clr-white);
             background-color: var(--clr-body-400);
             &:hover {
                 background-color: var(--clr-body-400);
@@ -469,6 +469,7 @@ a.load-more-button {
 
 // [role='button'] {
 //     &:focus {
-//         border-color: transparent !important;
+//         -webkit-outline: none !important;
+//         outline: none;
 //     }
 // }

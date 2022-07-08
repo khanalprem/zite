@@ -114,8 +114,9 @@ textarea {
 [role='menuitem'],
 [role='button']:focus {
     cursor: pointer;
-    border-color: var(--clr-primary-500);
+    cursor: pointer;
     outline: none;
+    -webkit-appearance: none;
 }
 
 .custom-input-group {

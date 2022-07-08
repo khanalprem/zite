@@ -2566,6 +2566,7 @@ body {
 .site-content {
   padding: 0 2.5rem;
   margin: 2.25rem 0;
+  margin-bottom: 0;
 }
 @media only screen and (max-width:1024px) {
   .site-content {
@@ -4486,7 +4487,7 @@ figure {
   color: var(--clr-white);
 }
 [class*=common-button].is-bg:disabled, [class*=common-button].is-bg.is-disable {
-  color: var(--clr-body-400);
+  color: var(--clr-white);
   background-color: var(--clr-body-400);
 }
 [class*=common-button].is-bg:disabled:hover, [class*=common-button].is-bg.is-disable:hover {
@@ -5107,8 +5108,9 @@ textarea.form-control {
 [role=menuitem],
 [role=button]:focus {
   cursor: pointer;
-  border-color: var(--clr-primary-500);
+  cursor: pointer;
   outline: none;
+  -webkit-appearance: none;
 }
 
 .custom-input-group {
