@@ -118,3 +118,49 @@
 // .inprogress {
 //   color: $inProgressColor !important;
 // }
+
+.open-bg {
+    background-color: rgba($open-color, 0.15);
+  }
+  .flagged-bg {
+    background-color: rgba($flagged-color, 0.15);
+  }
+  .rejected-bg {
+    background-color: rgba($rejected-color, 0.15);
+  }
+  .approved-bg {
+    background-color: rgba($approved-color, 0.15);
+  }
+  .inprogress-bg {
+    background-color: rgba($inprogress-color, 0.15);
+  }
+  .open-dark-bg {
+    background-color: $open-color;
+  }
+  .flagged-dark-bg {
+    background-color: $flagged-color;
+  }
+  .rejected-dark-bg {
+    background-color: $rejected-color;
+  }
+  .approved-dark-bg {
+    background-color: $approved-color;
+  }
+  .inprogress-dark-bg {
+    background-color: $inprogress-color;
+  }
+  .open {
+    color: $open-color !important;
+  }
+  .flagged {
+    color: $flagged-color !important;
+  }
+  .rejected {
+    color: $rejected-color !important;
+  }
+  .approved {
+    color: $approved-color !important;
+  }
+  .inprogress {
+    color: $inprogress-color !important;
+  }

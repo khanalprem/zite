@@ -12154,6 +12154,66 @@ span.count {
   text-align: center;
 }
 
+.open-bg {
+  background-color: rgba(0, 118, 255, 0.15);
+}
+
+.flagged-bg {
+  background-color: rgba(255, 177, 0, 0.15);
+}
+
+.rejected-bg {
+  background-color: rgba(255, 15, 15, 0.15);
+}
+
+.approved-bg {
+  background-color: rgba(64, 180, 73, 0.15);
+}
+
+.inprogress-bg {
+  background-color: rgba(171, 71, 188, 0.15);
+}
+
+.open-dark-bg {
+  background-color: #0076FF;
+}
+
+.flagged-dark-bg {
+  background-color: #FFB100;
+}
+
+.rejected-dark-bg {
+  background-color: #FF0F0F;
+}
+
+.approved-dark-bg {
+  background-color: #40B449;
+}
+
+.inprogress-dark-bg {
+  background-color: #AB47BC;
+}
+
+.open {
+  color: #0076FF !important;
+}
+
+.flagged {
+  color: #FFB100 !important;
+}
+
+.rejected {
+  color: #FF0F0F !important;
+}
+
+.approved {
+  color: #40B449 !important;
+}
+
+.inprogress {
+  color: #AB47BC !important;
+}
+
 /* custom scss By Varun
 --------------------------------------------- */
 .card-header-submittedDetail label {
