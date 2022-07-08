@@ -4962,10 +4962,6 @@ a.load-more-button:hover {
   margin-right: 0.6125rem;
 }
 
-[role=button]:focus {
-  border-color: transparent !important;
-}
-
 input.form-control,
 textarea.form-control {
   display: block;
