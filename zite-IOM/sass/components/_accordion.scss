@@ -46,6 +46,17 @@
                 @include align-items-center;
                 @include flex-direction-column(column);
                 @include radius(100%);
+                /* Support for all WebKit browsers. */
+                -webkit-font-smoothing: antialiased;
+                
+                /* Support for Safari and Chrome. */
+                text-rendering: optimizeLegibility;
+
+                /* Support for Firefox. */
+                -moz-osx-font-smoothing: grayscale;
+
+                /* Support for IE. */
+                font-feature-settings: 'liga';
             }
             .custom-checkbox {
                 margin: 0;

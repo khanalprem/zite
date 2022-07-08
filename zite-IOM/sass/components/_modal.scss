@@ -36,6 +36,7 @@
       position: relative;
       @include transform(scale(0.9));
       @include transition(all 0.2s ease-in-out);
+      min-height: 380px;
 
       &.is-wide {
         max-width: 1000px;

@@ -5574,8 +5574,8 @@ textarea.form-control.is-valid {
   flex-direction: column;
   cursor: pointer;
   background-color: var(--clr-primary-500);
-  margin: -1.2px 0 -1.2px -1.2px;
-  border-radius: 5px 0 0 5px;
+  margin: -1.2px -1.2px -1.2px 0;
+  border-radius: 0 5px 5px 0;
 }
 .search-bar .search-wrap span i {
   font-size: 1.2rem;
@@ -8920,6 +8920,14 @@ header.site-header.sticky {
   -moz-border-radius: 100%;
   -ms-border-radius: 100%;
   border-radius: 100%;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: "liga";
 }
 .acc .acc-list .acc-header .custom-checkbox {
   margin: 0;
@@ -9550,6 +9558,7 @@ header.site-header.sticky {
   -o-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  min-height: 380px;
 }
 .popup .popup-container .popup-body.is-wide,
 .window-popup .popup-container .popup-body.is-wide {
