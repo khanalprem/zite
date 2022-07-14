@@ -10382,7 +10382,6 @@ header.site-header.sticky {
   min-width: 160px;
 }
 .filter-card .custom-select p.selected-item {
-  border: 1px solid var(--clr-body-300);
   height: 2.3rem;
   line-height: 2.3rem;
 }
